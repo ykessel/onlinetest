@@ -12,6 +12,11 @@ import { TerminosComponent } from './componentes/terminos/terminos/terminos.comp
 import { NosotrosComponent } from './componentes/nosotros/nosotros/nosotros.component';
 import { CaracteristicasComponent } from './componentes/servicios/caracteristicas/caracteristicas.component';
 
+//Material Modules
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +30,11 @@ import { CaracteristicasComponent } from './componentes/servicios/caracteristica
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+
+    //Material Modeules Imports
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
