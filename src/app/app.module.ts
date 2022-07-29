@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SidebarComponent } from './privado/sidebar/sidebar.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { DocumentosComponent } from './componentes/documentos/documentos/documentos.component';
 import { ContactosComponent } from './componentes/contactos/contactos/contactos.component';
@@ -16,13 +15,11 @@ import { CaracteristicasComponent } from './componentes/servicios/caracteristica
 @NgModule({
   declarations: [
     AppComponent,
-    ServiciosComponent,
     DocumentosComponent,
     ContactosComponent,
     HomeComponent,
     TerminosComponent,
     NosotrosComponent,
-    CaracteristicasComponent,
   ],
   imports: [
     BrowserModule,
