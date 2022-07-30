@@ -1,5 +1,44 @@
+@import "~@fontsource/fredoka-one";
+
 .example-spacer {
   flex: 1 1 auto;
+}
+
+.mat-toolbar{
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-left{
+  display: flex;
+  flex-direction: row;
+}
+
+.top-right{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.button-nav{
+  width: 70px;
+  height: 19px;
+  
+  font-family: 'Fredoka One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  
+  color: #AE0000;
+  
+  
+  /* Inside auto layout */
+  
+  flex: none;
+  order: 0;
+  flex-grow: 0;
 }
 
 section {
@@ -14,12 +53,14 @@ section {
 }
 
 .example-button-row {
-  display: table-cell;
-  width: 490px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 690px;
 }
 
 .example-button-row .mat-button-base {
-  margin: 8px 8px 8px 0;
+  margin: 8px 8px 8px 3px;
 }
 
 .example-flex-container {
