@@ -16,6 +16,13 @@ import { CaracteristicasComponent } from './componentes/servicios/caracteristica
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatCardModule} from '@angular/material/card';
+import {MatChipsModule} from '@angular/material/chips';
+
+
+//3rd Party Libray
+import { OwlModule } from 'ngx-owl-carousel';
 
 @NgModule({
   declarations: [
@@ -36,6 +43,14 @@ import {MatButtonModule} from '@angular/material/button';
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
+    MatGridListModule,
+    MatCardModule,
+    MatChipsModule,
+
+
+    //3rd Party Libray
+    OwlModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

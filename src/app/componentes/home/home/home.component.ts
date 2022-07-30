@@ -12,4 +12,10 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  mySlideImages = ['../assets/banner.png','../assets/banner.png','../assets/banner.png'];
+  myCarouselImages =['../assets/banner.png','../assets/banner.png','../assets/banner.png'];
+
+  mySlideOptions={items: 1, dots: true, nav: true};
+  myCarouselOptions={items: 3, dots: true, nav: true};
+
 }
