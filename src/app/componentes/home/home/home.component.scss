@@ -1,3 +1,137 @@
+.home-container{
+  height: 107vh;
+}
+
+.banner-container{
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.img-header{
+  width: 25px;
+  height: 50px;
+  background: url(../../../../assets/img_header.png);
+}
+.white-space{
+  display: flex;
+  height: 80%;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.chip-image{
+  height: 79px;
+  width: 129px;
+  background: url(../../../../assets/chips-banner.png);
+}
+
+.left-side{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding-top: 2%;
+  height: 100%;
+  width: 20%; 
+  align-items: flex-start;
+}
+
+.center-side{
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  padding-left: 10px;
+  width: 35%;
+  height: 100%;
+}
+
+.tittle-banner{
+  font-family: 'Fredoka One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 68px;
+
+  color: #353535;
+}
+
+.p-banner{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  /* or 150% */
+
+
+  color: #727272;
+}
+
+.line-banner{
+  margin-top: 5%;
+  width: 50%;
+  height: 2%;
+
+  background: #F4A800;
+  border-radius: 25px;
+}
+
+.buttons-group{
+  display: flex;
+  flex-direction: row;
+  margin-top: 3%;
+  height: 10%;
+}
+
+.button-left{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Fredoka One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 19px;
+  margin-right: 3%;
+  padding: 10px 30px;
+  width: 158px;
+  height: 64px;
+  background: #F6D895;
+  border-radius: 50px;
+  border-style: none;
+  gap: 10px;
+  color: #AE0000;
+}
+
+.button-right{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: 'Fredoka One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  width: 158px;
+  height: 64px;
+  line-height: 19px;
+  color: #AE0000;
+  padding: 20px 40px;
+  gap: 10px;
+  border-style: none;
+  background: #FEB5B5;
+  border-radius: 50px;
+}
+
+.right-side{
+  width: 80%;
+  height: 100%;
+  background: url(../../../../assets/banner.png);
+  background-repeat: no-repeat;
+}
+
 .carrusel-1 {
   display: flex;
   flex-direction: row;
@@ -77,14 +211,6 @@
   align-self: center;
 }
 
-.carrusel-1-chips-right {
-  text-align: right;
-}
-
-.carrusel-1-chips-left {
-  text-align: left;
-}
-
 .car-container {
   display: flex;
   flex-direction: column;
@@ -95,7 +221,8 @@
     left: 0px;
     background: #fcf3da;
   }
-  .down {
+
+  .down {    
     width: 100%;
     height: 343px;
     left: 0px;

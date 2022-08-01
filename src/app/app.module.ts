@@ -34,7 +34,6 @@ import { OwlModule } from 'ngx-owl-carousel';
     HomeComponent,
     TerminosComponent,
     NosotrosComponent,
-    CaracteristicasComponent,
   ],
   imports: [
     BrowserModule,

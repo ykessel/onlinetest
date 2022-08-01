@@ -1,0 +1,169 @@
+.contact-container{
+    height: 100vh;
+    background-color: white;
+}
+
+.contact-head{
+    display: flex;
+    margin-top: 2%;
+    flex-direction: row;
+    align-items: center;
+    height: 20%;
+}
+
+.left-img{
+    margin-top: 2%;
+    margin-right: 5%;
+    background: linear-gradient(90deg, #FAA6A7 0%, #B5E7FF 67.02%, #FFDF95 98.96%);
+    border-radius: 0px 50px 50px 0px;
+    width: 15%;
+    height: 40%;
+}
+
+.rigth-img{
+    height: 80%;
+    width: 90%;
+    background-repeat: no-repeat !important;
+    background: url(../../../../assets/grafica_der1.png);
+}
+
+.rigth-container{
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+    width: 22%;
+}
+
+.center-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #FFF8E7;
+    border-radius: 500px;
+    height: 90%;
+    width: 66%;
+}
+
+.contact-tittle{
+    font-family: 'Fredoka One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 68px;
+    margin: 0 0 0 2% !important;
+    color: #353535;
+}
+
+.chip-img{    
+    width: 25px;
+    height: 50px;
+    background: url(../../../../assets/img_header.png);
+    background-repeat: no-repeat;
+}
+
+.contact-body{
+    height: 90%;
+}   
+
+.initial-space{
+    height: 40%;
+    width: 100%;
+    display: flex;
+    padding-bottom: 10%;
+}
+
+.container-izq{
+    display: flex;
+    flex-grow: 1;
+}
+
+.container-der{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.img-chip-izq{
+    position: absolute;
+    width: 129px;
+    height: 79px;
+    left: -6px;
+    top: 286px;
+    z-index: 2;
+    background-repeat: no-repeat !important;
+    background: url(../../../../assets//grafica_izq.png);
+}
+
+.img-chip-pink{
+    position: absolute;
+    width: 610px;
+    height: 109px;
+    left: -338px;
+    top: 330px;
+    z-index: 1;
+    background: rgba(250, 166, 167, 0.5);
+    border-radius: 500px;
+    transform: rotate(-180deg);
+}
+
+.img-chip-der{
+    width: 30%;
+    height: 110px;
+    background: linear-gradient(90deg, rgba(250, 166, 167, 0.5) 0%, rgba(181, 231, 255, 0.5) 67.02%, rgba(255, 223, 149, 0.5) 98.96%);
+    border-radius: 0 500px 500px 0;
+    transform: rotate(-180deg);
+}
+
+.img-chip-menor{
+    margin-top: 2%;
+    width: 10%;
+    height: 30px;
+    background: linear-gradient(90deg, #FAA6A7 0%, #B5E7FF 67.02%, #FFDF95 98.96%);
+    border-radius: 0 500px 500px 0;
+    transform: rotate(-180deg);
+}
+
+.we-background{
+    height: 220%;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(250, 166, 167, 0.3) 0%, rgba(181, 231, 255, 0.3) 67.02%, rgba(255, 223, 149, 0.3) 98.96%);
+    border-radius: 0px;
+}
+
+.we-text{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    height: 67%;
+    left: 36%;
+    top: 50%;
+    background: #FFFFFF;
+}
+
+.img-text{
+    height: 30%;
+    width: 100%;
+    padding: 5% 5% 0 5%;
+    background-repeat: no-repeat !important;
+    background: url(../../../../assets/Rectangle13.png);
+}
+
+.we-tittle{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 32px;
+    color: #353535;
+}
+
+.p-text{
+    color: #727272;
+}
+.we-text-container{
+    width: 60%;
+}
