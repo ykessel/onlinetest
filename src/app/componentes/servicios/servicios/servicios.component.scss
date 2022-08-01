@@ -1,0 +1,76 @@
+.servicios {
+  display: flex;
+  width: 100%;
+  
+  .servicios-left {
+    width: 20%;
+    height: 100vh;
+    background: green;
+
+    .servicios-left-rect {
+    }
+  }
+  .servicios-center {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: #3f3726;
+
+    .servicios-center-header {
+        display: flex;
+    }
+
+    .servicios-center-cards {
+      .card {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 24px 100px 24px 24px;
+        gap: 4px;
+
+        width: 1128px;
+        height: 402.56px;
+
+        background: #ffffff;
+        box-shadow: 0px 0px 16px rgba(217, 208, 184, 0.5);
+        border-radius: 24px;
+
+        .card-title {
+          width: 663px;
+          height: 39px;
+
+          font-family: "Fredoka One";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 32px;
+          line-height: 39px;
+          /* identical to box height */
+
+          color: #eda301;
+        }
+
+        .card-text {
+          width: 663px;
+          height: 204px;
+
+          font-family: "Roboto";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 30px;
+          /* or 188% */
+
+          letter-spacing: 0.03em;
+
+          color: #3f3726;
+        }
+      }
+    }
+  }
+
+  .servicios-right {
+      width: 20%;
+      height: 100vh;
+      background: red;
+  }
+}

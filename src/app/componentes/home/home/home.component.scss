@@ -74,7 +74,17 @@
   height: 56.3px;
   background: #f6d895;
   border-radius: 60px;
+  align-self: center;
 }
+
+.carrusel-1-chips-right {
+  text-align: right;
+}
+
+.carrusel-1-chips-left {
+  text-align: left;
+}
+
 .car-container {
   display: flex;
   flex-direction: column;
@@ -181,55 +191,232 @@
 .carrusel-2 {
   margin-top: 206px;
   background: linear-gradient(90deg, #fcded4 0%, #e6f2f2 51.87%, #fff1ce 100%);
+  margin-bottom: 0px;
 
-  .carrusel-2-second-line {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	padding: 24px;
-	gap: 49px;
-	width: 100%;
-	left: 0px;
+  .carrusel-2-first-line {
+    display: flex;
+    align-items: flex-start;
+    padding-top: 97.5px;
+    margin-left: 378.5px;
+    margin-right: 298px;
 
+    .example-spacer {
+      flex: 1 1 auto;
+    }
 
-	.carrusel-2-cards {
-	  display: flex;
-	  flex-direction: row;
-	  justify-content: center;
-	  padding: 24px;
-	  gap: 4px;
-	  background: #ffffff;
-	  box-shadow: 0px 0px 4px rgba(217, 208, 184, 0.5);
-	  border-radius: 24px;
-  
-	  .carrusel-2-cards-text-title {
-		width: 242px;
-		height: 93px;
-		font-family: "Fredoka One";
-		font-style: normal;
-		font-weight: 400;
-		font-size: 24px;
-		line-height: 29px;
-		color: #eda301;
-	  }
-  
-	  .carrusel-2-cards-text {
-		width: 242px;
-		height: 194px;
-		font-family: "Roboto";
-		font-style: normal;
-		font-weight: 400;
-		font-size: 16px;
-		line-height: 24px;
-		color: #3f3726;
-	  }
-  
-	  .carrusel-2-cards-bottom-image {
-		margin-top: 88px;
-		width: 228px;
-		height: 161px;
-	  }
+    .group-1 {
+      width: 306px;
+      height: 306px;
+      margin-right: 27.7px;
+    }
+    .group-2 {
+      width: 218.5px;
+      height: 450.7px;
+    }
+
+    .carrusel-2-first-line-text {
+      font-family: Fredoka One;
+      font-size: 36px;
+      font-weight: 400;
+      line-height: 36px;
+      letter-spacing: 0em;
+      text-align: right;
+      color: #5d0303;
+      align-self: center;
+      height: 72px;
+      width: 413px;
+      margin-bottom: 75px;
+    }
   }
 
+  .carrusel-2-second-line {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 24px;
+    gap: 49px;
+    width: 100%;
+    left: 0px;
+    margin-top: -207px;
+
+    .carrusel-2-cards {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      padding: 24px;
+      gap: 1px;
+      background: #ffffff;
+      box-shadow: 0px 0px 4px rgba(217, 208, 184, 0.5);
+      border-radius: 24px;
+
+      .carrusel-2-cards-text-title {
+        width: 242px;
+        height: 93px;
+        font-family: "Fredoka One";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 29px;
+        color: #eda301;
+      }
+
+      .carrusel-2-cards-text {
+        width: 242px;
+        height: 194px;
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #3f3726;
+      }
+
+      .carrusel-2-cards-bottom-image {
+        margin-top: 88px;
+        width: 228px;
+        height: 161px;
+      }
+    }
+
+    .carrusel-2-chips {
+      width: 117.5px;
+      height: 56.3px;
+      background: #f6d895;
+      border-radius: 60px;
+      align-self: center;
+    }
+
+    .carrusel-2-chips-right {
+      text-align: right;
+    }
+
+    .carrusel-2-chips-left {
+      text-align: left;
+    }
+  }
+
+  .carrusel-2-third-line {
+    .curved-container {
+      width: 100%;
+      height: 356px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+
+      .carrusel-2-third-line-text {
+        font-family: "Fredoka One";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 36px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #5d0303;
+        height: 72px;
+        width: 511px;
+      }
+    }
+  }
+}
+
+.footer {
+  margin-top: -11px;
+
+  .footer-comercios {
+    width: 100%;
+    height: 576px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #901616 0%, #5d0303 100%);
+
+    .logos-group-1 {
+      display: flex;
+      gap: 55px;
+      margin-bottom: 84px;
+    }
+    .logos-group-2 {
+      display: flex;
+      gap: 55px;
+    }
+  }
+
+  .footer-contactos {
+    width: 100%;
+    height: 767px;
+    background: #f4a800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .footer-contactos-left {
+      margin-left: 0px;
+    }
+
+    .footer-contactos-center {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .footer-contactos-title {
+        width: 511px;
+        height: 36px;
+
+        font-family: "Fredoka One";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 36px;
+        /* identical to box height */
+
+        text-align: center;
+        text-transform: uppercase;
+
+        color: #ffffff;
+      }
+
+      .footer-contactos-text {
+        width: 721px;
+        height: 112px;
+
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        /* or 120% */
+
+        text-align: center;
+
+        color: #ffffff;
+      }
+
+      .footer-contactos-boton {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 20px 56px;
+        gap: 10px;
+
+        width: 207px;
+        height: 69px;
+
+        background: #670f0f;
+        border-radius: 50px;
+      }
+    }
+
+    .footer-contactos-right {
+      
+    }
+  }
+
+  .footer-last {
+    width: 100%;
+    height: 877px;
+    background: #670f0f;
   }
 }

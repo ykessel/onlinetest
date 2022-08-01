@@ -19,6 +19,8 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
 import {MatChipsModule} from '@angular/material/chips';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {CdkAccordionModule} from '@angular/cdk/accordion';
 
 
 //3rd Party Libray
@@ -46,6 +48,8 @@ import { OwlModule } from 'ngx-owl-carousel';
     MatGridListModule,
     MatCardModule,
     MatChipsModule,
+    MatExpansionModule,
+    CdkAccordionModule,
 
 
     //3rd Party Libray
