@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-contactos',
+  selector: 'bipay-contactos',
   templateUrl: './contactos.component.html',
   styleUrls: ['./contactos.component.scss']
 })

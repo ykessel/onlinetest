@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-terminos',
+  selector: 'bipay-terminos',
   templateUrl: './terminos.component.html',
   styleUrls: ['./terminos.component.scss']
 })

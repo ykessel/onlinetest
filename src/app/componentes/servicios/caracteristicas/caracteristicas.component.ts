@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-caracteristicas',
+  selector: 'bipay-caracteristicas',
   templateUrl: './caracteristicas.component.html',
   styleUrls: ['./caracteristicas.component.scss']
 })

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-servicios',
+  selector: 'bipay-servicios',
   templateUrl: './servicios.component.html',
   styleUrls: ['./servicios.component.scss']
 })

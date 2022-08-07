@@ -1,76 +1,128 @@
-.servicios {
+.servicios-container {
   display: flex;
   width: 100%;
-  
-  .servicios-left {
-    width: 20%;
-    height: 100vh;
-    background: green;
 
-    .servicios-left-rect {
+  .left {
+    width: 20%;
+    margin-top: 30vh;
+    margin-left: 0;
+
+    .servicios-rect {
+      width: 40%;
+      height: 40px;
+      left: 0px;
+      top: 401px;
+
+      background: linear-gradient(
+        90deg,
+        #faa6a7 0%,
+        #b5e7ff 67.02%,
+        #ffdf95 98.96%
+      );
+      border-radius: 0px 50px 50px 0px;
+    }
+
+    .left-img {
+      width: 60px;
     }
   }
-  .servicios-center {
+
+  .center {
+    width: 60%;
     display: flex;
-    width: 100%;
-    height: 100vh;
-    background-color: #3f3726;
+    flex-direction: column;
+    margin-top: 2%;
 
-    .servicios-center-header {
+    .servicios-servicios {
+      display: flex;
+      align-items: flex-start;
+      padding: 10px;
+      gap: 10px;
+      width: 100%;
+      margin-bottom: 2vh;
+
+      .docs-header {
+        width: 0.7rem;
+      }
+
+      .header-title {
+        font-family: "Fredoka One";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
         display: flex;
-    }
+        align-items: center;
+        color: #353535;
+      }
 
-    .servicios-center-cards {
-      .card {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 24px 100px 24px 24px;
-        gap: 4px;
-
-        width: 1128px;
-        height: 402.56px;
-
-        background: #ffffff;
-        box-shadow: 0px 0px 16px rgba(217, 208, 184, 0.5);
-        border-radius: 24px;
-
-        .card-title {
-          width: 663px;
-          height: 39px;
-
-          font-family: "Fredoka One";
-          font-style: normal;
-          font-weight: 400;
-          font-size: 32px;
-          line-height: 39px;
-          /* identical to box height */
-
-          color: #eda301;
-        }
-
-        .card-text {
-          width: 663px;
-          height: 204px;
-
-          font-family: "Roboto";
-          font-style: normal;
-          font-weight: 400;
-          font-size: 16px;
-          line-height: 30px;
-          /* or 188% */
-
-          letter-spacing: 0.03em;
-
-          color: #3f3726;
-        }
+      .header-text {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1rem;
+        color: #727272;
       }
     }
   }
 
-  .servicios-right {
-      width: 20%;
-      height: 100vh;
-      background: red;
+  .right {
+    width: 20%;
+
+    .right-img {
+      position: absolute;
+      width: 150px;
+      right: 0;
+      margin-top: 18vh;
+    }
   }
+}
+
+.card-docs {
+  display: flex;
+  align-items: flex-start;
+  padding: 15px;
+  gap: 32px;
+  margin-bottom: 20px;
+
+  background: #ffffff;
+  box-shadow: 0px 0px 16px rgba(217, 208, 184, 0.5);
+  border-radius: 24px;
+
+  .docs-header-1 {
+    width: 0.5rem;
+  }
+  .docs-img {
+    width: 8rem;
+    margin-top: 1rem;
+  }
+
+  .content-center {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+
+    .title {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      color: #eda301;
+    }
+  }
+}
+
+.card-docs:last-child {
+  margin-bottom: 20vh;
+}
+
+.card-docs:first-child {
+  margin-top: 100px;
+}
+
+.mat-expansion-indicator::after {
+  margin-bottom: -5rem;
+}
+
+.mat-expansion-panel-header {
+  height: 111px;
 }
