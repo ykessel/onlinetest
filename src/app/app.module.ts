@@ -26,6 +26,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {CdkAccordionModule} from '@angular/cdk/accordion';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatDividerModule } from '@angular/material/divider';
 
 
 //3rd Party Libray
@@ -60,6 +61,7 @@ import { OwlModule } from 'ngx-owl-carousel';
     CdkAccordionModule,
     MatFormFieldModule,
     MatInputModule,
+    MatDividerModule,
 
 
     //3rd Party Libray
