@@ -170,63 +170,13 @@
         </svg>
       </button>
 
-      <div class="carrusel-2-cards">
+      <div *ngFor="let pago of Pagos" class="carrusel-2-cards">
         <div>
           <p class="carrusel-2-cards-text-title">
-            Cobro por invitación de pago diferido
+            {{pago.nombre}}
           </p>
           <p class="carrusel-2-cards-text">
-            Permite enviar al cliente una invitación de pago por correo
-            electrónico que contiene un link de acceso a la pasarela de pago
-            para efectuar el pago de forma segura en su lugar de origen.
-          </p>
-          <div class="carrusel-2-cards-bottom-image">
-            <img src="../../../../assets/img_pagoonline 1.png" />
-          </div>
-        </div>
-      </div>
-
-      <div class="carrusel-2-cards">
-        <div>
-          <p class="carrusel-2-cards-text-title">
-            Cobro por invitación de pago diferido
-          </p>
-          <p class="carrusel-2-cards-text">
-            Permite enviar al cliente una invitación de pago por correo
-            electrónico que contiene un link de acceso a la pasarela de pago
-            para efectuar el pago de forma segura en su lugar de origen.
-          </p>
-          <div class="carrusel-2-cards-bottom-image">
-            <img src="../../../../assets/img_pagoonline.png" />
-          </div>
-        </div>
-      </div>
-
-      <div class="carrusel-2-cards">
-        <div>
-          <p class="carrusel-2-cards-text-title">
-            Cobro por invitación de pago diferido
-          </p>
-          <p class="carrusel-2-cards-text">
-            Permite enviar al cliente una invitación de pago por correo
-            electrónico que contiene un link de acceso a la pasarela de pago
-            para efectuar el pago de forma segura en su lugar de origen.
-          </p>
-          <div class="carrusel-2-cards-bottom-image">
-            <img src="../../../../assets/img_pagoonline.png" />
-          </div>
-        </div>
-      </div>
-
-      <div class="carrusel-2-cards">
-        <div>
-          <p class="carrusel-2-cards-text-title">
-            Cobro por invitación de pago diferido
-          </p>
-          <p class="carrusel-2-cards-text">
-            Permite enviar al cliente una invitación de pago por correo
-            electrónico que contiene un link de acceso a la pasarela de pago
-            para efectuar el pago de forma segura en su lugar de origen.
+            {{pago.tituloEs}}
           </p>
           <div class="carrusel-2-cards-bottom-image">
             <img src="../../../../assets/img_pagoonline.png" />

@@ -19,7 +19,7 @@
       </p>
     </div>
 
-    <div class="card-docs">
+    <div *ngFor="let doc of documentos" class="card-docs">
 
       <img
         class="docs-header-1"
@@ -28,77 +28,9 @@
       <div class="docs-cuadro"></div>
 
       <div class="content-center">
-        <p class="title">Pago Online</p>
+        <p class="title">{{doc.tituloEs}}</p>
         <p class="content-text">
-          Aprobado por el Banco Central de Cuba y reconocido por otros
-          organismos del estado como el Ministerio del Turismo, Ministerio.
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-        </p>
-      </div>
-
-      <button mat-button>
-        <mat-icon>download</mat-icon>
-      </button>
-
-    </div>
-
-    <div class="card-docs">
-
-      <div class="header-img"></div>
-      <div class="docs-cuadro"></div>
-
-      <div class="content-center">
-        <p class="title">Pago Online</p>
-        <p class="content-text">
-          Aprobado por el Banco Central de Cuba y reconocido por otros
-          organismos del estado como el Ministerio del Turismo, Ministerio.
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-        </p>
-      </div>
-
-      <button mat-button>
-        <mat-icon>download</mat-icon>
-      </button>
-
-    </div>
-
-
-    <div class="card-docs">
-
-      <div class="header-img"></div>
-      <div class="docs-cuadro"></div>
-
-      <div class="content-center">
-        <p class="title">Pago Online</p>
-        <p class="content-text">
-          Aprobado por el Banco Central de Cuba y reconocido por otros
-          organismos del estado como el Ministerio del Turismo, Ministerio.
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-        </p>
-      </div>
-
-      <button mat-button>
-        <mat-icon>download</mat-icon>
-      </button>
-
-    </div>
-
-
-    <div class="card-docs">
-
-      <div class="header-img"></div>
-      <div class="docs-cuadro"></div>
-
-      <div class="content-center">
-        <p class="title">Pago Online</p>
-        <p class="content-text">
-          Aprobado por el Banco Central de Cuba y reconocido por otros
-          organismos del estado como el Ministerio del Turismo, Ministerio.
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          {{doc.slugEs}}
         </p>
       </div>
 
