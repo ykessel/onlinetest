@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SeccionesService } from 'src/app/services/secciones/secciones.service';
 
 @Component({
   selector: 'bipay-home',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private seccionesService: SeccionesService) { }
 
   ngOnInit(): void {
+    this.getSecciones()
   }
 
   mySlideImages = ['../assets/banner.png','../assets/banner.png','../assets/banner.png'];
@@ -17,5 +19,12 @@ export class HomeComponent implements OnInit {
 
   mySlideOptions={items: 1, dots: true, nav: true};
   myCarouselOptions={items: 3, dots: true, nav: true};
+
+  getSecciones() {
+    this.seccionesService.getSecciones()
+      .subscribe(s => {
+        console.log(s)
+      });
+  }
 
 }
