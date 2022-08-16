@@ -7,13 +7,28 @@
   <div class="center">
     <div class="servicios-servicios">
       <img class="docs-header" src="../../../../assets/img_header.png" />
-      <p class="header-title">Servicios</p>
-      <p class="header-text">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat.
-      </p>
+            <ng-container *ngFor="let seccion of Secciones">
+        <ng-container *ngIf="seccion.id == 14">
+          <p *ngIf="lang === 'es'" class="header-title">
+            {{ seccion.tituloEs }}
+          </p>
+          <p *ngIf="lang === 'en'" class="header-title">
+            {{ seccion.tituloEn }}
+          </p>
+          <p *ngIf="lang === 'xx'" class="header-title">
+            {{ seccion.tituloOtro }}
+          </p>
+          <p class="header-text" *ngIf="lang === 'es'">
+            {{ seccion.contenidoEs }}
+          </p>
+          <p class="header-text" *ngIf="lang === 'en'">
+            {{ seccion.contenidoEn }}
+          </p>
+          <p class="header-text" *ngIf="lang === 'xx'">
+            {{ seccion.contenidoEs }}
+          </p>
+        </ng-container>
+      </ng-container>
     </div>
 
     <div class="card-docs">

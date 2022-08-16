@@ -28,6 +28,7 @@ import { CdkAccordionModule } from '@angular/cdk/accordion';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatDividerModule } from '@angular/material/divider';
+import {MatSelectModule} from '@angular/material/select';
 
 //3rd Party Libray
 // import { OwlModule } from 'ngx-owl-carousel';
@@ -75,6 +76,7 @@ import { BannersService } from './services/banners/banners.service';
     MatFormFieldModule,
     MatInputModule,
     MatDividerModule,
+    MatSelectModule,
 
     //3rd Party Libray
     CarouselModule,

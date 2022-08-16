@@ -4,20 +4,34 @@
       <div class="home-pres">
         <img src="../../../../assets/img_header.png" class="pres-img" />
         <div class="home-pres-group">
-          <p class="home-pres-title">
-            Soluciones de Pago para StartUPs en Cuba
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </p>
-          <div class="home-pres-rect"></div>
-          <div class="home-pres-buttons">
-            <mat-chip class="home-button-1" >Saber Más</mat-chip>
-            <mat-chip class="home-button-2" >Inicia Ya</mat-chip>
-          </div>
+          <ng-container *ngFor="let seccion of Secciones">
+            <ng-container *ngIf="seccion.id == 12">
+              <p *ngIf="lang === 'es'" class="home-pres-title">
+                {{ seccion.tituloEs }}
+              </p>
+              <p *ngIf="lang === 'en'" class="home-pres-title">
+                {{ seccion.tituloEn }}
+              </p>
+              <p *ngIf="lang === 'xx'" class="home-pres-title">
+                {{ seccion.tituloOtro }}
+              </p>
+              <img class="header" src="../../../../assets/img_header.png" />
+              <p *ngIf="lang === 'es'">
+                {{ seccion.contenidoEs }}
+              </p>
+              <p *ngIf="lang === 'en'">
+                {{ seccion.contenidoEs }}
+              </p>
+              <p *ngIf="lang === 'xx'">
+                {{ seccion.contenidoEs }}
+              </p>
+              <div class="home-pres-rect"></div>
+              <div class="home-pres-buttons">
+                <mat-chip class="home-button-1">Saber Más</mat-chip>
+                <mat-chip class="home-button-2">Inicia Ya</mat-chip>
+              </div>
+            </ng-container>
+          </ng-container>
         </div>
       </div>
       <img src="../../../../assets/grafica_izq.png" class="home-izq" />
@@ -53,14 +67,13 @@
               class="carrusel-1-cards-img"
               src="../../../../assets/img_header.png"
             />
-            <p class="carrusel-1-cards-text-title"> {{pago.nombre}}</p>
+            <p class="carrusel-1-cards-text-title">{{ pago.nombre }}</p>
             <p class="carrusel-1-cards-text">
-              {{pago.tituloEs}}
-
+              {{ pago.tituloEs }}
             </p>
           </div>
           <div class="carrusel-1-cards-bottom-image">
-            <img src="{{pago.logo}}" />
+            <img src="{{ pago.logo }}" />
           </div>
         </div>
 
@@ -86,20 +99,27 @@
   </div>
 
   <div class="carrusel-part2">
-    <ng-container *ngFor="let seccion of Secciones" >
-        <ng-container *ngIf="seccion.id == 18" >
-          <div class="carrusel-part2-first-line">
-            <p class="pagos">{{seccion.tituloEs}}</p>
-            <img class="header" src="../../../../assets/img_header.png" />
-            <p class="lorem" *ngIf="seccion.contenidoEs == null" >
-              Este es un mensaje por default,  el contenido recibido es null
-            </p>
-            <p class="lorem" *ngIf="seccion.contenidoEs !== null" >
-              {{seccion.contenidoEs}}
-            </p>
-          </div>
+    <div class="carrusel-part2-first-line">
+      <ng-container *ngFor="let seccion of Secciones">
+        <ng-container *ngIf="seccion.id == 18">
+          <p *ngIf="lang === 'es'" class="pagos">{{ seccion.tituloEs }}</p>
+          <p *ngIf="lang === 'en'" class="pagos">{{ seccion.tituloEn }}</p>
+          <p *ngIf="lang === 'xx'" class="pagos">{{ seccion.tituloOtro }}</p>
+          <img class="header" src="../../../../assets/img_header.png" />
+          <p class="lorem" *ngIf="lang === 'es'">
+            {{ seccion.contenidoEs }}
+          </p>
+          <p class="lorem" *ngIf="lang === 'en'">
+            {{ seccion.contenidoEs }}
+          </p>
+          <p class="lorem" *ngIf="lang === 'xx'">
+            {{ seccion.contenidoEs }}
+          </p>
         </ng-container>
-  </ng-container>
+      </ng-container>
+    </div>
+
+    
     <div class="carrusel-part2-second-line">
       <div class="first-rect"></div>
       <div class="second-rect"></div>
@@ -119,7 +139,26 @@
       <img class="group-1" src="../../../../assets/Group.png" alt="Group 1" />
       <img class="group-2" src="../../../../assets/Group-2.png" alt="Group 2" />
       <span class="example-spacer"></span>
-      <p class="carrusel-2-first-line-text">Descubre nuestro potencial</p>
+      <ng-container *ngFor="let seccion of Secciones">
+        <p
+          *ngIf="seccion.id === 19 && lang === 'es'"
+          class="carrusel-2-first-line-text"
+        >
+          {{ seccion.tituloEs }}
+        </p>
+        <p
+          *ngIf="seccion.id === 19 && lang === 'en'"
+          class="carrusel-2-first-line-text"
+        >
+          {{ seccion.tituloEn }}
+        </p>
+        <p
+          *ngIf="seccion.id === 19 && lang === 'otro'"
+          class="carrusel-2-first-line-text"
+        >
+          {{ seccion.tituloOtro }}
+        </p>
+      </ng-container>
     </div>
 
     <div class="carrusel-2-second-line">
@@ -138,16 +177,19 @@
         </svg>
       </button>
 
-      <div *ngFor="let caracteristicas of Caracteristicas" class="carrusel-2-cards">
+      <div
+        *ngFor="let caracteristicas of Caracteristicas"
+        class="carrusel-2-cards"
+      >
         <div>
           <p class="carrusel-2-cards-text-title">
-            {{caracteristicas.tituloEs}}
+            {{ caracteristicas.tituloEs }}
           </p>
           <p class="carrusel-2-cards-text">
-            {{caracteristicas.contenidoEs}}
+            {{ caracteristicas.contenidoEs }}
           </p>
           <div class="carrusel-2-cards-bottom-image">
-            <img src="{{caracteristicas.imagenEs}}" />
+            <img src="{{ caracteristicas.imagenEs }}" />
           </div>
         </div>
       </div>
@@ -170,12 +212,29 @@
 
     <div class="carrusel-2-third-line">
       <div class="curved-container">
-        <p class="carrusel-2-third-line-text">
-          Visita los Comercios que ya utilizan Bipay
-        </p>
+        <ng-container *ngFor="let seccion of Secciones">
+          <p
+            *ngIf="seccion.id === 20 && lang === 'es'"
+            class="carrusel-2-third-line-text"
+          >
+            {{ seccion.tituloEs }}
+          </p>
+          <p
+            *ngIf="seccion.id === 20 && lang === 'en'"
+            class="carrusel-2-third-line-text"
+          >
+            {{ seccion.tituloEn }}
+          </p>
+          <p
+            *ngIf="seccion.id === 20 && lang === 'xx'"
+            class="carrusel-2-third-line-text"
+          >
+            {{ seccion.tituloOtro }}
+          </p>
+        </ng-container>
       </div>
-      <img src="../../../../assets/curva1.png" class="bottom-line">
-        <!-- <svg
+      <img src="../../../../assets/curva1.png" class="bottom-line" />
+      <!-- <svg
           width="100%"
           height="76"
           viewBox="0 0 100% 76"
@@ -192,37 +251,32 @@
   </div>
 </div>
 
-<div  class="carrusel-1-cards">
-
-  <owl-carousel-o [options]="customOptions">
-    <ng-container *ngFor="let pago of Pagos">
-      <ng-template carouselSlide [id]="pago.id">
-        <div  class="carrusel-1-cards">
-          <div>
-            <img
-              class="carrusel-1-cards-img"
-              src="../../../../assets/img_header.png"
-            />
-            <p class="carrusel-1-cards-text-title"> {{pago.nombre}}</p>
-            <p class="carrusel-1-cards-text">
-              {{pago.tituloEs}}
-
-            </p>
-          </div>
-          <div class="carrusel-1-cards-bottom-image">
-            <img src="{{pago.logo}}" />
-          </div>
+<owl-carousel-o [options]="customOptions">
+  <ng-container *ngFor="let pago of Pagos">
+    <ng-template carouselSlide [id]="pago.id">
+      <div class="carrusel-1-cards">
+        <div>
+          <img
+            class="carrusel-1-cards-img"
+            src="../../../../assets/img_header.png"
+          />
+          <p class="carrusel-1-cards-text-title">{{ pago.nombre }}</p>
+          <p class="carrusel-1-cards-text">
+            {{ pago.tituloEs }}
+          </p>
         </div>
-      </ng-template>
-    </ng-container>
-  </owl-carousel-o>
-</div>
-
+        <div class="carrusel-1-cards-bottom-image">
+          <img src="{{ pago.logo }}" />
+        </div>
+      </div>
+    </ng-template>
+  </ng-container>
+</owl-carousel-o>
 
 <!-- <owl-carousel
-	[options]="mySlideOptions"
-	[items]="mySlideImages"
-	[carouselClasses]="['owl-theme', 'sliding']"
+  [options]="mySlideOptions"
+  [items]="mySlideImages"
+  [carouselClasses]="['owl-theme', 'sliding']"
 >
 <div *ngFor="let pago of Pagos, let i = index" class="carrusel-1-cards">
   <div>
@@ -241,9 +295,9 @@
   </div>
 </div>
 
-	 <div class="item" *ngFor="let image of mySlideImages; let i = index">
-		<div>
-			<img src="{{ image }}" />
-		</div>
-	</div>
+   <div class="item" *ngFor="let image of mySlideImages; let i = index">
+    <div>
+      <img src="{{ image }}" />
+    </div>
+  </div>
 </owl-carousel> -->
