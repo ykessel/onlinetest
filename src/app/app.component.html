@@ -14,14 +14,13 @@
         >Contactenos</a
       >
       <mat-form-field appearance="fill">
-        <mat-label>Favorite food</mat-label>
-        <mat-select>
+        <mat-select [formControl]="langControl" >
           <mat-option
             *ngFor="let idioma of Idiomas"
             (click)="changeLang(idioma.siglas)"
             [value]="idioma.nombre"
           >
-            {{ idioma.nombre }}
+            <img width="20"  [src]="getFlags(idioma.siglas)" > {{ idioma.nombre }}
           </mat-option>
         </mat-select>
       </mat-form-field>

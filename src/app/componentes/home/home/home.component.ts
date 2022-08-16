@@ -5,6 +5,7 @@ import { SeccionesService } from 'src/app/services/secciones/secciones.service';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { IdiomasService } from 'src/app/services/idiomas/idiomas.service';
 import { CommonService } from 'src/app/services/system/common.service';
+import { PotencialidadesService } from 'src/app/services/potencialidades/potencialidades.service'
 
 @Component({
   selector: 'bipay-home',
@@ -17,6 +18,7 @@ export class HomeComponent implements OnInit {
   Pagos: any[] = [];
   lang: string = '';
   Idiomas: any[] = [];
+  Potencialidades: any[] = [];
 
   constructor(
     private seccionesService: SeccionesService,
@@ -24,13 +26,15 @@ export class HomeComponent implements OnInit {
     private caracteristicasService: CaracteristicasService,
     private idiomasService: IdiomasService,
     private commonService: CommonService,
+    private potencialidadesService: PotencialidadesService,
   ) {}
 
   ngOnInit(): void {
     this.getSecciones();
     this.getCaracteristicas();
     this.getPagos();
-    this.getIdiomas()
+    this.getIdiomas();
+    this.getPotencialidades();
     this.commonService.data$.subscribe(res => this.lang = res) 
   }
 
@@ -73,6 +77,13 @@ export class HomeComponent implements OnInit {
   mySlideOptions = { items: 1, dots: true, nav: true };
   myCarouselOptions = { items: 3, dots: true, nav: true };
 
+  getPotencialidades() {
+    this.potencialidadesService.getPotencialidades().subscribe((s) => {
+      this.Potencialidades = s;
+      console.log('Ptencias', s);
+    });
+  }
+
   getSecciones() {
     this.seccionesService.getSecciones().subscribe((s) => {
       this.Secciones = s;
@@ -91,7 +102,7 @@ export class HomeComponent implements OnInit {
     this.pagosService.getPagos().subscribe((s) => {
       let f = s;
       let r = s;
-      this.Pagos = f.concat(s);
+      this.Pagos = s;
       console.log('Pagos', s);
     });
   }

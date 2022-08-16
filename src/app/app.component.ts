@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { IdiomasService } from './services/idiomas/idiomas.service';
 import { CommonService } from './services/system/common.service';
 import { SeccionesService } from './services/secciones/secciones.service';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -13,6 +14,8 @@ export class AppComponent implements OnInit {
   Secciones: any[] = [];
   Idiomas: any[] = [];
   lang: string = '';
+  langControl = new FormControl('');
+  flags_base: string = "https://purecatamphetamine.github.io/country-flag-icons/3x2/"
 
 
   constructor(private commonService: CommonService, private idiomasService: IdiomasService, private seccionesService: SeccionesService,) {}
@@ -24,7 +27,16 @@ export class AppComponent implements OnInit {
     this.commonService.data$.subscribe(res => this.lang = res)
   }
 
-   getIdiomas() {
+  getFlags(sigla: string) {
+    let flag = this.flags_base + sigla.toUpperCase() + '.svg'
+    if (sigla === "en") {
+      return this.flags_base + "US" + '.svg'
+    } else {      
+      return flag;
+    }
+  }
+
+  getIdiomas() {
     this.idiomasService.getIdiomas()
     .subscribe(s => {
       this.Idiomas = s;
