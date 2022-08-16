@@ -60,7 +60,7 @@
             </p>
           </div>
           <div class="carrusel-1-cards-bottom-image">
-            <img src="../../../../assets/img_pagoonline.png" />
+            <img src="{{pago.logo}}" />
           </div>
         </div>
 
@@ -86,15 +86,20 @@
   </div>
 
   <div class="carrusel-part2">
-    <div class="carrusel-part2-first-line">
-      <p class="pagos">Varios métodos de pago</p>
-      <img class="header" src="../../../../assets/img_header.png" />
-      <p class="lorem">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco
-      </p>
-    </div>
+    <ng-container *ngFor="let seccion of Secciones" >
+        <ng-container *ngIf="seccion.id == 18" >
+          <div class="carrusel-part2-first-line">
+            <p class="pagos">{{seccion.tituloEs}}</p>
+            <img class="header" src="../../../../assets/img_header.png" />
+            <p class="lorem" *ngIf="seccion.contenidoEs == null" >
+              Este es un mensaje por default,  el contenido recibido es null
+            </p>
+            <p class="lorem" *ngIf="seccion.contenidoEs !== null" >
+              {{seccion.contenidoEs}}
+            </p>
+          </div>
+        </ng-container>
+  </ng-container>
     <div class="carrusel-part2-second-line">
       <div class="first-rect"></div>
       <div class="second-rect"></div>
@@ -133,16 +138,16 @@
         </svg>
       </button>
 
-      <div *ngFor="let pago of Pagos" class="carrusel-2-cards">
+      <div *ngFor="let caracteristicas of Caracteristicas" class="carrusel-2-cards">
         <div>
           <p class="carrusel-2-cards-text-title">
-            {{pago.nombre}}
+            {{caracteristicas.tituloEs}}
           </p>
           <p class="carrusel-2-cards-text">
-            {{pago.tituloEs}}
+            {{caracteristicas.contenidoEs}}
           </p>
           <div class="carrusel-2-cards-bottom-image">
-            <img src="../../../../assets/img_pagoonline.png" />
+            <img src="{{caracteristicas.imagenEs}}" />
           </div>
         </div>
       </div>
@@ -186,12 +191,57 @@
     </div>
   </div>
 </div>
+
+<div  class="carrusel-1-cards">
+
+  <owl-carousel-o [options]="customOptions">
+    <ng-container *ngFor="let pago of Pagos">
+      <ng-template carouselSlide [id]="pago.id">
+        <div  class="carrusel-1-cards">
+          <div>
+            <img
+              class="carrusel-1-cards-img"
+              src="../../../../assets/img_header.png"
+            />
+            <p class="carrusel-1-cards-text-title"> {{pago.nombre}}</p>
+            <p class="carrusel-1-cards-text">
+              {{pago.tituloEs}}
+
+            </p>
+          </div>
+          <div class="carrusel-1-cards-bottom-image">
+            <img src="{{pago.logo}}" />
+          </div>
+        </div>
+      </ng-template>
+    </ng-container>
+  </owl-carousel-o>
+</div>
+
+
 <!-- <owl-carousel
 	[options]="mySlideOptions"
 	[items]="mySlideImages"
 	[carouselClasses]="['owl-theme', 'sliding']"
 >
-	<div class="item" *ngFor="let image of mySlideImages; let i = index">
+<div *ngFor="let pago of Pagos, let i = index" class="carrusel-1-cards">
+  <div>
+    <img
+      class="carrusel-1-cards-img"
+      src="../../../../assets/img_header.png"
+    />
+    <p class="carrusel-1-cards-text-title"> {{pago.nombre}}</p>
+    <p class="carrusel-1-cards-text">
+      {{pago.tituloEs}}
+
+    </p>
+  </div>
+  <div class="carrusel-1-cards-bottom-image">
+    <img src="{{pago.logo}}" />
+  </div>
+</div>
+
+	 <div class="item" *ngFor="let image of mySlideImages; let i = index">
 		<div>
 			<img src="{{ image }}" />
 		</div>

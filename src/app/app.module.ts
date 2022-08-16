@@ -30,7 +30,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatDividerModule } from '@angular/material/divider';
 
 //3rd Party Libray
-import { OwlModule } from 'ngx-owl-carousel';
+// import { OwlModule } from 'ngx-owl-carousel';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 import { AsociadosService } from './services/asociados/asociados.service';
 import { CaracteristicasService } from './services/caracteristicas/caracteristicas.service';
 import { ContactosService } from './services/contactos/contactos.service';
@@ -76,7 +77,7 @@ import { BannersService } from './services/banners/banners.service';
     MatDividerModule,
 
     //3rd Party Libray
-    OwlModule,
+    CarouselModule,
   ],
   exports: [
     FooterComponent,

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CaracteristicasService } from 'src/app/services/caracteristicas/caracteristicas.service';
 import { PagosService } from 'src/app/services/pagos/pagos.service';
 import { SeccionesService } from 'src/app/services/secciones/secciones.service';
+import { OwlOptions } from 'ngx-owl-carousel-o';
 
 @Component({
   selector: 'bipay-home',
@@ -19,6 +20,31 @@ export class HomeComponent implements OnInit {
     this.getSecciones()
     this.getCaracteristicas()
     this.getPagos()
+  }
+
+  customOptions: OwlOptions = {
+    loop: true,
+    mouseDrag: false,
+    touchDrag: false,
+    pullDrag: false,
+    dots: false,
+    navSpeed: 600,
+    navText: ['&#8249', '&#8250;'],
+    responsive: {
+      0: {
+        items: 3
+      },
+      400: {
+        items: 3
+      },
+      760: {
+        items: 3
+      },
+      1000: {
+        items: 3
+      }
+    },
+    nav: true
   }
 
   mySlideImages = ['../assets/banner.png','../assets/banner.png','../assets/banner.png'];
