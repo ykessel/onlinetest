@@ -39,10 +39,10 @@
           <p class="content-text">
             {{ isHide ? textContent.substr(0, 300) + "..." : textContent }}
           </p>
-        </div>
-        <button mat-mini-fab (click)="hideAndShow()">
+        <button style="display: flex; width: 1rem; align-self: self-end;" mat-flat-button (click)="hideAndShow()">
           <mat-icon>{{ isHide ? "expand_more" : "expand_less" }}</mat-icon>
         </button>
+        </div>
       </div>
       <!-- <md-button ue|false" md-ripple-size="full|partial|auto">content</md-button> -->
     </mat-accordion>
