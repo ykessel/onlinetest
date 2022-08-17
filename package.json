@@ -21,6 +21,7 @@
     "@angular/platform-browser-dynamic": "^14.1.0",
     "@angular/router": "^14.1.0",
     "@fontsource/fredoka-one": "^4.5.7",
+    "flag-icon-css": "^4.1.7",
     "jquery": "^3.6.0",
     "js-file-downloader": "^1.1.24",
     "ngx-owl-carousel": "^2.0.7",
