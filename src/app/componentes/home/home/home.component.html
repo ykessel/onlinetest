@@ -37,6 +37,7 @@
       <img src="../../../../assets/grafica_izq.png" class="home-izq" />
       <div class="home-rect"></div>
     </div>
+
     <div class="home-right">
       <img class="home-banner" src="../../../../assets/banner.png" alt="" />
       <img class="home-der" src="../../../../assets/grafica_der1.png" alt="" />
@@ -46,7 +47,11 @@
   <div class="car-container">
     <div class="middle">
       <div class="carrusel-1">
-        <button mat-button class="carrusel-1-chips carrusel-1-chips-left">
+        <button
+          mat-button
+          (click)="owlCar.prev()"
+          class="carrusel-1-chips carrusel-1-chips-left"
+        >
           <svg
             width="50%"
             height="50%"
@@ -61,68 +66,78 @@
           </svg>
         </button>
 
-        <div class="carrusel-1-cards">
-          <ng-container *ngFor="let caract of Caracteristicas">
-            <ng-container *ngIf="caract.id == 1">
-              <div>
-                <img
-                  class="carrusel-1-cards-img"
-                  src="../../../../assets/img_header.png"
-                />
-                <p *ngIf="lang === 'es'" class="carrusel-1-cards-text-title">
-                  {{ caract.tituloEs }}
-                </p>
-                <p *ngIf="lang === 'en'" class="carrusel-1-cards-text-title">
-                  {{ caract.tituloEn }}
-                </p>
-                <p *ngIf="lang === 'xx'" class="carrusel-1-cards-text-title">
-                  {{ caract.tituloOtro }}
-                </p>
+        <div class="carrusel-caract">
+          <owl-carousel-o [options]="customOptions" #owlCar>
+            <ng-container *ngFor="let caract of Caracteristicas">
+              <ng-template carouselSlide [id]="caract.id">
+                <div class="carrusel-1-cards">
+                  <div>
+                    <img
+                      class="carrusel-1-cards-img"
+                      src="../../../../assets/img_header.png"
+                    />
+                    <p
+                      *ngIf="lang === 'es'"
+                      class="carrusel-1-cards-text-title"
+                    >
+                      {{ caract.tituloEs }}
+                    </p>
+                    <p
+                      *ngIf="lang === 'en'"
+                      class="carrusel-1-cards-text-title"
+                    >
+                      {{ caract.tituloEn }}
+                    </p>
+                    <p
+                      *ngIf="lang === 'xx'"
+                      class="carrusel-1-cards-text-title"
+                    >
+                      {{ caract.tituloOtro }}
+                    </p>
 
-                <p *ngIf="lang === 'es'" class="carrusel-1-cards-text">
-                  {{ caract.contenidoEs }}
-                </p>
+                    <p *ngIf="lang === 'es'" class="carrusel-1-cards-text">
+                      {{ caract.contenidoEs }}
+                    </p>
 
-                <p *ngIf="lang === 'en'" class="carrusel-1-cards-text">
-                  {{ caract.contenidoEn }}
-                </p>
+                    <p *ngIf="lang === 'en'" class="carrusel-1-cards-text">
+                      {{ caract.contenidoEn }}
+                    </p>
 
-                <p *ngIf="lang === 'xx'" class="carrusel-1-cards-text">
-                  {{ caract.contenidoOtro }}
-                </p>
-              </div>
-              <div *ngIf="lang === 'es'" class="carrusel-1-cards-bottom-image">
-                <img src="{{ caract.imagenEs }}" />
-              </div>
+                    <p *ngIf="lang === 'xx'" class="carrusel-1-cards-text">
+                      {{ caract.contenidoOtro }}
+                    </p>
+                  </div>
+                  <div
+                    *ngIf="lang === 'es'"
+                    class="carrusel-1-cards-bottom-image"
+                  >
+                    <img src="{{ caract.imagenEs }}" />
+                  </div>
 
-              <div *ngIf="lang === 'en'" class="carrusel-1-cards-bottom-image">
-                <img src="{{ caract.imagenEn }}" />
-              </div>
+                  <div
+                    *ngIf="lang === 'en'"
+                    class="carrusel-1-cards-bottom-image"
+                  >
+                    <img src="{{ caract.imagenEn }}" />
+                  </div>
 
-              <div *ngIf="lang === 'xx'" class="carrusel-1-cards-bottom-image">
-                <img src="{{ caract.imagenOtro }}" />
-              </div>
+                  <div
+                    *ngIf="lang === 'xx'"
+                    class="carrusel-1-cards-bottom-image"
+                  >
+                    <img src="{{ caract.imagenOtro }}" />
+                  </div>
+                </div>
+              </ng-template>
             </ng-container>
-          </ng-container>
+          </owl-carousel-o>
         </div>
 
-        <!--         <div *ngFor="let pago of Pagos" class="carrusel-1-cards">
-          <div>
-            <img
-              class="carrusel-1-cards-img"
-              src="../../../../assets/img_header.png"
-            />
-            <p class="carrusel-1-cards-text-title">{{ pago.nombre }}</p>
-            <p class="carrusel-1-cards-text">
-              {{ pago.tituloEs }}
-            </p>
-          </div>
-          <div class="carrusel-1-cards-bottom-image">
-            <img src="{{ pago.logo }}" />
-          </div>
-        </div> -->
-
-        <button mat-button class="carrusel-1-chips carrusel-1-chips-right">
+        <button
+          mat-button
+          (click)="owlCar.next()"
+          class="carrusel-1-chips carrusel-1-chips-right"
+        >
           <svg
             width="50%"
             height="50%"
@@ -168,6 +183,7 @@
       <div class="first-rect"></div>
       <div class="second-rect"></div>
     </div>
+
     <div class="carrusel-part2-third-line">
       <ng-container *ngFor="let pago of Pagos">
         <img src="{{ pago.logo }}" class="small-card" />
@@ -203,7 +219,11 @@
     </div>
 
     <div class="carrusel-2-second-line">
-      <button mat-button class="carrusel-2-chips carrusel-2-chips-left">
+      <button
+        (click)="owlCar.prev()"
+        mat-button
+        class="carrusel-2-chips carrusel-2-chips-left"
+      >
         <svg
           width="26"
           height="25"
@@ -218,24 +238,28 @@
         </svg>
       </button>
 
-      <div
-        *ngFor="let caracteristicas of Caracteristicas"
-        class="carrusel-2-cards"
-      >
-        <div>
-          <p class="carrusel-2-cards-text-title">
-            {{ caracteristicas.tituloEs }}
-          </p>
-          <p class="carrusel-2-cards-text">
-            {{ caracteristicas.contenidoEs }}
-          </p>
-          <div class="carrusel-2-cards-bottom-image">
-            <img src="{{ caracteristicas.imagenEs }}" />
+      <owl-carousel-o [options]="customOptions" #owlPoten>
+        <ng-container *ngFor="let ponte of Potencialidades">
+          <div class="carrusel-2-cards">
+            <div>
+              <p class="carrusel-2-cards-text-title">
+                {{ ponte.tituloEs }}
+              </p>
+              <p class="carrusel-2-cards-text">
+                {{ ponte.contenidoEs }}
+              </p>
+              <div class="carrusel-2-cards-bottom-image">
+                <img src="{{ ponte.imagenEs }}" />
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-
-      <button mat-button class="carrusel-2-chips carrusel-2-chips-right">
+        </ng-container>
+      </owl-carousel-o>
+      <button
+        mat-button
+        (click)="owlCar.next()"
+        class="carrusel-2-chips carrusel-2-chips-right"
+      >
         <svg
           width="26"
           height="25"
@@ -275,70 +299,6 @@
         </ng-container>
       </div>
       <img src="../../../../assets/curva1.png" class="bottom-line" />
-      <!-- <svg
-          width="100%"
-          height="76"
-          viewBox="0 0 100% 76"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M960 71.1C597.8 71.1 264.3 44.5 0 0V76.1H1920V0C1655.7 44.5 1322.2 71.1 960 71.1Z"
-            fill="#901616"
-          />
-        </svg> -->
-      <!-- </div> -->
     </div>
   </div>
 </div>
-
-<owl-carousel-o [options]="customOptions">
-  <ng-container *ngFor="let pago of Pagos">
-    <ng-template carouselSlide [id]="pago.id">
-      <div class="carrusel-1-cards">
-        <div>
-          <img
-            class="carrusel-1-cards-img"
-            src="../../../../assets/img_header.png"
-          />
-          <p class="carrusel-1-cards-text-title">{{ pago.nombre }}</p>
-          <p class="carrusel-1-cards-text">
-            {{ pago.tituloEs }}
-          </p>
-        </div>
-        <div class="carrusel-1-cards-bottom-image">
-          <img src="{{ pago.logo }}" />
-        </div>
-      </div>
-    </ng-template>
-  </ng-container>
-</owl-carousel-o>
-
-<!-- <owl-carousel
-  [options]="mySlideOptions"
-  [items]="mySlideImages"
-  [carouselClasses]="['owl-theme', 'sliding']"
->
-<div *ngFor="let pago of Pagos, let i = index" class="carrusel-1-cards">
-  <div>
-    <img
-      class="carrusel-1-cards-img"
-      src="../../../../assets/img_header.png"
-    />
-    <p class="carrusel-1-cards-text-title"> {{pago.nombre}}</p>
-    <p class="carrusel-1-cards-text">
-      {{pago.tituloEs}}
-
-    </p>
-  </div>
-  <div class="carrusel-1-cards-bottom-image">
-    <img src="{{pago.logo}}" />
-  </div>
-</div>
-
-   <div class="item" *ngFor="let image of mySlideImages; let i = index">
-    <div>
-      <img src="{{ image }}" />
-    </div>
-  </div>
-</owl-carousel> -->

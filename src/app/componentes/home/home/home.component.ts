@@ -41,11 +41,11 @@ export class HomeComponent implements OnInit {
   customOptions: OwlOptions = {
     loop: false,
     mouseDrag: false,
-    touchDrag: false,
+    touchDrag: true,
     pullDrag: false,
     dots: false,
     navSpeed: 600,
-    navText: ['&#8249', '&#8250;'],
+    navText: ['', ''],
     responsive: {
       0: {
         items: 3,
@@ -60,7 +60,7 @@ export class HomeComponent implements OnInit {
         items: 3,
       },
     },
-    nav: true,
+    nav: false,
   };
 
   mySlideImages = [
@@ -102,7 +102,7 @@ export class HomeComponent implements OnInit {
     this.pagosService.getPagos().subscribe((s) => {
       let f = s;
       let r = s;
-      this.Pagos = s;
+      this.Pagos = f.concat(r);
       console.log('Pagos', s);
     });
   }
