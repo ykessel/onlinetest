@@ -20,6 +20,7 @@ mat-form-field.mat-form-field {
 .mat-toolbar {
   background-color: white;
   display: flex;
+  width: 100%;
   justify-content: space-between;
   padding: 0 !important;
 }
@@ -32,6 +33,7 @@ mat-form-field.mat-form-field {
 
 .top-left {
   display: flex;
+  width: 100%;
   flex-direction: row;
 }
 
@@ -41,8 +43,46 @@ mat-form-field.mat-form-field {
   justify-content: flex-end;
 }
 
+.navigation{
+  display: flex;
+
+}
+
+.line{
+  width: 70%;
+  height: 6px;
+  background: #353535;
+  border-radius: 25px;
+}
+
+.menu-span{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+/* identical to box height */
+
+
+  color: #000000;
+}
+
+.nav-container{
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: center;  
+}
+
+.nav-container-home{
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: center;  
+}
+
 .button-nav {
-  width: 70px;
+  width: 100%;
   height: 19px;
 
   font-family: "Fredoka One";
@@ -70,13 +110,19 @@ section {
   margin-left: 8px;
   min-width: 120px;
 }
-
+.pres-img {
+  width: 2rem;
+  height: 2rem;
+  max-width: 21px;
+  max-height: 29px;
+  margin-right: .6rem;
+}
 .example-button-row {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
-  width: 690px;
+  justify-content: space-between;
+  width: 82%;
 }
 
 .example-button-row .mat-button-base {
@@ -97,7 +143,7 @@ section {
 
 .footer {
   margin-top: -11px;
-
+  width: 100%;
   .footer-comercios {
     width: 100%;
     height: 576px;
@@ -109,12 +155,33 @@ section {
 
     .logos-group-1 {
       display: flex;
-      gap: 55px;
+      width: 100%;
+      // gap: 3%;
       margin-bottom: 84px;
+
+      .img-section1{
+        width: 50%;
+      }
+
+      .img-section2{
+        width: 50%;
+      }
+
+      .img-footer{
+        width: 20%;
+      }
     }
     .logos-group-2 {
       display: flex;
-      gap: 55px;
+      width: 100%;
+      // gap: 3%;
+      
+      .img-section2{
+        width: 50%;
+      }
+      .img-footer{
+        width: 20%;
+      }
     }
   }
 
@@ -340,14 +407,63 @@ section {
       .footer-last-legal {
         p {
           font-family: 'Roboto';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 16px;
-
-color: #FFFFFF;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 16px;
+          color: #FFFFFF;
         }
       }
     }
+  }
+}
+
+.img-container{
+  overflow: hidden;
+  height: 26px;
+  width: 32px;
+  display: flex;
+  border-radius: 50%;
+}
+
+.button-wrapper{
+  display: flex !important;
+  flex-direction: row !important;
+}
+
+.img-element{
+  height: 26px;
+  width: 39px;
+}
+
+.dropdown{
+  margin-left: 20px !important;
+}
+
+@media (max-width: 700px) {
+  // .logos-group-1{
+
+  // }
+  .nav-container{
+    display: none;
+  }
+
+  .menu{
+    display: none;
+  }
+
+  .example-button-row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    width: 41%;
+  }
+
+  .top-left{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }

@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -29,7 +28,8 @@ import { CdkAccordionModule } from '@angular/cdk/accordion';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatDividerModule } from '@angular/material/divider';
-import {MatSelectModule} from '@angular/material/select';
+import {MatMenuModule} from '@angular/material/menu';
+// import {MatSelectModule} from '@angular/material/select';
 
 //3rd Party Libray
 // import { OwlModule } from 'ngx-owl-carousel';
@@ -64,11 +64,11 @@ import { BannersService } from './services/banners/banners.service';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    ReactiveFormsModule,
 
     //Material Modeules Imports
     MatToolbarModule,
     MatIconModule,
+    MatMenuModule,
     MatButtonModule,
     MatGridListModule,
     MatCardModule,
@@ -78,7 +78,7 @@ import { BannersService } from './services/banners/banners.service';
     MatFormFieldModule,
     MatInputModule,
     MatDividerModule,
-    MatSelectModule,
+    // MatSelectModule,
 
     //3rd Party Libray
     CarouselModule,
