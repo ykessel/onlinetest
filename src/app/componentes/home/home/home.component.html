@@ -1,47 +1,49 @@
 <div class="conatainer">
   <div class="home">
-    <div class="home-left">
-      <div class="home-pres">
-        <img src="../../../../assets/img_header.png" class="pres-img" />
-        <div class="home-pres-group">
-          <ng-container *ngFor="let seccion of Secciones">
-            <ng-container *ngIf="seccion.id == 12">
-              <p *ngIf="lang === 'es'" class="home-pres-title">
-                {{ seccion.tituloEs }}
-              </p>
-              <p *ngIf="lang === 'en'" class="home-pres-title">
-                {{ seccion.tituloEn }}
-              </p>
-              <p *ngIf="lang === 'xx'" class="home-pres-title">
-                {{ seccion.tituloOtro }}
-              </p>
-              <img class="header" src="../../../../assets/img_header.png" />
-              <p *ngIf="lang === 'es'">
-                {{ seccion.contenidoEs }}
-              </p>
-              <p *ngIf="lang === 'en'">
-                {{ seccion.contenidoEs }}
-              </p>
-              <p *ngIf="lang === 'xx'">
-                {{ seccion.contenidoEs }}
-              </p>
-              <div class="home-pres-rect"></div>
-              <div class="home-pres-buttons">
-                <mat-chip class="home-button-1">Saber Más</mat-chip>
-                <mat-chip class="home-button-2">Inicia Ya</mat-chip>
-              </div>
-            </ng-container>
-          </ng-container>
+    <ng-container *ngFor="let banner of Banners">
+      <div class="home-left">
+        <div class="home-pres">
+          <img src="../../../../assets/img_header.png" class="pres-img" />
+          <div class="home-pres-group">
+            <p *ngIf="lang === 'es'" class="home-pres-title">
+              {{ banner.tituloEs }}
+            </p>
+            <p *ngIf="lang === 'en'" class="home-pres-title">
+              {{ banner.tituloEn }}
+            </p>
+            <p *ngIf="lang === 'xx'" class="home-pres-title">
+              {{ banner.tituloOtro }}
+            </p>
+            <img class="header" src="../../../../assets/img_header.png" />
+            <p *ngIf="lang === 'es'">
+              {{ banner.contenidoEs }}
+            </p>
+            <p *ngIf="lang === 'en'">
+              {{ banner.contenidoEs }}
+            </p>
+            <p *ngIf="lang === 'xx'">
+              {{ banner.contenidoEs }}
+            </p>
+            <div class="home-pres-rect"></div>
+            <div class="home-pres-buttons">
+              <mat-chip class="home-button-1">Saber Más</mat-chip>
+              <mat-chip class="home-button-2">Inicia Ya</mat-chip>
+            </div>
+          </div>
         </div>
+        <img src="../../../../assets/grafica_izq.png" class="home-izq" />
+        <div class="home-rect"></div>
       </div>
-      <img src="../../../../assets/grafica_izq.png" class="home-izq" />
-      <div class="home-rect"></div>
-    </div>
 
-    <div class="home-right">
-      <img class="home-banner" src="../../../../assets/banner.png" alt="" />
-      <img class="home-der" src="../../../../assets/grafica_der1.png" alt="" />
-    </div>
+      <div class="home-right">
+        <img class="home-banner" src="../../../../assets/banner.png" alt="" />
+        <img
+          class="home-der"
+          src="../../../../assets/grafica_der1.png"
+          alt=""
+        />
+      </div>
+    </ng-container>
   </div>
 
   <div class="car-container">
@@ -220,7 +222,7 @@
 
     <div class="carrusel-2-second-line">
       <button
-        (click)="owlCar.prev()"
+        (click)="owlPoten.prev()"
         mat-button
         class="carrusel-2-chips carrusel-2-chips-left"
       >
@@ -257,7 +259,7 @@
       </owl-carousel-o>
       <button
         mat-button
-        (click)="owlCar.next()"
+        (click)="owlPoten.next()"
         class="carrusel-2-chips carrusel-2-chips-right"
       >
         <svg
@@ -278,24 +280,17 @@
     <div class="carrusel-2-third-line">
       <div class="curved-container">
         <ng-container *ngFor="let seccion of Secciones">
-          <p
-            *ngIf="seccion.id === 20 && lang === 'es'"
-            class="carrusel-2-third-line-text"
-          >
-            {{ seccion.tituloEs }}
-          </p>
-          <p
-            *ngIf="seccion.id === 20 && lang === 'en'"
-            class="carrusel-2-third-line-text"
-          >
-            {{ seccion.tituloEn }}
-          </p>
-          <p
-            *ngIf="seccion.id === 20 && lang === 'xx'"
-            class="carrusel-2-third-line-text"
-          >
-            {{ seccion.tituloOtro }}
-          </p>
+          <ng-template *ngIf="seccion.id === 20">
+            <p *ngIf="lang === 'es'" class="carrusel-2-third-line-text">
+              {{ seccion.tituloEs }}
+            </p>
+            <p *ngIf="lang === 'en'" class="carrusel-2-third-line-text">
+              {{ seccion.tituloEn }}
+            </p>
+            <p *ngIf="lang === 'xx'" class="carrusel-2-third-line-text">
+              {{ seccion.tituloOtro }}
+            </p>
+          </ng-template>
         </ng-container>
       </div>
       <img src="../../../../assets/curva1.png" class="bottom-line" />
