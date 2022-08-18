@@ -7,7 +7,7 @@
   <div class="center">
     <div class="servicios-servicios">
       <img class="docs-header" src="../../../../assets/img_header.png" />
-            <ng-container *ngFor="let seccion of Secciones">
+      <ng-container *ngFor="let seccion of Secciones">
         <ng-container *ngIf="seccion.id == 14">
           <p *ngIf="lang === 'es'" class="header-title">
             {{ seccion.tituloEs }}
@@ -30,8 +30,24 @@
         </ng-container>
       </ng-container>
     </div>
+    <mat-accordion class="content-text">
+      <div class="card-docs">
+        <img class="docs-header-1" src="../../../../assets/img_header.png" />
+        <img class="docs-img" src="../../../../assets/img_pagoonline.png" />
+        <div class="content-center">
+          <p class="title">Pago Online</p>
+          <p class="content-text">
+            {{ isHide ? textContent.substr(0, 300) + "..." : textContent }}
+          </p>
+        <button style="display: flex; width: 1rem; align-self: self-end;" mat-flat-button (click)="hideAndShow()">
+          <mat-icon>{{ isHide ? "expand_more" : "expand_less" }}</mat-icon>
+        </button>
+        </div>
+      </div>
+      <!-- <md-button ue|false" md-ripple-size="full|partial|auto">content</md-button> -->
+    </mat-accordion>
 
-    <div class="card-docs">
+    <!--  <div class="card-docs">
       <img class="docs-header-1" src="../../../../assets/img_header.png" />
 
       <img class="docs-img" src="../../../../assets/img_pagoonline.png" />
@@ -39,11 +55,11 @@
       <div class="content-center">
         <p class="title">Pago Online</p>
         <p class="content-text">
-          <!-- Aprobado por el Banco Central de Cuba y reconocido por otros
+          Aprobado por el Banco Central de Cuba y reconocido por otros
           organismos del estado como el Ministerio del Turismo, Ministerio.
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-        </p> -->
+        </p>
 
         <mat-accordion class="content-text">
           <mat-expansion-panel
@@ -83,12 +99,10 @@
         </mat-accordion>
 
       </div>
-    </div>
+    </div> -->
 
     <div class="right">
       <img class="right-img" src="../../../../assets/grafica_der1.png" />
     </div>
   </div>
-
-  <mat-accordion></mat-accordion>
 </div>
