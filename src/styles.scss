@@ -19,5 +19,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 
 .owl-carousel .owl-item {
-    padding: 2em;
+    padding: .5em;
+}
+
+.owl-carousel .owl-stage {
+    width:2500px !important;
 }

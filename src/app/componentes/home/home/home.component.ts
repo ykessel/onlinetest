@@ -6,6 +6,8 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 import { IdiomasService } from 'src/app/services/idiomas/idiomas.service';
 import { CommonService } from 'src/app/services/system/common.service';
 import { PotencialidadesService } from 'src/app/services/potencialidades/potencialidades.service'
+import { BannersService } from 'src/app/services/banners/banners.service';
+import { AsociadosService } from 'src/app/services/asociados/asociados.service';
 
 @Component({
   selector: 'bipay-home',
@@ -19,6 +21,8 @@ export class HomeComponent implements OnInit {
   lang: string = '';
   Idiomas: any[] = [];
   Potencialidades: any[] = [];
+  Banners: any[] = [];
+  
 
   constructor(
     private seccionesService: SeccionesService,
@@ -27,6 +31,7 @@ export class HomeComponent implements OnInit {
     private idiomasService: IdiomasService,
     private commonService: CommonService,
     private potencialidadesService: PotencialidadesService,
+    private bannersService: BannersService,
   ) {}
 
   ngOnInit(): void {
@@ -35,6 +40,7 @@ export class HomeComponent implements OnInit {
     this.getPagos();
     this.getIdiomas();
     this.getPotencialidades();
+    this.getBannersService();
     this.commonService.data$.subscribe(res => this.lang = res) 
   }
 
@@ -59,23 +65,19 @@ export class HomeComponent implements OnInit {
       1000: {
         items: 3,
       },
+      1920: {
+        items: 3,
+      }
     },
     nav: false,
   };
 
-  mySlideImages = [
-    '../assets/banner.png',
-    '../assets/banner.png',
-    '../assets/banner.png',
-  ];
-  myCarouselImages = [
-    '../assets/banner.png',
-    '../assets/banner.png',
-    '../assets/banner.png',
-  ];
-
-  mySlideOptions = { items: 1, dots: true, nav: true };
-  myCarouselOptions = { items: 3, dots: true, nav: true };
+ getBannersService() {
+    this.bannersService.getBanners().subscribe((s) => {
+      this.Banners = s;
+      console.log('Banners', s);
+    });
+  }
 
   getPotencialidades() {
     this.potencialidadesService.getPotencialidades().subscribe((s) => {
@@ -93,7 +95,7 @@ export class HomeComponent implements OnInit {
 
   getCaracteristicas() {
     this.caracteristicasService.getCaracteristicas().subscribe((s) => {
-      this.Caracteristicas = s;
+      this.Caracteristicas = s.concat(s).concat(s).concat(s);
       console.log('Caracteristicas', s);
     });
   }

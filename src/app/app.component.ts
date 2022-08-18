@@ -3,6 +3,7 @@ import { IdiomasService } from './services/idiomas/idiomas.service';
 import { CommonService } from './services/system/common.service';
 import { SeccionesService } from './services/secciones/secciones.service';
 import { FormControl } from '@angular/forms';
+import { AsociadosService } from 'src/app/services/asociados/asociados.service';
 
 @Component({
   selector: 'app-root',
@@ -14,18 +15,18 @@ export class AppComponent implements OnInit {
   title = 'bipay-frontend-personal';
   Secciones: any[] = [];
   Idiomas: any[] = [];
+  Asociados: any[] = [];
   lang: string = '';
   topNavSelected: number = 1;
   langControl = new FormControl('');
   flags_base: string = "https://purecatamphetamine.github.io/country-flag-icons/3x2/"
-
-
-  constructor(private commonService: CommonService, private idiomasService: IdiomasService, private seccionesService: SeccionesService,) {}
-
+    
+  constructor(private asociadosService: AsociadosService, private commonService: CommonService, private idiomasService: IdiomasService, private seccionesService: SeccionesService,) {}
 
   ngOnInit(): void {
     this.getIdiomas()
     this.getSecciones();
+    this.getAsociadosService();
     this.commonService.data$.subscribe(res => this.lang = res)
   }
 
@@ -49,6 +50,13 @@ export class AppComponent implements OnInit {
   getLineStyle(number: number){
     return this.topNavSelected === number ? "visible":"hidden";
   }
+
+   getAsociadosService() {
+    this.asociadosService.getAsociados().subscribe((s) => {
+      this.Asociados = s.concat(s).concat(s);
+      console.log('Asociados', s);
+    });
+  } 
 
   getIdiomas() {
     this.idiomasService.getIdiomas()
