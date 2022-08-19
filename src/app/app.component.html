@@ -82,8 +82,8 @@
             (click)="changeLang(idioma.siglas)"
           >
             <div class="button-wrapper">
-              <div class="img-container">
-                <img class="img-element" [src]="getFlags(idioma.siglas)" />
+              <div class="img-item-container">
+                <img *ngIf="idioma.nombre !== 'Otro'" class="img-element" [src]="getFlags(idioma.siglas)"  alt="Imagen idioma"/>
               </div>
               <span class="menu-span">{{ idioma.nombre }}</span>
             </div>

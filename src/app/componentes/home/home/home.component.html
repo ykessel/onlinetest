@@ -5,23 +5,24 @@
         <div class="home-pres">
           <img src="../../../../assets/img_header.png" class="pres-img" />
           <div class="home-pres-group">
-            <p *ngIf="lang === 'es'" class="home-pres-title">
+            <h3 *ngIf="lang === 'es'" class="home-pres-title">
               {{ banner.tituloEs }}
-            </p>
-            <p *ngIf="lang === 'en'" class="home-pres-title">
+            </h3>
+            <h3 *ngIf="lang === 'en'" class="home-pres-title">
               {{ banner.tituloEn }}
-            </p>
-            <p *ngIf="lang === 'xx'" class="home-pres-title">
+            </h3>
+            <h3 *ngIf="lang === 'xx'" class="home-pres-title">
               {{ banner.tituloOtro }}
-            </p>
-            <img class="header" src="../../../../assets/img_header.png" />
-            <p *ngIf="lang === 'es'">
+            </h3>
+            <!-- <img class="header" src="../../../../assets/img_header.png" /> -->
+            <p class="home-pres-p" *ngIf="lang === 'es'">
+              
               {{ banner.contenidoEs }}
             </p>
-            <p *ngIf="lang === 'en'">
-              {{ banner.contenidoEs }}
+            <p class="home-pres-p" *ngIf="lang === 'en'">
+              {{ banner.contenidoEn }}
             </p>
-            <p *ngIf="lang === 'xx'">
+            <p class="home-pres-p" *ngIf="lang === 'xx'">
               {{ banner.contenidoEs }}
             </p>
             <div class="home-pres-rect"></div>

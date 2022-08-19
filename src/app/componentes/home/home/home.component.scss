@@ -15,7 +15,8 @@
     .home-pres {
       display: flex;
       align-self: flex-end;
-      width: 67%;
+      width: 54%;
+      margin-top: 5%;
       margin-bottom: 20vh;
 
       .pres-img {
@@ -39,9 +40,21 @@
 
           color: #353535;
         }
+
+        .home-pres-p{
+          font-family: 'Roboto';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 24px;
+          color: #727272;
+        }
         .home-pres-rect {
           background: #f4a800;
           border-radius: 25px;
+          width: 50%;
+          margin-bottom: 5%;
+          height: 12px;
         }
 
         .home-pres-buttons {
@@ -50,23 +63,38 @@
           gap: 1rem;
 
           .home-button-1 {
-            width: 5rem;
+            width: 24%;
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: flex-start;
-            padding: 10px 20px;
+            padding: 4%;
+            font-family: 'Fredoka One';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            text-align: center;
 
+            color: #5D0303;
             background: #f6d895;
             border-radius: 50px;
           }
           .home-button-2 {
-            width: 5rem;
+            width: 24%;
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: flex-start;
-            padding: 10px 20px;
+            padding: 4%;
+            font-family: 'Fredoka One';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            text-align: center;
+
+            color: #5D0303;
 
             background: #feb5b5;
             border-radius: 50px;
