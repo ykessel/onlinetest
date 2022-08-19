@@ -54,18 +54,18 @@ export class HomeComponent implements OnInit {
     navText: ['', ''],
     responsive: {
       0: {
-        items: 3,
+        items: 1,
       },
       400: {
-        items: 3,
+        items: 1,
       },
       760: {
+        items: 1,
+      },
+      1024: {
         items: 3,
       },
-      1000: {
-        items: 3,
-      },
-      1920: {
+      1366: {
         items: 3,
       }
     },

@@ -1,9 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
-@import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+@import "~ngx-owl-carousel-o/lib/styles/scss/owl.carousel";
+@import "~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default";
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background-color: crimson;
+}
 
 .mat-form-field-appearance-fill .mat-form-field-underline::before {
     content: "";
@@ -14,14 +21,19 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     width: 100%;
 }
 
-.mat-toolbar .mat-form-field-underline, .mat-toolbar .mat-form-field-ripple, .mat-toolbar .mat-focused .mat-form-field-ripple {
-    background-color: rgba(0,0,0, 1);
+.mat-toolbar .mat-form-field-underline,
+.mat-toolbar .mat-form-field-ripple,
+.mat-toolbar .mat-focused .mat-form-field-ripple {
+    background-color: rgba(0, 0, 0, 1);
 }
 
 .owl-carousel .owl-item {
-    padding: .5em;
+    padding: 0.5em;
+    width: fit-content;
 }
 
 .owl-carousel .owl-stage {
-    width:2500px !important;
+    width: 2500px !important;
 }
+
+/*.owl-carousel .owl-stage { display: flex; align-items: center; }*/

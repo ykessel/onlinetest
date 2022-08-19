@@ -14,6 +14,6 @@ export class BannersService {
   };
 
   getBanners() {
-    return this.http.post<any[]>(api_base + 'listar-banners', this.httpOptions);
+    return this.http.post<any[]>(api_base + 'listar-soluciones-pago', this.httpOptions);
   }
 }

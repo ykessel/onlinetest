@@ -164,10 +164,14 @@
     <div class="carrusel-part2-first-line">
       <ng-container *ngFor="let seccion of Secciones">
         <ng-container *ngIf="seccion.id == 18">
-          <p *ngIf="lang === 'es'" class="pagos">{{ seccion.tituloEs }}</p>
-          <p *ngIf="lang === 'en'" class="pagos">{{ seccion.tituloEn }}</p>
-          <p *ngIf="lang === 'xx'" class="pagos">{{ seccion.tituloOtro }}</p>
-          <img class="header" src="../../../../assets/img_header.png" />
+          <div class="carrusel-part2-gruop">
+            <p *ngIf="lang === 'es'" class="pagos">{{ seccion.tituloEs }}</p>
+            <p *ngIf="lang === 'en'" class="pagos">{{ seccion.tituloEn }}</p>
+            <p *ngIf="lang === 'xx'" class="pagos">{{ seccion.tituloOtro }}</p>
+
+            <img class="header" src="../../../../assets/img_header.png" />
+          </div>
+
           <p class="lorem" *ngIf="lang === 'es'">
             {{ seccion.contenidoEs }}
           </p>

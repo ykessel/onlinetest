@@ -1,1 +1,175 @@
-4
+<div class="footer">
+  <div class="footer-comercios">
+    <div class="logos-footer">
+      <ng-container *ngFor="let asoc of Asociados">
+        <img
+          class="img-footer"
+          src="../../../../assets/logo1.png"
+          alt="logo1"
+        />
+      </ng-container>
+    </div>
+
+    <!-- <div class="logos-group-1">
+      <div class="img-section1">
+        <img class="img-footer" src="../../../../assets/logo1.png" alt="logo1" />
+        <img class="img-footer" src="../../../../assets/logo2.png" alt="logo2" />
+        <img class="img-footer" src="../../../../assets/logo3.png" alt="logo3" />
+      </div>
+
+      <div class="img-section2">
+        <img class="img-footer" src="../../../../assets/logo4.png" alt="logo4" />
+        <img class="img-footer" src="../../../../assets/logo5.png" alt="logo5" />
+        <img class="img-footer" src="../../../../assets/logo3.png" alt="logo3" />
+      </div>
+
+    </div>
+
+    <div class="logos-group-2">
+      <div class="img-section1">
+        <img class="img-footer" src="../../../../assets/logo1.png" alt="logo1" />
+        <img class="img-footer" src="../../../../assets/logo2.png" alt="logo2" />
+        <img class="img-footer" src="../../../../assets/logo5.png" alt="logo5" />
+      </div>
+
+      <div class="img-section2">
+        <img class="img-footer" src="../../../../assets/logo4.png" alt="logo4" />
+      </div>
+    </div> -->
+  </div>
+
+  <div class="footer-contactos">
+    <img src="../../../../assets/curva2.png" class="bottom-line" />
+    <div class="footer-contactos-container">
+      <img
+        class="footer-contactos-left"
+        src="../../../../assets/grafica-contactos_izq.png"
+        alt="lines"
+      />
+
+      <div class="footer-contactos-center">
+        <ng-container *ngFor="let seccion of Secciones">
+          <ng-container *ngIf="seccion.id == 21">
+            <p *ngIf="lang === 'es'" class="footer-contactos-title">
+              {{ seccion.tituloEs }}
+            </p>
+            <p *ngIf="lang === 'en'" class="footer-contactos-title">
+              {{ seccion.tituloEn }}
+            </p>
+            <p *ngIf="lang === 'xx'" class="footer-contactos-title">
+              {{ seccion.tituloOtro }}
+            </p>
+
+            <p *ngIf="lang === 'es'" class="footer-contactos-text">
+              {{ seccion.contenidoEs }}
+            </p>
+            <p *ngIf="lang === 'en'" class="footer-contactos-text">
+              {{ seccion.contenidoEs }}
+            </p>
+            <p *ngIf="lang === 'xx'" class="footer-contactos-text">
+              {{ seccion.contenidoEs }}
+            </p>
+            <button class="footer-contactos-boton" mat-button>Inicia ya</button>
+          </ng-container>
+        </ng-container>
+      </div>
+
+      <img
+        class="footer-contactos-right"
+        src="../../../../assets/grafica-contactos.png"
+        alt="lines"
+      />
+    </div>
+  </div>
+
+  <div class="footer-last">
+    <mat-chip>
+      <mat-icon>phone</mat-icon>
+      <p>Llamenos</p>
+      <img src="../assets/img_header.png" />
+      <p>(53) 12345678</p>
+    </mat-chip>
+
+    <div class="footer-container">
+      <div class="footer-last-description">
+        <img src="../assets/logo-footer.png" />
+
+        <ng-container *ngFor="let seccion of Secciones">
+          <ng-container *ngIf="seccion.id == 22">
+            <p *ngIf="lang === 'es'" class="footer-description">
+              {{ seccion.contenidoEs }}
+            </p>
+            <p *ngIf="lang === 'en'" class="footer-description">
+              {{ seccion.contenidoEs }}
+            </p>
+            <p *ngIf="lang === 'xx'" class="footer-description">
+              {{ seccion.contenidoEs }}
+            </p>
+          </ng-container>
+        </ng-container>
+      </div>
+
+      <div class="footer-last-documents">
+        <div class="footer-docs">
+          <img src="../assets/img_header.png" />
+          <p class="footer-title">Documentos</p>
+        </div>
+        <div class="footer-docs-group">
+          <p>Documento bastante largo que está en dos líneas</p>
+          <p>Documento 2</p>
+          <p>Documento 3</p>
+          <p>Documento 4</p>
+        </div>
+      </div>
+
+      <div class="footer-last-documents">
+        <div class="footer-docs">
+          <img src="../assets/img_header.png" />
+          <p class="footer-title">Documentos</p>
+        </div>
+        <div class="footer-docs-group">
+          <p>Documento bastante largo que está en dos líneas</p>
+          <p>Documento 2</p>
+          <p>Documento 3</p>
+          <p>Documento 4</p>
+        </div>
+      </div>
+
+      <div class="footer-last-documents">
+        <div class="footer-docs">
+          <img src="../assets/img_header.png" />
+          <p class="footer-title">Documentos</p>
+        </div>
+        <div class="footer-docs-group">
+          <p>Documento bastante largo que está en dos líneas</p>
+          <p>Documento 2</p>
+          <p>Documento 3</p>
+          <p>Documento 4</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-last-group">
+      <div class="footer-last-info">
+        <div class="footer-info">
+          <mat-icon>location</mat-icon>
+          <p>Dirección de la compañía, País.</p>
+        </div>
+
+        <div class="footer-info">
+          <mat-icon>room</mat-icon>
+          <p>infoalybio@server.com</p>
+        </div>
+
+        <div class="footer-info">
+          <mat-icon>phone</mat-icon>
+          <p>(800) 1234567891</p>
+        </div>
+      </div>
+      <mat-divider></mat-divider>
+      <div class="footer-last-legal">
+        <p>Copyrights 2021 por Bipay. Todos los derechos reservados</p>
+      </div>
+    </div>
+  </div>
+</div>
