@@ -81,8 +81,8 @@
             (click)="changeLang(idioma.siglas)"
           >
             <div class="button-wrapper">
-              <div class="img-container">
-                <img class="img-element" [src]="getFlags(idioma.siglas)" />
+              <div class="img-item-container">
+                <img *ngIf="idioma.nombre !== 'Otro'" class="img-element" [src]="getFlags(idioma.siglas)"  alt="Imagen idioma"/>
               </div>
               <span class="menu-span">{{ idioma.nombre }}</span>
             </div>
@@ -202,7 +202,7 @@
 
     <div class="footer-container">
       <div class="footer-last-description">
-        <img src="../assets/logo-footer.png" />
+        <img src="../assets/logo-footer.png"/>
 
         <ng-container *ngFor="let seccion of Secciones">
           <ng-container *ngIf="seccion.id == 22">
@@ -260,19 +260,27 @@
 
     <div class="footer-last-group">
       <div class="footer-last-info">
-        <div class="footer-info">
-          <mat-icon>location</mat-icon>
-          <p>Dirección de la compañía, País.</p>
+        <div class="footer-info-container">
+          <div class="footer-info">
+            <mat-icon>location</mat-icon>
+            <p>Dirección de la compañía, País.</p>
+          </div>
+  
+          <div class="footer-info">
+            <mat-icon>room</mat-icon>
+            <p>infoalybio@server.com</p>
+          </div>
+  
+          <div class="footer-info">
+            <mat-icon>phone</mat-icon>
+            <p>(800) 1234567891</p>
+          </div>
         </div>
-
-        <div class="footer-info">
-          <mat-icon>room</mat-icon>
-          <p>infoalybio@server.com</p>
-        </div>
-
-        <div class="footer-info">
-          <mat-icon>phone</mat-icon>
-          <p>(800) 1234567891</p>
+        <div class="footer-social">
+          <mat-icon class="icon-media">facebook</mat-icon>
+          <mat-icon class="icon-media">telegram</mat-icon>
+          <!-- <mat-icon class="icon-media">whatsapp</mat-icon> -->
+          <mat-icon class="icon-media">mail_outline</mat-icon>
         </div>
       </div>
       <mat-divider></mat-divider>

@@ -34,6 +34,7 @@ mat-form-field.mat-form-field {
 .top-left {
   display: flex;
   width: 100%;
+  justify-content: space-between;
   flex-direction: row;
 }
 
@@ -420,8 +421,11 @@ section {
 
       .footer-last-info {
         display: flex;
-        flex-direction: column;
-
+        flex-direction: row;
+        gap: 5%;
+        .icon-media{
+          color: white;
+        }
         .footer-info {
           display: flex;
 
@@ -471,6 +475,15 @@ section {
   border-radius: 50%;
 }
 
+.img-item-container{
+  overflow: hidden;
+  height: 26px;
+  width: 32px;
+  margin-right: 8px;
+  display: flex;
+  border-radius: 50%;
+}
+
 .button-wrapper{
   display: flex !important;
   flex-direction: row !important;
@@ -485,6 +498,11 @@ section {
   margin-left: 20px !important;
 }
 
+.img-footer{
+  height: 63%;
+  max-height: 139px;
+  width: 15%;
+}
 @media (max-width: 700px) {
   // .logos-group-1{
 
