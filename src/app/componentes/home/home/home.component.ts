@@ -75,28 +75,24 @@ export class HomeComponent implements OnInit {
  getBannersService() {
     this.bannersService.getBanners().subscribe((s) => {
       this.Banners = s;
-      console.log('Banners', s);
     });
   }
 
   getPotencialidades() {
     this.potencialidadesService.getPotencialidades().subscribe((s) => {
       this.Potencialidades = s;
-      console.log('Ptencias', s);
     });
   }
 
   getSecciones() {
     this.seccionesService.getSecciones().subscribe((s) => {
       this.Secciones = s;
-      console.log('Secciones', s);
     });
   }
 
   getCaracteristicas() {
     this.caracteristicasService.getCaracteristicas().subscribe((s) => {
       this.Caracteristicas = s.concat(s).concat(s).concat(s);
-      console.log('Caracteristicas', s);
     });
   }
 
@@ -105,7 +101,6 @@ export class HomeComponent implements OnInit {
       let f = s;
       let r = s;
       this.Pagos = f.concat(r);
-      console.log('Pagos', s);
     });
   }
 
@@ -113,7 +108,6 @@ export class HomeComponent implements OnInit {
     this.idiomasService.getIdiomas()
     .subscribe(s => {
       this.Idiomas = s;
-      console.log("Idiomas", s)
     });
   }
 }
