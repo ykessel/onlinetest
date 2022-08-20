@@ -4,70 +4,34 @@
     <div class="example-button-row">
       <div class="navigation">
         <div class="nav-container-home">
-          <a
-            class="button-nav"
-            (click)="setSelected(1)"
-            [style.color]="getLinkStyle(1)"
-            mat-button
-            routerLink=""
-            >Home</a
-          >
+          <a class="button-nav" (click)="setSelected(1)" [style.color]="getLinkStyle(1)" mat-button
+            routerLink="">Home</a>
           <div class="line" [style.visibility]="getLineStyle(1)"></div>
         </div>
         <div class="nav-container">
-          <a
-            class="button-nav"
-            (click)="setSelected(2)"
-            [style.color]="getLinkStyle(2)"
-            mat-button
-            routerLink="nosotros"
-            >Nosotros</a
-          >
+          <a class="button-nav" (click)="setSelected(2)" [style.color]="getLinkStyle(2)" mat-button
+            routerLink="nosotros">Nosotros</a>
           <div class="line" [style.visibility]="getLineStyle(2)"></div>
         </div>
         <div class="nav-container">
-          <a
-            class="button-nav"
-            (click)="setSelected(3)"
-            [style.color]="getLinkStyle(3)"
-            mat-button
-            routerLink="servicios"
-            >Servicios</a
-          >
+          <a class="button-nav" (click)="setSelected(3)" [style.color]="getLinkStyle(3)" mat-button
+            routerLink="servicios">Servicios</a>
           <div class="line" [style.visibility]="getLineStyle(3)"></div>
         </div>
         <div class="nav-container">
-          <a
-            class="button-nav"
-            (click)="setSelected(4)"
-            [style.color]="getLinkStyle(4)"
-            mat-button
-            routerLink="documentos"
-            >Documentación</a
-          >
+          <a class="button-nav" (click)="setSelected(4)" [style.color]="getLinkStyle(4)" mat-button
+            routerLink="documentos">Documentación</a>
           <div class="line" [style.visibility]="getLineStyle(4)"></div>
         </div>
         <div class="nav-container">
-          <a
-            class="button-nav"
-            (click)="setSelected(5)"
-            [style.color]="getLinkStyle(5)"
-            mat-button
-            routerLink="contactos"
-            >Contáctenos</a
-          >
+          <a class="button-nav" (click)="setSelected(5)" [style.color]="getLinkStyle(5)" mat-button
+            routerLink="contactos">Contáctenos</a>
           <div class="line" [style.visibility]="getLineStyle(5)"></div>
         </div>
       </div>
-
       <div class="menu">
         <img src="../../../../assets/img_header.png" class="pres-img" />
-        <button
-          class="dropdown"
-          mat-icon-button
-          [matMenuTriggerFor]="menu"
-          aria-label="Menu de lenguaje"
-        >
+        <button class="dropdown" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Menu de lenguaje">
           <div class="button-wrapper">
             <div class="img-container">
               <img class="img-element" [src]="getFlags(lang)" />
@@ -76,23 +40,204 @@
           </div>
         </button>
         <mat-menu #menu="matMenu">
-          <button
-            mat-menu-item
-            *ngFor="let idioma of Idiomas"
-            (click)="changeLang(idioma.siglas)"
-          >
+          <button mat-menu-item *ngFor="let idioma of Idiomas" (click)="changeLang(idioma.siglas)">
             <div class="button-wrapper">
               <div class="img-item-container">
-                <img *ngIf="idioma.nombre !== 'Otro'" class="img-element" [src]="getFlags(idioma.siglas)"  alt="Imagen idioma"/>
+                <img *ngIf="idioma.nombre !== 'Otro'" class="img-element" [src]="getFlags(idioma.siglas)"
+                  alt="Imagen idioma" />
               </div>
               <span class="menu-span">{{ idioma.nombre }}</span>
             </div>
           </button>
         </mat-menu>
       </div>
+      <!-- <mat-form-field appearance="fill"> -->
+      <!-- <mat-select [formControl]="langControl" > -->
+      <!-- <mat-option
+            *ngFor="let idioma of Idiomas"
+            (click)="changeLang(idioma.siglas)"
+            [value]="idioma.nombre"
+          > -->
+
+      <!-- <img width="20" [src]="getFlags(idioma.siglas)"> {{ idioma.nombre }} -->
+      <!-- </mat-option> -->
+      <!-- </mat-select> -->
+      <!-- </mat-form-field> -->
     </div>
   </div>
-</mat-toolbar>
 
+  <!-- <span class="example-spacer"></span> -->
+</mat-toolbar>
 <router-outlet></router-outlet>
-<bipay-footer></bipay-footer>
+
+<div class="footer">
+  <div class="footer-comercios">
+    <div class="logos-footer">
+      <ng-container *ngFor="let asoc of Asociados">
+        <img class="img-footer" src="../../../../assets/logo1.png" alt="logo1" />
+      </ng-container>
+    </div>
+
+    <!-- <div class="logos-group-1">
+      <div class="img-section1">
+        <img class="img-footer" src="../../../../assets/logo1.png" alt="logo1" />
+        <img class="img-footer" src="../../../../assets/logo2.png" alt="logo2" />
+        <img class="img-footer" src="../../../../assets/logo3.png" alt="logo3" />
+      </div>
+
+      <div class="img-section2">
+        <img class="img-footer" src="../../../../assets/logo4.png" alt="logo4" />
+        <img class="img-footer" src="../../../../assets/logo5.png" alt="logo5" />
+        <img class="img-footer" src="../../../../assets/logo3.png" alt="logo3" />
+      </div>
+
+    </div>
+
+    <div class="logos-group-2">
+      <div class="img-section1">
+        <img class="img-footer" src="../../../../assets/logo1.png" alt="logo1" />
+        <img class="img-footer" src="../../../../assets/logo2.png" alt="logo2" />
+        <img class="img-footer" src="../../../../assets/logo5.png" alt="logo5" />
+      </div>
+
+      <div class="img-section2">
+        <img class="img-footer" src="../../../../assets/logo4.png" alt="logo4" />
+      </div>
+    </div> -->
+  </div>
+
+  <div class="footer-contactos">
+    <img src="../../../../assets/curva2.png" class="bottom-line" />
+    <div class="footer-contactos-container">
+      <img class="footer-contactos-left" src="../../../../assets/grafica-contactos_izq.png" alt="lines" />
+
+      <div class="footer-contactos-center">
+        <ng-container *ngFor="let seccion of Secciones">
+          <ng-container *ngIf="seccion.id == 21">
+            <p *ngIf="lang === 'es'" class="footer-contactos-title">
+              {{ seccion.tituloEs }}
+            </p>
+            <p *ngIf="lang === 'en'" class="footer-contactos-title">
+              {{ seccion.tituloEn }}
+            </p>
+            <p *ngIf="lang === 'xx'" class="footer-contactos-title">
+              {{ seccion.tituloOtro }}
+            </p>
+
+            <p *ngIf="lang === 'es'" class="footer-contactos-text">
+              {{ seccion.contenidoEs }}
+            </p>
+            <p *ngIf="lang === 'en'" class="footer-contactos-text">
+              {{ seccion.contenidoEs }}
+            </p>
+            <p *ngIf="lang === 'xx'" class="footer-contactos-text">
+              {{ seccion.contenidoEs }}
+            </p>
+            <button class="footer-contactos-boton" mat-button>Inicia ya</button>
+          </ng-container>
+        </ng-container>
+      </div>
+
+      <img class="footer-contactos-right" src="../../../../assets/grafica-contactos.png" alt="lines" />
+    </div>
+  </div>
+
+  <div class="footer-last">
+    <mat-chip>
+      <mat-icon>phone</mat-icon>
+      <p>Llamenos</p>
+      <img src="../assets/img_header.png" />
+      <p>(53) 12345678</p>
+    </mat-chip>
+
+    <div class="footer-container">
+      <div class="footer-last-description">
+        <img src="../assets/logo-footer.png" />
+
+        <ng-container *ngFor="let seccion of Secciones">
+          <ng-container *ngIf="seccion.id == 22">
+            <p *ngIf="lang === 'es'" class="footer-description">
+              {{ seccion.contenidoEs }}
+            </p>
+            <p *ngIf="lang === 'en'" class="footer-description">
+              {{ seccion.contenidoEs }}
+            </p>
+            <p *ngIf="lang === 'xx'" class="footer-description">
+              {{ seccion.contenidoEs }}
+            </p>
+          </ng-container>
+        </ng-container>
+      </div>
+      <div class="footer-seccion-doc">
+        <div class="footer-last-documents">
+          <div class="footer-docs">
+            <img src="../assets/img_header.png" />
+            <p class="footer-title">Documentos</p>
+          </div>
+          <div class="footer-docs-group">
+            <p>Documento bastante largo que está en dos líneas</p>
+            <p>Documento 2</p>
+            <p>Documento 3</p>
+            <p>Documento 4</p>
+          </div>
+        </div>
+
+        <div class="footer-last-documents">
+          <div class="footer-docs">
+            <img src="../assets/img_header.png" />
+            <p class="footer-title">Documentos</p>
+          </div>
+          <div class="footer-docs-group">
+            <p>Documento bastante largo que está en dos líneas</p>
+            <p>Documento 2</p>
+            <p>Documento 3</p>
+            <p>Documento 4</p>
+          </div>
+        </div>
+        <div class="footer-last-documents">
+          <div class="footer-docs">
+            <img src="../assets/img_header.png" />
+            <p class="footer-title">Documentos</p>
+          </div>
+          <div class="footer-docs-group">
+            <p>Documento bastante largo que está en dos líneas</p>
+            <p>Documento 2</p>
+            <p>Documento 3</p>
+            <p>Documento 4</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-last-group">
+      <div class="footer-last-info">
+        <div class="footer-info-container">
+          <div class="footer-info">
+            <mat-icon>location</mat-icon>
+            <p>Dirección de la compañía, País.</p>
+          </div>
+
+          <div class="footer-info">
+            <mat-icon>room</mat-icon>
+            <p>infoalybio@server.com</p>
+          </div>
+
+          <div class="footer-info">
+            <mat-icon>phone</mat-icon>
+            <p>(800) 1234567891</p>
+          </div>
+        </div>
+        <div class="footer-social">
+          <mat-icon class="icon-media">facebook</mat-icon>
+          <mat-icon class="icon-media">telegram</mat-icon>
+          <!-- <mat-icon class="icon-media">whatsapp</mat-icon> -->
+          <mat-icon class="icon-media">mail_outline</mat-icon>
+        </div>
+      </div>
+      <mat-divider></mat-divider>
+      <div class="footer-last-legal">
+        <p>Copyrights 2021 por Bipay. Todos los derechos reservados</p>
+      </div>
+    </div>
+  </div>
+</div>
