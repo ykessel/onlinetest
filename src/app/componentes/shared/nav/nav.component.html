@@ -1,0 +1,70 @@
+<mat-toolbar>
+  <div class="top-left">
+    <div class="top-logo"></div>
+    <div class="example-button-row">
+      <div class="navigation">
+        <div class="nav-container-home">
+          <a class="button-nav" (click)="setSelected(1)" [style.color]="getLinkStyle(1)" mat-button
+            routerLink="">Home</a>
+          <div class="line" [style.visibility]="getLineStyle(1)"></div>
+        </div>
+        <div class="nav-container">
+          <a class="button-nav" (click)="setSelected(2)" [style.color]="getLinkStyle(2)" mat-button
+            routerLink="nosotros">Nosotros</a>
+          <div class="line" [style.visibility]="getLineStyle(2)"></div>
+        </div>
+        <div class="nav-container">
+          <a class="button-nav" (click)="setSelected(3)" [style.color]="getLinkStyle(3)" mat-button
+            routerLink="servicios">Servicios</a>
+          <div class="line" [style.visibility]="getLineStyle(3)"></div>
+        </div>
+        <div class="nav-container">
+          <a class="button-nav" (click)="setSelected(4)" [style.color]="getLinkStyle(4)" mat-button
+            routerLink="documentos">Documentación</a>
+          <div class="line" [style.visibility]="getLineStyle(4)"></div>
+        </div>
+        <div class="nav-container">
+          <a class="button-nav" (click)="setSelected(5)" [style.color]="getLinkStyle(5)" mat-button
+            routerLink="contactos">Contáctenos</a>
+          <div class="line" [style.visibility]="getLineStyle(5)"></div>
+        </div>
+      </div>
+      <div class="menu">
+        <img src="../../../../assets/img_header.png" class="pres-img" />
+        <button class="dropdown" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Menu de lenguaje">
+          <div class="button-wrapper">
+            <div class="img-container">
+              <img class="img-element" [src]="getFlags(lang)" />
+            </div>
+            <mat-icon>keyboard_arrow_down</mat-icon>
+          </div>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item *ngFor="let idioma of Idiomas" (click)="changeLang(idioma.siglas)">
+            <div class="button-wrapper">
+              <div class="img-item-container">
+                <img *ngIf="idioma.nombre !== 'Otro'" class="img-element" [src]="getFlags(idioma.siglas)"
+                  alt="Imagen idioma" />
+              </div>
+              <span class="menu-span">{{ idioma.nombre }}</span>
+            </div>
+          </button>
+        </mat-menu>
+      </div>
+      <!-- <mat-form-field appearance="fill"> -->
+      <!-- <mat-select [formControl]="langControl" > -->
+      <!-- <mat-option
+            *ngFor="let idioma of Idiomas"
+            (click)="changeLang(idioma.siglas)"
+            [value]="idioma.nombre"
+          > -->
+
+      <!-- <img width="20" [src]="getFlags(idioma.siglas)"> {{ idioma.nombre }} -->
+      <!-- </mat-option> -->
+      <!-- </mat-select> -->
+      <!-- </mat-form-field> -->
+    </div>
+  </div>
+
+  <!-- <span class="example-spacer"></span> -->
+</mat-toolbar>

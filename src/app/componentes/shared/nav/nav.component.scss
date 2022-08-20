@@ -1,0 +1,587 @@
+@import "~@fontsource/fredoka-one";
+
+mat-form-field.mat-form-field {
+  font-size: 16px;
+}
+
+.mat-form-field-appearance-fill .mat-form-field-underline::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    /* height: 1px; */
+    width: 100%;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.mat-toolbar {
+  background-color: white;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 !important;
+}
+
+.top-logo {
+  height: 56px;
+  width: 244px;
+  background-repeat: no-repeat !important;
+  background: url(../assets/logo.png);
+  // margin-right: 2rem;
+}
+
+.top-left {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.top-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.navigation{
+  display: flex;
+
+}
+
+.line{
+  width: 70%;
+  height: 6px;
+  background: #353535;
+  border-radius: 25px;
+}
+
+.menu-span{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+/* identical to box height */
+
+
+  color: #000000;
+}
+
+.nav-container{
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: center;  
+}
+
+.nav-container-home{
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: center;  
+}
+
+.button-nav {
+  width: 100%;
+  height: 19px;
+
+  font-family: "Fredoka One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #ae0000;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+section {
+  display: table;
+}
+
+.example-label {
+  display: table-cell;
+  font-size: 14px;
+  margin-left: 8px;
+  min-width: 120px;
+}
+.pres-img {
+  width: 2rem;
+  height: 2rem;
+  max-width: 21px;
+  max-height: 29px;
+  margin-right: .6rem;
+}
+.example-button-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-left: 2rem;
+}
+
+.example-button-row .mat-button-base {
+  margin: 8px 8px 8px 3px;
+}
+
+.example-flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.example-button-container {
+  display: flex;
+  justify-content: center;
+  width: 120px;
+}
+
+.footer {
+  margin-top: -11px;
+  width: 100%;
+  .footer-comercios {
+    width: 94%;
+    padding: 3%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #901616 0%, #5d0303 100%);
+    
+    .logos-footer {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: space-around;
+      gap: 5%;
+    }
+
+    .logos-group-1 {
+      display: flex;
+      width: 100%;
+      gap: 5%;
+      margin-bottom: 84px;
+
+      .img-section1{
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+        // gap: 5%;
+      }
+
+      .img-section2{
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+        // gap: 5%;
+      }
+
+      .img-footer{
+        height: 63%;
+        max-height: 139px;
+        width: 15%;
+      }
+    }
+    .logos-group-2 {
+      display: flex;
+      width: 100%;
+      gap: 5%;
+
+      .img-section1{
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+        // gap: 5%;
+      }
+
+      .img-section2{
+        display: flex;
+        width: 50%;
+        justify-content: space-between;
+        // gap: 5%;
+      }
+      .img-footer{
+        height: 63%;
+        max-height: 139px;
+        width: 25%;
+      }
+    }
+  }
+
+  .footer-contactos {
+    width: 100%;
+    background: #f4a800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .bottom-line {
+      width: 100%;
+    }
+
+    .footer-contactos-container {
+      width: 100%;
+      height: 100vh;
+      background: #f4a800;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .footer-contactos-left {
+        display: flex;
+        width:15%;
+        justify-content: flex-start;
+      }
+
+      .footer-contactos-right {
+        display: flex;
+        width:15%;
+        justify-content: flex-end;
+      }
+
+      .footer-contactos-center {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .footer-contactos-title {
+          //width: 511px;
+          height: 36px;
+
+          font-family: "Fredoka One";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 36px;
+          line-height: 36px;
+          /* identical to box height */
+
+          text-align: center;
+          text-transform: uppercase;
+
+          color: #ffffff;
+        }
+
+        .footer-contactos-text {
+          width: 70%;
+          height: 112px;
+
+          font-family: "Roboto";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 24px;
+          /* or 120% */
+
+          text-align: center;
+
+          color: #ffffff;
+        }
+
+        .footer-contactos-boton {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: flex-start;
+          padding: 2% 5%;
+          gap: 10px;
+
+          width: 20%;
+          height: 4%;
+
+          background: #670f0f;
+          border-radius: 50px;
+        }
+      }
+    }
+
+
+  }
+
+  .footer-last {
+    width: 100%;
+    height: 100%;
+    background: #670f0f;
+    display: flex;
+    flex-direction: column;
+
+    mat-chip {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 40%;
+      padding: 4px 0px;
+      gap: 15px;
+      height: 3rem;
+      background: #e4e4e4;
+      border-radius: 50px;
+      justify-content: center;
+      align-self: center;
+      margin-top: -1.5rem;
+      margin-bottom: 10vh;
+
+      img {
+        width: 1rem;
+      }
+
+      p {
+        margin-top: 0.8rem;
+      }
+    }
+
+    .footer-container {
+      display: flex;
+      max-width: 100%;
+      margin-left: 20vh;
+      margin-right: 20vh;
+      justify-content: center;
+      gap: 2%;
+
+      .footer-last-description {
+        display: flex;
+        flex-direction: column;
+        width: 35%;
+
+        img {
+          width: 4rem;
+        }
+
+        p {
+          font-family: "Roboto";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          color: #ca8383;
+        }
+      }
+      .footer-last-documents {
+        display: flex;
+        flex-direction: column;
+        gap: 1%;
+
+        .footer-docs {
+          display: flex;
+
+          img {
+            width: 0.4rem;
+            height: 1rem;
+            margin-top: 0.2rem;
+            margin-right: 0.2rem;
+          }
+
+          .footer-title {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            color: #f4a800;
+          }
+        }
+
+        .footer-docs-group {
+          margin-left: 1rem;
+          p {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            /* or 150% */
+
+            color: #fcb9b9;
+          }
+        }
+      }
+      .footer-last-documents-2 {
+      }
+      .footer-last-documents-3 {
+      }
+      .footer-last-documents-4 {
+      }
+    }
+
+    .footer-last-group {
+      display: flex;
+      max-width: 100%;
+      margin-left: 20vh;
+      margin-right: 20vh;
+      flex-direction: column;
+
+      .footer-last-info {
+        display: flex;
+        flex-direction: row;
+        gap: 5%;
+        .icon-media{
+          color: white;
+        }
+        .footer-info {
+          display: flex;
+
+          p {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            /* identical to box height, or 150% */
+
+            color: #ffffff;
+          }
+        }
+      }
+
+      mat-divider {
+        background-color: #823C3C;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+      }
+      .footer-last-legal {
+        p {
+          font-family: 'Roboto';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 16px;
+          color: #FFFFFF;
+        }
+      }
+    }
+  }
+}
+.mat-menu-content{
+  background: #FFFFFF;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  padding: 32px 0px;
+}
+
+.img-container{
+  overflow: hidden;
+  height: 26px;
+  width: 32px;
+  display: flex;
+  border-radius: 50%;
+}
+
+.img-item-container{
+  overflow: hidden;
+  height: 26px;
+  width: 32px;
+  margin-right: 8px;
+  display: flex;
+  border-radius: 50%;
+}
+
+.button-wrapper{
+  display: flex !important;
+  flex-direction: row !important;
+}
+
+.img-element{
+  height: 26px;
+  width: 39px;
+}
+
+.dropdown{
+  margin-left: 20px !important;
+}
+
+.img-footer{
+  height: 63%;
+  max-height: 139px;
+  width: 15%;
+}
+
+.footer-seccion-doc{
+  display: flex;
+}
+@media (max-width: 700px) {
+  // .logos-group-1{
+
+  // }
+  .footer-seccion-doc{
+    flex-direction: column;
+  }
+  .nav-container{
+    display: none;
+  }
+
+  .footer .footer-last mat-chip{
+    width: 64%;
+  }
+
+  .footer .footer-comercios .logos-group-1{
+    flex-direction: column;
+  }
+
+  .footer .footer-comercios .logos-group-2{
+    flex-direction: column;
+  }
+
+  .footer .footer-comercios .logos-group-1 .img-section1{
+    // display: flex;
+    width: 100% !important;
+    // gap: 5%;
+  }
+  .footer-contactos .footer-contactos-container .footer-contactos-right{
+    width: 22% !important;
+  }
+  .footer-contactos .footer-contactos-container .footer-contactos-left{
+    width: 22% !important;
+  }
+
+  .footer .footer-comercios .logos-group-1 .img-section2{
+    // display: flex;
+    width: 100% !important;
+    // gap: 5%;
+  }
+
+  .footer .footer-comercios .logos-group-2 .img-section1{
+    // display: flex;
+    width: 100% !important;
+    // gap: 5%;
+  }
+
+
+  .footer .footer-comercios .logos-group-2 .img-section2{
+    // display: flex;
+    width: 100% !important;
+    // gap: 5%;
+  }
+
+  
+  .menu{
+    display: none;
+  }
+
+  .example-button-row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    width: 41%;
+    margin-left: 2rem;
+  }
+
+  .top-left{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

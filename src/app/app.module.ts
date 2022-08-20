@@ -46,6 +46,7 @@ import { SeccionesService } from 'src/app/services/secciones/secciones.service';
 import { PotencialidadesService } from './services/potencialidades/potencialidades.service';
 import { PagosService } from './services/pagos/pagos.service';
 import { BannersService } from './services/banners/banners.service';
+import { NavComponent } from './componentes/shared/nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +59,7 @@ import { BannersService } from './services/banners/banners.service';
     CaracteristicasComponent,
     FooterComponent,
     ServiciosComponent,
+    NavComponent,
   ],
   imports: [
     CommonModule,
