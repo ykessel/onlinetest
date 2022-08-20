@@ -34,20 +34,20 @@
         <div class="we-background">
 
         </div>
-        <div class="we-text">
+        <form [formGroup]="contactoForm" class="we-text">
             <div class="we-text-container">
-                <input type="text" placeholder="Empresa*" class="we-input"/>
-                <input type="text" placeholder="No Carnet*" class="we-input"/>
-                <input type="text" placeholder="Pagina Web" class="we-input"/>
-                <input type="text" placeholder="Nombre*" class="we-input"/>
-                <input type="text" placeholder="Apellidos*" class="we-input"/>
-                <input type="text" placeholder="Teléfono*" class="we-input"/>
-                <input type="text" placeholder="Email*" class="we-input"/>
+                <input type="text" required matInput formControlName="empresa" placeholder="Empresa*" class="we-input"/>
+                <input type="text" required matInput formControlName="numeroCarnet" placeholder="No Carnet*" class="we-input"/>
+                <input type="text" matInput formControlName="paginaWeb" placeholder="Pagina Web" class="we-input"/>
+                <input type="text" required matInput formControlName="nombre" placeholder="Nombre*" class="we-input"/>
+                <input type="text" required matInput formControlName="apellidos" placeholder="Apellidos*" class="we-input"/>
+                <input type="text" required matInput formControlName="telefono" placeholder="Teléfono*" class="we-input"/>
+                <input type="text" required matInput formControlName="correo" placeholder="Email*" type="email" class="we-input"/>
             </div>
             <div class="we-policy">
                 <div class="we-term">
                     <div class="check-container">
-                        <input type="checkbox" class="we-check"/>
+                        <input formControlName="suscripcion" type="checkbox" class="we-check"/>
                     </div>
                     <div class="p-container">
                         <p class="policy-p">He leído y acepto la <a href="#" class="link">Política de Privacidad</a> y <a href="#" class="link">Condiciones generales de BIPAY</a></p>
@@ -55,18 +55,19 @@
                 </div>
                 <div class="we-ask">
                     <div class="check-container">
-                        <input type="checkbox" class="we-check"/>
+                        <input formControlName="terminosCondiciones" type="checkbox" class="we-check"/>
                     </div>                    
                     <div class="p-container">
                         <p class="policy-p">Acepto recibir información comercial, incluso por medios electrónicos.</p>
                     </div>
                 </div>
                 <div class="button-container">
-                    <button class="form-button">
+                    <p>Form Status: {{ contactoForm.status }}</p>
+                    <button type="submit" (click)="sendContacto()" class="form-button">
                         Enviar
                     </button>
                 </div>
             </div>
-        </div>
+        </form>
     </div>
 </div>
