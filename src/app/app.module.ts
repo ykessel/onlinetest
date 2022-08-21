@@ -47,6 +47,7 @@ import { PotencialidadesService } from './services/potencialidades/potencialidad
 import { PagosService } from './services/pagos/pagos.service';
 import { BannersService } from './services/banners/banners.service';
 import { NavComponent } from './componentes/shared/nav/nav.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -86,6 +87,7 @@ import { NavComponent } from './componentes/shared/nav/nav.component';
 
     //3rd Party Libray
     CarouselModule,
+    FontAwesomeModule,
   ],
   exports: [
     FooterComponent,

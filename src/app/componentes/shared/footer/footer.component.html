@@ -9,33 +9,6 @@
         />
       </ng-container>
     </div>
-
-    <!-- <div class="logos-group-1">
-      <div class="img-section1">
-        <img class="img-footer" src="../../../../assets/logo1.png" alt="logo1" />
-        <img class="img-footer" src="../../../../assets/logo2.png" alt="logo2" />
-        <img class="img-footer" src="../../../../assets/logo3.png" alt="logo3" />
-      </div>
-
-      <div class="img-section2">
-        <img class="img-footer" src="../../../../assets/logo4.png" alt="logo4" />
-        <img class="img-footer" src="../../../../assets/logo5.png" alt="logo5" />
-        <img class="img-footer" src="../../../../assets/logo3.png" alt="logo3" />
-      </div>
-
-    </div>
-
-    <div class="logos-group-2">
-      <div class="img-section1">
-        <img class="img-footer" src="../../../../assets/logo1.png" alt="logo1" />
-        <img class="img-footer" src="../../../../assets/logo2.png" alt="logo2" />
-        <img class="img-footer" src="../../../../assets/logo5.png" alt="logo5" />
-      </div>
-
-      <div class="img-section2">
-        <img class="img-footer" src="../../../../assets/logo4.png" alt="logo4" />
-      </div>
-    </div> -->
   </div>
 
   <div class="footer-contactos">
@@ -96,7 +69,10 @@
 
         <ng-container *ngFor="let seccion of Secciones">
           <ng-container *ngIf="seccion.id == 22">
-            <p *ngIf="lang === 'es'" class="footer-description">
+            <div *ngIf="lang === 'es'" class="footer-description" [innerHTML]="seccion.contenidoEs" ></div>
+            <div *ngIf="lang === 'en'" class="footer-description" [innerHTML]="seccion.contenidoEn" ></div>
+            <div *ngIf="lang === 'xx'" class="footer-description" [innerHTML]="seccion.contenidoOtro" ></div>
+<!--             <p *ngIf="lang === 'es'" class="footer-description">
               {{ seccion.contenidoEs }}
             </p>
             <p *ngIf="lang === 'en'" class="footer-description">
@@ -104,7 +80,7 @@
             </p>
             <p *ngIf="lang === 'xx'" class="footer-description">
               {{ seccion.contenidoEs }}
-            </p>
+            </p> -->
           </ng-container>
         </ng-container>
       </div>
@@ -166,6 +142,7 @@
           <p>(800) 1234567891</p>
         </div>
       </div>
+      <fa-icon [icon]="faCoffee"></fa-icon>
       <mat-divider></mat-divider>
       <div class="footer-last-legal">
         <p>Copyrights 2021 por Bipay. Todos los derechos reservados</p>

@@ -3,7 +3,9 @@ import { IdiomasService } from 'src/app/services/idiomas/idiomas.service';
 import { CommonService } from 'src/app/services/system/common.service';
 import { AsociadosService } from 'src/app/services/asociados/asociados.service';
 import { SeccionesService } from 'src/app/services/secciones/secciones.service';
-
+import { SocialesService } from 'src/app/services/sociales/sociales.service';
+// import { faCoffee, faFacebook, faInstagram, faTwitter, faYoutube, faTikTok, faLinkedIn, faPinterest, faMessenger, faSnapchat, faReddit } from '@fortawesome/free-solid-svg-icons';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'bipay-footer',
@@ -15,10 +17,12 @@ export class FooterComponent implements OnInit {
   Idiomas: any[] = [];
   Asociados: any[] = [];
   Secciones: any[] = [];
+  Sociales: any[] = [];
+  faCoffee = faCoffee;
 
 
 
-  constructor(    private seccionesService: SeccionesService, private asociadosService: AsociadosService, private idiomasService: IdiomasService,
+  constructor(private socialesService: SocialesService, private seccionesService: SeccionesService, private asociadosService: AsociadosService, private idiomasService: IdiomasService,
     private commonService: CommonService,) { }
 
   ngOnInit(): void {
@@ -26,8 +30,16 @@ export class FooterComponent implements OnInit {
     this.getIdiomas();
     this.getAsociadosService();
     this.getSecciones();
+    this.getSociales();
     }
 
+  getSociales() {
+    this.socialesService.getSociales().subscribe((s) => {
+      this.Sociales = s;
+      console.log('Sociales', s);
+    });
+  }
+    
   getIdiomas() {
     this.idiomasService.getIdiomas()
     .subscribe(s => {
