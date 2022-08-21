@@ -1,5 +1,5 @@
 <div class="conatainer">
-  <div class="home">
+  <div class="home" ngsReveal>
     <ng-container *ngFor="let banner of Banners">
       <div class="home-left">
         <div class="home-pres">
@@ -52,7 +52,7 @@
     </ng-container>
   </div>
 
-  <div class="car-container">
+  <div class="car-container" ngsReveal>
     <div class="middle">
       <div class="carrusel-1">
         <button
@@ -166,7 +166,7 @@
     <div class="down"></div>
   </div>
 
-  <div class="carrusel-part2">
+  <div class="carrusel-part2" ngsReveal>
     <div class="carrusel-part2-first-line">
       <ng-container *ngFor="let seccion of Secciones">
         <ng-container *ngIf="seccion.id == 18">
@@ -203,7 +203,7 @@
     </div>
   </div>
 
-  <div class="carrusel-2">
+  <div class="carrusel-2" ngsReveal>
     <div class="carrusel-2-first-line">
       <img class="group-1" src="../../../../assets/Group.png" alt="Group 1" />
       <img class="group-2" src="../../../../assets/Group-2.png" alt="Group 2" />

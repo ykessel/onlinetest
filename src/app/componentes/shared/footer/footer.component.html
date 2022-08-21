@@ -1,5 +1,5 @@
-<div class="footer">
-  <div class="footer-comercios">
+<div class="footer" ngsReveal>
+  <div class="footer-comercios" ngsReveal>
     <div class="logos-footer">
       <ng-container *ngFor="let asoc of Asociados">
         <img
@@ -11,7 +11,7 @@
     </div>
   </div>
 
-  <div class="footer-contactos">
+  <div class="footer-contactos" ngsReveal>
     <img src="../../../../assets/curva2.png" class="bottom-line" />
     <div class="footer-contactos-container">
       <img
@@ -55,7 +55,7 @@
     </div>
   </div>
 
-  <div class="footer-last">
+  <div class="footer-last" ngsReveal>
     <mat-chip>
       <mat-icon>phone</mat-icon>
       <p>Llamenos</p>
@@ -63,7 +63,7 @@
       <p>(53) 12345678</p>
     </mat-chip>
 
-    <div class="footer-container">
+    <div class="footer-container" ngsReveal>
       <div class="footer-last-description">
         <img src="../assets/logo-footer.png" />
 
@@ -72,15 +72,6 @@
             <div *ngIf="lang === 'es'" class="footer-description" [innerHTML]="seccion.contenidoEs" ></div>
             <div *ngIf="lang === 'en'" class="footer-description" [innerHTML]="seccion.contenidoEn" ></div>
             <div *ngIf="lang === 'xx'" class="footer-description" [innerHTML]="seccion.contenidoOtro" ></div>
-<!--             <p *ngIf="lang === 'es'" class="footer-description">
-              {{ seccion.contenidoEs }}
-            </p>
-            <p *ngIf="lang === 'en'" class="footer-description">
-              {{ seccion.contenidoEs }}
-            </p>
-            <p *ngIf="lang === 'xx'" class="footer-description">
-              {{ seccion.contenidoEs }}
-            </p> -->
           </ng-container>
         </ng-container>
       </div>
@@ -125,7 +116,7 @@
       </div>
     </div>
 
-    <div class="footer-last-group">
+    <div class="footer-last-group" ngsReveal>
       <div class="footer-last-info">
         <div class="footer-info">
           <mat-icon>location</mat-icon>

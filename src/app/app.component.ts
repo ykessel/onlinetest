@@ -12,7 +12,7 @@ import { AsociadosService } from "src/app/services/asociados/asociados.service";
 })
 
 export class AppComponent implements OnInit {
-  title = "bipay-frontend-personal";
+  title = "Bipay";
   Secciones: any[] = [];
   Idiomas: any[] = [];
   Asociados: any[] = [];
@@ -27,7 +27,8 @@ export class AppComponent implements OnInit {
     private commonService: CommonService,
     private idiomasService: IdiomasService,
     private seccionesService: SeccionesService
-  ) {}
+  ) {
+  }
 
   ngOnInit(): void {
     this.getIdiomas();
@@ -78,5 +79,5 @@ export class AppComponent implements OnInit {
   changeLang(value: string) {
     this.commonService.changeData(value);
   }
-  
+
 }

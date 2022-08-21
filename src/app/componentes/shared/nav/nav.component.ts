@@ -14,10 +14,17 @@ export class NavComponent implements OnInit {
   flags_base: string = "https://purecatamphetamine.github.io/country-flag-icons/3x2/";
 
 
-  constructor(private idiomasService: IdiomasService,private commonService: CommonService,) { }
+  constructor(private idiomasService: IdiomasService, private commonService: CommonService,) { }
 
   ngOnInit(): void {
     this.commonService.data$.subscribe((res) => (this.lang = res));
+    this.getIdiomas();
+  }
+
+  getIdiomas() {
+    this.idiomasService.getIdiomas().subscribe((s) => {
+      this.Idiomas = s;
+    });
   }
 
   getFlags(sigla: string) {
