@@ -32,14 +32,12 @@ export class FooterComponent implements OnInit {
     this.idiomasService.getIdiomas()
     .subscribe(s => {
       this.Idiomas = s;
-      console.log("Idiomas", s)
     });
   }
 
     getSecciones() {
     this.seccionesService.getSecciones().subscribe((s) => {
       this.Secciones = s;
-      console.log('Secciones', s);
     });
   }
 
@@ -47,6 +45,5 @@ export class FooterComponent implements OnInit {
    getAsociadosService() {
     this.asociadosService.getAsociados().subscribe((s) => {
       this.Asociados = s.concat(s).concat(s);
-      console.log('Asociados', s);
    });
 }}
