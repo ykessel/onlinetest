@@ -291,6 +291,16 @@
         margin-top: 2rem;
         margin-bottom: 2rem;
       }
+
+      .footer-social {
+        display: flex;
+        gap: 1em;
+        
+        .footer-social-icon {
+          color: white;
+          font-size: 2em;
+        }
+      }
       
       .footer-last-legal {
         p {

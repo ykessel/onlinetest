@@ -69,9 +69,21 @@
 
         <ng-container *ngFor="let seccion of Secciones">
           <ng-container *ngIf="seccion.id == 22">
-            <div *ngIf="lang === 'es'" class="footer-description" [innerHTML]="seccion.contenidoEs" ></div>
-            <div *ngIf="lang === 'en'" class="footer-description" [innerHTML]="seccion.contenidoEn" ></div>
-            <div *ngIf="lang === 'xx'" class="footer-description" [innerHTML]="seccion.contenidoOtro" ></div>
+            <div
+              *ngIf="lang === 'es'"
+              class="footer-description"
+              [innerHTML]="seccion.contenidoEs"
+            ></div>
+            <div
+              *ngIf="lang === 'en'"
+              class="footer-description"
+              [innerHTML]="seccion.contenidoEn"
+            ></div>
+            <div
+              *ngIf="lang === 'xx'"
+              class="footer-description"
+              [innerHTML]="seccion.contenidoOtro"
+            ></div>
           </ng-container>
         </ng-container>
       </div>
@@ -133,7 +145,87 @@
           <p>(800) 1234567891</p>
         </div>
       </div>
-      <fa-icon [icon]="faCoffee"></fa-icon>
+      <div class="footer-social">
+        <ng-container *ngFor="let social of Sociales">
+          <ng-container *ngIf="social.nombre === 'Facebook'">
+            <a [href]="social.enlace" target="_blank"
+              ><fa-icon class="footer-social-icon" [icon]="faFacebook"></fa-icon
+            ></a>
+          </ng-container>
+
+          <ng-container *ngIf="social.nombre === 'G+'">
+            <a [href]="social.enlace" target="_blank">
+              <fa-icon
+                class="footer-social-icon"
+                [icon]="faGooglePlus"
+              ></fa-icon>
+            </a>
+          </ng-container>
+
+          <ng-container *ngIf="social.nombre == 'Instagram'">
+            <a [href]="social.enlace" target="_blank"
+              ><fa-icon
+                class="footer-social-icon"
+                [icon]="faInstagram"
+              ></fa-icon
+            ></a>
+          </ng-container>
+
+          <ng-container *ngIf="social.nombre == 'Youtube'">
+            <a [href]="social.enlace" target="_blank"
+              ><fa-icon class="footer-social-icon" [icon]="faYoutube"></fa-icon
+            ></a>
+          </ng-container>
+
+          <ng-container *ngIf="social.nombre == 'Twitter'">
+            <a [href]="social.enlace" target="_blank"
+              ><fa-icon class="footer-social-icon" [icon]="faTwitter"></fa-icon
+            ></a>
+          </ng-container>
+
+          <ng-container *ngIf="social.nombre == 'TikTok'">
+            <a [href]="social.enlace" target="_blank"
+              ><fa-icon class="footer-social-icon" [icon]="faTiktok"></fa-icon
+            ></a>
+          </ng-container>
+
+          <ng-container *ngIf="social.nombre == 'Linkedin'">
+            <a [href]="social.enlace" target="_blank"
+              ><fa-icon class="footer-social-icon" [icon]="faLinkedin"></fa-icon
+            ></a>
+          </ng-container>
+
+          <ng-container *ngIf="social.nombre == 'Pinterest'">
+            <a [href]="social.enlace" target="_blank"
+              ><fa-icon
+                class="footer-social-icon"
+                [icon]="faPinterest"
+              ></fa-icon
+            ></a>
+          </ng-container>
+
+          <ng-container *ngIf="social.nombre == 'Messenger'">
+            <a [href]="social.enlace" target="_blank">
+              <fa-icon
+                class="footer-social-icon"
+                [icon]="faFacebookMessenger"
+              ></fa-icon
+            ></a>
+          </ng-container>
+
+          <ng-container *ngIf="social.nombre == 'Snapchat'">
+            <a [href]="social.enlace" target="_blank"
+              ><fa-icon class="footer-social-icon" [icon]="faSnapchat"></fa-icon
+            ></a>
+          </ng-container>
+
+          <ng-container *ngIf="social.nombre == 'Reddit'">
+            <a [href]="social.enlace" target="_blank"
+              ><fa-icon class="footer-social-icon" [icon]="faReddit"></fa-icon
+            ></a>
+          </ng-container>
+        </ng-container>
+      </div>
       <mat-divider></mat-divider>
       <div class="footer-last-legal">
         <p>Copyrights 2021 por Bipay. Todos los derechos reservados</p>

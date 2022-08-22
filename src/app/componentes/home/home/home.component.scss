@@ -41,8 +41,8 @@
           color: #353535;
         }
 
-        .home-pres-p{
-          font-family: 'Roboto';
+        .home-pres-p {
+          font-family: "Roboto";
           font-style: normal;
           font-weight: 400;
           font-size: 12px;
@@ -69,14 +69,14 @@
             justify-content: center;
             align-items: flex-start;
             padding: 4%;
-            font-family: 'Fredoka One';
+            font-family: "Fredoka One";
             font-style: normal;
             font-weight: 400;
             font-size: 20px;
             line-height: 24px;
             text-align: center;
 
-            color: #5D0303;
+            color: #5d0303;
             background: #f6d895;
             border-radius: 50px;
           }
@@ -87,14 +87,14 @@
             justify-content: center;
             align-items: flex-start;
             padding: 4%;
-            font-family: 'Fredoka One';
+            font-family: "Fredoka One";
             font-style: normal;
             font-weight: 400;
             font-size: 20px;
             line-height: 24px;
             text-align: center;
 
-            color: #5D0303;
+            color: #5d0303;
 
             background: #feb5b5;
             border-radius: 50px;
@@ -554,8 +554,8 @@
     }
 
     .carrusel-2-chips {
-      width: 4rem;
-      height: 2rem;
+      width: 4%;
+      height: 2%;
       background: #f6d895;
       border-radius: 60px;
       align-self: center;
@@ -642,8 +642,8 @@
     line-height: 30px !important;
   }
 
-   .carrusel-part2-first-line {
+  .carrusel-part2-first-line {
     flex-direction: column !important;
     margin-right: 4%;
-   }
+  }
 }

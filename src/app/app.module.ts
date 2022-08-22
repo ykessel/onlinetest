@@ -92,7 +92,7 @@ import { BannersService } from './services/banners/banners.service';
     //3rd Party Libray
     CarouselModule,
     FontAwesomeModule,
-    NgsRevealModule
+    NgsRevealModule,
   ],
   exports: [
     FooterComponent,

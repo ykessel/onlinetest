@@ -18,89 +18,53 @@
           <p *ngIf="lang === 'xx'" class="header-title">
             {{ seccion.tituloOtro }}
           </p>
-          <p class="header-text" *ngIf="lang === 'es'">
-            {{ seccion.contenidoEs }}
-          </p>
-          <p class="header-text" *ngIf="lang === 'en'">
-            {{ seccion.contenidoEn }}
-          </p>
-          <p class="header-text" *ngIf="lang === 'xx'">
-            {{ seccion.contenidoEs }}
-          </p>
         </ng-container>
       </ng-container>
     </div>
-    <mat-accordion class="content-text">
-      <div class="card-docs">
-        <img class="docs-header-1" src="../../../../assets/img_header.png" />
-        <img class="docs-img" src="../../../../assets/img_pagoonline.png" />
-        <div class="content-center">
-          <p class="title">Pago Online</p>
-          <p class="content-text">
-            {{ isHide ? textContent.substr(0, 300) + "..." : textContent }}
-          </p>
-        <button style="display: flex; width: 1rem; align-self: self-end;" mat-flat-button (click)="hideAndShow()">
-          <mat-icon>{{ isHide ? "expand_more" : "expand_less" }}</mat-icon>
-        </button>
-        </div>
-      </div>
-      <!-- <md-button ue|false" md-ripple-size="full|partial|auto">content</md-button> -->
-    </mat-accordion>
+    <mat-accordion>
+      <ng-container *ngFor="let servicio of Servicios">
+        <div class="card-docs">
+          <img class="docs-header-1" src="../../../../assets/img_header.png" />
+          <img class="docs-img" src="../../../../assets/img_pagoonline.png" />
+          <div class="content-center">
+            <p class="title" *ngIf="lang === 'es'">{{ servicio.tituloEs }}</p>
+            <p class="title" *ngIf="lang === 'en'">{{ servicio.tituloEn }}</p>
+            <p class="title" *ngIf="lang === 'xx'">{{ servicio.tituloOtro }}</p>
 
-    <!--  <div class="card-docs">
-      <img class="docs-header-1" src="../../../../assets/img_header.png" />
-
-      <img class="docs-img" src="../../../../assets/img_pagoonline.png" />
-
-      <div class="content-center">
-        <p class="title">Pago Online</p>
-        <p class="content-text">
-          Aprobado por el Banco Central de Cuba y reconocido por otros
-          organismos del estado como el Ministerio del Turismo, Ministerio.
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-        </p>
-
-        <mat-accordion class="content-text">
-          <mat-expansion-panel
-            (opened)="panelOpenState = true"
-            (closed)="panelOpenState = false"
-          >
-            <mat-expansion-panel-header>
-              <mat-panel-description>
-                {{ panelOpenState ? "" : "Aprobado por el Banco Central de Cuba y reconocido por otros
-                organismos del estado como el Ministerio del Turismo, Ministerio.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad" }}
-
-              </mat-panel-description>
-            </mat-expansion-panel-header>
-            <p>
-              Aprobado por el Banco Central de Cuba y reconocido por otros
-              organismos del estado como el Ministerio del Turismo, Ministerio.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-              minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-              aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-              pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum. Sed ut
-              perspiciatis unde omnis iste natus error sit voluptatem accusantium
-              doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
-              inventore veritatis et quasi architecto beatae vitae dicta sunt
-              explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-              odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
-              voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum
-              quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam
-              eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
-              voluptatem.
+            <p class="content-text" *ngIf="lang === 'es'">
+              {{
+                isHide
+                  ? cleanText(servicio.contenidoEs).substr(0, 300) + "..."
+                  : cleanText(servicio.contenidoEs)
+              }}
             </p>
-          </mat-expansion-panel>
-        </mat-accordion>
 
-      </div>
-    </div> -->
+            <p class="content-text" *ngIf="lang === 'en'">
+              {{
+                isHide
+                  ? cleanText(servicio.contenidoEn).substr(0, 300) + "..."
+                  : cleanText(servicio.contenidoEn)
+              }}
+            </p>
 
+            <p class="content-text" *ngIf="lang === 'xx'">
+              {{
+                hideElement(servicio.id)
+                  ? cleanText(servicio.contenidoOtro).substr(0, 300) + "..."
+                  : cleanText(servicio.contenidoOtro)
+              }}
+            </p>
+            <button
+              style="display: flex; width: 1rem; align-self: self-end"
+              mat-flat-button
+              (click)="hideAndShow(servicio.id)"
+            >
+              <mat-icon>{{ isHide ? "expand_more" : "expand_less" }}</mat-icon>
+            </button>
+          </div>
+        </div>
+      </ng-container>
+    </mat-accordion>
     <div class="right">
       <img class="right-img" src="../../../../assets/grafica_der1.png" />
     </div>

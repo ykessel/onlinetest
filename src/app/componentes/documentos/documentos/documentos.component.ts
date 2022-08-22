@@ -55,18 +55,13 @@ export class DocumentosComponent implements OnInit {
     new JsFileDownloader({ 
     url: url_doc
   })
-  .then(function () {
+  .then(() => {
     console.log("Donwloaded", url_doc);
     // Called when download ended
   })
-  .catch(function (error) {
+  .catch((error) => {
     // Called when an error occurred
      console.log("Somthing wrong happend", url_doc);
   });
-
-  //   let link = document.createElement("a");
-  //   document.body.appendChild(link);
-  //   link.href = url_doc;
-  //   link.click();
   }
 }

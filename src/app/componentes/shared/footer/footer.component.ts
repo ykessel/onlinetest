@@ -4,8 +4,7 @@ import { CommonService } from 'src/app/services/system/common.service';
 import { AsociadosService } from 'src/app/services/asociados/asociados.service';
 import { SeccionesService } from 'src/app/services/secciones/secciones.service';
 import { SocialesService } from 'src/app/services/sociales/sociales.service';
-// import { faCoffee, faFacebook, faInstagram, faTwitter, faYoutube, faTikTok, faLinkedIn, faPinterest, faMessenger, faSnapchat, faReddit } from '@fortawesome/free-solid-svg-icons';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { faFacebook,faGooglePlus, faFacebookMessenger, faInstagram, faTwitter, faYoutube, faTiktok, faLinkedin, faPinterest, faSnapchat, faReddit } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'bipay-footer',
@@ -18,9 +17,17 @@ export class FooterComponent implements OnInit {
   Asociados: any[] = [];
   Secciones: any[] = [];
   Sociales: any[] = [];
-  faCoffee = faCoffee;
-
-
+  faFacebook = faFacebook;
+  faInstagram = faInstagram;
+  faTwitter = faTwitter;
+  faYoutube = faYoutube;
+  faTiktok = faTiktok;
+  faLinkedin = faLinkedin;
+  faPinterest = faPinterest; 
+  faFacebookMessenger = faFacebookMessenger; 
+  faSnapchat = faSnapchat;
+  faReddit = faReddit;
+  faGooglePlus = faGooglePlus;
 
   constructor(private socialesService: SocialesService, private seccionesService: SeccionesService, private asociadosService: AsociadosService, private idiomasService: IdiomasService,
     private commonService: CommonService,) { }
