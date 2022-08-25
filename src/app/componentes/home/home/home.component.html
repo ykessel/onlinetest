@@ -16,7 +16,7 @@
             </h3>
             <!-- <img class="header" src="../../../../assets/img_header.png" /> -->
             <p class="home-pres-p" *ngIf="lang === 'es'">
-              
+
               {{ banner.contenidoEs }}
             </p>
             <p class="home-pres-p" *ngIf="lang === 'en'">
@@ -168,7 +168,7 @@
 
   <div class="carrusel-part2" ngsReveal>
     <div class="carrusel-part2-first-line">
-      <ng-container *ngFor="let seccion of Secciones">
+      <ng-container *ngFor="let seccion of secciones$ | async">
         <ng-container *ngIf="seccion.id == 18">
           <div class="carrusel-part2-gruop">
             <p *ngIf="lang === 'es'" class="pagos">{{ seccion.tituloEs }}</p>
@@ -208,7 +208,7 @@
       <img class="group-1" src="../../../../assets/Group.png" alt="Group 1" />
       <img class="group-2" src="../../../../assets/Group-2.png" alt="Group 2" />
       <span class="example-spacer"></span>
-      <ng-container *ngFor="let seccion of Secciones">
+      <ng-container *ngFor="let seccion of secciones$ | async">
         <p
           *ngIf="seccion.id === 19 && lang === 'es'"
           class="carrusel-2-first-line-text"
@@ -289,7 +289,7 @@
 
     <div class="carrusel-2-third-line">
       <div class="curved-container">
-        <ng-container *ngFor="let seccion of Secciones">
+        <ng-container *ngFor="let seccion of secciones$ | async">
           <ng-template *ngIf="seccion.id === 20">
             <p *ngIf="lang === 'es'" class="carrusel-2-third-line-text">
               {{ seccion.tituloEs }}

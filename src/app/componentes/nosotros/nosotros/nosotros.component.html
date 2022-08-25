@@ -3,7 +3,7 @@
         <div class="left-img"></div>
         <div class="center-content">
             <div class="chip-img"></div>
-            <ng-container *ngFor="let seccion of Secciones">
+            <ng-container *ngFor="let seccion of secciones$ | async">
                 <ng-container *ngIf="seccion.id == 13">
                     <h1 *ngIf="lang === 'es'" class="contact-tittle">
                         {{ seccion.tituloEs }}
@@ -32,11 +32,11 @@
         <div class="we-text">
             <div class="we-text-container">
 
-                  <ng-container *ngFor="let seccion of Secciones">
+                  <ng-container *ngFor="let seccion of secciones$ | async">
                 <ng-container *ngIf="seccion.id == 13">
-                    <div *ngIf="lang === 'es'" [innerHTML]="seccion.contenidoEs" ></div> 
-                    <div *ngIf="lang === 'en'" [innerHTML]="seccion.contenidoEs" ></div> 
-                    <div *ngIf="lang === 'xx'" [innerHTML]="seccion.contenidoOtro" ></div> 
+                    <div *ngIf="lang === 'es'" [innerHTML]="seccion.contenidoEs" ></div>
+                    <div *ngIf="lang === 'en'" [innerHTML]="seccion.contenidoEs" ></div>
+                    <div *ngIf="lang === 'xx'" [innerHTML]="seccion.contenidoOtro" ></div>
         <!--         <h1 class="we-tittle">Historia</h1>
                     <p class="p-text" *ngIf="lang === 'es'" class="contact-tittle">
                         {{ seccion.contenidoEs }}
@@ -51,7 +51,7 @@
                     </p> -->
                 </ng-container>
             </ng-container>
-            </div> 
+            </div>
         </div>
     </div>
 </div>

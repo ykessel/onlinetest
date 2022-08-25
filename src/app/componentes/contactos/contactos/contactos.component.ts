@@ -1,6 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { FormGroup, Validators, FormBuilder } from "@angular/forms";
 import { FormsService } from "src/app/services/system/forms.service";
+import { Store } from '@ngrx/store';
+import { selectSecciones } from 'src/app/store/secciones/sercciones.selectors';
 
 @Component({
   selector: "bipay-contactos",
@@ -9,8 +11,9 @@ import { FormsService } from "src/app/services/system/forms.service";
 })
 export class ContactosComponent implements OnInit {
   contactoForm: FormGroup;
+  secciones$ = this.store.select(selectSecciones);
 
-  constructor(private fb: FormBuilder, private formsService: FormsService) {
+  constructor(private store: Store, private fb: FormBuilder, private formsService: FormsService) {
     this.contactoForm = this.fb.group({
       empresa: ["", Validators.required],
       paginaWeb: [""],

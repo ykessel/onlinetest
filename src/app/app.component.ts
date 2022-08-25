@@ -4,6 +4,9 @@ import { CommonService } from "./services/system/common.service";
 import { SeccionesService } from "./services/secciones/secciones.service";
 import { FormControl } from "@angular/forms";
 import { AsociadosService } from "src/app/services/asociados/asociados.service";
+import { Store } from '@ngrx/store';
+import { getSecciones } from 'src/app/store/secciones/secciones.actions';
+import { selectSecciones } from 'src/app/store/secciones/sercciones.selectors';
 
 @Component({
   selector: "app-root",
@@ -13,7 +16,7 @@ import { AsociadosService } from "src/app/services/asociados/asociados.service";
 
 export class AppComponent implements OnInit {
   title = "Bipay";
-  Secciones: any[] = [];
+  secciones$ = this.store.select(selectSecciones);
   Idiomas: any[] = [];
   Asociados: any[] = [];
   lang: string = "";
@@ -23,6 +26,7 @@ export class AppComponent implements OnInit {
     "https://purecatamphetamine.github.io/country-flag-icons/3x2/";
 
   constructor(
+    private store: Store,
     private asociadosService: AsociadosService,
     private commonService: CommonService,
     private idiomasService: IdiomasService,
@@ -31,8 +35,11 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.seccionesService.getSecciones()
+    .subscribe((secciones) => this.store.dispatch(getSecciones({ secciones })));
+
     this.getIdiomas();
-    this.getSecciones();
+    // this.getSecciones();
     this.getAsociadosService();
     this.commonService.data$.subscribe((res) => (this.lang = res));
   }
@@ -70,11 +77,11 @@ export class AppComponent implements OnInit {
     });
   }
 
-  getSecciones() {
-    this.seccionesService.getSecciones().subscribe((s) => {
-      this.Secciones = s;
-    });
-  }
+  // getSecciones() {
+  //   this.seccionesService.getSecciones().subscribe((s) => {
+  //     this.Secciones = s;
+  //   });
+  // }
 
   changeLang(value: string) {
     this.commonService.changeData(value);

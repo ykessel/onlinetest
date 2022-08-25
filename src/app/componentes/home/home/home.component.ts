@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { CaracteristicasService } from 'src/app/services/caracteristicas/caracteristicas.service';
 import { PagosService } from 'src/app/services/pagos/pagos.service';
-import { SeccionesService } from 'src/app/services/secciones/secciones.service';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { IdiomasService } from 'src/app/services/idiomas/idiomas.service';
 import { CommonService } from 'src/app/services/system/common.service';
 import { PotencialidadesService } from 'src/app/services/potencialidades/potencialidades.service'
 import { BannersService } from 'src/app/services/banners/banners.service';
 import { AsociadosService } from 'src/app/services/asociados/asociados.service';
+import { Store } from '@ngrx/store';
+import { selectSecciones } from 'src/app/store/secciones/sercciones.selectors';
 
 @Component({
   selector: 'bipay-home',
@@ -15,17 +16,16 @@ import { AsociadosService } from 'src/app/services/asociados/asociados.service';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  Secciones: any[] = [];
   Caracteristicas: any[] = [];
   Pagos: any[] = [];
   lang: string = '';
   Idiomas: any[] = [];
   Potencialidades: any[] = [];
   Banners: any[] = [];
-  
+  secciones$ = this.store.select(selectSecciones);
 
   constructor(
-    private seccionesService: SeccionesService,
+    private store: Store,
     private pagosService: PagosService,
     private caracteristicasService: CaracteristicasService,
     private idiomasService: IdiomasService,
@@ -35,13 +35,12 @@ export class HomeComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.getSecciones();
     this.getCaracteristicas();
     this.getPagos();
     this.getIdiomas();
     this.getPotencialidades();
     this.getBannersService();
-    this.commonService.data$.subscribe(res => this.lang = res) 
+    this.commonService.data$.subscribe(res => this.lang = res)
   }
 
   customOptions: OwlOptions = {
@@ -81,12 +80,6 @@ export class HomeComponent implements OnInit {
   getPotencialidades() {
     this.potencialidadesService.getPotencialidades().subscribe((s) => {
       this.Potencialidades = s;
-    });
-  }
-
-  getSecciones() {
-    this.seccionesService.getSecciones().subscribe((s) => {
-      this.Secciones = s;
     });
   }
 
