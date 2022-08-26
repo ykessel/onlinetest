@@ -28,7 +28,7 @@
       </ng-container>
     </div>
 
-    <div *ngFor="let doc of documentos" class="card-docs">
+    <div *ngFor="let doc of documentos$ | async" class="card-docs">
       <img class="docs-header-1" src="../../../../assets/img_header.png" />
       <div class="docs-cuadro"></div>
 

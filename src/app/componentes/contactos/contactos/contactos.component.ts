@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { FormGroup, Validators, FormBuilder } from "@angular/forms";
 import { FormsService } from "src/app/services/system/forms.service";
 import { Store } from '@ngrx/store';
-import { selectSecciones } from 'src/app/store/secciones/sercciones.selectors';
+import { selectSecciones } from "src/app/store/secciones/secciones.selectors";
 
 @Component({
   selector: "bipay-contactos",

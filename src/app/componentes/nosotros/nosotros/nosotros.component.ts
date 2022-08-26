@@ -3,8 +3,9 @@ import { IdiomasService } from 'src/app/services/idiomas/idiomas.service';
 import { CommonService } from 'src/app/services/system/common.service';
 import { SeccionesService } from 'src/app/services/secciones/secciones.service';
 import { Store } from '@ngrx/store';
-import { getSecciones } from './../../../store/secciones/secciones.actions';
-import { selectSecciones } from './../../../store/secciones/sercciones.selectors';
+import { getSecciones } from 'src/app/store/secciones/secciones.actions';
+import { selectSecciones } from "src/app/store/secciones/secciones.selectors";
+
 @Component({
   selector: "bipay-nosotros",
   templateUrl: "./nosotros.component.html",

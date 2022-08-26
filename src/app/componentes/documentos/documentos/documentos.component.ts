@@ -5,7 +5,8 @@ import { CommonService } from "src/app/services/system/common.service";
 import { SeccionesService } from "src/app/services/secciones/secciones.service";
 import JsFileDownloader from 'js-file-downloader';
 import { Store } from '@ngrx/store';
-import { selectSecciones } from 'src/app/store/secciones/sercciones.selectors';
+import { selectDocumentos } from "src/app/store/documentos/documentos.selectors";
+import { selectSecciones } from "src/app/store/secciones/secciones.selectors";
 
 @Component({
   selector: "bipay-documentos",
@@ -14,7 +15,8 @@ import { selectSecciones } from 'src/app/store/secciones/sercciones.selectors';
 })
 export class DocumentosComponent implements OnInit {
   secciones$ = this.store.select(selectSecciones);
-  documentos: any[] = [];
+  documentos$ = this.store.select(selectDocumentos);
+  // documentos: any[] = [];
   lang: string = "";
   Idiomas: any[] = [];
 
@@ -27,16 +29,16 @@ export class DocumentosComponent implements OnInit {
 
   ngOnInit(): void {
     this.getIdiomas();
-    this.getDocumentos();
+    // this.getDocumentos();
     this.commonService.data$.subscribe((res) => (this.lang = res));
   }
 
-  getDocumentos() {
-    this.documentosService.getDocumentos().subscribe((s) => {
-      this.documentos = s;
-      console.log("Documentos", s);
-    });
-  }
+  // getDocumentos() {
+  //   this.documentosService.getDocumentos().subscribe((s) => {
+  //     this.documentos = s;
+  //     console.log("Documentos", s);
+  //   });
+  // }
 
   getIdiomas() {
     this.idiomasService.getIdiomas().subscribe((s) => {

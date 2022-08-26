@@ -58,6 +58,8 @@ import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { SeccinesReducer } from './store/secciones/secciones.reducer';
+import { IdiomasReducer } from './store/idiomas/idiomas.reducer';
+import { DocumentosReducer } from './store/documentos/documentos.reducer';
 
 @NgModule({
   declarations: [
@@ -99,8 +101,18 @@ import { SeccinesReducer } from './store/secciones/secciones.reducer';
     CarouselModule,
     FontAwesomeModule,
     NgsRevealModule,
-    StoreModule.forRoot({ secciones: SeccinesReducer }, {}),
-    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
+    StoreModule.forRoot(
+      {
+        secciones: SeccinesReducer,
+        idiomas: IdiomasReducer,
+        documentos: DocumentosReducer,
+      },
+      {}
+    ),
+    StoreDevtoolsModule.instrument({
+      maxAge: 25,
+      logOnly: environment.production,
+    }),
   ],
   exports: [
     FooterComponent,

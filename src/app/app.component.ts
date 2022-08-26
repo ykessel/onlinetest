@@ -1,3 +1,4 @@
+import { getDocumentos } from './store/documentos/documentos.actions';
 import { Component, OnInit } from "@angular/core";
 import { IdiomasService } from "./services/idiomas/idiomas.service";
 import { CommonService } from "./services/system/common.service";
@@ -6,7 +7,8 @@ import { FormControl } from "@angular/forms";
 import { AsociadosService } from "src/app/services/asociados/asociados.service";
 import { Store } from '@ngrx/store';
 import { getSecciones } from 'src/app/store/secciones/secciones.actions';
-import { selectSecciones } from 'src/app/store/secciones/sercciones.selectors';
+import { selectSecciones } from 'src/app/store/secciones/secciones.selectors';
+import { DocumentosService } from './services/documentos/documentos.service';
 
 @Component({
   selector: "app-root",
@@ -30,13 +32,20 @@ export class AppComponent implements OnInit {
     private asociadosService: AsociadosService,
     private commonService: CommonService,
     private idiomasService: IdiomasService,
-    private seccionesService: SeccionesService
+    private seccionesService: SeccionesService,
+    private documentosService: DocumentosService,
   ) {
   }
 
   ngOnInit(): void {
     this.seccionesService.getSecciones()
     .subscribe((secciones) => this.store.dispatch(getSecciones({ secciones })));
+
+    this.documentosService.getDocumentos()
+    .subscribe((documentos) => this.store.dispatch(getDocumentos({ documentos })));
+
+    this.idiomasService.getIdiomas()
+    .subscribe((documentos) => this.store.dispatch(getDocumentos({ documentos })))
 
     this.getIdiomas();
     // this.getSecciones();

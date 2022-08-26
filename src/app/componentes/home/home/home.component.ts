@@ -8,7 +8,7 @@ import { PotencialidadesService } from 'src/app/services/potencialidades/potenci
 import { BannersService } from 'src/app/services/banners/banners.service';
 import { AsociadosService } from 'src/app/services/asociados/asociados.service';
 import { Store } from '@ngrx/store';
-import { selectSecciones } from 'src/app/store/secciones/sercciones.selectors';
+import { selectSecciones } from 'src/app/store/secciones/secciones.selectors';
 
 @Component({
   selector: 'bipay-home',
@@ -35,11 +35,11 @@ export class HomeComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.getBannersService();
     this.getCaracteristicas();
     this.getPagos();
     this.getIdiomas();
     this.getPotencialidades();
-    this.getBannersService();
     this.commonService.data$.subscribe(res => this.lang = res)
   }
 

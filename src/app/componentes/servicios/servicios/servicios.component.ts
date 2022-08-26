@@ -3,7 +3,7 @@ import { IdiomasService } from "src/app/services/idiomas/idiomas.service";
 import { CommonService } from "src/app/services/system/common.service";
 import { ServiciosService } from "src/app/services/servicios/servicios.service";
 import { Store } from '@ngrx/store';
-import { selectSecciones } from './../../../store/secciones/sercciones.selectors';
+import { selectSecciones } from "src/app/store/secciones/secciones.selectors";
 
 @Component({
   selector: "bipay-servicios",
