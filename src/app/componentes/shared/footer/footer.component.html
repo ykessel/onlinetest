@@ -1,7 +1,7 @@
 <div class="footer" ngsReveal>
   <div class="footer-comercios" ngsReveal>
     <div class="logos-footer">
-      <ng-container *ngFor="let asoc of Asociados">
+      <ng-container *ngFor="let asoc of asociados$ | async">
         <img
           class="img-footer"
           src="../../../../assets/logo1.png"
@@ -21,7 +21,7 @@
       />
 
       <div class="footer-contactos-center">
-        <ng-container *ngFor="let seccion of Secciones">
+        <ng-container *ngFor="let seccion of secciones$ | async">
           <ng-container *ngIf="seccion.id == 21">
             <p *ngIf="lang === 'es'" class="footer-contactos-title">
               {{ seccion.tituloEs }}
@@ -67,7 +67,7 @@
       <div class="footer-last-description">
         <img src="../assets/logo-footer.png" />
 
-        <ng-container *ngFor="let seccion of Secciones">
+        <ng-container *ngFor="let seccion of secciones$ | async">
           <ng-container *ngIf="seccion.id == 22">
             <div
               *ngIf="lang === 'es'"
@@ -146,7 +146,7 @@
         </div>
       </div>
       <div class="footer-social">
-        <ng-container *ngFor="let social of Sociales">
+        <ng-container *ngFor="let social of sociales$ | async">
           <ng-container *ngIf="social.nombre === 'Facebook'">
             <a [href]="social.enlace" target="_blank"
               ><fa-icon class="footer-social-icon" [icon]="faFacebook"></fa-icon

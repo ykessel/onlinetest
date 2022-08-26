@@ -1,3 +1,9 @@
+import { AsociadosReducer } from './store/asociados/asociados.reducer';
+import { BannersReducer } from './store/banners/banners.reducer';
+import { CaracteristicasReducer } from './store/caracteristicas/caracteristicas.reducer';
+import { PagosReducer } from './store/pagos/pagos.reducer';
+import { PotencialidadesReducer } from './store/potencialidades/potencialidades.reducer';
+import { SocialesReducer } from './store/sociales/sociales.reducer';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
@@ -58,6 +64,10 @@ import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { SeccinesReducer } from './store/secciones/secciones.reducer';
+import { IdiomasReducer } from './store/idiomas/idiomas.reducer';
+import { DocumentosReducer } from './store/documentos/documentos.reducer';
+import { ServiciosReducer } from './store/servicios/servicios.reducer';
+import { SystemLangReducer, SystemServiceIdReducer } from './store/system/system.reducer';
 
 @NgModule({
   declarations: [
@@ -99,8 +109,27 @@ import { SeccinesReducer } from './store/secciones/secciones.reducer';
     CarouselModule,
     FontAwesomeModule,
     NgsRevealModule,
-    StoreModule.forRoot({ secciones: SeccinesReducer }, {}),
-    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
+    StoreModule.forRoot(
+      {
+        secciones: SeccinesReducer,
+        idiomas: IdiomasReducer,
+        documentos: DocumentosReducer,
+        servicios: ServiciosReducer,
+        sociales: SocialesReducer,
+        potencialidades: PotencialidadesReducer,
+        pagos: PagosReducer,
+        caracteristicas: CaracteristicasReducer,
+        banners: BannersReducer,
+        asociados: AsociadosReducer,
+        lang: SystemLangReducer,
+        serviceId: SystemServiceIdReducer,
+      },
+      {}
+    ),
+    StoreDevtoolsModule.instrument({
+      maxAge: 25,
+      logOnly: environment.production,
+    }),
   ],
   exports: [
     FooterComponent,
