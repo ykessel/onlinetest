@@ -151,6 +151,12 @@ section {
 
 .button-wrapper{
   display: flex !important;
+  width: 48px;
+  flex-direction: row !important;
+}
+
+.button-wrapper-item{
+  display: flex !important;
   width: 91px;
   flex-direction: row !important;
 }

@@ -185,7 +185,7 @@
             *ngFor="let idioma of idiomas$ | async"
             (click)="changeLang(idioma.siglas)"
           >
-            <div class="button-wrapper">
+            <div class="button-wrapper-item">
               <div class="img-item-container">
                 <img
                   *ngIf="idioma.nombre !== 'Otro'"
