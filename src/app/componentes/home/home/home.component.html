@@ -1,6 +1,6 @@
 <div class="conatainer">
   <div class="home" ngsReveal>
-    <ng-container *ngFor="let banner of Banners">
+    <ng-container *ngFor="let banner of banners$ | async">
       <div class="home-left">
         <div class="home-pres">
           <img src="../../../../assets/img_header.png" class="pres-img" />
@@ -76,8 +76,8 @@
 
         <div class="carrusel-caract">
           <owl-carousel-o [options]="customOptions" #owlCar>
-            <ng-container *ngFor="let caract of Caracteristicas">
-              <ng-template carouselSlide [id]="caract.id">
+            <ng-container *ngFor="let caract of caracteristicas$ | async">
+              <ng-template carouselSlide>
                 <div class="carrusel-1-cards">
                   <div>
                     <img
@@ -197,7 +197,7 @@
     </div>
 
     <div class="carrusel-part2-third-line">
-      <ng-container *ngFor="let pago of Pagos">
+      <ng-container *ngFor="let pago of pagos$ | async">
         <img src="{{ pago.logo }}" class="small-card" />
       </ng-container>
     </div>
@@ -251,7 +251,7 @@
       </button>
 
       <owl-carousel-o [options]="customOptions" #owlPoten>
-        <ng-container *ngFor="let ponte of Potencialidades">
+        <ng-container *ngFor="let ponte of potencialidades$ | async">
           <div class="carrusel-2-cards">
             <div>
               <p class="carrusel-2-cards-text-title">

@@ -31,7 +31,7 @@
       </ng-container>
     </div>
     <mat-accordion>
-      <ng-container *ngFor="let servicio of Servicios">
+      <ng-container *ngFor="let servicio of servicios$ | async">
         <div class="card-docs">
           <img class="docs-header-1" src="../../../../assets/img_header.png" />
           <img class="docs-img" src="../../../../assets/img_pagoonline.png" />

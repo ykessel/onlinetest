@@ -182,7 +182,7 @@
         <mat-menu #menu="matMenu">
           <button
             mat-menu-item
-            *ngFor="let idioma of Idiomas"
+            *ngFor="let idioma of idiomas$ | async"
             (click)="changeLang(idioma.siglas)"
           >
             <div class="button-wrapper">

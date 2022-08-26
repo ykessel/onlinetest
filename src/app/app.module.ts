@@ -1,3 +1,9 @@
+import { AsociadosReducer } from './store/asociados/asociados.reducer';
+import { BannersReducer } from './store/banners/banners.reducer';
+import { CaracteristicasReducer } from './store/caracteristicas/caracteristicas.reducer';
+import { PagosReducer } from './store/pagos/pagos.reducer';
+import { PotencialidadesReducer } from './store/potencialidades/potencialidades.reducer';
+import { SocialesReducer } from './store/sociales/sociales.reducer';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
@@ -60,6 +66,8 @@ import { environment } from '../environments/environment';
 import { SeccinesReducer } from './store/secciones/secciones.reducer';
 import { IdiomasReducer } from './store/idiomas/idiomas.reducer';
 import { DocumentosReducer } from './store/documentos/documentos.reducer';
+import { ServiciosReducer } from './store/servicios/servicios.reducer';
+import { SystemLangReducer } from './store/system/system.reducer';
 
 @NgModule({
   declarations: [
@@ -106,6 +114,14 @@ import { DocumentosReducer } from './store/documentos/documentos.reducer';
         secciones: SeccinesReducer,
         idiomas: IdiomasReducer,
         documentos: DocumentosReducer,
+        servicios: ServiciosReducer,
+        sociales: SocialesReducer,
+        potencialidades: PotencialidadesReducer,
+        pagos: PagosReducer,
+        caracteristicas: CaracteristicasReducer,
+        banners: BannersReducer,
+        asociados: AsociadosReducer,
+        lang: SystemLangReducer,
       },
       {}
     ),

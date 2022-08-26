@@ -1,14 +1,24 @@
+import { selectBanners } from './../../../store/banners/banners.selectors';
+import { getCaracteristicas } from './../../../store/caracteristicas/caracteristicas.actions';
+import { selectCaracteristicas } from './../../../store/caracteristicas/caracteristicas.selectors';
+import { selectPagos } from './../../../store/pagos/pagos.selectors';
 import { Component, OnInit } from '@angular/core';
 import { CaracteristicasService } from 'src/app/services/caracteristicas/caracteristicas.service';
 import { PagosService } from 'src/app/services/pagos/pagos.service';
 import { OwlOptions } from 'ngx-owl-carousel-o';
-import { IdiomasService } from 'src/app/services/idiomas/idiomas.service';
+// import { IdiomasService } from 'src/app/services/idiomas/idiomas.service';
 import { CommonService } from 'src/app/services/system/common.service';
 import { PotencialidadesService } from 'src/app/services/potencialidades/potencialidades.service'
 import { BannersService } from 'src/app/services/banners/banners.service';
 import { AsociadosService } from 'src/app/services/asociados/asociados.service';
 import { Store } from '@ngrx/store';
 import { selectSecciones } from 'src/app/store/secciones/secciones.selectors';
+import { getBanners } from 'src/app/store/banners/banners.actions';
+import { getPotencialidades } from 'src/app/store/potencialidades/potencialidades.actions';
+import { selectPotencialidades } from 'src/app/store/potencialidades/potencialidades.selectors';
+import { selectServicios } from 'src/app/store/servicios/servicios.selectors';
+import { getPagos } from 'src/app/store/pagos/pagos.actions';
+import { selectLang } from 'src/app/store/system/system.selectors';
 
 @Component({
   selector: 'bipay-home',
@@ -16,31 +26,44 @@ import { selectSecciones } from 'src/app/store/secciones/secciones.selectors';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  Caracteristicas: any[] = [];
-  Pagos: any[] = [];
   lang: string = '';
-  Idiomas: any[] = [];
-  Potencialidades: any[] = [];
-  Banners: any[] = [];
   secciones$ = this.store.select(selectSecciones);
+  servicios$ = this.store.select(selectServicios);
+  potencialidades$ = this.store.select(selectPotencialidades);
+  pagos$ = this.store.select(selectPagos);
+  caracteristicas$ = this.store.select(selectCaracteristicas);
+  banners$ = this.store.select(selectBanners);
+  lang$ = this.store.select(selectLang).subscribe((l) => this.lang = l);
 
   constructor(
     private store: Store,
     private pagosService: PagosService,
     private caracteristicasService: CaracteristicasService,
-    private idiomasService: IdiomasService,
-    private commonService: CommonService,
     private potencialidadesService: PotencialidadesService,
     private bannersService: BannersService,
   ) {}
 
   ngOnInit(): void {
-    this.getBannersService();
-    this.getCaracteristicas();
-    this.getPagos();
-    this.getIdiomas();
-    this.getPotencialidades();
-    this.commonService.data$.subscribe(res => this.lang = res)
+
+    this.bannersService.getBanners()
+    .subscribe((banners) =>
+      this.store.dispatch(getBanners({ banners }))
+    );
+
+    this.potencialidadesService.getPotencialidades()
+    .subscribe((potencialidades) =>
+      this.store.dispatch(getPotencialidades({ potencialidades }))
+    );
+
+    this.caracteristicasService.getCaracteristicas()
+    .subscribe((caracteristicas) =>
+      this.store.dispatch(getCaracteristicas({ caracteristicas }))
+    );
+
+    this.pagosService.getPagos()
+    .subscribe((pagos) =>
+      this.store.dispatch(getPagos({ pagos }))
+    );
   }
 
   customOptions: OwlOptions = {
@@ -70,37 +93,4 @@ export class HomeComponent implements OnInit {
     },
     nav: false,
   };
-
- getBannersService() {
-    this.bannersService.getBanners().subscribe((s) => {
-      this.Banners = s;
-    });
-  }
-
-  getPotencialidades() {
-    this.potencialidadesService.getPotencialidades().subscribe((s) => {
-      this.Potencialidades = s;
-    });
-  }
-
-  getCaracteristicas() {
-    this.caracteristicasService.getCaracteristicas().subscribe((s) => {
-      this.Caracteristicas = s.concat(s).concat(s).concat(s);
-    });
-  }
-
-  getPagos() {
-    this.pagosService.getPagos().subscribe((s) => {
-      let f = s;
-      let r = s;
-      this.Pagos = f.concat(r);
-    });
-  }
-
-  getIdiomas() {
-    this.idiomasService.getIdiomas()
-    .subscribe(s => {
-      this.Idiomas = s;
-    });
-  }
 }
