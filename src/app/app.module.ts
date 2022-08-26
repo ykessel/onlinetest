@@ -67,7 +67,7 @@ import { SeccinesReducer } from './store/secciones/secciones.reducer';
 import { IdiomasReducer } from './store/idiomas/idiomas.reducer';
 import { DocumentosReducer } from './store/documentos/documentos.reducer';
 import { ServiciosReducer } from './store/servicios/servicios.reducer';
-import { SystemLangReducer } from './store/system/system.reducer';
+import { SystemLangReducer, SystemServiceIdReducer } from './store/system/system.reducer';
 
 @NgModule({
   declarations: [
@@ -122,6 +122,7 @@ import { SystemLangReducer } from './store/system/system.reducer';
         banners: BannersReducer,
         asociados: AsociadosReducer,
         lang: SystemLangReducer,
+        serviceId: SystemServiceIdReducer,
       },
       {}
     ),

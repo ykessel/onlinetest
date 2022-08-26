@@ -176,7 +176,7 @@ section {
 }
 
 @media (max-width: 700px) {
-  .menu{
+  .menu, .nav-container {
     display: none;
   }
 

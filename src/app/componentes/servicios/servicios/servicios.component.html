@@ -42,25 +42,25 @@
 
             <p class="content-text" *ngIf="lang === 'es'">
               {{
-                isHide
-                  ? cleanText(servicio.contenidoEs).substr(0, 300) + "..."
-                  : cleanText(servicio.contenidoEs)
+                sid === servicio.id
+                  ? cleanText(servicio.contenidoEs)
+                  : cleanText(servicio.contenidoEs).substr(0, 300) + "..."
               }}
             </p>
 
             <p class="content-text" *ngIf="lang === 'en'">
               {{
-                isHide
-                  ? cleanText(servicio.contenidoEn).substr(0, 300) + "..."
-                  : cleanText(servicio.contenidoEn)
+                sid === servicio.id
+                  ? cleanText(servicio.contenidoEs)
+                  : cleanText(servicio.contenidoEs).substr(0, 300) + "..."
               }}
             </p>
 
             <p class="content-text" *ngIf="lang === 'xx'">
               {{
-                hideElement(servicio.id)
-                  ? cleanText(servicio.contenidoOtro).substr(0, 300) + "..."
-                  : cleanText(servicio.contenidoOtro)
+                sid === servicio.id
+                  ? cleanText(servicio.contenidoEs)
+                  : cleanText(servicio.contenidoEs).substr(0, 300) + "..."
               }}
             </p>
             <button
@@ -68,7 +68,7 @@
               mat-flat-button
               (click)="hideAndShow(servicio.id)"
             >
-              <mat-icon>{{ isHide ? "expand_more" : "expand_less" }}</mat-icon>
+              <mat-icon>{{ sid === servicio.id ? "expand_less" : "expand_more" }}</mat-icon>
             </button>
           </div>
         </div>
