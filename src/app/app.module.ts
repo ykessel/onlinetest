@@ -53,6 +53,12 @@ import { PotencialidadesService } from './services/potencialidades/potencialidad
 import { PagosService } from './services/pagos/pagos.service';
 import { BannersService } from './services/banners/banners.service';
 
+// Redux
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
+import { SeccinesReducer } from './store/secciones/secciones.reducer';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -93,6 +99,8 @@ import { BannersService } from './services/banners/banners.service';
     CarouselModule,
     FontAwesomeModule,
     NgsRevealModule,
+    StoreModule.forRoot({ secciones: SeccinesReducer }, {}),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
   ],
   exports: [
     FooterComponent,

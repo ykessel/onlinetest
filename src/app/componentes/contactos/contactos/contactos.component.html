@@ -4,7 +4,11 @@
         </div>
         <div class="center-content">
             <div class="chip-img"></div>
-            <h1 class="contact-tittle">Contáctanos</h1>
+            <ng-container *ngFor="let seccion of secciones$ | async">
+              <ng-container *ngIf="seccion.id == 16">
+                <h1 class="contact-tittle">{{ seccion.nombre }}</h1>
+            </ng-container>
+            </ng-container>
         </div>
         <div class="rigth-container">
             <div class="rigth-img">
@@ -21,12 +25,12 @@
             <div class="text-center">
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero modi ex accusamus fugit officiis eaque commodi nisi corrupti neque, corporis laborum minus praesentium, reiciendis cumque, id quis quisquam. Labore, blanditiis?
-                </p>                
+                </p>
             </div>
 
             <div class="container-der">
                 <div class="img-chip-der"></div>
-                
+
                 <div class="img-chip-menor"></div>
             </div>
         </div>
@@ -51,12 +55,12 @@
                     </div>
                     <div class="p-container">
                         <p class="policy-p">He leído y acepto la <a href="#" class="link">Política de Privacidad</a> y <a href="#" class="link">Condiciones generales de BIPAY</a></p>
-                    </div>                    
+                    </div>
                 </div>
                 <div class="we-ask">
                     <div class="check-container">
                         <input formControlName="terminosCondiciones" type="checkbox" class="we-check"/>
-                    </div>                    
+                    </div>
                     <div class="p-container">
                         <p class="policy-p">Acepto recibir información comercial, incluso por medios electrónicos.</p>
                     </div>

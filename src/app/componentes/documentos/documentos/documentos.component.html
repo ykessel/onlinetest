@@ -7,9 +7,15 @@
   <div class="center">
     <div class="documentos-servicios">
       <img class="docs-header" src="../../../../assets/img_header.png" />
-      <ng-container *ngFor="let seccion of Secciones">
+      <ng-container *ngFor="let seccion of secciones$ | async">
         <ng-container *ngIf="seccion.id == 15">
-          <p *ngIf="lang === 'es'" class="header-title">
+          <p  class="header-title">
+            {{ seccion.nombre }}
+          </p>
+          <!-- Suponiendo que el titulo de la pagina venga en diferente idiomas
+          este es el codigo   -->
+
+          <!-- <p *ngIf="lang === 'es'" class="header-title">
             {{ seccion.tituloEs }}
           </p>
           <p *ngIf="lang === 'en'" class="header-title">
@@ -17,16 +23,7 @@
           </p>
           <p *ngIf="lang === 'xx'" class="header-title">
             {{ seccion.tituloOtro }}
-          </p>
-          <p class="header-text" *ngIf="lang === 'es'">
-            {{ seccion.contenidoEs }}
-          </p>
-          <p class="header-text" *ngIf="lang === 'en'">
-            {{ seccion.contenidoEn }}
-          </p>
-          <p class="header-text" *ngIf="lang === 'xx'">
-            {{ seccion.contenidoOtro }}
-          </p>
+          </p> -->
         </ng-container>
       </ng-container>
     </div>
@@ -39,6 +36,7 @@
         <p *ngIf="lang === 'es'" class="title">{{ doc.tituloEs }}</p>
         <p *ngIf="lang === 'en'" class="title">{{ doc.tituloEn }}</p>
         <p *ngIf="lang === 'xx'" class="title">{{ doc.tituloOtro }}</p>
+
         <p *ngIf="lang === 'es'" class="content-text">
           {{ doc.slugEs }}
         </p>
