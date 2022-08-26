@@ -48,8 +48,6 @@
   font-size: 16px;
   line-height: 19px;
 /* identical to box height */
-
-
   color: #000000;
 }
 
@@ -137,7 +135,7 @@ section {
 .img-container{
   overflow: hidden;
   height: 26px;
-  width: 32px;
+  width: 26px;
   display: flex;
   border-radius: 50%;
 }
@@ -145,7 +143,7 @@ section {
 .img-item-container{
   overflow: hidden;
   height: 26px;
-  width: 32px;
+  width: 26px;
   margin-right: 8px;
   display: flex;
   border-radius: 50%;
@@ -153,12 +151,13 @@ section {
 
 .button-wrapper{
   display: flex !important;
+  width: 91px;
   flex-direction: row !important;
 }
 
 .img-element{
-  height: 26px;
-  width: 39px;
+  height: 27px;
+  width: 63px;
 }
 
 .dropdown{
@@ -177,6 +176,10 @@ section {
 
 @media (max-width: 700px) {
   .menu{
+    display: none;
+  }
+  
+  .nav-container{
     display: none;
   }
 

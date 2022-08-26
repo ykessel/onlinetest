@@ -32,12 +32,12 @@
         <div class="we-text">
             <div class="we-text-container">
 
-                  <ng-container *ngFor="let seccion of Secciones">
-                <ng-container *ngIf="seccion.id == 13">
-                    <div *ngIf="lang === 'es'" [innerHTML]="seccion.contenidoEs" ></div> 
-                    <div *ngIf="lang === 'en'" [innerHTML]="seccion.contenidoEs" ></div> 
-                    <div *ngIf="lang === 'xx'" [innerHTML]="seccion.contenidoOtro" ></div> 
-        <!--         <h1 class="we-tittle">Historia</h1>
+                <ng-container *ngFor="let seccion of Secciones">
+                    <ng-container *ngIf="seccion.id == 13">
+                        <div class="we-seccion" *ngIf="lang === 'es'" [innerHTML]="seccion.contenidoEs"></div>
+                        <div class="we-seccion" *ngIf="lang === 'en'" [innerHTML]="seccion.contenidoEs"></div>
+                        <div class="we-seccion" *ngIf="lang === 'xx'" [innerHTML]="seccion.contenidoOtro"></div>
+                        <!--         <h1 class="we-tittle">Historia</h1>
                     <p class="p-text" *ngIf="lang === 'es'" class="contact-tittle">
                         {{ seccion.contenidoEs }}
                     </p>
@@ -49,9 +49,9 @@
                     <p class="p-text" *ngIf="lang === 'xx'" class="contact-tittle">
                         {{ seccion.contenidoEs }}
                     </p> -->
+                    </ng-container>
                 </ng-container>
-            </ng-container>
-            </div> 
+            </div>
         </div>
     </div>
 </div>

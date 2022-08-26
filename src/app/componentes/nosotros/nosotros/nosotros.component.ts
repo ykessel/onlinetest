@@ -8,6 +8,7 @@ import { SeccionesService } from 'src/app/services/secciones/secciones.service';
   templateUrl: "./nosotros.component.html",
   styleUrls: ["./nosotros.component.scss"],
 })
+
 export class NosotrosComponent implements OnInit {
   Secciones: any[] = [];
   lang: string = "";
@@ -26,6 +27,7 @@ export class NosotrosComponent implements OnInit {
   }
 
   getSecciones() {
+    
     this.seccionesService.getSecciones().subscribe((s) => {
       this.Secciones = s;
       console.log("Secciones", s);

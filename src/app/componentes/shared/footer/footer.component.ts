@@ -11,6 +11,7 @@ import { faFacebook,faGooglePlus, faFacebookMessenger, faInstagram, faTwitter, f
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss']
 })
+
 export class FooterComponent implements OnInit {
   lang: string = '';
   Idiomas: any[] = [];
@@ -43,7 +44,6 @@ export class FooterComponent implements OnInit {
   getSociales() {
     this.socialesService.getSociales().subscribe((s) => {
       this.Sociales = s;
-      console.log('Sociales', s);
     });
   }
     
