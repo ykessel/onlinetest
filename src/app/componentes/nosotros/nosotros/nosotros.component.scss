@@ -55,7 +55,7 @@
     color: #353535;
 }
 
-.chip-img{    
+.chip-img{
     width: 25px;
     height: 50px;
     background: url(../../../../assets/img_header.png);
@@ -64,7 +64,7 @@
 
 .contact-body{
     height: 90%;
-}   
+}
 
 .initial-space{
     height: 40%;
@@ -144,7 +144,7 @@
     background: #FFFFFF;
 }
 
-.img-text{
+.img-text {
     height: 30%;
     width: 100%;
     padding: 5% 5% 0 5%;
@@ -152,18 +152,37 @@
     background: url(../../../../assets/Rectangle13.png);
 }
 
-.we-tittle{
+.nos-container {
+  h1 {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
     line-height: 32px;
     color: #353535;
+  }
+
+  * > img {
+    width: 100%;
+  }
+
+  p {
+    color: #727272;
+  }
 }
 
-.p-text{
-    color: #727272;
-}
+// .we-tittle{
+//     font-family: 'Roboto';
+//     font-style: normal;
+//     font-weight: 700;
+//     font-size: 32px;
+//     line-height: 32px;
+//     color: #353535;
+// }
+
+// .p-text{
+//     color: #727272;
+// }
 .we-text-container{
     width: 60%;
 }

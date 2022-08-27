@@ -34,9 +34,9 @@
 
                   <ng-container *ngFor="let seccion of secciones$ | async">
                 <ng-container *ngIf="seccion.id == 13">
-                    <div *ngIf="lang === 'es'" [innerHTML]="seccion.contenidoEs" ></div>
-                    <div *ngIf="lang === 'en'" [innerHTML]="seccion.contenidoEs" ></div>
-                    <div *ngIf="lang === 'xx'" [innerHTML]="seccion.contenidoOtro" ></div>
+                    <div class="nos-container" *ngIf="lang === 'es'" [innerHTML]="seccion.contenidoEs" ></div>
+                    <div class="nos-container" *ngIf="lang === 'en'" [innerHTML]="seccion.contenidoEs" ></div>
+                    <div class="nos-container" *ngIf="lang === 'xx'" [innerHTML]="seccion.contenidoOtro" ></div>
         <!--         <h1 class="we-tittle">Historia</h1>
                     <p class="p-text" *ngIf="lang === 'es'" class="contact-tittle">
                         {{ seccion.contenidoEs }}
