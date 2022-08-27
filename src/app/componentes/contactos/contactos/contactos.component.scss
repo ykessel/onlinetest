@@ -1,5 +1,5 @@
 .contact-container{
-    height: 100vh;
+    height: 189vh;
     background-color: white;
 }
 
@@ -8,7 +8,7 @@
     margin-top: 2%;
     flex-direction: row;
     align-items: center;
-    height: 20%;
+    height: 9%;
 }
 
 .left-img{
@@ -353,7 +353,8 @@
     word-wrap: break-word;
     width: 30%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    margin-top: 4%;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;

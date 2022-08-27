@@ -1,5 +1,5 @@
 .contact-container{
-    height: 100vh;
+    height: 260vh;
     background-color: white;
 }
 
@@ -8,7 +8,7 @@
     margin-top: 2%;
     flex-direction: row;
     align-items: center;
-    height: 20%;
+    height: 9%;
 }
 
 .left-img{
@@ -126,8 +126,19 @@
     transform: rotate(-180deg);
 }
 
+.we-seccion{
+    h1{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 32px;
+        color: #353535;
+    }
+}
+
 .we-background{
-    height: 220%;
+    height: 100%;
     width: 100%;
     background: linear-gradient(90deg, rgba(250, 166, 167, 0.3) 0%, rgba(181, 231, 255, 0.3) 67.02%, rgba(255, 223, 149, 0.3) 98.96%);
     border-radius: 0px;
@@ -140,7 +151,7 @@
     width: 55%;
     height: 200%;
     left: 26%;
-    top: 50%;
+    top: 40%;
     background: #FFFFFF;
 }
 

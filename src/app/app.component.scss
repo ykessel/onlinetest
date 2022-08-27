@@ -510,6 +510,7 @@ section {
 .footer-seccion-doc{
   display: flex;
 }
+
 @media (max-width: 700px) {
   // .logos-group-1{
 
@@ -517,10 +518,7 @@ section {
   .footer-seccion-doc{
     flex-direction: column;
   }
-  .nav-container{
-    display: none;
-  }
-
+ 
   .footer .footer-last mat-chip{
     width: 64%;
   }
