@@ -126,17 +126,6 @@
     transform: rotate(-180deg);
 }
 
-.we-seccion{
-    h1{
-        font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 32px;
-        line-height: 32px;
-        color: #353535;
-    }
-}
-
 .we-background{
     height: 100%;
     width: 100%;
@@ -163,6 +152,10 @@
     background: url(../../../../assets/Rectangle13.png);
 }
 
+.we-text-container{
+    width: 60%;
+}
+
 .nos-container {
   h1 {
     font-family: 'Roboto';
@@ -173,27 +166,16 @@
     color: #353535;
   }
 
-  * > img {
+  figure {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  * > img, img {
     width: 100%;
   }
 
   p {
     color: #727272;
   }
-}
-
-// .we-tittle{
-//     font-family: 'Roboto';
-//     font-style: normal;
-//     font-weight: 700;
-//     font-size: 32px;
-//     line-height: 32px;
-//     color: #353535;
-// }
-
-// .p-text{
-//     color: #727272;
-// }
-.we-text-container{
-    width: 60%;
 }
