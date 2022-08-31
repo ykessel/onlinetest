@@ -29,7 +29,7 @@ body {
 
 .owl-carousel .owl-item {
     padding: 0.5em;
-    width: fit-content;
+    max-width: fit-content;
 }
 
 .owl-carousel .owl-stage {
@@ -37,13 +37,11 @@ body {
     // width: 100% !important;
 }
 
-.owl-carousel .owl-item {
-    // width: 2500px !important;
-    // display: flex;
-    // justify-content: center;
-    // width: 100% !important;
+.carrusel-potencial {
+    .owl-carousel .owl-item {
+        width: 10% !important;
+    }
+    .owl-carousel >  :first-child  {
+        margin-left: 5% !important;
+    }
 }
-
-
-
-/*.owl-carousel .owl-stage { display: flex; align-items: center; }*/

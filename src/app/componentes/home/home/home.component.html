@@ -115,22 +115,16 @@
                       class="carrusel-1-cards-img"
                       src="../../../../assets/img_header.png"
                     />
-                    <div class="carrusel-1-cards-text-title">                      
-                    <p
-                      *ngIf="lang === 'es'"
-                    >
-                      {{ caract.tituloEs }}
-                    </p>
-                    <p
-                      *ngIf="lang === 'en'"
-                    >
-                      {{ caract.tituloEn }}
-                    </p>
-                    <p
-                      *ngIf="lang === 'xx'"
-                    >
-                      {{ caract.tituloOtro }}
-                    </p>
+                    <div class="carrusel-1-cards-text-title">
+                      <p *ngIf="lang === 'es'">
+                        {{ caract.tituloEs }}
+                      </p>
+                      <p *ngIf="lang === 'en'">
+                        {{ caract.tituloEn }}
+                      </p>
+                      <p *ngIf="lang === 'xx'">
+                        {{ caract.tituloOtro }}
+                      </p>
                     </div>
 
                     <div
@@ -150,7 +144,6 @@
                       class="carrusel-1-cards-text"
                       [innerHTML]="caract.contenidoOtro"
                     ></div>
-
                   </div>
 
                   <div
@@ -280,18 +273,44 @@
         </svg>
       </button>
 
-      <div class="carrusel-caract">
+      <div class="carrusel-potencial">
         <owl-carousel-o [options]="customOptions2" #owlPoten>
           <ng-container *ngFor="let ponte of potencialidades$ | async">
             <ng-template carouselSlide>
               <div class="carrusel-2-cards">
                 <div>
-                  <p class="carrusel-2-cards-text-title">
+                  <p class="carrusel-2-cards-text-title" *ngIf="lang === 'es'">
                     {{ ponte.tituloEs }}
                   </p>
-                  <p class="carrusel-2-cards-text">
-                    {{ ponte.contenidoEs }}
+
+                  <p class="carrusel-2-cards-text-title" *ngIf="lang === 'en'">
+                    {{ ponte.tituloEn }}
                   </p>
+
+                  <p class="carrusel-2-cards-text-title" *ngIf="lang === 'xx'">
+                    {{ ponte.tituloOtro }}
+                  </p>
+
+                  <!-- Contenido -->
+
+                  <div
+                    *ngIf="lang === 'es'"
+                    class="carrusel-2-cards-text"
+                    [innerHTML]="ponte.contenidoEs"
+                  ></div>
+
+                  <div
+                    *ngIf="lang === 'en'"
+                    class="carrusel-2-cards-text"
+                    [innerHTML]="ponte.contenidoEn"
+                  ></div>
+
+                  <div
+                    *ngIf="lang === 'xx'"
+                    class="carrusel-2-cards-text"
+                    [innerHTML]="ponte.contenidoOtro"
+                  ></div>
+
                   <div class="carrusel-2-cards-bottom-image">
                     <img src="{{ ponte.imagenEs }}" />
                   </div>
