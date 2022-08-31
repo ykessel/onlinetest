@@ -27,13 +27,13 @@
             </p>
             <div class="home-pres-rect"></div>
             <div class="home-pres-buttons">
-              <mat-chip class="home-button-1" *ngIf="lang === 'es'">{{banner.textoBtn1Es}}</mat-chip>
-              <mat-chip class="home-button-1" *ngIf="lang === 'en'">{{banner.textoBtn1En}}</mat-chip>
-              <mat-chip class="home-button-1" *ngIf="lang === 'xx'">{{banner.textoBtn1Otro}}</mat-chip>
+              <a mat-button class="home-button-1" href="{{banner.enlaceBtn1Es}}" *ngIf="lang === 'es'">{{banner.textoBtn1Es}}</a>
+              <a mat-button class="home-button-1" href="{{banner.enlaceBtn1En}}" *ngIf="lang === 'en'">{{banner.textoBtn1En}}</a>
+              <a mat-button class="home-button-1" href="{{banner.enlaceBtn1Otro}}" *ngIf="lang === 'xx'">{{banner.textoBtn1Otro}}</a>
 
-              <mat-chip class="home-button-2" *ngIf="lang === 'en'">{{banner.textoBtn2En}}</mat-chip>
-              <mat-chip class="home-button-2" *ngIf="lang === 'es'">{{banner.textoBtn2Es}}</mat-chip>
-              <mat-chip class="home-button-2" *ngIf="lang === 'xx'">{{banner.textoBtn2Otro}}</mat-chip>
+              <a mat-button class="home-button-2" href="{{banner.enlaceBtn2En}}" *ngIf="lang === 'en'">{{banner.textoBtn2En}}</a>
+              <a mat-button class="home-button-2" href="{{banner.enlaceBtn2Es}}" *ngIf="lang === 'es'">{{banner.textoBtn2Es}}</a>
+              <a mat-button class="home-button-2" href="{{banner.enlaceBtn2Otro}}" *ngIf="lang === 'xx'">{{banner.textoBtn2Otro}}</a>
             </div>
           </div>
         </div>
