@@ -20,13 +20,15 @@ export class DocumentosComponent implements OnInit {
   constructor(
     private store: Store,
     private documentosService: DocumentosService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.documentosService
       .getDocumentos()
-      .subscribe((documentos) =>
+      .subscribe((documentos) => {
+
         this.store.dispatch(getDocumentos({ documentos }))
+      }
       );
   }
 

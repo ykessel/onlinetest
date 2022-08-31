@@ -1,3 +1,13 @@
+.left-container{
+  display: flex;
+  margin-left: 5%;
+  gap: 5%;
+}
+.info-container{
+  display: flex;
+  
+}
+
 .documentos-container {
   display: flex;
   width: 100%;
@@ -83,21 +93,22 @@
   padding: 32px;
   gap: 32px;
   margin-bottom: 20px;
-
+  justify-content: space-between;
   background: #ffffff;
   box-shadow: 0px 0px 16px rgba(217, 208, 184, 0.5);
   border-radius: 24px;
 
   .docs-header-1 {
-    width: 0.4rem;
+    width: 9px;
+    height: 17px;
   }
   .header-img {
     background-image: url("../../../../assets/img_header.png");
   }
 
   .docs-cuadro {
-    width: 64px;
-    height: 64px;
+    width: 68px;
+    height: 52px;
 
     background: #dadada;
     border-radius: 8px;
@@ -106,6 +117,7 @@
   .content-center {
     display: flex;
     flex-direction: column;
+    width: 94%;
 
     .title {
       font-family: "Roboto";

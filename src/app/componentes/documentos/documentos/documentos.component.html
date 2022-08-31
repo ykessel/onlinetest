@@ -9,7 +9,7 @@
       <img class="docs-header" src="../../../../assets/img_header.png" />
       <ng-container *ngFor="let seccion of secciones$ | async">
         <ng-container *ngIf="seccion.id == 15">
-          <p  class="header-title">
+          <p class="header-title">
             {{ seccion.nombre }}
           </p>
           <!-- Suponiendo que el titulo de la pagina venga en diferente idiomas
@@ -29,37 +29,42 @@
     </div>
 
     <div *ngFor="let doc of documentos$ | async" class="card-docs">
-      <img class="docs-header-1" src="../../../../assets/img_header.png" />
-      <div class="docs-cuadro"></div>
+      <div class="info-container">
+        <img class="docs-header-1" src="../../../../assets/img_header.png" />
+        <div class="left-container">
+          <div class="docs-cuadro"></div>
+          <div class="content-center">
+            <p *ngIf="lang === 'es'" class="title">{{ doc.tituloEs }}</p>
+            <p *ngIf="lang === 'en'" class="title">{{ doc.tituloEn }}</p>
+            <p *ngIf="lang === 'xx'" class="title">{{ doc.tituloOtro }}</p>
 
-      <div class="content-center">
-        <p *ngIf="lang === 'es'" class="title">{{ doc.tituloEs }}</p>
-        <p *ngIf="lang === 'en'" class="title">{{ doc.tituloEn }}</p>
-        <p *ngIf="lang === 'xx'" class="title">{{ doc.tituloOtro }}</p>
-
-        <p *ngIf="lang === 'es'" class="content-text">
-          {{ doc.slugEs }}
-        </p>
-        <p *ngIf="lang === 'en'" class="content-text">
-          {{ doc.slugEs }}
-        </p>
-        <p *ngIf="lang === 'xx'" class="content-text">
-          {{ doc.slugEs }}
-        </p>
+            <p *ngIf="lang === 'es'" class="content-text">
+              {{ doc.slugEs }}
+            </p>
+            <p *ngIf="lang === 'en'" class="content-text">
+              {{ doc.slugEs }}
+            </p>
+            <p *ngIf="lang === 'xx'" class="content-text">
+              {{ doc.slugEs }}
+            </p>
+          </div>
+        </div>
       </div>
+      <div class="button-container">
+        <button *ngIf="lang === 'es'" (click)="downloadDoc(doc.documentoEs)" mat-button>
+          <mat-icon>download</mat-icon>
+        </button>
 
-      <button *ngIf="lang === 'es'" (click)="downloadDoc(doc.documentoEs)" mat-button>
-        <mat-icon>download</mat-icon>
-      </button>
+        <button *ngIf="lang === 'en'" (click)="downloadDoc(doc.documentoEn)" mat-button>
+          <mat-icon>download</mat-icon>
+        </button>
 
-      <button *ngIf="lang === 'en'" (click)="downloadDoc(doc.documentoEn)"mat-button>
-        <mat-icon>download</mat-icon>
-      </button>
-
-      <button *ngIf="lang === 'xx'" (click)="downloadDoc(doc.documentoOtro)"mat-button>
-        <mat-icon>download</mat-icon>
-      </button>
+        <button *ngIf="lang === 'xx'" (click)="downloadDoc(doc.documentoOtro)" mat-button>
+          <mat-icon>download</mat-icon>
+        </button>
+      </div>
     </div>
+
   </div>
 
   <div class="right">

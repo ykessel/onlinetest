@@ -1,5 +1,5 @@
 .contact-container{
-    height: 260vh;
+    height: 155vh;
     background-color: white;
 }
 
@@ -46,13 +46,13 @@
 }
 
 .contact-tittle{
-    font-family: 'Fredoka One';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 35px;
-    line-height: 68px;
+    font-family: 'Fredoka One' !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    font-size: 35px !important;
+    line-height: 68px !important;
     margin: 0 0 0 2% !important;
-    color: #353535;
+    color: #353535 !important;
 }
 
 .chip-img{
@@ -67,7 +67,7 @@
 }
 
 .initial-space{
-    height: 40%;
+    height: 32%;
     width: 100%;
     display: flex;
     padding-bottom: 10%;
@@ -127,7 +127,7 @@
 }
 
 .we-background{
-    height: 100%;
+    height: 91%;
     width: 100%;
     background: linear-gradient(90deg, rgba(250, 166, 167, 0.3) 0%, rgba(181, 231, 255, 0.3) 67.02%, rgba(255, 223, 149, 0.3) 98.96%);
     border-radius: 0px;
@@ -138,7 +138,7 @@
     display: flex;
     justify-content: center;
     width: 55%;
-    height: 200%;
+    height: 127%;
     left: 26%;
     top: 40%;
     background: #FFFFFF;
@@ -162,6 +162,15 @@
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
+    line-height: 32px;
+    color: #353535;
+  }
+
+  h3{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
     line-height: 32px;
     color: #353535;
   }
