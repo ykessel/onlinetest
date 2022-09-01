@@ -1,6 +1,17 @@
 .footer-contact{
   display: flex;
-  gap: 9%;
+  gap: 5%;
+}
+
+.footer-description{
+  p{
+    color: #CA8383;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .footer {
