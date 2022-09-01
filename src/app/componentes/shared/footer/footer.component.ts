@@ -1,5 +1,5 @@
 import { getAsociados } from './../../../store/asociados/asociados.actions';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { AsociadosService } from 'src/app/services/asociados/asociados.service';
 import { SocialesService } from 'src/app/services/sociales/sociales.service';
 import { Store } from '@ngrx/store';
@@ -27,6 +27,7 @@ import { selectLang } from 'src/app/store/system/system.selectors';
   selector: 'bipay-footer',
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class FooterComponent implements OnInit {
   lang: string = '';
