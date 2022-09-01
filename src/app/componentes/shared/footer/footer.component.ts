@@ -17,6 +17,7 @@ import {
   faSnapchat,
   faReddit,
 } from '@fortawesome/free-brands-svg-icons';
+import { faLocationDot, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { getSociales } from 'src/app/store/sociales/sociales.actions';
 import { selectSociales } from 'src/app/store/sociales/sociales.selectors';
 import { selectAsociados } from 'src/app/store/asociados/asociados.selectors';
@@ -45,6 +46,9 @@ export class FooterComponent implements OnInit {
   faSnapchat = faSnapchat;
   faReddit = faReddit;
   faGooglePlus = faGooglePlus;
+  faLocationDot = faLocationDot;
+  faEnvelope = faEnvelope;
+  faPhone = faPhone;
 
   constructor(
     private store: Store,
