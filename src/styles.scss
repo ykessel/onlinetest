@@ -6,10 +6,9 @@
 html,
 body {
     height: 100%;
-}
-body {
     margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-family: "Fredoka One" !important;
+    font-style: normal !important;
 }
 
 .mat-form-field-appearance-fill .mat-form-field-underline::before {
@@ -29,21 +28,30 @@ body {
 
 .owl-carousel .owl-item {
     padding: 0.5em;
-    width: fit-content;
+    max-width: fit-content;
 }
 
 .owl-carousel .owl-stage {
-    // width: 2500px !important;
-    width: 100% !important;
+    width: 2500px !important;
+    // width: 100% !important;
 }
 
-.owl-carousel .owl-item {
-    // width: 2500px !important;
-    display: flex;
-    justify-content: center;
-    width: 100% !important;
+.carrusel-potencial {
+    .owl-carousel .owl-item {
+        width: 10% !important;
+    }
+    .owl-carousel > :first-child  {
+        margin-left: 5% !important;
+    }
 }
 
-
-
-/*.owl-carousel .owl-stage { display: flex; align-items: center; }*/
+@media (max-width: 700px) {
+    .carrusel-potencial {
+    .owl-carousel .owl-item {
+        width: 9% !important;
+    }
+    .owl-carousel > :first-child  {
+        margin-left: 0% !important;
+    }
+}    
+}

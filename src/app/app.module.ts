@@ -38,7 +38,6 @@ import { ContactosComponent } from './componentes/contactos/contactos/contactos.
 import { HomeComponent } from './componentes/home/home/home.component';
 import { TerminosComponent } from './componentes/terminos/terminos/terminos.component';
 import { NosotrosComponent } from './componentes/nosotros/nosotros/nosotros.component';
-import { CaracteristicasComponent } from './componentes/servicios/caracteristicas/caracteristicas.component';
 import { ServiciosComponent } from './componentes/servicios/servicios/servicios.component';
 import { FooterComponent } from './componentes/shared/footer/footer.component';
 import { NavComponent } from './componentes/shared/nav/nav.component';
@@ -109,7 +108,6 @@ import { SystemLangReducer, SystemServiceIdReducer } from './store/system/system
     HomeComponent,
     TerminosComponent,
     NosotrosComponent,
-    CaracteristicasComponent,
     FooterComponent,
     ServiciosComponent,
     NavComponent,

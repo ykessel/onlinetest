@@ -15,6 +15,7 @@
             </div>
         </div>
     </div>
+
     <div class="contact-body">
         <div class="initial-space">
             <div class="container-izq">
@@ -22,11 +23,24 @@
 
                 <div class="img-chip-pink"></div>
             </div>
-            <div class="text-center">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero modi ex accusamus fugit officiis eaque commodi nisi corrupti neque, corporis laborum minus praesentium, reiciendis cumque, id quis quisquam. Labore, blanditiis?
+
+            <ng-container *ngFor="let seccion of secciones$ | async">
+              <ng-template *ngIf="seccion.id == 16">
+                <div  class="text-center">
+                <p *ngIf="lang === 'es'">
+                    {{ seccion.contenidoEs }}
+                </p>
+
+                <p *ngIf="lang === 'en'">
+                    {{ seccion.contenidoEn }}
+                </p>
+
+                <p *ngIf="lang === 'xx'">
+                    {{ seccion.contenidoOtro }}
                 </p>
             </div>
+            </ng-template>
+            </ng-container>
 
             <div class="container-der">
                 <div class="img-chip-der"></div>

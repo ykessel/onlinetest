@@ -68,7 +68,7 @@
             flex-direction: row;
             justify-content: center;
             align-items: flex-start;
-            padding: 4%;
+            padding: 4% 20%;
             font-family: "Fredoka One";
             font-style: normal;
             font-weight: 400;
@@ -79,14 +79,14 @@
             background: #f6d895;
             border-radius: 50px;
           }
-          
+
           .home-button-2 {
             width: 30%;
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: flex-start;
-            padding: 4%;
+            padding: 4% 20%;
             font-family: "Fredoka One";
             font-style: normal;
             font-weight: 400;
@@ -279,7 +279,7 @@
   width: 100%;
 }
 .carrusel-caract {
-  width: 80%;
+  width: 84%;
   justify-content: center;
 }
 
@@ -316,28 +316,30 @@
 }
 
 .carrusel-1-cards-text {
-  width: 70%;
-  height: 150px;
-  margin-left: 64px;
-  margin-right: 64px;
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 0.7rem;
-  line-height: 24px;
-  color: #3f3726;
+  p {
+    width: 70%;
+    height: 150px;
+    margin-left: 64px;
+    margin-right: 64px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.7rem;
+    line-height: 1rem;
+    color: #3f3726;
 
-  flex: none;
-  order: 1;
-  align-self: stretch;
-  flex-grow: 0;
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+  }
 }
 
-.carrusel-1-cards-text-title {
+.carrusel-1-cards-text-title p {
   font-family: "Fredoka One";
   font-style: normal;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 1.5em;
   line-height: 29px;
   margin-left: 64px;
   margin-right: 64px;
@@ -457,7 +459,6 @@
 
     .small-card {
       width: 10%;
-      background: #d9d9d9;
     }
   }
 }
@@ -473,6 +474,7 @@
     align-items: flex-start;
     padding-top: 97.5px;
     margin-left: 10%;
+    margin-bottom: -25%;
 
     .example-spacer {
       flex: 1 1 auto;
@@ -496,53 +498,64 @@
       color: #5d0303;
       align-self: center;
       height: 72px;
-      //width: 413px;
-      margin-bottom: 75px;
-      margin-right: 7%;
+      max-width: 30%;
+      margin-bottom: 22%;
+      margin-right: 13%;
     }
   }
 
   .carrusel-2-second-line {
     display: flex;
     justify-content: center;
-    padding: 4px;
-    gap: 2rem;
-    max-width: 100%;
+    gap: 0.1rem;
+    width: 100%;
     left: 0px;
-    margin-top: -207px;
+
+    .carrusel-potencial {
+      width: 88%;
+      justify-content: center;
+    }
 
     .carrusel-2-cards {
       display: flex;
-      flex-direction: row;
-      justify-content: center;
+      flex-direction: column;
+      justify-content: space-between;
       padding: 2px;
       gap: 1px;
       background: #ffffff;
       box-shadow: 0px 0px 4px rgba(217, 208, 184, 0.5);
       border-radius: 24px;
+      min-height: 70vh;
 
       .carrusel-2-cards-text-title {
-        font-family: "Fredoka One";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 1.2rem;
-        line-height: 1.2rem;
-        margin: 1rem;
-        color: #eda301;
+        display: flex;
+        p {
+          font-family: "Fredoka One";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 1.2rem;
+          line-height: 1.2rem;
+          margin: 1rem;
+          color: #eda301;
+        }
       }
 
       .carrusel-2-cards-text {
-        font-family: "Roboto";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 24px;
-        margin: 2rem;
-        color: #3f3726;
+        display: flex;
+        flex-grow: 1;
+
+        p {
+          font-family: "Roboto";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 1em;
+          line-height: 24px;
+          margin: 0 2rem;
+          color: #3f3726;
+        }
       }
 
       .carrusel-2-cards-bottom-image {
-        margin-top: 88px;
         display: flex;
         justify-content: center;
         margin-bottom: 2rem;
@@ -559,14 +572,6 @@
       background: #f6d895;
       border-radius: 60px;
       align-self: center;
-    }
-
-    .carrusel-2-chips-right {
-      text-align: right;
-    }
-
-    .carrusel-2-chips-left {
-      text-align: left;
     }
   }
 
@@ -633,6 +638,18 @@
 
   .carrusel-caract {
     width: 63% !important;
+  }
+
+  .carrusel-potencial {
+    width: 63% !important;
+  }
+
+  .carrusel-1-cards {
+    width: 90% !important;
+  }
+
+  .carrusel-2-first-line {
+    margin-bottom: -10% !important;
   }
 
   .mat-button,
