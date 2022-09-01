@@ -152,10 +152,10 @@
 
         .footer-contactos-boton {
           display: flex;
-          flex-direction: row;
           justify-content: center;
           align-items: flex-start;
-          padding: 2% 5%;
+          padding: 2% 50%;
+          color: white;
           gap: 10px;
 
           width: 20%;
@@ -175,9 +175,8 @@
     display: flex;
     flex-direction: column;
 
-    mat-chip {
+    .footer-call {
       display: flex;
-      flex-direction: row;
       align-items: center;
       width: 40%;
       padding: 4px 0px;

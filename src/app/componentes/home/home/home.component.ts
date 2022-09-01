@@ -6,7 +6,6 @@ import { selectPagos } from "./../../../store/pagos/pagos.selectors";
 import { CaracteristicasService } from "src/app/services/caracteristicas/caracteristicas.service";
 import { PagosService } from "src/app/services/pagos/pagos.service";
 import { OwlOptions } from "ngx-owl-carousel-o";
-// import { IdiomasService } from 'src/app/services/idiomas/idiomas.service';
 import { CommonService } from "src/app/services/system/common.service";
 import { PotencialidadesService } from "src/app/services/potencialidades/potencialidades.service";
 import { BannersService } from "src/app/services/banners/banners.service";

@@ -278,18 +278,18 @@
           <ng-container *ngFor="let ponte of potencialidades$ | async">
             <ng-template carouselSlide>
               <div class="carrusel-2-cards">
-                <div>
-                  <p class="carrusel-2-cards-text-title" *ngIf="lang === 'es'">
-                    {{ ponte.tituloEs }}
-                  </p>
+                
+                <div class="carrusel-2-cards-text-title" *ngIf="lang === 'es'">
+                    <p> {{ ponte.tituloEs }} </p>
+                </div>
 
-                  <p class="carrusel-2-cards-text-title" *ngIf="lang === 'en'">
-                    {{ ponte.tituloEn }}
-                  </p>
+                <div class="carrusel-2-cards-text-title" *ngIf="lang === 'en'">
+                   <p> {{ ponte.tituloEn }} </p>
+                </div>
 
-                  <p class="carrusel-2-cards-text-title" *ngIf="lang === 'xx'">
-                    {{ ponte.tituloOtro }}
-                  </p>
+                <div class="carrusel-2-cards-text-title" *ngIf="lang === 'xx'">
+                   <p> {{ ponte.tituloOtro }} </p>
+                </div>
 
                   <!-- Contenido -->
 
@@ -312,9 +312,10 @@
                   ></div>
 
                   <div class="carrusel-2-cards-bottom-image">
-                    <img src="{{ ponte.imagenEs }}" />
+                    <!-- <img src="{{ ponte.imagenEs }}" /> -->
+                    <img src="../../../../assets/img_pagoonline.png">
                   </div>
-                </div>
+                
               </div>
             </ng-template>
           </ng-container>

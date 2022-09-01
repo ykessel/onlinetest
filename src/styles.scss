@@ -6,10 +6,9 @@
 html,
 body {
     height: 100%;
-}
-body {
     margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-family: "Fredoka One" !important;
+    font-style: normal !important;
 }
 
 .mat-form-field-appearance-fill .mat-form-field-underline::before {
@@ -41,7 +40,18 @@ body {
     .owl-carousel .owl-item {
         width: 10% !important;
     }
-    .owl-carousel >  :first-child  {
+    .owl-carousel > :first-child  {
         margin-left: 5% !important;
     }
+}
+
+@media (max-width: 700px) {
+    .carrusel-potencial {
+    .owl-carousel .owl-item {
+        width: 9% !important;
+    }
+    .owl-carousel > :first-child  {
+        margin-left: 0% !important;
+    }
+}    
 }

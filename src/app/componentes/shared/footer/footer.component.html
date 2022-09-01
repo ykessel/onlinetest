@@ -34,7 +34,7 @@
             <p *ngIf="lang === 'xx'" class="footer-contactos-text">
               {{ seccion.contenidoEs }}
             </p>
-            <button class="footer-contactos-boton" mat-button>Inicia ya</button>
+            <a class="footer-contactos-boton" mat-button href="#">Inicia ya</a>
           </ng-container>
         </ng-container>
       </div>
@@ -44,12 +44,12 @@
   </div>
 
   <div class="footer-last" ngsReveal>
-    <mat-chip>
+    <div class="footer-call" mat-button href="#">
       <mat-icon>phone</mat-icon>
-      <p>Llamenos</p>
+      <p style="color: #670f0f;">Llamenos</p>
       <img src="../assets/img_header.png" />
       <p>(53) 12345678</p>
-    </mat-chip>
+    </div>
 
     <div class="footer-container" ngsReveal>
       <div class="footer-last-description">

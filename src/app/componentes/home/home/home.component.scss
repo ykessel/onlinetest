@@ -68,7 +68,7 @@
             flex-direction: row;
             justify-content: center;
             align-items: flex-start;
-            padding: 4%;
+            padding: 4% 20%;
             font-family: "Fredoka One";
             font-style: normal;
             font-weight: 400;
@@ -86,7 +86,7 @@
             flex-direction: row;
             justify-content: center;
             align-items: flex-start;
-            padding: 4%;
+            padding: 4% 20%;
             font-family: "Fredoka One";
             font-style: normal;
             font-weight: 400;
@@ -325,7 +325,7 @@
     font-style: normal;
     font-weight: 400;
     font-size: 0.7rem;
-    line-height: 24px;
+    line-height: 1rem;
     color: #3f3726;
 
     flex: none;
@@ -459,7 +459,6 @@
 
     .small-card {
       width: 10%;
-      background: #d9d9d9;
     }
   }
 }
@@ -475,6 +474,7 @@
     align-items: flex-start;
     padding-top: 97.5px;
     margin-left: 10%;
+    margin-bottom: -25%;
 
     .example-spacer {
       flex: 1 1 auto;
@@ -507,11 +507,9 @@
   .carrusel-2-second-line {
     display: flex;
     justify-content: center;
-    padding: 4px;
-    gap: 1rem;
-    max-width: 100%;
+    gap: 0.1rem;
+    width: 100%;
     left: 0px;
-    margin-top: -55vh;
 
     .carrusel-potencial {
       width: 88%;
@@ -520,38 +518,44 @@
 
     .carrusel-2-cards {
       display: flex;
-      flex-direction: row;
-      justify-content: center;
+      flex-direction: column;
+      justify-content: space-between;
       padding: 2px;
       gap: 1px;
       background: #ffffff;
       box-shadow: 0px 0px 4px rgba(217, 208, 184, 0.5);
       border-radius: 24px;
       min-height: 70vh;
-      // max-width: 70%;
 
       .carrusel-2-cards-text-title {
-        font-family: "Fredoka One";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 1.2rem;
-        line-height: 1.2rem;
-        margin: 1rem;
-        color: #eda301;
+        display: flex;
+        p {
+          font-family: "Fredoka One";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 1.2rem;
+          line-height: 1.2rem;
+          margin: 1rem;
+          color: #eda301;
+        }
       }
 
-      .carrusel-2-cards-text p {
-        font-family: "Roboto";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 24px;
-        margin: 2rem;
-        color: #3f3726;
+      .carrusel-2-cards-text {
+        display: flex;
+        flex-grow: 1;
+
+        p {
+          font-family: "Roboto";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 1em;
+          line-height: 24px;
+          margin: 0 2rem;
+          color: #3f3726;
+        }
       }
 
       .carrusel-2-cards-bottom-image {
-        margin-top: 88px;
         display: flex;
         justify-content: center;
         margin-bottom: 2rem;
@@ -634,6 +638,18 @@
 
   .carrusel-caract {
     width: 63% !important;
+  }
+
+  .carrusel-potencial {
+    width: 63% !important;
+  }
+
+  .carrusel-1-cards {
+    width: 90% !important;
+  }
+
+  .carrusel-2-first-line {
+    margin-bottom: -10% !important;
   }
 
   .mat-button,
