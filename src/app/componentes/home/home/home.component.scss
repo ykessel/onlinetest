@@ -2,6 +2,11 @@
   width: 100%;
 }
 
+.container-image{
+  display: flex;
+  flex-direction: column;
+}
+
 .home {
   display: flex;
   height: 100vh;
@@ -21,8 +26,9 @@
 
       .pres-img {
         width: 2rem;
+        margin-top: 8px;
         height: 2rem;
-        max-width: 20px;
+        max-width: 17px;
         max-height: 20px;
         margin-right: 0.6rem;
       }
@@ -37,7 +43,6 @@
           font-weight: 400;
           font-size: 3rem;
           line-height: 3rem;
-
           color: #353535;
         }
 
@@ -45,10 +50,11 @@
           font-family: "Roboto";
           font-style: normal;
           font-weight: 400;
-          font-size: 12px;
+          font-size: 16px;
           line-height: 24px;
           color: #727272;
         }
+
         .home-pres-rect {
           background: #f4a800;
           border-radius: 25px;
@@ -321,13 +327,12 @@
     height: 150px;
     margin-left: 64px;
     margin-right: 64px;
-    font-family: "Roboto";
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
-    font-size: 0.7rem;
-    line-height: 1rem;
-    color: #3f3726;
-
+    font-size: 16px;
+    line-height: 24px;
+    color: #3F3726;
     flex: none;
     order: 1;
     align-self: stretch;

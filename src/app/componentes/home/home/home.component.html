@@ -3,7 +3,9 @@
     <ng-container *ngFor="let banner of banners$ | async">
       <div class="home-left">
         <div class="home-pres">
-          <img src="../../../../assets/img_header.png" class="pres-img" />
+          <div class="container-images">
+            <img src="../../../../assets/img_header.png" class="pres-img" />
+          </div>
           <div class="home-pres-group">
             <h3 *ngIf="lang === 'es'" class="home-pres-title">
               {{ banner.tituloEs }}
@@ -15,14 +17,11 @@
               {{ banner.tituloOtro }}
             </h3>
             <!-- <img class="header" src="../../../../assets/img_header.png" /> -->
-            <p class="home-pres-p" *ngIf="lang === 'es'">
-              {{ banner.contenidoEs }}
+            <p class="home-pres-p" *ngIf="lang === 'es'" [innerHTML]="banner.contenidoEs">
             </p>
-            <p class="home-pres-p" *ngIf="lang === 'en'">
-              {{ banner.contenidoEn }}
+            <p class="home-pres-p" *ngIf="lang === 'en'" [innerHTML]="banner.contenidoEn">
             </p>
-            <p class="home-pres-p" *ngIf="lang === 'xx'">
-              {{ banner.contenidoEs }}
+            <p class="home-pres-p" *ngIf="lang === 'xx'" [innerHTML]="banner.contenidoEs">
             </p>
             <div class="home-pres-rect"></div>
             <div class="home-pres-buttons">
