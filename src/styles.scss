@@ -5,25 +5,10 @@
 
 html,
 body {
-    height: 100%;
-    margin: 0;
-    font-family: "Fredoka One" !important;
-    font-style: normal !important;
-}
-
-.mat-form-field-appearance-fill .mat-form-field-underline::before {
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: 0;
-    height: 0px !important;
-    width: 100%;
-}
-
-.mat-toolbar .mat-form-field-underline,
-.mat-toolbar .mat-form-field-ripple,
-.mat-toolbar .mat-focused .mat-form-field-ripple {
-    background-color: rgba(0, 0, 0, 1);
+  height: 100%;
+  margin: 0;
+  font-family: "Fredoka One" !important;
+  font-style: normal !important;
 }
 
 .owl-carousel .owl-item {
@@ -33,7 +18,6 @@ body {
 
 .owl-carousel .owl-stage {
     width: 2500px !important;
-    // width: 100% !important;
 }
 
 .carrusel-potencial {
@@ -53,5 +37,17 @@ body {
     .owl-carousel > :first-child  {
         margin-left: 0% !important;
     }
-}    
 }
+}
+
+// .carrusel-banner {
+//   .owl-carousel .owl-item {
+//     width: 100vw !important;
+//     padding: 0;
+//   }
+//   .owl-carousel .owl-stage {
+//     // width: 20000px !important;
+//     // width: 100% !important;
+//   }
+
+// }

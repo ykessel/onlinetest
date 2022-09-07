@@ -32,7 +32,7 @@ export class HomeComponent implements OnInit {
   potencialidades$ = this.store.select(selectPotencialidades);
   pagos$ = this.store.select(selectPagos);
   caracteristicas$ = this.store.select(selectCaracteristicas);
-  banners$ = this.store.select(selectBanners);
+  // banners$ = this.store.select(selectBanners);
   lang$ = this.store.select(selectLang).subscribe((l) => (this.lang = l));
 
   constructor(
