@@ -169,16 +169,21 @@
 }
 
 .carrusel-1-cards-text {
+  display: flex;
+  justify-content: center;
+  padding-left: 5%;
   p {
     width: 70%;
     height: 150px;
     margin-left: 64px;
     margin-right: 64px;
+
     font-family: "Roboto";
     font-style: normal;
     font-weight: 400;
-    font-size: 0.7rem;
-    line-height: 1rem;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 2rem;
     color: #3f3726;
 
     flex: none;
@@ -305,9 +310,9 @@
   }
   .carrusel-part2-third-line {
     display: flex;
-    width: 100%;
+    width: 91%;
     justify-content: center;
-    gap: 1%;
+    gap: 2%;
     margin-top: 164px;
 
     .small-card {
@@ -382,13 +387,17 @@
 
       .carrusel-2-cards-text-title {
         display: flex;
+        margin: 0 2rem;
+        width: 71%;
+        justify-content: flex-start;
+
         p {
           font-family: "Fredoka One";
           font-style: normal;
           font-weight: 400;
           font-size: 1.2rem;
           line-height: 1.2rem;
-          margin: 1rem;
+          margin: 1rem 0px 1rem 0px;
           color: #eda301;
         }
       }

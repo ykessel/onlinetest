@@ -121,14 +121,11 @@
             <img class="header" src="../../../../assets/img_header.png" />
           </div>
 
-          <p class="lorem" *ngIf="lang === 'es'">
-            {{ seccion.contenidoEs }}
+          <p class="lorem" *ngIf="lang === 'es'" [innerHTML]="seccion.contenidoEs">
           </p>
-          <p class="lorem" *ngIf="lang === 'en'">
-            {{ seccion.contenidoEs }}
+          <p class="lorem" *ngIf="lang === 'en'" [innerHTML]="seccion.contenidoEs">
           </p>
-          <p class="lorem" *ngIf="lang === 'xx'">
-            {{ seccion.contenidoEs }}
+          <p class="lorem" *ngIf="lang === 'xx'" [innerHTML]="seccion.contenidoEs">
           </p>
         </ng-container>
       </ng-container>

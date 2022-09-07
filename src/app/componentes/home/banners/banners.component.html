@@ -14,14 +14,11 @@
             <h3 *ngIf="lang === 'xx'" class="home-pres-title">
               {{ banner.tituloOtro }}
             </h3>
-            <p class="home-pres-p" *ngIf="lang === 'es'">
-              {{ banner.contenidoEs }}
+            <p class="home-pres-p" *ngIf="lang === 'es'" [innerHTML]="banner.contenidoEs">
             </p>
-            <p class="home-pres-p" *ngIf="lang === 'en'">
-              {{ banner.contenidoEn }}
+            <p class="home-pres-p" *ngIf="lang === 'en'" [innerHTML]="banner.contenidoEn">
             </p>
-            <p class="home-pres-p" *ngIf="lang === 'xx'">
-              {{ banner.contenidoEs }}
+            <p class="home-pres-p" *ngIf="lang === 'xx'" [innerHTML]="banner.contenidoEs">
             </p>
             <div class="home-pres-rect"></div>
             <div class="home-pres-buttons">
