@@ -1,92 +1,89 @@
-<div #banners class="carrusel-banner">
-  <ng-container *ngFor="let banner of banners$ | async; let i = index">
-    <div [@enterLeave]="i === hideId ? 'enter' : 'leave'" [class.show]="i === hideId" class="home">
-      <div class="home-left">
-        <div class="home-pres">
-          <img src="../../../../assets/img_header.png" class="pres-img" />
-          <div class="home-pres-group">
-            <h3 *ngIf="lang === 'es'" class="home-pres-title">
-              {{ banner.tituloEs }}
-            </h3>
-            <h3 *ngIf="lang === 'en'" class="home-pres-title">
-              {{ banner.tituloEn }}
-            </h3>
-            <h3 *ngIf="lang === 'xx'" class="home-pres-title">
-              {{ banner.tituloOtro }}
-            </h3>
-            <p class="home-pres-p" *ngIf="lang === 'es'">
-              {{ banner.contenidoEs }}
-            </p>
-            <p class="home-pres-p" *ngIf="lang === 'en'">
-              {{ banner.contenidoEn }}
-            </p>
-            <p class="home-pres-p" *ngIf="lang === 'xx'">
-              {{ banner.contenidoEs }}
-            </p>
-            <div class="home-pres-rect"></div>
-            <div class="home-pres-buttons">
-              <a
-                mat-button
-                class="home-button-1"
-                href="{{ banner.enlaceBtn1Es }}"
-                *ngIf="lang === 'es'"
-                >{{ banner.textoBtn1Es }}</a
-              >
-              <a
-                mat-button
-                class="home-button-1"
-                href="{{ banner.enlaceBtn1En }}"
-                *ngIf="lang === 'en'"
-                >{{ banner.textoBtn1En }}</a
-              >
-              <a
-                mat-button
-                class="home-button-1"
-                href="{{ banner.enlaceBtn1Otro }}"
-                *ngIf="lang === 'xx'"
-                >{{ banner.textoBtn1Otro }}</a
-              >
+<div class="banner">
+  <div class="banner-up-container">
+      <ng-container *ngFor="let banner of banners$ | async; let i = index">
+      <div [@enterLeave]="i === hideId ? 'enter' : 'leave'" [class.show]="i === hideId"  class="banner-up">
+        <div class="banner-pres">
+          <div class="banner-press-left">
+            <img src="../../../../assets/img_header.png" class="pres-img" />
+            <div class="banner-pres-group">
+              <h3 *ngIf="lang === 'es'" class="banner-pres-title">
+                  {{ banner.tituloEs }}
+                </h3>
+                <h3 *ngIf="lang === 'en'" class="banner-pres-title">
+                  {{ banner.tituloEn }}
+                </h3>
+                <h3 *ngIf="lang === 'xx'" class="banner-pres-title">
+                  {{ banner.tituloOtro }}
+                </h3>
 
-              <a
-                mat-button
-                class="home-button-2"
-                href="{{ banner.enlaceBtn2En }}"
-                *ngIf="lang === 'en'"
-                >{{ banner.textoBtn2En }}</a
-              >
-              <a
-                mat-button
-                class="home-button-2"
-                href="{{ banner.enlaceBtn2Es }}"
-                *ngIf="lang === 'es'"
-                >{{ banner.textoBtn2Es }}</a
-              >
-              <a
-                mat-button
-                class="home-button-2"
-                href="{{ banner.enlaceBtn2Otro }}"
-                *ngIf="lang === 'xx'"
-                >{{ banner.textoBtn2Otro }}</a
-              >
+                <div *ngIf="lang === 'es'" [innerHtml]="banner.contenidoEs" class="banner-pres-p"></div>
+                <div *ngIf="lang === 'en'" [innerHtml]="banner.contenidoEn" class="banner-pres-p"></div>
+                <div *ngIf="lang === 'xx'" [innerHtml]="banner.contenidoOtro" class="banner-pres-p"></div>
+
+                <div class="banner-pres-rect"></div>
+                <div class="banner-pres-buttons">
+                  <a
+                    mat-button
+                    class="banner-button-1"
+                    href="{{ banner.enlaceBtn1Es }}"
+                    *ngIf="lang === 'es'"
+                    >{{ banner.textoBtn1Es }}</a
+                  >
+                  <a
+                    mat-button
+                    class="banner-button-1"
+                    href="{{ banner.enlaceBtn1En }}"
+                    *ngIf="lang === 'en'"
+                    >{{ banner.textoBtn1En }}</a
+                  >
+                  <a
+                    mat-button
+                    class="banner-button-1"
+                    href="{{ banner.enlaceBtn1Otro }}"
+                    *ngIf="lang === 'xx'"
+                    >{{ banner.textoBtn1Otro }}</a
+                  >
+
+                  <a
+                    mat-button
+                    class="banner-button-2"
+                    href="{{ banner.enlaceBtn2En }}"
+                    *ngIf="lang === 'en'"
+                    >{{ banner.textoBtn2En }}</a
+                  >
+                  <a
+                    mat-button
+                    class="banner-button-2"
+                    href="{{ banner.enlaceBtn2Es }}"
+                    *ngIf="lang === 'es'"
+                    >{{ banner.textoBtn2Es }}</a
+                  >
+                  <a
+                    mat-button
+                    class="banner-button-2"
+                    href="{{ banner.enlaceBtn2Otro }}"
+                    *ngIf="lang === 'xx'"
+                    >{{ banner.textoBtn2Otro }}</a
+                  >
+                </div>
             </div>
           </div>
         </div>
-        <img src="../../../../assets/grafica_izq.png" class="home-izq" />
-        <div class="home-rect"></div>
-      </div>
-
-      <div class="home-right">
-        <img
-          class="home-banner"
-          src="../../../../assets/banner.png"
-          alt=""
+        <div class="banner-up-img" >
+          <img src="../../../../assets/banner.png"
         />
-        <img
-          class="home-der"
-          src="../../../../assets/grafica_der1.png"
-          alt=""
-        />
+        </div>
       </div>
+    </ng-container>
     </div>
-</ng-container>
+
+  <div class="banner-down-container">
+    <div class="banner-down">
+      <div class="banner-down-left">
+        <img src="../../../../assets/grafica_izq.png" class="banner-izq" />
+        <div class="banner-rect"></div>
+      </div>
+      <img class="banner-der" src="../../../../assets/grafica_der1.png" alt="" />
+    </div>
+    </div>
 </div>
