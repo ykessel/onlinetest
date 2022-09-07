@@ -288,6 +288,12 @@
         .footer-info {
           display: flex;
 
+        .footer-info-icon {
+          color: white;
+          font-size: 1.6em;
+          padding-right: 0.6em;
+        }
+
           p {
             font-family: "Roboto";
             font-style: normal;
