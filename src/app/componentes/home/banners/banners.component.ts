@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit, OnDestroy, ElementRef, ViewChild } from '@angular/core';
+import { Component, OnInit, AfterViewInit, OnDestroy, ViewEncapsulation, ElementRef, ViewChild } from '@angular/core';
 import {
   animation, trigger, animateChild, group,
   transition, animate, style, query, state
@@ -8,12 +8,15 @@ import { BannersService } from 'src/app/services/banners/banners.service';
 import { getBanners } from "src/app/store/banners/banners.actions";
 import { selectLang } from 'src/app/store/system/system.selectors';
 import { selectBanners } from "./../../../store/banners/banners.selectors";
+import { Banner } from 'src/app/models/banner.model';
+import { first, take } from 'rxjs/operators';
 
 
 @Component({
   selector: 'bipay-banners',
   templateUrl: './banners.component.html',
   styleUrls: ['./banners.component.scss'],
+  encapsulation: ViewEncapsulation.None,
   animations: [
     trigger('enterLeave', [
       state('enter', style({

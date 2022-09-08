@@ -1,140 +1,171 @@
-.home {
-  display: none;
+.banner {
+  display:flex;
+  flex-direction: column;
   height: 100vh;
   width: 100vw;
 
 
-  .home-left {
+  .banner-up-container {
     display: flex;
-    width: 50%;
-    flex-direction: column;
+    width: 100%;
+    height: 70%;
+    max-height: 70%;
 
-    .home-pres {
-      display: flex;
-      align-self: flex-end;
-      width: 54%;
-      margin-top: 5%;
-      margin-bottom: 20vh;
+
+    .banner-up {
+      display: none;
+      width: 100%;
+
+      .banner-pres {
+        display: flex;
+        width: 50%;
+        justify-content: flex-end;
+        // margin-bottom: 20vh;
+
+        .banner-press-left {
+          display: flex;
+          width: 60%;
+          min-width: 54%;
+          margin-top: 5%;
+        }
 
       .pres-img {
-        width: 2rem;
         height: 2rem;
-        max-width: 20px;
-        max-height: 20px;
         margin-right: 0.6rem;
-      }
-
-      .home-pres-group {
-        display: flex;
-        flex-direction: column;
-
-        .home-pres-title {
-          font-family: "Fredoka One";
-          font-style: normal;
-          font-weight: 400;
-          font-size: 3rem;
-          line-height: 3rem;
-
-          color: #353535;
         }
 
-        .home-pres-p {
-          font-family: "Roboto";
-          font-style: normal;
-          font-weight: 400;
-          font-size: 16px;
-          line-height: 24px;
-          color: #727272;
-        }
-        .home-pres-rect {
-          background: #f4a800;
-          border-radius: 25px;
-          width: 50%;
-          margin-bottom: 5%;
-          height: 12px;
-        }
-
-        .home-pres-buttons {
+        .banner-pres-group {
           display: flex;
-          align-items: flex-start;
-          gap: 1rem;
+          flex-direction: column;
 
-          .home-button-1 {
-            width: 33%;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: flex-start;
-            padding: 4% 20%;
+          .banner-pres-title {
             font-family: "Fredoka One";
             font-style: normal;
             font-weight: 400;
-            font-size: 20px;
-            line-height: 24px;
-            text-align: center;
-            color: #5d0303;
-            background: #f6d895;
-            border-radius: 50px;
+            font-size: 2.5rem;
+            line-height: 2.5rem;
+            color: #353535;
           }
 
-          .home-button-2 {
-            width: 30%;
+          .banner-pres-p {
+            p {
+              font-family: "Roboto";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 12px;
+              line-height: 24px;
+              color: #727272;
+            }
+          }
+
+          .banner-pres-rect {
+            background: #f4a800;
+            border-radius: 25px;
+            width: 50%;
+            margin-bottom: 5%;
+            height: 12px;
+          }
+
+          .banner-pres-buttons {
             display: flex;
-            flex-direction: row;
-            justify-content: center;
             align-items: flex-start;
-            padding: 4% 20%;
-            font-family: "Fredoka One";
-            font-style: normal;
-            font-weight: 400;
-            font-size: 20px;
-            line-height: 24px;
-            text-align: center;
+            gap: 1rem;
 
-            color: #5d0303;
+            .banner-button-1 {
+              width: 33%;
+              display: flex;
+              flex-direction: row;
+              justify-content: center;
+              align-items: flex-start;
+              padding: 4% 20%;
+              font-family: "Fredoka One";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 20px;
+              line-height: 24px;
+              text-align: center;
+              color: #5d0303;
+              background: #f6d895;
+              border-radius: 50px;
+            }
 
-            background: #feb5b5;
-            border-radius: 50px;
+            .banner-button-2 {
+              width: 30%;
+              display: flex;
+              flex-direction: row;
+              justify-content: center;
+              align-items: flex-start;
+              padding: 4% 20%;
+              font-family: "Fredoka One";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 20px;
+              line-height: 24px;
+              text-align: center;
+
+              color: #5d0303;
+
+              background: #feb5b5;
+              border-radius: 50px;
+            }
           }
+        }
+      }
+
+      .banner-up-img {
+        width: 50%;
+        img {
+          width: 100%;
         }
       }
     }
 
-    .home-izq {
-      width: 10%;
-      align-self: flex-start;
-      margin-bottom: 1rem;
-    }
-
-    .home-rect {
-      width: 100%;
-      height: 3rem;
-      background: linear-gradient(
-        90deg,
-        #faa6a7 0%,
-        #b5e7ff 67.02%,
-        #ffdf95 98.96%
-      );
-      border-radius: 0px 50px 50px 0px;
-    }
   }
 
-  .home-right {
+  .banner-down-container {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    width: 50%;
+    width: 100%;
+    height: 30%;
+    justify-content: space-between;
 
-    .home-banner {
+    .banner-down {
+      display: flex;
       width: 100%;
+      justify-content: space-between;
+
+      .banner-down-left {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+      }
+
+      .banner-der {
+        width: 15%;
+        height: 25%;
+      }
+
+      .banner-izq {
+        width: 10%;
+        margin-top: -3.2rem;
+        margin-bottom: 1rem;
+      }
+
+      .banner-rect {
+        width: 100%;
+        height: 3rem;
+        background: linear-gradient(
+          90deg,
+          #faa6a7 0%,
+          #b5e7ff 67.02%,
+          #ffdf95 98.96%
+        );
+        border-radius: 0px 50px 50px 0px;
+      }
     }
 
-    .home-der {
-      width: 25%;
-    }
   }
 }
 
 .show {
-  display: flex;
+  display: flex !important;
 }
