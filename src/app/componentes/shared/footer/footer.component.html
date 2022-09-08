@@ -25,14 +25,11 @@
               {{ seccion.tituloOtro }}
             </p>
 
-            <p *ngIf="lang === 'es'" class="footer-contactos-text">
-              {{ seccion.contenidoEs }}
+            <p *ngIf="lang === 'es'" class="footer-contactos-text" [innerHTML]="seccion.contenidoEs">
             </p>
-            <p *ngIf="lang === 'en'" class="footer-contactos-text">
-              {{ seccion.contenidoEs }}
+            <p *ngIf="lang === 'en'" class="footer-contactos-text" [innerHTML]="seccion.contenidoEs">
             </p>
-            <p *ngIf="lang === 'xx'" class="footer-contactos-text">
-              {{ seccion.contenidoEs }}
+            <p *ngIf="lang === 'xx'" class="footer-contactos-text" [innerHTML]="seccion.contenidoEs">
             </p>
             <a class="footer-contactos-boton" mat-button href="#">Inicia ya</a>
           </ng-container>

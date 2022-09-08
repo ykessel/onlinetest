@@ -1,5 +1,5 @@
 import { selectLang } from './../../../store/system/system.selectors';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { IdiomasService } from "src/app/services/idiomas/idiomas.service";
 import { CommonService } from "src/app/services/system/common.service";
 import { Store } from '@ngrx/store';
@@ -10,6 +10,7 @@ import { SetLang } from 'src/app/store/system/system.actions';
 @Component({
   selector: 'bipay-nav',
   templateUrl: './nav.component.html',
+  encapsulation: ViewEncapsulation.None,
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent implements OnInit {
