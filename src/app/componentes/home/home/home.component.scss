@@ -241,7 +241,10 @@
 
 .carrusel-part2 {
   margin-top: 108px;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
   .carrusel-part2-first-line {
     display: flex;
     gap: 31px;
@@ -308,11 +311,13 @@
   .carrusel-part2-third-line {
     display: flex;
     width: 91%;
-    justify-content: center;
-    gap: 2%;
+    justify-content: center;  
     margin-top: 164px;
 
     .small-card {
+      margin-right: 9px;
+      margin-left: 13px;
+      height: 106px;
       width: 10%;
     }
   }
