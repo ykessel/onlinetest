@@ -1,13 +1,16 @@
 <div class="footer" ngsReveal>
-  <div class="footer-comercios" ngsReveal>
+  <div class="footer-comercios" >
     <div class="logos-footer">
-      <ng-container *ngFor="let asoc of asociados$ | async">
-        <img class="img-footer" src="../../../../assets/logo1.png" alt="logo1" />
+      <ng-container *ngFor="let asoc of asoc">
+        <img src="{{ asoc.logo }}" alt="{{ asoc.tituloEs }}" class="img-footer" />
       </ng-container>
+      <!-- <ng-container *ngFor="let aso of asociados$ | async">
+        <img src="{{ aso.logo }}" alt="{{ aso.tituloEs }}" class="img-footer" />
+      </ng-container> -->
     </div>
   </div>
 
-  <div class="footer-contactos" ngsReveal>
+  <div class="footer-contactos" >
     <img src="../../../../assets/curva2.png" class="bottom-line" />
     <div class="footer-contactos-container">
       <img class="footer-contactos-left" src="../../../../assets/grafica-contactos_izq.png" alt="lines" />
@@ -31,7 +34,7 @@
             </p>
             <p *ngIf="lang === 'xx'" class="footer-contactos-text" [innerHTML]="seccion.contenidoEs">
             </p>
-            <a class="footer-contactos-boton" mat-button href="#">Inicia ya</a>
+            <a class="footer-contactos-boton" mat-button routerLink="contactos">Inicia ya</a>
           </ng-container>
         </ng-container>
       </div>
@@ -40,7 +43,7 @@
     </div>
   </div>
 
-  <div class="footer-last" ngsReveal>
+  <div class="footer-last">
     <div class="footer-call" mat-button href="#">
       <mat-icon>phone</mat-icon>
       <p style="color: #670f0f;">Llamenos</p>

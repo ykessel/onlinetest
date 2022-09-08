@@ -89,6 +89,9 @@ export class HomeComponent implements OnInit {
       1366: {
         items: 3,
       },
+      1920: {
+        items: 3,
+      },
     },
     nav: false,
   };

@@ -35,6 +35,7 @@ export class FooterComponent implements OnInit {
   sociales$ = this.store.select(selectSociales);
   secciones$ = this.store.select(selectSecciones);
   asociados$ = this.store.select(selectAsociados);
+  asoc: any[]=  [];
   lang$ = this.store.select(selectLang).subscribe((l) => this.lang = l);
   faFacebook = faFacebook;
   faInstagram = faInstagram;
@@ -64,8 +65,10 @@ export class FooterComponent implements OnInit {
     );
 
     this.asociadosService.getAsociados()
-    .subscribe((asociados) =>
-      this.store.dispatch(getAsociados({ asociados }))
+    .subscribe((asociados) =>{
+      this.asoc = asociados;
+      console.log(asociados);
+      this.store.dispatch(getAsociados({ asociados }))}
     );
 
   }

@@ -8,5 +8,8 @@ export interface Servicio {
   tituloEs: string;
   tituloEn: string;
   tituloOtro: string;
+  imagenEs: string;
+  imagenEn: string;
+  imagenOtro: string;
   nombre: string;
 }

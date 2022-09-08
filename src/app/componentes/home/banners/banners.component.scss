@@ -169,3 +169,67 @@
 .show {
   display: flex !important;
 }
+
+// @media (max-width: 768px) {
+//   .banner {
+//     display: flex;
+//     width: 100%;
+//     height: 126vh;
+//     flex-direction: column;
+//   }
+
+//   .banner-left {
+//     display: flex !important;
+//     width: 100% !important;
+//     flex-direction: column !important;
+//     margin-top: 30px !important;
+//   }
+
+//   .banner-izq {
+//     display: none;
+//   }
+
+//   .banner-pres {
+//     display: flex !important;
+//     align-self: flex-end !important;
+//     width: 100% !important;
+//     margin-bottom: 20vh !important;
+//   }
+
+//   .banner-right {
+//     display: flex !important;
+//     flex-direction: column !important;
+//     align-items: flex-end !important;
+//     width: 100% !important;
+//   }
+
+//   .carrusel-caract {
+//     width: 63% !important;
+//   }
+
+//   .carrusel-potencial {
+//     width: 63% !important;
+//   }
+
+//   .carrusel-1-cards {
+//     width: 90% !important;
+//   }
+
+//   .carrusel-2-first-line {
+//     margin-bottom: -10% !important;
+//   }
+
+//   .mat-button,
+//   .mat-icon-button,
+//   .mat-stroked-button,
+//   .mat-flat-button {
+//     min-width: 50px !important;
+//     line-height: 30px !important;
+//   }
+
+//   .carrusel-part2-first-line {
+//     flex-direction: column !important;
+//     margin-right: 4%;
+//   }
+// }
+
