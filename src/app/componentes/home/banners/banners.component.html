@@ -1,7 +1,8 @@
 <div class="banner">
   <div class="banner-up-container">
       <ng-container *ngFor="let banner of banners$ | async; let i = index">
-      <div [@enterLeave]="i === hideId ? 'enter' : 'leave'" [class.show]="i === hideId"  class="banner-up">
+      <div [class.show]="i === 0"  class="banner-up">
+        <!-- [@enterLeave]="i === hideId ? 'enter' : 'leave'" [class.show]="i === hideId" -->
         <div class="banner-pres">
           <div class="banner-press-left">
             <img src="../../../../assets/img_header.png" class="pres-img" />
