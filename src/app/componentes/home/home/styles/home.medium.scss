@@ -1,5 +1,6 @@
 @media only screen and (min-width: 328px) and (max-width: 1280px) {
-  .carrusel-caract, .carrusel-potencial {
+  .carrusel-caract,
+  .carrusel-potencial {
     width: 92% !important;
   }
   .car-container {
@@ -28,8 +29,57 @@
     line-height: 30px !important;
   }
 
+  .carrusel-2-first-line {
+    padding-top: 10% !important;
+
+    .carrusel-2-first-line-text {
+      position: absolute !important;
+      max-width: 100% !important;
+    }
+  }
+
   .carrusel-part2-first-line {
     flex-direction: column !important;
-    margin-right: 4%;
+    margin: 4%;
+
+    .lorem {
+      width: 100% !important;
+    }
+    .pagos {
+      width: 100% !important;
+      font-size: 30px !important;
+    }
+    .header {
+      margin-bottom: 12px;
+    }
+    .mat-typography p {
+      margin: 0 !important;
+    }
+  }
+
+  .carrusel-part2-second-line {
+    margin-top: 8%;
+  }
+
+  .carrusel-part2-gruop {
+    align-items: center !important;
+  }
+
+  .carrusel-part2-third-line {
+    margin-top: 10% !important;
+    justify-content: start !important;
+
+    .small-card {
+      width: 40% !important;
+      height: 40% !important;
+    }
+  }
+  .carrusel-2 {
+    margin-top: 10% !important;
+  }
+
+  .carrusel-2-third-line-text {
+    height: auto !important;
+    width: 100% !important;
   }
 }

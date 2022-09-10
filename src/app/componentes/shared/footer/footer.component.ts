@@ -23,6 +23,9 @@ import { selectSociales } from 'src/app/store/sociales/sociales.selectors';
 import { selectAsociados } from 'src/app/store/asociados/asociados.selectors';
 import { selectSecciones } from 'src/app/store/secciones/secciones.selectors';
 import { selectLang } from 'src/app/store/system/system.selectors';
+import { DocumentosService } from 'src/app/services/documentos/documentos.service';
+import { selectDocumentos } from 'src/app/store/documentos/documentos.selectors';
+import { getDocumentos } from 'src/app/store/documentos/documentos.actions';
 
 @Component({
   selector: 'bipay-footer',
@@ -32,10 +35,11 @@ import { selectLang } from 'src/app/store/system/system.selectors';
 })
 export class FooterComponent implements OnInit {
   lang: string = '';
+  asoc: any[]=  [];
   sociales$ = this.store.select(selectSociales);
   secciones$ = this.store.select(selectSecciones);
   asociados$ = this.store.select(selectAsociados);
-  asoc: any[]=  [];
+  documentos$ = this.store.select(selectDocumentos);
   lang$ = this.store.select(selectLang).subscribe((l) => this.lang = l);
   faFacebook = faFacebook;
   faInstagram = faInstagram;
@@ -56,6 +60,7 @@ export class FooterComponent implements OnInit {
     private store: Store,
     private socialesService: SocialesService,
     private asociadosService: AsociadosService,
+    private documentosService: DocumentosService
   ) {}
 
   ngOnInit(): void {
@@ -69,6 +74,14 @@ export class FooterComponent implements OnInit {
       this.asoc = asociados;
       console.log(asociados);
       this.store.dispatch(getAsociados({ asociados }))}
+    );
+
+    this.documentosService
+    .getDocumentos()
+    .subscribe((documentos) => {
+
+      this.store.dispatch(getDocumentos({ documentos }))
+    }
     );
 
   }

@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { DocumentosService } from 'src/app/services/documentos/documentos.service';
 import { Store } from '@ngrx/store';
+import { DocumentosService } from 'src/app/services/documentos/documentos.service';
 import { selectDocumentos } from 'src/app/store/documentos/documentos.selectors';
-import { selectSecciones } from 'src/app/store/secciones/secciones.selectors';
 import { getDocumentos } from 'src/app/store/documentos/documentos.actions';
+import { selectSecciones } from 'src/app/store/secciones/secciones.selectors';
 import { selectLang } from 'src/app/store/system/system.selectors';
 
 @Component({

@@ -279,6 +279,8 @@
     }
   }
   .carrusel-part2-second-line {
+    width: 100%;
+
     .first-rect {
       width: 50%;
       height: 60px;
@@ -286,6 +288,7 @@
       background: rgba(255, 223, 149, 0.3);
       border-radius: 0px 50px 50px 0px;
     }
+
     .second-rect {
       width: 80%;
       height: 80px;
@@ -304,6 +307,7 @@
     display: flex;
     width: 90%;
     justify-content: center;
+    align-items: center;
     margin-top: 164px;
 
     .small-card {

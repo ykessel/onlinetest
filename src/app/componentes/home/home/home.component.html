@@ -119,6 +119,7 @@
   </div>
 
   <div class="carrusel-part2" ngsReveal>
+    <!-- Seccion de metodos de pagos (Info header) -->
     <div class="carrusel-part2-first-line">
       <ng-container *ngFor="let seccion of secciones$ | async">
         <ng-container *ngIf="seccion.id == 18">
@@ -149,11 +150,13 @@
       </ng-container>
     </div>
 
+    <!-- Elementos decorativos -->
     <div class="carrusel-part2-second-line">
       <div class="first-rect"></div>
       <div class="second-rect"></div>
     </div>
 
+    <!-- Seccion de metodos de pagos (Imagenes) -->
     <div class="carrusel-part2-third-line">
       <ng-container *ngFor="let pago of pagos$ | async">
         <div style="height: 133px; border-left: 2px dashed #d9d9d9"></div>
