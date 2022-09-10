@@ -1,13 +1,9 @@
 @import "./styles/home.large.scss";
+@import "./styles/home.medium.scss";
 
 .container {
   width: 100%;
   overflow: hidden;
-}
-
-.wrapper-banners {
-  height: 100vh;
-  position: relative;
 }
 
 .img-header {
@@ -133,6 +129,7 @@
   gap: 1%;
   width: 100%;
 }
+
 .carrusel-caract {
   width: 78%;
   justify-content: center;
@@ -228,6 +225,9 @@
     align-self: center;
     margin-top: 80px;
     position: absolute;
+  }
+  .owl-carousel .owl-stage-outer {
+    min-height: 500px;
   }
 }
 
@@ -463,67 +463,4 @@
 
 .hide {
   display: none !important;
-}
-
-@media (max-width: 700px) {
-  .home {
-    display: flex;
-    width: 100%;
-    height: 126vh;
-    flex-direction: column;
-  }
-
-  .home-left {
-    display: flex !important;
-    width: 100% !important;
-    flex-direction: column !important;
-    margin-top: 30px !important;
-  }
-
-  .home-izq {
-    display: none;
-  }
-
-  .home-pres {
-    display: flex !important;
-    align-self: flex-end !important;
-    width: 100% !important;
-    margin-bottom: 20vh !important;
-  }
-
-  .home-right {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: flex-end !important;
-    width: 100% !important;
-  }
-
-  .carrusel-caract {
-    width: 63% !important;
-  }
-
-  .carrusel-potencial {
-    width: 63% !important;
-  }
-
-  .carrusel-1-cards {
-    width: 90% !important;
-  }
-
-  .carrusel-2-first-line {
-    margin-bottom: -10% !important;
-  }
-
-  .mat-button,
-  .mat-icon-button,
-  .mat-stroked-button,
-  .mat-flat-button {
-    min-width: 50px !important;
-    line-height: 30px !important;
-  }
-
-  .carrusel-part2-first-line {
-    flex-direction: column !important;
-    margin-right: 4%;
-  }
 }

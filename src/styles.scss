@@ -19,24 +19,3 @@ body {
 .owl-stage, .owl-item {
   display: flex;
 }
-
-.car-container {
-  .owl-carousel .owl-item {
-    // margin-right: -1%;
-}
-
-  .owl-carousel .owl-stage-outer {
-    min-height: 500px;
-  }
-}
-
-@media (max-width: 700px) {
-  .carrusel-potencial {
-    .owl-carousel .owl-item {
-      width: 9% !important;
-    }
-    .owl-carousel > :first-child {
-      margin-left: 0% !important;
-    }
-  }
-}
