@@ -1,3 +1,5 @@
+@import "./styles/home.large.scss";
+
 .container {
   width: 100%;
   overflow: hidden;
@@ -132,12 +134,12 @@
   width: 100%;
 }
 .carrusel-caract {
-  width: 84%;
+  width: 78%;
   justify-content: center;
 }
 
 .carrusel-1-cards {
-  width: 85%;
+  // width: 85%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -147,61 +149,51 @@
   background: #ffffff;
   box-shadow: 0px 0px 16px rgba(217, 208, 184, 0.5);
   border-radius: 24px;
-}
+  margin: 1% 2%;
 
-.carrusel-1-cards-img {
-  margin-left: 24px;
-  margin-top: 24px;
-  max-width: 1rem;
-}
-
-.carrusel-1-cards-bottom-image {
-  display: flex;
-  justify-content: center;
-  width: 80%;
-  align-self: center;
-
-  img {
-    width: 100%;
-    // height: 161px;
-    margin-bottom: -83.86px;
+  .carrusel-1-cards-img {
+    margin-left: 24px;
+    margin-top: 24px;
+    max-width: 1rem;
   }
-}
 
-.carrusel-1-cards-text {
-  display: flex;
-  justify-content: center;
-  padding-left: 5%;
-  p {
-    width: 70%;
-    height: 150px;
-    margin-left: 64px;
-    margin-right: 64px;
+  .carrusel-1-cards-bottom-image {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    align-self: center;
 
-    font-family: "Roboto";
+    img {
+      width: 100%;
+      margin-bottom: -35%;
+    }
+  }
+
+  .carrusel-1-cards-text {
+    display: flex;
+    flex-grow: 1;
+
+    p {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      margin: 0 3.5rem;
+      color: #3f3726;
+      align-self: stretch;
+    }
+  }
+
+  .carrusel-1-cards-text-title p {
+    font-family: "Fredoka One";
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    margin: 0 2rem;
-    color: #3f3726;
-
-    flex: none;
-    order: 1;
-    align-self: stretch;
-    flex-grow: 0;
+    font-size: 1.5em;
+    line-height: 29px;
+    margin: 0 3.5rem;
+    color: #eda301;
   }
-}
-
-.carrusel-1-cards-text-title p {
-  font-family: "Fredoka One";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 1.5em;
-  line-height: 29px;
-  margin-left: 64px;
-  margin-right: 64px;
-  color: #eda301;
 }
 
 .carrusel-1-chips {
@@ -372,7 +364,7 @@
     left: 0px;
 
     .carrusel-potencial {
-      width: 88%;
+      width: 78%;
       justify-content: center;
     }
 
@@ -386,6 +378,7 @@
       box-shadow: 0px 0px 4px rgba(217, 208, 184, 0.5);
       border-radius: 24px;
       min-height: 70vh;
+      margin: 1% 4%;
 
       .carrusel-2-cards-text-title {
         display: flex;
@@ -406,7 +399,7 @@
 
       .carrusel-2-cards-text {
         display: flex;
-        flex-grow: 0.5;
+        flex-grow: 1;
 
         p {
           font-family: "Roboto";
@@ -426,6 +419,7 @@
 
         img {
           width: 12rem;
+          max-height: 23vh;
         }
       }
     }
@@ -465,6 +459,10 @@
       width: 100%;
     }
   }
+}
+
+.hide {
+  display: none !important;
 }
 
 @media (max-width: 700px) {

@@ -1,4 +1,5 @@
 @import "~@fontsource/fredoka-one";
+@import "./styles/nav.medium.scss";
 
 .mat-toolbar {
   background-color: white !important;
@@ -10,8 +11,10 @@
   padding: 0 !important;
 }
 
-.mat-menu-panel, .mat-menu-content  {
-  border-radius: 10px !important;
+.menu {
+  .mat-menu-panel, .mat-menu-content  {
+    border-radius: 10px !important;
+  }
 }
 
 .top-logo {
@@ -108,6 +111,7 @@ section {
   margin-left: 8px;
   min-width: 120px;
 }
+
 .pres-img {
   width: 2rem;
   height: 2rem;
@@ -115,6 +119,7 @@ section {
   max-height: 29px;
   margin-right: .6rem;
 }
+
 .example-button-row {
   display: flex;
   flex-direction: row;
@@ -196,28 +201,6 @@ section {
   display: flex;
 }
 
-@media (max-width: 700px) {
-  .menu, .nav-container {
-    display: none;
-  }
-
-  .nav-container{
-    display: none;
-  }
-
-  .example-button-row{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-    width: 41%;
-    margin-left: 2rem;
-  }
-
-  .top-left{
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-between;
-  }
+.menu-nav {
+  display: none;
 }

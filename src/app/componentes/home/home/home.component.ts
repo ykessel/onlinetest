@@ -27,12 +27,13 @@ import { selectLang } from "src/app/store/system/system.selectors";
 })
 export class HomeComponent implements OnInit {
   lang: string = "";
+  totalCaract: number = 0;
+  totalPoten: number = 0;
   secciones$ = this.store.select(selectSecciones);
   servicios$ = this.store.select(selectServicios);
   potencialidades$ = this.store.select(selectPotencialidades);
   pagos$ = this.store.select(selectPagos);
   caracteristicas$ = this.store.select(selectCaracteristicas);
-  // banners$ = this.store.select(selectBanners);
   lang$ = this.store.select(selectLang).subscribe((l) => (this.lang = l));
 
   constructor(
@@ -50,14 +51,16 @@ export class HomeComponent implements OnInit {
 
     this.potencialidadesService
       .getPotencialidades()
-      .subscribe((potencialidades) =>
-        this.store.dispatch(getPotencialidades({ potencialidades }))
+      .subscribe((potencialidades) =>{
+        this.totalPoten = potencialidades.length;
+        this.store.dispatch(getPotencialidades({ potencialidades }))}
       );
 
     this.caracteristicasService
       .getCaracteristicas()
-      .subscribe((caracteristicas) =>
-        this.store.dispatch(getCaracteristicas({ caracteristicas }))
+      .subscribe((caracteristicas) => {
+        this.totalCaract = caracteristicas.length;
+        this.store.dispatch(getCaracteristicas({ caracteristicas }))}
       );
 
     this.pagosService
@@ -92,6 +95,9 @@ export class HomeComponent implements OnInit {
       1920: {
         items: 3,
       },
+      2000: {
+        items: 3,
+      },
     },
     nav: false,
   };
@@ -118,6 +124,12 @@ export class HomeComponent implements OnInit {
         items: 4,
       },
       1366: {
+        items: 4,
+      },
+      1920: {
+        items: 4,
+      },
+      2000: {
         items: 4,
       },
     },

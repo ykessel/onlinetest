@@ -6,7 +6,12 @@
   <div class="car-container" ngsReveal>
     <div class="middle">
       <div class="carrusel-1">
-        <button mat-button (click)="owlCar.prev()" class="carrusel-1-chips">
+        <button
+          mat-button
+          (click)="owlCar.prev()"
+          [class.hide]="totalCaract === 3"
+          class="carrusel-1-chips"
+        >
           <svg
             width="50%"
             height="50%"
@@ -26,41 +31,40 @@
             <ng-container *ngFor="let caract of caracteristicas$ | async">
               <ng-template carouselSlide>
                 <div class="carrusel-1-cards">
-                  <div>
-                    <img
-                      class="carrusel-1-cards-img"
-                      src="../../../../assets/img_header.png"
-                    />
-                    <div class="carrusel-1-cards-text-title">
-                      <p *ngIf="lang === 'es'">
-                        {{ caract.tituloEs }}
-                      </p>
-                      <p *ngIf="lang === 'en'">
-                        {{ caract.tituloEn }}
-                      </p>
-                      <p *ngIf="lang === 'xx'">
-                        {{ caract.tituloOtro }}
-                      </p>
-                    </div>
+                  <img
+                    class="carrusel-1-cards-img"
+                    src="../../../../assets/img_header.png"
+                  />
 
-                    <div
-                      *ngIf="lang === 'es'"
-                      class="carrusel-1-cards-text"
-                      [innerHTML]="caract.contenidoEs"
-                    ></div>
-
-                    <div
-                      *ngIf="lang === 'en'"
-                      class="carrusel-1-cards-text"
-                      [innerHTML]="caract.contenidoEn"
-                    ></div>
-
-                    <div
-                      *ngIf="lang === 'xx'"
-                      class="carrusel-1-cards-text"
-                      [innerHTML]="caract.contenidoOtro"
-                    ></div>
+                  <div class="carrusel-1-cards-text-title">
+                    <p *ngIf="lang === 'es'">
+                      {{ caract.tituloEs }}
+                    </p>
+                    <p *ngIf="lang === 'en'">
+                      {{ caract.tituloEn }}
+                    </p>
+                    <p *ngIf="lang === 'xx'">
+                      {{ caract.tituloOtro }}
+                    </p>
                   </div>
+
+                  <div
+                    *ngIf="lang === 'es'"
+                    class="carrusel-1-cards-text"
+                    [innerHTML]="caract.contenidoEs"
+                  ></div>
+
+                  <div
+                    *ngIf="lang === 'en'"
+                    class="carrusel-1-cards-text"
+                    [innerHTML]="caract.contenidoEn"
+                  ></div>
+
+                  <div
+                    *ngIf="lang === 'xx'"
+                    class="carrusel-1-cards-text"
+                    [innerHTML]="caract.contenidoOtro"
+                  ></div>
 
                   <div
                     *ngIf="lang === 'es'"
@@ -88,7 +92,12 @@
           </owl-carousel-o>
         </div>
 
-        <button mat-button (click)="owlCar.next()" class="carrusel-1-chips">
+        <button
+          mat-button
+          (click)="owlCar.next()"
+          [class.hide]="totalCaract === 3"
+          class="carrusel-1-chips"
+        >
           <svg
             width="50%"
             height="50%"
@@ -121,12 +130,21 @@
             <img class="header" src="../../../../assets/img_header.png" />
           </div>
 
-          <p class="lorem" *ngIf="lang === 'es'" [innerHTML]="seccion.contenidoEs">
-          </p>
-          <p class="lorem" *ngIf="lang === 'en'" [innerHTML]="seccion.contenidoEs">
-          </p>
-          <p class="lorem" *ngIf="lang === 'xx'" [innerHTML]="seccion.contenidoEs">
-          </p>
+          <p
+            class="lorem"
+            *ngIf="lang === 'es'"
+            [innerHTML]="seccion.contenidoEs"
+          ></p>
+          <p
+            class="lorem"
+            *ngIf="lang === 'en'"
+            [innerHTML]="seccion.contenidoEs"
+          ></p>
+          <p
+            class="lorem"
+            *ngIf="lang === 'xx'"
+            [innerHTML]="seccion.contenidoEs"
+          ></p>
         </ng-container>
       </ng-container>
     </div>
@@ -138,11 +156,10 @@
 
     <div class="carrusel-part2-third-line">
       <ng-container *ngFor="let pago of pagos$ | async">
-        <div style="height:133px;border-left:2px dashed #D9D9D9"></div>
+        <div style="height: 133px; border-left: 2px dashed #d9d9d9"></div>
         <img src="{{ pago.logo }}" class="small-card" />
       </ng-container>
-      <div style="height:133px;border-left:2px dashed #D9D9D9"></div>
-      
+      <div style="height: 133px; border-left: 2px dashed #d9d9d9"></div>
     </div>
   </div>
 
@@ -174,7 +191,12 @@
     </div>
 
     <div class="carrusel-2-second-line">
-      <button mat-button (click)="owlPoten.prev()" class="carrusel-1-chips">
+      <button
+        mat-button
+        (click)="owlPoten.prev()"
+        [class.hide]="totalPoten === 4"
+        class="carrusel-1-chips"
+      >
         <svg
           width="50%"
           height="50%"
@@ -194,51 +216,55 @@
           <ng-container *ngFor="let ponte of potencialidades$ | async">
             <ng-template carouselSlide>
               <div class="carrusel-2-cards">
-
                 <div class="carrusel-2-cards-text-title" *ngIf="lang === 'es'">
-                    <p> {{ ponte.tituloEs }} </p>
+                  <p>{{ ponte.tituloEs }}</p>
                 </div>
 
                 <div class="carrusel-2-cards-text-title" *ngIf="lang === 'en'">
-                   <p> {{ ponte.tituloEn }} </p>
+                  <p>{{ ponte.tituloEn }}</p>
                 </div>
 
                 <div class="carrusel-2-cards-text-title" *ngIf="lang === 'xx'">
-                   <p> {{ ponte.tituloOtro }} </p>
+                  <p>{{ ponte.tituloOtro }}</p>
                 </div>
 
-                  <!-- Contenido -->
+                <!-- Contenido -->
 
-                  <div
-                    *ngIf="lang === 'es'"
-                    class="carrusel-2-cards-text"
-                    [innerHTML]="ponte.contenidoEs"
-                  ></div>
+                <div
+                  *ngIf="lang === 'es'"
+                  class="carrusel-2-cards-text"
+                  [innerHTML]="ponte.contenidoEs"
+                ></div>
 
-                  <div
-                    *ngIf="lang === 'en'"
-                    class="carrusel-2-cards-text"
-                    [innerHTML]="ponte.contenidoEn"
-                  ></div>
+                <div
+                  *ngIf="lang === 'en'"
+                  class="carrusel-2-cards-text"
+                  [innerHTML]="ponte.contenidoEn"
+                ></div>
 
-                  <div
-                    *ngIf="lang === 'xx'"
-                    class="carrusel-2-cards-text"
-                    [innerHTML]="ponte.contenidoOtro"
-                  ></div>
+                <div
+                  *ngIf="lang === 'xx'"
+                  class="carrusel-2-cards-text"
+                  [innerHTML]="ponte.contenidoOtro"
+                ></div>
 
-                  <div class="carrusel-2-cards-bottom-image">
-                    <!-- <img src="{{ ponte.imagenEs }}" /> -->
-                    <img src="../../../../assets/img_pagoonline.png">
-                  </div>
-
+                <div class="carrusel-2-cards-bottom-image">
+                  <img *ngIf="lang === 'es'" src="{{ ponte.imagenEs }}" />
+                  <img *ngIf="lang === 'en'" src="{{ ponte.imagenEn }}" />
+                  <img *ngIf="lang === 'xx'" src="{{ ponte.imagenOtro }}" />
+                </div>
               </div>
             </ng-template>
           </ng-container>
         </owl-carousel-o>
       </div>
 
-      <button mat-button (click)="owlPoten.next()" class="carrusel-1-chips">
+      <button
+        mat-button
+        (click)="owlPoten.next()"
+        [class.hide]="totalPoten === 4"
+        class="carrusel-1-chips"
+      >
         <svg
           width="50%"
           height="50%"

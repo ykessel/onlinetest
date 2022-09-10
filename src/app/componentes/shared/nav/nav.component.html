@@ -35,6 +35,7 @@
           >
           <div class="line" [style.visibility]="getLineStyle(1)"></div>
         </div>
+
         <div class="nav-container">
           <a
             class="button-nav"
@@ -67,6 +68,7 @@
           >
           <div class="line" [style.visibility]="getLineStyle(2)"></div>
         </div>
+
         <div class="nav-container">
           <a
             class="button-nav"
@@ -99,6 +101,7 @@
           >
           <div class="line" [style.visibility]="getLineStyle(3)"></div>
         </div>
+
         <div class="nav-container">
           <a
             class="button-nav"
@@ -131,6 +134,7 @@
           >
           <div class="line" [style.visibility]="getLineStyle(4)"></div>
         </div>
+
         <div class="nav-container">
           <a
             class="button-nav"
@@ -164,6 +168,7 @@
           <div class="line" [style.visibility]="getLineStyle(5)"></div>
         </div>
       </div>
+
       <div class="menu">
         <img src="../../../../assets/img_header.png" class="pres-img" />
         <button
@@ -199,7 +204,196 @@
           </button>
         </mat-menu>
       </div>
+
+      <div class="menu-nav">
+        <button mat-icon-button  [matMenuTriggerFor]="menuNav" aria-label="Nav">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <mat-menu #menuNav xPosition="before">
+          <div mat-menu-item class="nav-container-home">
+            <a
+              class="button-menu"
+              *ngIf="lang === 'es'"
+              (click)="setSelected(1)"
+              [style.color]="getLinkStyle(1)"
+              mat-button
+              routerLink=""
+              >Inicio</a
+            >
+
+            <a
+              class="button-menu"
+              *ngIf="lang === 'en'"
+              (click)="setSelected(1)"
+              [style.color]="getLinkStyle(1)"
+              mat-button
+              routerLink=""
+              >Home</a
+            >
+
+            <a
+              class="button-menu"
+              *ngIf="lang === 'xx'"
+              (click)="setSelected(1)"
+              [style.color]="getLinkStyle(1)"
+              mat-button
+              routerLink=""
+              >Inicio</a
+            >
+            <div class="line" [style.visibility]="getLineStyle(1)"></div>
+          </div>
+
+          <div mat-menu-item class="nav-container">
+            <a
+              class="button-menu"
+              *ngIf="lang === 'es'"
+              (click)="setSelected(2)"
+              [style.color]="getLinkStyle(2)"
+              mat-button
+              routerLink="nosotros"
+              >Nosotros</a
+            >
+
+            <a
+              class="button-menu"
+              *ngIf="lang === 'en'"
+              (click)="setSelected(2)"
+              [style.color]="getLinkStyle(2)"
+              mat-button
+              routerLink="nosotros"
+              >About us</a
+            >
+
+            <a
+              class="button-menu"
+              *ngIf="lang === 'xx'"
+              (click)="setSelected(2)"
+              [style.color]="getLinkStyle(2)"
+              mat-button
+              routerLink="nosotros"
+              >Nosotros</a
+            >
+            <div class="line" [style.visibility]="getLineStyle(2)"></div>
+          </div>
+
+          <div mat-menu-item class="nav-container">
+            <a
+              class="button-menu"
+              *ngIf="lang === 'es'"
+              (click)="setSelected(3)"
+              [style.color]="getLinkStyle(3)"
+              mat-button
+              routerLink="servicios"
+              >Servicios</a
+            >
+
+            <a
+              class="button-menu"
+              *ngIf="lang === 'en'"
+              (click)="setSelected(3)"
+              [style.color]="getLinkStyle(3)"
+              mat-button
+              routerLink="servicios"
+              >Services</a
+            >
+
+            <a
+              class="button-menu"
+              *ngIf="lang === 'xx'"
+              (click)="setSelected(3)"
+              [style.color]="getLinkStyle(3)"
+              mat-button
+              routerLink="servicios"
+              >Servicios</a
+            >
+            <div class="line" [style.visibility]="getLineStyle(3)"></div>
+          </div>
+
+          <div mat-menu-item class="nav-container">
+            <a
+              class="button-menu"
+              *ngIf="lang === 'es'"
+              (click)="setSelected(4)"
+              [style.color]="getLinkStyle(4)"
+              mat-button
+              routerLink="documentos"
+              >Documentación</a
+            >
+
+            <a
+              class="button-menu"
+              *ngIf="lang === 'en'"
+              (click)="setSelected(4)"
+              [style.color]="getLinkStyle(4)"
+              mat-button
+              routerLink="documentos"
+              >Documentation</a
+            >
+
+            <a
+              class="button-menu"
+              *ngIf="lang === 'xx'"
+              (click)="setSelected(4)"
+              [style.color]="getLinkStyle(4)"
+              mat-button
+              routerLink="documentos"
+              >Documentación</a
+            >
+            <div class="line" [style.visibility]="getLineStyle(4)"></div>
+          </div>
+
+          <div mat-menu-item class="nav-container">
+            <a
+              class="button-menu"
+              *ngIf="lang === 'es'"
+              (click)="setSelected(5)"
+              [style.color]="getLinkStyle(5)"
+              mat-button
+              routerLink="contactos"
+              >Contáctenos</a
+            >
+
+            <a
+              class="button-menu"
+              *ngIf="lang === 'en'"
+              (click)="setSelected(5)"
+              [style.color]="getLinkStyle(5)"
+              mat-button
+              routerLink="contactos"
+              >Contact us</a
+            >
+
+            <a
+              class="button-menu"
+              *ngIf="lang === 'xx'"
+              (click)="setSelected(5)"
+              [style.color]="getLinkStyle(5)"
+              mat-button
+              routerLink="contactos"
+              >Contáctenos</a
+            >
+            <div class="line" [style.visibility]="getLineStyle(5)"></div>
+          </div>
+          <mat-divider></mat-divider>
+          <button
+          mat-menu-item
+          *ngFor="let idioma of idiomas$ | async"
+          (click)="changeLang(idioma.siglas)"
+        >
+          <div class="button-wrapper-item">
+            <div class="img-item-container">
+              <img
+                *ngIf="idioma.nombre !== 'Otro'"
+                class="img-element"
+                [src]="getFlags(idioma.siglas)"
+                alt="Imagen idioma"
+              />
+            </div>
+            <span class="menu-span">{{ idioma.nombre }}</span>
+          </div>
+        </button>
+        </mat-menu>
+      </div>
     </div>
   </div>
-
 </mat-toolbar>
