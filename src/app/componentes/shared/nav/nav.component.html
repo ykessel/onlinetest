@@ -7,8 +7,7 @@
           <a
             class="button-nav"
             *ngIf="lang === 'es'"
-            (click)="setSelected(1)"
-            [style.color]="getLinkStyle(1)"
+            [class.active]="activeLink('')"
             mat-button
             routerLink=""
             >Inicio</a
@@ -17,8 +16,7 @@
           <a
             class="button-nav"
             *ngIf="lang === 'en'"
-            (click)="setSelected(1)"
-            [style.color]="getLinkStyle(1)"
+            [class.active]="activeLink('')"
             mat-button
             routerLink=""
             >Home</a
@@ -27,21 +25,19 @@
           <a
             class="button-nav"
             *ngIf="lang === 'ex'"
-            (click)="setSelected(1)"
-            [style.color]="getLinkStyle(1)"
+            [class.active]="activeLink('')"
             mat-button
             routerLink=""
             >Inicio</a
           >
-          <div class="line" [style.visibility]="getLineStyle(1)"></div>
+          <div class="line" [style.visibility]="activeLink('') ? 'visible' : 'hidden'"></div>
         </div>
 
         <div class="nav-container">
           <a
             class="button-nav"
             *ngIf="lang === 'es'"
-            (click)="setSelected(2)"
-            [style.color]="getLinkStyle(2)"
+            [class.active]="activeLink('/nosotros')"
             mat-button
             routerLink="nosotros"
             >Nosotros</a
@@ -50,8 +46,7 @@
           <a
             class="button-nav"
             *ngIf="lang === 'en'"
-            (click)="setSelected(2)"
-            [style.color]="getLinkStyle(2)"
+            [class.active]="activeLink('/nosotros')"
             mat-button
             routerLink="nosotros"
             >About us</a
@@ -60,21 +55,19 @@
           <a
             class="button-nav"
             *ngIf="lang === 'xx'"
-            (click)="setSelected(2)"
-            [style.color]="getLinkStyle(2)"
+            [class.active]="activeLink('/nosotros')"
             mat-button
             routerLink="nosotros"
             >Nosotros</a
           >
-          <div class="line" [style.visibility]="getLineStyle(2)"></div>
+          <div class="line" [style.visibility]="activeLink('/nosotros') ? 'visible' : 'hidden'"></div>
         </div>
 
         <div class="nav-container">
           <a
             class="button-nav"
             *ngIf="lang === 'es'"
-            (click)="setSelected(3)"
-            [style.color]="getLinkStyle(3)"
+            [class.active]="activeLink('/servicios')"
             mat-button
             routerLink="servicios"
             >Servicios</a
@@ -83,8 +76,7 @@
           <a
             class="button-nav"
             *ngIf="lang === 'en'"
-            (click)="setSelected(3)"
-            [style.color]="getLinkStyle(3)"
+            [class.active]="activeLink('/servicios')"
             mat-button
             routerLink="servicios"
             >Services</a
@@ -93,21 +85,19 @@
           <a
             class="button-nav"
             *ngIf="lang === 'xx'"
-            (click)="setSelected(3)"
-            [style.color]="getLinkStyle(3)"
+            [class.active]="activeLink('/servicios')"
             mat-button
             routerLink="servicios"
             >Servicios</a
           >
-          <div class="line" [style.visibility]="getLineStyle(3)"></div>
+          <div class="line" [style.visibility]="activeLink('/servicios') ? 'visible' : 'hidden'"></div>
         </div>
 
         <div class="nav-container">
           <a
             class="button-nav"
             *ngIf="lang === 'es'"
-            (click)="setSelected(4)"
-            [style.color]="getLinkStyle(4)"
+            [class.active]="activeLink('/documentos')"
             mat-button
             routerLink="documentos"
             >Documentación</a
@@ -116,8 +106,7 @@
           <a
             class="button-nav"
             *ngIf="lang === 'en'"
-            (click)="setSelected(4)"
-            [style.color]="getLinkStyle(4)"
+            [class.active]="activeLink('/documentos')"
             mat-button
             routerLink="documentos"
             >Documentation</a
@@ -126,21 +115,19 @@
           <a
             class="button-nav"
             *ngIf="lang === 'xx'"
-            (click)="setSelected(4)"
-            [style.color]="getLinkStyle(4)"
+            [class.active]="activeLink('/documentos')"
             mat-button
             routerLink="documentos"
             >Documentación</a
           >
-          <div class="line" [style.visibility]="getLineStyle(4)"></div>
+          <div class="line" [style.visibility]="activeLink('/documentos') ? 'visible' : 'hidden'"></div>
         </div>
 
         <div class="nav-container">
           <a
             class="button-nav"
             *ngIf="lang === 'es'"
-            (click)="setSelected(5)"
-            [style.color]="getLinkStyle(5)"
+            [class.active]="activeLink('/contactos')"
             mat-button
             routerLink="contactos"
             >Contáctenos</a
@@ -149,8 +136,7 @@
           <a
             class="button-nav"
             *ngIf="lang === 'en'"
-            (click)="setSelected(5)"
-            [style.color]="getLinkStyle(5)"
+            [class.active]="activeLink('/contactos')"
             mat-button
             routerLink="contactos"
             >Contact us</a
@@ -159,13 +145,12 @@
           <a
             class="button-nav"
             *ngIf="lang === 'xx'"
-            (click)="setSelected(5)"
-            [style.color]="getLinkStyle(5)"
+            [class.active]="activeLink('/contactos')"
             mat-button
             routerLink="contactos"
             >Contáctenos</a
           >
-          <div class="line" [style.visibility]="getLineStyle(5)"></div>
+          <div class="line" [style.visibility]="activeLink('/documentos') ? 'visible' : 'hidden'"></div>
         </div>
       </div>
 
@@ -214,8 +199,7 @@
             <a
               class="button-menu"
               *ngIf="lang === 'es'"
-              (click)="setSelected(1)"
-              [style.color]="getLinkStyle(1)"
+              [class.active]="activeLink('/contactos')"
               mat-button
               routerLink=""
               >Inicio</a
@@ -224,8 +208,7 @@
             <a
               class="button-menu"
               *ngIf="lang === 'en'"
-              (click)="setSelected(1)"
-              [style.color]="getLinkStyle(1)"
+              [class.active]="activeLink('')"
               mat-button
               routerLink=""
               >Home</a
@@ -234,21 +217,19 @@
             <a
               class="button-menu"
               *ngIf="lang === 'xx'"
-              (click)="setSelected(1)"
-              [style.color]="getLinkStyle(1)"
+              [class.active]="activeLink('')"
               mat-button
               routerLink=""
               >Inicio</a
             >
-            <div class="line" [style.visibility]="getLineStyle(1)"></div>
+            <div class="line" [style.visibility]="activeLink('') ? 'visible' : 'hidden'"></div>
           </div>
 
           <div mat-menu-item class="nav-container">
             <a
               class="button-menu"
               *ngIf="lang === 'es'"
-              (click)="setSelected(2)"
-              [style.color]="getLinkStyle(2)"
+              [class.active]="activeLink('/nosotros')"
               mat-button
               routerLink="nosotros"
               >Nosotros</a
@@ -257,8 +238,7 @@
             <a
               class="button-menu"
               *ngIf="lang === 'en'"
-              (click)="setSelected(2)"
-              [style.color]="getLinkStyle(2)"
+              [class.active]="activeLink('/nosotros')"
               mat-button
               routerLink="nosotros"
               >About us</a
@@ -267,21 +247,19 @@
             <a
               class="button-menu"
               *ngIf="lang === 'xx'"
-              (click)="setSelected(2)"
-              [style.color]="getLinkStyle(2)"
+              [class.active]="activeLink('/nosotros')"
               mat-button
               routerLink="nosotros"
               >Nosotros</a
             >
-            <div class="line" [style.visibility]="getLineStyle(2)"></div>
+            <div class="line" [style.visibility]="activeLink('/nosotros') ? 'visible' : 'hidden'"></div>
           </div>
 
           <div mat-menu-item class="nav-container">
             <a
               class="button-menu"
               *ngIf="lang === 'es'"
-              (click)="setSelected(3)"
-              [style.color]="getLinkStyle(3)"
+              [class.active]="activeLink('/servicios')"
               mat-button
               routerLink="servicios"
               >Servicios</a
@@ -290,8 +268,7 @@
             <a
               class="button-menu"
               *ngIf="lang === 'en'"
-              (click)="setSelected(3)"
-              [style.color]="getLinkStyle(3)"
+              [class.active]="activeLink('/servicios')"
               mat-button
               routerLink="servicios"
               >Services</a
@@ -300,21 +277,19 @@
             <a
               class="button-menu"
               *ngIf="lang === 'xx'"
-              (click)="setSelected(3)"
-              [style.color]="getLinkStyle(3)"
+              [class.active]="activeLink('/servicios')"
               mat-button
               routerLink="servicios"
               >Servicios</a
             >
-            <div class="line" [style.visibility]="getLineStyle(3)"></div>
+            <div class="line" [style.visibility]="activeLink('/servicios') ? 'visible' : 'hidden'"></div>
           </div>
 
           <div mat-menu-item class="nav-container">
             <a
               class="button-menu"
               *ngIf="lang === 'es'"
-              (click)="setSelected(4)"
-              [style.color]="getLinkStyle(4)"
+              [class.active]="activeLink('/documentos')"
               mat-button
               routerLink="documentos"
               >Documentación</a
@@ -323,8 +298,7 @@
             <a
               class="button-menu"
               *ngIf="lang === 'en'"
-              (click)="setSelected(4)"
-              [style.color]="getLinkStyle(4)"
+              [class.active]="activeLink('/documentos')"
               mat-button
               routerLink="documentos"
               >Documentation</a
@@ -333,21 +307,19 @@
             <a
               class="button-menu"
               *ngIf="lang === 'xx'"
-              (click)="setSelected(4)"
-              [style.color]="getLinkStyle(4)"
+              [class.active]="activeLink('/documentos')"
               mat-button
               routerLink="documentos"
               >Documentación</a
             >
-            <div class="line" [style.visibility]="getLineStyle(4)"></div>
+            <div class="line" [style.visibility]="activeLink('/documentos') ? 'visible' : 'hidden'"></div>
           </div>
 
           <div mat-menu-item class="nav-container">
             <a
               class="button-menu"
               *ngIf="lang === 'es'"
-              (click)="setSelected(5)"
-              [style.color]="getLinkStyle(5)"
+              [class.active]="activeLink('/contactos')"
               mat-button
               routerLink="contactos"
               >Contáctenos</a
@@ -356,8 +328,7 @@
             <a
               class="button-menu"
               *ngIf="lang === 'en'"
-              (click)="setSelected(5)"
-              [style.color]="getLinkStyle(5)"
+              [class.active]="activeLink('/contactos')"
               mat-button
               routerLink="contactos"
               >Contact us</a
@@ -366,13 +337,12 @@
             <a
               class="button-menu"
               *ngIf="lang === 'xx'"
-              (click)="setSelected(5)"
-              [style.color]="getLinkStyle(5)"
+              [class.active]="activeLink('/contactos')"
               mat-button
               routerLink="contactos"
               >Contáctenos</a
             >
-            <div class="line" [style.visibility]="getLineStyle(5)"></div>
+            <div class="line" [style.visibility]="activeLink('/contactos') ? 'visible' : 'hidden'"></div>
           </div>
           <mat-divider></mat-divider>
           <button

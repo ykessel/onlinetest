@@ -1,3 +1,8 @@
+import { EnlacesInteresService } from './services/enlaces-interes/enlaces-interes.service';
+import { CategoriasEnlaceService } from './services/categorias-enlace/categorias-enlace.service';
+import { EnlacesReducer } from './store/enlaces/enlaces.reducer';
+import { ContactosReducer } from './store/contactos/contactos.reducer';
+import { CategoriasReducer } from './store/categorias/categorias.reducer';
 import { AsociadosReducer } from './store/asociados/asociados.reducer';
 import { BannersReducer } from './store/banners/banners.reducer';
 import { CaracteristicasReducer } from './store/caracteristicas/caracteristicas.reducer';
@@ -58,6 +63,8 @@ import { SeccionesService } from 'src/app/services/secciones/secciones.service';
 import { PotencialidadesService } from './services/potencialidades/potencialidades.service';
 import { PagosService } from './services/pagos/pagos.service';
 import { BannersService } from './services/banners/banners.service';
+import { DatosContactoService } from './services/datos-contacto/datos-contacto.service';
+
 
 // Redux
 import { StoreModule } from '@ngrx/store';
@@ -153,6 +160,9 @@ const cookieConfig:NgcCookieConsentConfig = {
         caracteristicas: CaracteristicasReducer,
         banners: BannersReducer,
         asociados: AsociadosReducer,
+        categorias: CategoriasReducer,
+        contactos: ContactosReducer,
+        enlaces: EnlacesReducer,
         lang: SystemLangReducer,
         serviceId: SystemServiceIdReducer,
       },
@@ -183,6 +193,10 @@ const cookieConfig:NgcCookieConsentConfig = {
     SeccionesService,
     ServiciosService,
     SocialesService,
+    CategoriasEnlaceService,
+    ContactosService,
+    EnlacesInteresService,
+    DatosContactoService
   ],
   bootstrap: [AppComponent],
 })

@@ -274,6 +274,7 @@
       .footer-last-info {
         display: flex;
         flex-direction: column;
+        margin-top: 4rem;
 
         .footer-info {
           display: flex;
@@ -352,8 +353,10 @@
 
       .footer-social {
         display: flex;
-        justify-content: end;
+        justify-content: flex-end;
         gap: 1em;
+        margin-top: -3rem;
+
 
         .footer-social-icon {
           color: white;

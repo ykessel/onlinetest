@@ -3,7 +3,6 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { AsociadosService } from 'src/app/services/asociados/asociados.service';
 import { SocialesService } from 'src/app/services/sociales/sociales.service';
 import { Store } from '@ngrx/store';
-
 import {
   faFacebook,
   faGooglePlus,
@@ -26,6 +25,15 @@ import { selectLang } from 'src/app/store/system/system.selectors';
 import { DocumentosService } from 'src/app/services/documentos/documentos.service';
 import { selectDocumentos } from 'src/app/store/documentos/documentos.selectors';
 import { getDocumentos } from 'src/app/store/documentos/documentos.actions';
+import { selectCategorias } from 'src/app/store/categorias/categorias.selectors';
+import { selectContactos } from 'src/app/store/contactos/contactos.selectors';
+import { selectEnlaces } from 'src/app/store/enlaces/enlaces.selectors';
+import { EnlacesInteresService } from 'src/app/services/enlaces-interes/enlaces-interes.service';
+import { DatosContactoService } from 'src/app/services/datos-contacto/datos-contacto.service';
+import { CategoriasEnlaceService } from 'src/app/services/categorias-enlace/categorias-enlace.service';
+import { getCategorias } from 'src/app/store/categorias/categorias.actions';
+import { getContactos } from 'src/app/store/contactos/contactos.actions';
+import { getEnlaces } from 'src/app/store/enlaces/enlaces.actions';
 
 @Component({
   selector: 'bipay-footer',
@@ -40,6 +48,9 @@ export class FooterComponent implements OnInit {
   secciones$ = this.store.select(selectSecciones);
   asociados$ = this.store.select(selectAsociados);
   documentos$ = this.store.select(selectDocumentos);
+  categorias$ = this.store.select(selectCategorias);
+  contactos$ = this.store.select(selectContactos);
+  enlaces$ = this.store.select(selectEnlaces);
   lang$ = this.store.select(selectLang).subscribe((l) => this.lang = l);
   faFacebook = faFacebook;
   faInstagram = faInstagram;
@@ -60,7 +71,10 @@ export class FooterComponent implements OnInit {
     private store: Store,
     private socialesService: SocialesService,
     private asociadosService: AsociadosService,
-    private documentosService: DocumentosService
+    private documentosService: DocumentosService,
+    private categoriasService: CategoriasEnlaceService,
+    private contactosService: DatosContactoService,
+    private enlacesService: EnlacesInteresService
   ) {}
 
   ngOnInit(): void {
@@ -78,10 +92,23 @@ export class FooterComponent implements OnInit {
 
     this.documentosService
     .getDocumentos()
-    .subscribe((documentos) => {
-
+    .subscribe((documentos) =>
       this.store.dispatch(getDocumentos({ documentos }))
-    }
+    );
+
+    this.categoriasService.getCategorias()
+    .subscribe((categorias) =>
+      this.store.dispatch(getCategorias({ categorias }))
+    );
+
+    this.contactosService.getDatosContacto()
+    .subscribe((contactos) =>
+      this.store.dispatch(getContactos({ contactos }))
+    );
+
+    this.enlacesService.getEnlaces()
+    .subscribe((enlaces) =>
+      this.store.dispatch(getEnlaces({ enlaces }))
     );
 
   }
