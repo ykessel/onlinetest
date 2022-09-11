@@ -179,6 +179,7 @@
       }
     }
   }
+  
   .icon{
     color: #670f0f;
   }
@@ -246,6 +247,7 @@
         display: flex;
         flex-direction: column;
         width: 35%;
+        gap: 10%;
 
         img {
           width: 115px;
@@ -270,19 +272,19 @@
           display: flex;
 
           img {
-            width: 0.4rem;
-            height: 1rem;
+            width: 14.06px;
+            height: 20.12px;
             margin-top: 0.2rem;
             margin-right: 0.2rem;
           }
 
           .footer-title {
-            font-family: "Roboto";
+            font-family: 'Roboto';
             font-style: normal;
             font-weight: 400;
-            font-size: 2rem;
+            font-size: 20px;
             line-height: 24px;
-            color: #f4a800;
+            color: #F4A800;
           }
         }
 
@@ -363,7 +365,75 @@
   }
 }
 
+.call-group{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 @media (max-width: 700px) {
+  
+  .call-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+    gap: 8px;
+  }
+
+  .footer .footer-last .footer-container .footer-last-documents .footer-docs img {
+    width: 14.06px;
+    height: 20.12px;
+    margin-top: 0.2rem;
+    margin-right: 4px;
+  }
+
+  .footer .footer-contactos .footer-contactos-container .footer-contactos-center .footer-contactos-text {
+    width: 70%;
+    height: 200px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .footer .footer-contactos .footer-contactos-container .footer-contactos-center .footer-contactos-boton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2% 10%;
+    gap: 10px;
+    font-family: "Fredoka One";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: #EAC2C2;
+    width: 207px;
+    height: 69px;
+    background: #670f0f;
+    border-radius: 50px;
+  } 
+
+  .footer .footer-last .footer-call {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 339px;
+    padding: 4px 0px;
+    gap: 0px;
+    height: 154px;
+    background: #e4e4e4;
+    border-radius: 100px;
+    justify-content: center;
+    align-self: center;
+    margin-top: -3.5rem;
+    margin-bottom: 10vh;
+  }
+
   .footer .footer-last mat-chip {
     width: 85%;
   }

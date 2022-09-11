@@ -5,7 +5,8 @@
 
 .contact-head{
     display: flex;
-    margin-top: 2%;
+    margin-top: 5%;
+    justify-content: center;
     flex-direction: row;
     align-items: center;
     height: 9%;
@@ -140,7 +141,7 @@
     width: 55%;
     height: 127%;
     left: 26%;
-    top: 40%;
+    top: 45%;
     background: #FFFFFF;
 }
 
@@ -192,4 +193,74 @@
     line-height: 24px;
     color: #727272;
   }
+}
+
+@media (max-width: 700px) {
+    
+    .img-chip-izq{
+        display: none;
+    }
+    .img-chip-pink {
+        display: none;
+    }
+    .img-chip-der{
+        display: none;
+    }
+
+    .img-chip-menor{
+        display: none;
+    }
+    .we-text-container{
+        width: 92% !important;
+    } 
+    
+    .we-text {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 127%;
+        left: 0%;
+        top: 56%;
+        background: #FFFFFF;
+    }
+
+    .center-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background: #FFF8E7;
+        border-radius: 500px;
+        height: 90%;
+        width: 70%;
+    }
+
+    .rigth-container {
+        display: flex;
+        justify-content: flex-end;
+        width: 340px !important;
+        height: 83px !important;
+        top: 218px !important;
+        right: 0px !important;
+        position: absolute !important;        
+    }
+
+    .rigth-img {
+        height: 80%;
+        width: 57% !important;
+        background-repeat: no-repeat !important;
+        background: url(../../../../assets/grafica_der1.png);
+    }
+
+    .left-img {
+
+        top: 213px !important;
+        left: -93px !important;
+        position: absolute !important;
+        background: linear-gradient(90deg, #FAA6A7 0%, #B5E7FF 67.02%, #FFDF95 98.96%);
+        border-radius: 0px 50px 50px 0px;
+        width: 225px !important;
+        height: 80px !important;
+    }
 }
