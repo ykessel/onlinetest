@@ -1,12 +1,9 @@
-.footer-contact{
-  display: flex;
-  gap: 5%;
-}
+@import "./styles/footer.mediun.scss";
 
-.footer-description{
-  p{
-    color: #CA8383;
-    font-family: 'Roboto';
+.footer-description {
+  p {
+    color: #ca8383;
+    font-family: "Roboto";
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -127,60 +124,63 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
 
         .footer-contactos-title {
           //width: 511px;
           height: 36px;
-          font-family: 'Fredoka One';
+          font-family: "Fredoka One";
           font-style: normal;
           font-weight: 400;
           font-size: 36px;
           line-height: 36px;
-          color: #FFFFFF;
+          color: #ffffff;
           text-align: center;
           text-transform: uppercase;
         }
 
         .footer-contactos-text {
-          width: 70%;
-          height: 112px;
+          display: flex;
+          justify-content: center;
 
-          font-family: "Roboto";
-          font-style: normal;
-          font-weight: 400;
-          font-size: 20px;
-          line-height: 24px;
-          /* or 120% */
-
-          text-align: center;
-
-          color: #ffffff;
+          p {
+            width: 70%;
+            height: 112px;
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            text-align: center;
+            color: #ffffff;
+          }
         }
 
         .footer-contactos-boton {
           display: flex;
           justify-content: center;
-          align-items: flex-start;
-          padding: 2% 10%;
-          gap: 10px;
-          font-family: 'Fredoka One';
-          font-style: normal;
-          font-weight: 400;
-          font-size: 24px;
-          line-height: 29px;     /* identical to box height */
-          color: #EAC2C2;
-          width: 20%;
-          height: 4%;
 
-          background: #670f0f;
-          border-radius: 50px;
+          a {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 2% 10%;
+            gap: 10px;
+            font-family: "Fredoka One";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 29px;
+            color: #eac2c2;
+            width: 20%;
+            height: 4%;
+            background: #670f0f;
+            border-radius: 50px;
+          }
         }
       }
     }
   }
-  
-  .icon{
+  .icon {
     color: #670f0f;
   }
 
@@ -194,7 +194,7 @@
     height: 24px;
     width: 24px;
     overflow: hidden;
-}
+  }
 
   .footer-last {
     width: 100%;
@@ -211,7 +211,7 @@
       padding: 4px 0px;
       gap: 15px;
       height: 3rem;
-      
+
       background: #e4e4e4;
       border-radius: 50px;
       justify-content: center;
@@ -223,14 +223,22 @@
         width: 1rem;
       }
 
-      p {
-        font-family: 'Fredoka One';
+      .call-p1 {
+        font-family: "Fredoka One";
         font-style: normal;
         font-weight: 400;
         font-size: 24px;
         line-height: 29px;
-        color: #670F0F;
+        color: #670f0f;
         margin-top: 0.8rem;
+      }
+      .call-p2 {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+        color: #353535;
       }
     }
 
@@ -247,7 +255,6 @@
         display: flex;
         flex-direction: column;
         width: 35%;
-        gap: 10%;
 
         img {
           width: 115px;
@@ -262,6 +269,33 @@
           line-height: 24px;
           color: #ca8383;
         }
+
+
+      .footer-last-info {
+        display: flex;
+        flex-direction: column;
+
+        .footer-info {
+          display: flex;
+
+          .footer-info-icon {
+            color: white;
+            font-size: 1.6em;
+            padding-right: 0.6em;
+          }
+
+          p {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            /* identical to box height, or 150% */
+
+            color: #ffffff;
+          }
+        }
+      }
       }
       .footer-last-documents {
         display: flex;
@@ -272,19 +306,19 @@
           display: flex;
 
           img {
-            width: 14.06px;
-            height: 20.12px;
+            width: 0.4rem;
+            height: 1rem;
             margin-top: 0.2rem;
             margin-right: 0.2rem;
           }
 
           .footer-title {
-            font-family: 'Roboto';
+            font-family: "Roboto";
             font-style: normal;
             font-weight: 400;
-            font-size: 20px;
+            font-size: 2rem;
             line-height: 24px;
-            color: #F4A800;
+            color: #f4a800;
           }
         }
 
@@ -309,31 +343,6 @@
       margin-right: 20vh;
       flex-direction: column;
 
-      .footer-last-info {
-        display: flex;
-        flex-direction: column;
-
-        .footer-info {
-          display: flex;
-
-        .footer-info-icon {
-          color: white;
-          font-size: 1.6em;
-          padding-right: 0.6em;
-        }
-
-          p {
-            font-family: "Roboto";
-            font-style: normal;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 24px;
-            /* identical to box height, or 150% */
-
-            color: #ffffff;
-          }
-        }
-      }
 
       mat-divider {
         background-color: #823c3c;
@@ -343,14 +352,15 @@
 
       .footer-social {
         display: flex;
+        justify-content: end;
         gap: 1em;
-        
+
         .footer-social-icon {
           color: white;
           font-size: 2em;
         }
       }
-      
+
       .footer-last-legal {
         p {
           font-family: "Roboto";
@@ -362,107 +372,5 @@
         }
       }
     }
-  }
-}
-
-.call-group{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-@media (max-width: 700px) {
-  
-  .call-group {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-top: 10px;
-    gap: 8px;
-  }
-
-  .footer .footer-last .footer-container .footer-last-documents .footer-docs img {
-    width: 14.06px;
-    height: 20.12px;
-    margin-top: 0.2rem;
-    margin-right: 4px;
-  }
-
-  .footer .footer-contactos .footer-contactos-container .footer-contactos-center .footer-contactos-text {
-    width: 70%;
-    height: 200px;
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
-    text-align: center;
-    color: #ffffff;
-  }
-
-  .footer .footer-contactos .footer-contactos-container .footer-contactos-center .footer-contactos-boton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2% 10%;
-    gap: 10px;
-    font-family: "Fredoka One";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 29px;
-    color: #EAC2C2;
-    width: 207px;
-    height: 69px;
-    background: #670f0f;
-    border-radius: 50px;
-  } 
-
-  .footer .footer-last .footer-call {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 339px;
-    padding: 4px 0px;
-    gap: 0px;
-    height: 154px;
-    background: #e4e4e4;
-    border-radius: 100px;
-    justify-content: center;
-    align-self: center;
-    margin-top: -3.5rem;
-    margin-bottom: 10vh;
-  }
-
-  .footer .footer-last mat-chip {
-    width: 85%;
-  }
-  .footer-container {
-    flex-direction: column;
-    margin-left: 4% !important;
-    margin-right: 4% !important;
-  }
-  .footer-last-group {
-    margin-left: 3vh !important;
-    margin-right: 3vh !important;
-  }
-
-  .logos-footer {
-    height: 0 !important;
-  }
-  .footer-last {
-    height: 100% !important;
-  }
-
-  .footer-contactos-center {
-    width: 100% !important;
-  }
-
-  .footer-last-description {
-    width: 100% !important;
-  }
-
-  .footer-contactos-left, .footer-contactos-right {
-    display: none !important;
   }
 }

@@ -3,8 +3,8 @@ export interface Asociado {
   activo: boolean;
   actualizado: string;
   creado: string;
-  logo: string;
-  tituloEs: string;
-  tituloEn: string;
-  tituloOtro: string;
+  logo: string | null;
+  tituloEs: string | null;
+  tituloEn: string  | null;
+  tituloOtro: string  | null;
 }

@@ -11,43 +11,11 @@ body {
   font-style: normal !important;
 }
 
-.owl-carousel .owl-item {
-    padding: 0.5em;
-    max-width: fit-content;
-}
-
+//Para todo los carruseles
 .owl-carousel .owl-stage {
-    width: 2500px !important;
+  width: 2500px !important;
 }
 
-.carrusel-potencial {
-    .owl-carousel .owl-item {
-        width: 10% !important;
-    }
-    .owl-carousel > :first-child  {
-        margin-left: 5% !important;
-    }
+.owl-stage, .owl-item {
+  display: flex;
 }
-
-@media (max-width: 700px) {
-    .carrusel-potencial {
-    .owl-carousel .owl-item {
-        width: 9% !important;
-    }
-    .owl-carousel > :first-child  {
-        margin-left: 0% !important;
-    }
-}
-}
-
-// .carrusel-banner {
-//   .owl-carousel .owl-item {
-//     width: 100vw !important;
-//     padding: 0;
-//   }
-//   .owl-carousel .owl-stage {
-//     // width: 20000px !important;
-//     // width: 100% !important;
-//   }
-
-// }

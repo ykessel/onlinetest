@@ -1,7 +1,7 @@
 <div class="banner">
   <div class="banner-up-container">
       <ng-container *ngFor="let banner of banners$ | async; let i = index">
-      <div [@enterLeave]="i === hideId ? 'enter' : 'leave'" [class.show]="i === hideId"  class="banner-up">
+      <div [class.show]="i === hideId" class="banner-up">
         <div class="banner-pres">
           <div class="banner-press-left">
             <img src="../../../../assets/img_header.png" class="pres-img" />
@@ -47,21 +47,21 @@
                   <a
                     mat-button
                     class="banner-button-2"
-                    href="{{ banner.enlaceBtn2En }}"
+                    routerLink="contactos"
                     *ngIf="lang === 'en'"
                     >{{ banner.textoBtn2En }}</a
                   >
                   <a
                     mat-button
                     class="banner-button-2"
-                    href="{{ banner.enlaceBtn2Es }}"
+                    routerLink="contactos"
                     *ngIf="lang === 'es'"
                     >{{ banner.textoBtn2Es }}</a
                   >
                   <a
                     mat-button
                     class="banner-button-2"
-                    href="{{ banner.enlaceBtn2Otro }}"
+                    routerLink="contactos"
                     *ngIf="lang === 'xx'"
                     >{{ banner.textoBtn2Otro }}</a
                   >
@@ -87,3 +87,4 @@
     </div>
     </div>
 </div>
+<!-- [@enterLeave]="i === hideId ? 'enter' : 'leave'" -->

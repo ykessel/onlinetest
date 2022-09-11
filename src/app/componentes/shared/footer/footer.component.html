@@ -1,13 +1,16 @@
 <div class="footer" ngsReveal>
-  <div class="footer-comercios" ngsReveal>
+  <div class="footer-comercios" >
     <div class="logos-footer">
-      <ng-container *ngFor="let asoc of asociados$ | async">
-        <img class="img-footer" src="../../../../assets/logo1.png" alt="logo1" />
+      <ng-container *ngFor="let asoc of asoc">
+        <img src="{{ asoc.logo }}" alt="{{ asoc.tituloEs }}" class="img-footer" />
       </ng-container>
+      <!-- <ng-container *ngFor="let aso of asociados$ | async">
+        <img src="{{ aso.logo }}" alt="{{ aso.tituloEs }}" class="img-footer" />
+      </ng-container> -->
     </div>
   </div>
 
-  <div class="footer-contactos" ngsReveal>
+  <div class="footer-contactos" >
     <img src="../../../../assets/curva2.png" class="bottom-line" />
     <div class="footer-contactos-container">
       <img class="footer-contactos-left" src="../../../../assets/grafica-contactos_izq.png" alt="lines" />
@@ -25,13 +28,15 @@
               {{ seccion.tituloOtro }}
             </p>
 
-            <p *ngIf="lang === 'es'" class="footer-contactos-text" [innerHTML]="seccion.contenidoEs">
-            </p>
-            <p *ngIf="lang === 'en'" class="footer-contactos-text" [innerHTML]="seccion.contenidoEs">
-            </p>
-            <p *ngIf="lang === 'xx'" class="footer-contactos-text" [innerHTML]="seccion.contenidoEs">
-            </p>
-            <a class="footer-contactos-boton" mat-button href="#">Inicia ya</a>
+            <div *ngIf="lang === 'es'" class="footer-contactos-text" [innerHTML]="seccion.contenidoEs">
+            </div>
+            <div *ngIf="lang === 'en'" class="footer-contactos-text" [innerHTML]="seccion.contenidoEs">
+            </div>
+            <div *ngIf="lang === 'xx'" class="footer-contactos-text" [innerHTML]="seccion.contenidoEs">
+            </div>
+            <div class="footer-contactos-boton">
+              <a mat-button routerLink="contactos">Inicia ya</a>
+            </div>
           </ng-container>
         </ng-container>
       </div>
@@ -40,14 +45,12 @@
     </div>
   </div>
 
-  <div class="footer-last" ngsReveal>
+  <div class="footer-last">
     <div class="footer-call" mat-button href="#">
-      <div class="call-group">
-        <mat-icon class="icon">phone</mat-icon>
-        <p style="color: #670f0f;">Llamenos</p>
-        <img src="../assets/img_header.png" />
-      </div>
-      <p style="color: #353535;">(53) 12345678</p>
+      <mat-icon class="icon">phone</mat-icon>
+      <p class="call-p1">Llamenos</p>
+      <img src="../assets/img_header.png" />
+      <p class="call-p2">(53) 12345678</p>
     </div>
 
     <div class="footer-container" ngsReveal>
@@ -61,6 +64,24 @@
             <div *ngIf="lang === 'xx'" class="footer-description" [innerHTML]="seccion.contenidoOtro"></div>
           </ng-container>
         </ng-container>
+
+        <div class="footer-last-info">
+          <div class="footer-info">
+            <fa-icon class="footer-info-icon" [icon]="faLocationDot"></fa-icon>
+            <p>Dirección de la compañía, País.</p>
+          </div>
+
+          <div class="footer-info">
+            <fa-icon class="footer-info-icon" [icon]="faEnvelope"></fa-icon>
+            <p>infoalybio@server.com</p>
+          </div>
+
+          <div class="footer-info">
+            <fa-icon class="footer-info-icon" [icon]="faPhone"></fa-icon>
+            <p>(800) 1234567891</p>
+          </div>
+        </div>
+
       </div>
 
       <div class="footer-last-documents">
@@ -104,23 +125,6 @@
     </div>
 
     <div class="footer-last-group" ngsReveal>
-      <div class="footer-contact">
-        <div class="footer-last-info">
-          <div class="footer-info">
-            <fa-icon class="footer-info-icon" [icon]="faLocationDot"></fa-icon>
-            <p>Dirección de la compañía, País.</p>
-          </div>
-
-          <div class="footer-info">
-            <fa-icon class="footer-info-icon" [icon]="faEnvelope"></fa-icon>
-            <p>infoalybio@server.com</p>
-          </div>
-
-          <div class="footer-info">
-            <fa-icon class="footer-info-icon" [icon]="faPhone"></fa-icon>
-            <p>(800) 1234567891</p>
-          </div>
-        </div>
         <div class="footer-social">
           <ng-container *ngFor="let social of sociales$ | async">
             <ng-container *ngIf="social.nombre === 'Facebook'">
@@ -190,7 +194,6 @@
             </ng-container>
           </ng-container>
         </div>
-      </div>
       <mat-divider></mat-divider>
       <div class="footer-last-legal">
         <p>Copyrights 2021 por Bipay. Todos los derechos reservados</p>

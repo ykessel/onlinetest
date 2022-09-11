@@ -1,11 +1,9 @@
+@import "./styles/home.large.scss";
+@import "./styles/home.medium.scss";
+
 .container {
   width: 100%;
   overflow: hidden;
-}
-
-.wrapper-banners {
-  height: 100vh;
-  position: relative;
 }
 
 .img-header {
@@ -131,13 +129,14 @@
   gap: 1%;
   width: 100%;
 }
+
 .carrusel-caract {
-  width: 84%;
+  width: 78%;
   justify-content: center;
 }
 
 .carrusel-1-cards {
-  width: 85%;
+  // width: 85%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -147,61 +146,51 @@
   background: #ffffff;
   box-shadow: 0px 0px 16px rgba(217, 208, 184, 0.5);
   border-radius: 24px;
-}
+  margin: 1% 2%;
 
-.carrusel-1-cards-img {
-  margin-left: 24px;
-  margin-top: 24px;
-  max-width: 1rem;
-}
-
-.carrusel-1-cards-bottom-image {
-  display: flex;
-  justify-content: center;
-  width: 80%;
-  align-self: center;
-
-  img {
-    width: 100%;
-    // height: 161px;
-    margin-bottom: -83.86px;
+  .carrusel-1-cards-img {
+    margin-left: 24px;
+    margin-top: 24px;
+    max-width: 1rem;
   }
-}
 
-.carrusel-1-cards-text {
-  display: flex;
-  justify-content: center;
-  padding-left: 5%;
-  p {
-    width: 70%;
-    height: 150px;
-    margin-left: 64px;
-    margin-right: 64px;
+  .carrusel-1-cards-bottom-image {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    align-self: center;
 
-    font-family: "Roboto";
+    img {
+      width: 100%;
+      margin-bottom: -35%;
+    }
+  }
+
+  .carrusel-1-cards-text {
+    display: flex;
+    flex-grow: 1;
+
+    p {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      margin: 0 3.5rem;
+      color: #3f3726;
+      align-self: stretch;
+    }
+  }
+
+  .carrusel-1-cards-text-title p {
+    font-family: "Fredoka One";
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    margin: 0 2rem;
-    color: #3f3726;
-
-    flex: none;
-    order: 1;
-    align-self: stretch;
-    flex-grow: 0;
+    font-size: 1.5em;
+    line-height: 29px;
+    margin: 0 3.5rem;
+    color: #eda301;
   }
-}
-
-.carrusel-1-cards-text-title p {
-  font-family: "Fredoka One";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 1.5em;
-  line-height: 29px;
-  margin-left: 64px;
-  margin-right: 64px;
-  color: #eda301;
 }
 
 .carrusel-1-chips {
@@ -237,6 +226,9 @@
     margin-top: 80px;
     position: absolute;
   }
+  .owl-carousel .owl-stage-outer {
+    min-height: 500px;
+  }
 }
 
 .carrusel-part2 {
@@ -244,7 +236,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+
   .carrusel-part2-first-line {
     display: flex;
     gap: 31px;
@@ -287,6 +279,8 @@
     }
   }
   .carrusel-part2-second-line {
+    width: 100%;
+
     .first-rect {
       width: 50%;
       height: 60px;
@@ -294,6 +288,7 @@
       background: rgba(255, 223, 149, 0.3);
       border-radius: 0px 50px 50px 0px;
     }
+
     .second-rect {
       width: 80%;
       height: 80px;
@@ -310,8 +305,9 @@
   }
   .carrusel-part2-third-line {
     display: flex;
-    width: 91%;
-    justify-content: center;  
+    width: 90%;
+    justify-content: center;
+    align-items: center;
     margin-top: 164px;
 
     .small-card {
@@ -372,7 +368,7 @@
     left: 0px;
 
     .carrusel-potencial {
-      width: 88%;
+      width: 78%;
       justify-content: center;
     }
 
@@ -386,6 +382,7 @@
       box-shadow: 0px 0px 4px rgba(217, 208, 184, 0.5);
       border-radius: 24px;
       min-height: 70vh;
+      margin: 1% 4%;
 
       .carrusel-2-cards-text-title {
         display: flex;
@@ -406,7 +403,7 @@
 
       .carrusel-2-cards-text {
         display: flex;
-        flex-grow: 0.5;
+        flex-grow: 1;
 
         p {
           font-family: "Roboto";
@@ -426,6 +423,7 @@
 
         img {
           width: 12rem;
+          max-height: 23vh;
         }
       }
     }
@@ -467,65 +465,6 @@
   }
 }
 
-@media (max-width: 700px) {
-  .home {
-    display: flex;
-    width: 100%;
-    height: 126vh;
-    flex-direction: column;
-  }
-
-  .home-left {
-    display: flex !important;
-    width: 100% !important;
-    flex-direction: column !important;
-    margin-top: 30px !important;
-  }
-
-  .home-izq {
-    display: none;
-  }
-
-  .home-pres {
-    display: flex !important;
-    align-self: flex-end !important;
-    width: 100% !important;
-    margin-bottom: 20vh !important;
-  }
-
-  .home-right {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: flex-end !important;
-    width: 100% !important;
-  }
-
-  .carrusel-caract {
-    width: 63% !important;
-  }
-
-  .carrusel-potencial {
-    width: 63% !important;
-  }
-
-  .carrusel-1-cards {
-    width: 90% !important;
-  }
-
-  .carrusel-2-first-line {
-    margin-bottom: -10% !important;
-  }
-
-  .mat-button,
-  .mat-icon-button,
-  .mat-stroked-button,
-  .mat-flat-button {
-    min-width: 50px !important;
-    line-height: 30px !important;
-  }
-
-  .carrusel-part2-first-line {
-    flex-direction: column !important;
-    margin-right: 4%;
-  }
+.hide {
+  display: none !important;
 }

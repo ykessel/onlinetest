@@ -1,3 +1,6 @@
+@import "./styles/banners.medium.scss";
+
+
 .banner {
   display:flex;
   flex-direction: column;
@@ -44,6 +47,7 @@
             font-weight: 400;
             font-size: 2.5rem;
             line-height: 2.5rem;
+            margin-top: -0.3rem;
             color: #353535;
           }
 

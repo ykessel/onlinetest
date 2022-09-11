@@ -9,9 +9,7 @@
       <img class="docs-header" src="../../../../assets/img_header.png" />
       <ng-container *ngFor="let seccion of secciones$ | async">
         <ng-container *ngIf="seccion.id == 14">
-
-
-           <!-- Suponiendo que el titulo de la pagina venga en diferente idiomas
+          <!-- Suponiendo que el titulo de la pagina venga en diferente idiomas
           este es el codigo   -->
 
           <!-- <p *ngIf="lang === 'es'" class="header-title">
@@ -34,41 +32,79 @@
       <ng-container *ngFor="let servicio of servicios$ | async">
         <div class="card-docs">
           <img class="docs-header-1" src="../../../../assets/img_header.png" />
-          <img class="docs-img" src="../../../../assets/img_pagoonline.png" />
+          <img
+            class="docs-img"
+            *ngIf="lang === 'es'"
+            src="{{ servicio.imagenEs }}"
+          />
+          <img
+            class="docs-img"
+            *ngIf="lang === 'en'"
+            src="{{ servicio.imagenEn }}"
+          />
+          <img
+            class="docs-img"
+            *ngIf="lang === 'xx'"
+            src="{{ servicio.imagenOtro }}"
+          />
           <div class="content-center">
             <p class="title" *ngIf="lang === 'es'">{{ servicio.tituloEs }}</p>
             <p class="title" *ngIf="lang === 'en'">{{ servicio.tituloEn }}</p>
             <p class="title" *ngIf="lang === 'xx'">{{ servicio.tituloOtro }}</p>
 
-            <p class="content-text" *ngIf="lang === 'es'">
-              {{
-                sid === servicio.id
-                  ? cleanText(servicio.contenidoEs)
-                  : cleanText(servicio.contenidoEs).substr(0, 300) + "..."
-              }}
-            </p>
+            <ng-container *ngIf="lang === 'es'">
+              <ng-container *ngIf="sid === servicio.id">
+                <div
+                  class="content-text"
+                  [innerHtml]="servicio.contenidoEs"
+                ></div>
+              </ng-container>
+              <ng-container *ngIf="sid !== servicio.id">
+                <div
+                  class="content-text"
+                  [innerHtml]="servicio.contenidoEs.substr(0, 300) + '...'"
+                ></div>
+              </ng-container>
+            </ng-container>
 
-            <p class="content-text" *ngIf="lang === 'en'">
-              {{
-                sid === servicio.id
-                  ? cleanText(servicio.contenidoEs)
-                  : cleanText(servicio.contenidoEs).substr(0, 300) + "..."
-              }}
-            </p>
+            <ng-container *ngIf="lang === 'en'">
+              <ng-container *ngIf="sid === servicio.id">
+                <div
+                  class="content-text"
+                  [innerHtml]="servicio.contenidoEn"
+                ></div>
+              </ng-container>
+              <ng-container *ngIf="sid !== servicio.id">
+                <div
+                  class="content-text"
+                  [innerHtml]="servicio.contenidoEs.substr(0, 300) + '...'"
+                ></div>
+              </ng-container>
+            </ng-container>
 
-            <p class="content-text" *ngIf="lang === 'xx'">
-              {{
-                sid === servicio.id
-                  ? cleanText(servicio.contenidoEs)
-                  : cleanText(servicio.contenidoEs).substr(0, 300) + "..."
-              }}
-            </p>
+            <ng-container *ngIf="lang === 'xx'">
+              <ng-container *ngIf="sid === servicio.id">
+                <div
+                  class="content-text"
+                  [innerHtml]="servicio.contenidoOtro"
+                ></div>
+              </ng-container>
+              <ng-container *ngIf="sid !== servicio.id">
+                <div
+                  class="content-text"
+                  [innerHtml]="servicio.contenidoOtro.substr(0, 300) + '...'"
+                ></div>
+              </ng-container>
+            </ng-container>
+
             <button
               style="display: flex; width: 1rem; align-self: self-end"
               mat-flat-button
               (click)="hideAndShow(servicio.id)"
             >
-              <mat-icon>{{ sid === servicio.id ? "expand_less" : "expand_more" }}</mat-icon>
+              <mat-icon>{{
+                sid === servicio.id ? "expand_less" : "expand_more"
+              }}</mat-icon>
             </button>
           </div>
         </div>
