@@ -5,9 +5,13 @@
   }
 
   .example-button-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
     justify-content: end !important;
-  }
-
+    margin-left: 4rem;
+}
   .menu-nav {
     display: block !important;
   }

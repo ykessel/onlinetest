@@ -2,14 +2,16 @@
     <div class="contact-head">
         <div class="left-img">
         </div>
+
         <div class="center-content">
             <div class="chip-img"></div>
             <ng-container *ngFor="let seccion of secciones$ | async">
-              <ng-container *ngIf="seccion.id == 16">
-                <h1 class="contact-tittle">{{ seccion.nombre }}</h1>
-            </ng-container>
+                <ng-container *ngIf="seccion.id == 16">
+                    <h1 class="contact-tittle">{{ seccion.nombre }}</h1>
+                </ng-container>
             </ng-container>
         </div>
+
         <div class="rigth-container">
             <div class="rigth-img">
             </div>
@@ -18,34 +20,37 @@
 
     <div class="contact-body">
         <div class="initial-space">
-            <div class="container-izq">
-                <div class="img-chip-izq"></div>
-                <div class="img-chip-pink"></div>
+            <div class="seccion-img">
+                <div class="container-izq">
+                    <div class="img-chip-izq"></div>
+                    <div class="img-chip-pink"></div>
+                </div>
+
+                <ng-container *ngFor="let seccion of secciones$ | async">
+                    <ng-template >
+                        <div class="text-center">
+                            <p *ngIf="lang === 'es'">
+                                {{ seccion.contenidoEs }}
+                            </p>
+    
+                            <p *ngIf="lang === 'en'">
+                                {{ seccion.contenidoEn }}
+                            </p>
+    
+                            <p *ngIf="lang === 'xx'">
+                                {{ seccion.contenidoOtro }}
+                            </p>
+                        </div>
+                    </ng-template>
+                </ng-container>
+
+                <div class="container-der">
+                    <div class="img-chip-der"></div>
+
+                    <div class="img-chip-menor"></div>
+                </div>
             </div>
 
-            <ng-container *ngFor="let seccion of secciones$ | async">
-              <ng-template *ngIf="seccion.id == 16">
-                <div  class="text-center">
-                <p *ngIf="lang === 'es'">
-                    {{ seccion.contenidoEs }}
-                </p>
-
-                <p *ngIf="lang === 'en'">
-                    {{ seccion.contenidoEn }}
-                </p>
-
-                <p *ngIf="lang === 'xx'">
-                    {{ seccion.contenidoOtro }}
-                </p>
-            </div>
-            </ng-template>
-            </ng-container>
-
-            <div class="container-der">
-                <div class="img-chip-der"></div>
-
-                <div class="img-chip-menor"></div>
-            </div>
         </div>
 
         <div class="we-background">
@@ -53,26 +58,33 @@
         </div>
         <form [formGroup]="contactoForm" class="we-text">
             <div class="we-text-container">
-                <input type="text" required matInput formControlName="empresa" placeholder="Empresa*" class="we-input"/>
-                <input type="text" required matInput formControlName="numeroCarnet" placeholder="No Carnet*" class="we-input"/>
-                <input type="text" matInput formControlName="paginaWeb" placeholder="Pagina Web" class="we-input"/>
-                <input type="text" required matInput formControlName="nombre" placeholder="Nombre*" class="we-input"/>
-                <input type="text" required matInput formControlName="apellidos" placeholder="Apellidos*" class="we-input"/>
-                <input type="text" required matInput formControlName="telefono" placeholder="Teléfono*" class="we-input"/>
-                <input type="text" required matInput formControlName="correo" placeholder="Email*" type="email" class="we-input"/>
+                <input type="text" required matInput formControlName="empresa" placeholder="Empresa*"
+                    class="we-input" />
+                <input type="text" required matInput formControlName="numeroCarnet" placeholder="No Carnet*"
+                    class="we-input" />
+                <input type="text" matInput formControlName="paginaWeb" placeholder="Pagina Web" class="we-input" />
+                <input type="text" required matInput formControlName="nombre" placeholder="Nombre*" class="we-input" />
+                <input type="text" required matInput formControlName="apellidos" placeholder="Apellidos*"
+                    class="we-input" />
+                <input type="text" required matInput formControlName="telefono" placeholder="Teléfono*"
+                    class="we-input" />
+                <input type="text" required matInput formControlName="correo" placeholder="Email*" type="email"
+                    class="we-input" />
             </div>
             <div class="we-policy">
                 <div class="we-term">
                     <div class="check-container">
-                        <input formControlName="suscripcion" type="checkbox" class="we-check"/>
+                        <input formControlName="suscripcion" type="checkbox" class="we-check" />
                     </div>
                     <div class="p-container">
-                        <p class="policy-p">He leído y acepto la <a href="#" class="link">Política de Privacidad</a> y <a href="#" class="link">Condiciones generales de BIPAY</a></p>
+                        <p class="policy-p">He leído y acepto la <a href="#" class="link">Política de Privacidad</a> y
+                            <a href="#" class="link">Condiciones generales de BIPAY</a>
+                        </p>
                     </div>
                 </div>
                 <div class="we-ask">
                     <div class="check-container">
-                        <input formControlName="terminosCondiciones" type="checkbox" class="we-check"/>
+                        <input formControlName="terminosCondiciones" type="checkbox" class="we-check" />
                     </div>
                     <div class="p-container">
                         <p class="policy-p">Acepto recibir información comercial, incluso por medios electrónicos.</p>
