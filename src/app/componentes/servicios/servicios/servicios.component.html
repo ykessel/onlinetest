@@ -6,47 +6,70 @@
 
   <div class="center">
     <div class="servicios-servicios">
-      <img class="docs-header" src="../../../../assets/img_header.png" />
       <ng-container *ngFor="let seccion of secciones$ | async">
         <ng-container *ngIf="seccion.id == 14">
-          <!-- Suponiendo que el titulo de la pagina venga en diferente idiomas
+          <div class="header-title">
+            <img class="docs-header" src="../../../../assets/img_header.png" />
+            <p>{{ seccion.nombre }}</p>
+            <!-- Suponiendo que el titulo de la pagina venga en diferente idiomas
           este es el codigo   -->
 
-          <!-- <p *ngIf="lang === 'es'" class="header-title">
+            <!-- <p *ngIf="lang === 'es'">
             {{ seccion.tituloEs }}
           </p>
-          <p *ngIf="lang === 'en'" class="header-title">
+          <p *ngIf="lang === 'en'">
             {{ seccion.tituloEn }}
           </p>
-          <p *ngIf="lang === 'xx'" class="header-title">
+          <p *ngIf="lang === 'xx'">
             {{ seccion.tituloOtro }}
           </p> -->
-
-          <p class="header-title">
-            {{ seccion.nombre }}
+          </div>
+          <p class="header-text">
+            Aprobado por el Banco Central de Cuba y reconocido por otros
+            organismos del estado como el Ministerio del Turismo, Ministerio.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercit
           </p>
+          <!-- <p *ngIf="lang === 'es'" class="header-text">
+            {{ seccion.contenidoEs }}
+          </p>
+          <p *ngIf="lang === 'en'" class="header-text">
+            {{ seccion.contenidoEn }}
+          </p>
+          <p *ngIf="lang === 'xx'" class="header-text">
+            {{ seccion.contenidoOtro }}
+          </p> -->
         </ng-container>
       </ng-container>
     </div>
+
+    <div ngClass="center-movil">
+      <div class="terminos-rect"></div>
+      <div class="center-movil-right">
+        <img
+          class="center-movil-right-img"
+          src="../../../../assets/grafica_der1.png"
+        />
+      </div>
+    </div>
+
     <mat-accordion>
       <ng-container *ngFor="let servicio of servicios$ | async">
         <div class="card-docs">
           <img class="docs-header-1" src="../../../../assets/img_header.png" />
-          <img
-            class="docs-img"
-            *ngIf="lang === 'es'"
-            src="{{ servicio.imagenEs }}"
-          />
-          <img
-            class="docs-img"
-            *ngIf="lang === 'en'"
-            src="{{ servicio.imagenEn }}"
-          />
-          <img
-            class="docs-img"
-            *ngIf="lang === 'xx'"
-            src="{{ servicio.imagenOtro }}"
-          />
+          <div *ngIf="lang === 'es'" class="servicio-img">
+            <img src="{{ servicio.imagenEs }}" />
+          </div>
+
+          <div *ngIf="lang === 'en'" class="servicio-img">
+            <img src="{{ servicio.imagenEs }}" />
+          </div>
+
+          <div *ngIf="lang === 'xx'" class="servicio-img">
+            <img src="{{ servicio.imagenOtro }}" />
+          </div>
+
           <div class="content-center">
             <p class="title" *ngIf="lang === 'es'">{{ servicio.tituloEs }}</p>
             <p class="title" *ngIf="lang === 'en'">{{ servicio.tituloEn }}</p>

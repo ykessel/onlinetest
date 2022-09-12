@@ -1,3 +1,5 @@
+@import "./styles/servicios.medium.scss";
+
 .servicios-container {
   display: flex;
   width: 100%;
@@ -37,22 +39,29 @@
       display: flex;
       align-items: flex-start;
       padding: 10px;
-      gap: 10px;
+      gap: 1rem;
       width: 100%;
       margin-bottom: 2vh;
+      margin-top: 0.5rem;
 
       .docs-header {
-        width: 0.7rem;
+        width: 1rem;
       }
 
       .header-title {
-        font-family: "Fredoka One";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 40px;
         display: flex;
-        align-items: center;
-        color: #353535;
+        gap: 1rem;
+
+        p {
+          font-family: "Fredoka One";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 40px;
+          display: flex;
+          align-items: center;
+          color: #353535;
+          margin-bottom: 0;
+        }
       }
 
       .header-text {
@@ -70,10 +79,9 @@
 
     .right-img {
       position: absolute;
-      width: 150px;
-      height: 10%;
+      width: 15%;
       right: 0;
-      margin-top: 18vh;
+      margin-top: 16vh;
     }
   }
 }
@@ -97,6 +105,16 @@
     margin-top: 1rem;
   }
 
+  .servicio-img {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    img {
+      width: 100%;
+      border-radius: 10px;
+    }
+  }
+
   .content-center {
     display: flex;
     flex-direction: column;
@@ -113,11 +131,11 @@
 }
 
 .card-docs:last-child {
-  margin-bottom: 20vh;
+  margin-bottom: 20vh !important;;
 }
 
 .card-docs:first-child {
-  margin-top: 100px;
+  margin-top: 10px;
 }
 
 .mat-expansion-indicator::after {
@@ -135,4 +153,9 @@
   font-size: 15px;
   line-height: 24px;
   color: #3F3726;
+}
+
+
+.center-movil {
+  display: none;
 }
