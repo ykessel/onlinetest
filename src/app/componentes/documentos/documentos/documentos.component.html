@@ -1,9 +1,10 @@
 <div class="documentos-container">
-  <div class="left">
+  <!-- <div class="left">
     <div class="servicios-rect"></div>
     <img class="left-img" src="../../../../assets/grafica_izq.png" />
-  </div>
-
+  </div> -->
+  <div class="left-img"></div>
+  
   <div class="center">
     <div class="documentos-servicios">
       <img class="docs-header" src="../../../../assets/img_header.png" />
@@ -28,46 +29,48 @@
       </ng-container>
     </div>
 
-    <div *ngFor="let doc of documentos$ | async" class="card-docs">
-      <div class="info-container">
-        <img class="docs-header-1" src="../../../../assets/img_header.png" />
-        <div class="left-container">
-          <div class="docs-cuadro"></div>
-          <div class="content-center">
-            <p *ngIf="lang === 'es'" class="title">{{ doc.tituloEs }}</p>
-            <p *ngIf="lang === 'en'" class="title">{{ doc.tituloEn }}</p>
-            <p *ngIf="lang === 'xx'" class="title">{{ doc.tituloOtro }}</p>
-
-            <p *ngIf="lang === 'es'" class="content-text">
-              {{ doc.slugEs }}
-            </p>
-            <p *ngIf="lang === 'en'" class="content-text">
-              {{ doc.slugEs }}
-            </p>
-            <p *ngIf="lang === 'xx'" class="content-text">
-              {{ doc.slugEs }}
-            </p>
+    <div class="card-docs-container">
+      <div *ngFor="let doc of documentos$ | async" class="card-docs">
+        <div class="info-container">
+          <img class="docs-header-1" src="../../../../assets/img_header.png" />
+          <div class="left-container">
+            <div class="docs-cuadro"></div>
+            <div class="content-center">
+              <p *ngIf="lang === 'es'" class="title">{{ doc.tituloEs }}</p>
+              <p *ngIf="lang === 'en'" class="title">{{ doc.tituloEn }}</p>
+              <p *ngIf="lang === 'xx'" class="title">{{ doc.tituloOtro }}</p>
+  
+              <p *ngIf="lang === 'es'" class="content-text">
+                {{ doc.slugEs }}
+              </p>
+              <p *ngIf="lang === 'en'" class="content-text">
+                {{ doc.slugEs }}
+              </p>
+              <p *ngIf="lang === 'xx'" class="content-text">
+                {{ doc.slugEs }}
+              </p>
+            </div>
           </div>
         </div>
+        <div class="button-container">
+          <button *ngIf="lang === 'es'" (click)="downloadDoc(doc.documentoEs)" mat-button>
+            <mat-icon>download</mat-icon>
+          </button>
+  
+          <button *ngIf="lang === 'en'" (click)="downloadDoc(doc.documentoEn)" mat-button>
+            <mat-icon>download</mat-icon>
+          </button>
+  
+          <button *ngIf="lang === 'xx'" (click)="downloadDoc(doc.documentoOtro)" mat-button>
+            <mat-icon>download</mat-icon>
+          </button>
+        </div>
       </div>
-      <div class="button-container">
-        <button *ngIf="lang === 'es'" (click)="downloadDoc(doc.documentoEs)" mat-button>
-          <mat-icon>download</mat-icon>
-        </button>
-
-        <button *ngIf="lang === 'en'" (click)="downloadDoc(doc.documentoEn)" mat-button>
-          <mat-icon>download</mat-icon>
-        </button>
-
-        <button *ngIf="lang === 'xx'" (click)="downloadDoc(doc.documentoOtro)" mat-button>
-          <mat-icon>download</mat-icon>
-        </button>
-      </div>
+  
     </div>
-
   </div>
 
-  <div class="right">
-    <img class="right-img" src="../../../../assets/grafica_der1.png" />
+  <div class="rigth-container">
+    <div class="rigth-img"></div>
   </div>
 </div>

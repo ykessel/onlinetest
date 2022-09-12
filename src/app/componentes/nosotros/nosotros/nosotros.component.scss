@@ -5,7 +5,7 @@
 
 .contact-head{
     display: flex;
-    margin-top: 5%;
+    margin-top: 8%;
     justify-content: center;
     flex-direction: row;
     align-items: center;
@@ -196,13 +196,15 @@
 }
 
 @media (max-width: 700px) {
-    
+
     .img-chip-izq{
         display: none;
     }
+
     .img-chip-pink {
         display: none;
     }
+
     .img-chip-der{
         display: none;
     }
@@ -210,6 +212,7 @@
     .img-chip-menor{
         display: none;
     }
+
     .we-text-container{
         width: 92% !important;
     } 
@@ -254,7 +257,6 @@
     }
 
     .left-img {
-
         top: 213px !important;
         left: -93px !important;
         position: absolute !important;

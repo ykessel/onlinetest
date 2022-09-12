@@ -146,3 +146,106 @@
   color: #3F3726;
 }
 
+.card-docs-container{
+  margin-top: 26%;
+}
+
+@media (max-width: 700px) {
+
+  .servicios-rect{
+    position: absolute;
+    width: 225px;
+    height: 80px;
+    left: -100px;
+    top: 209px;
+    background: linear-gradient(90deg, #faa6a7 0%, #b5e7ff 67.02%, #ffdf95 98.96%);
+    border-radius: 0px 50px 50px 0px;
+  }
+  
+  .left-img {
+    top: 213px !important;
+    left: -93px !important;
+    position: absolute !important;
+    background: linear-gradient(90deg, #FAA6A7 0%, #B5E7FF 67.02%, #FFDF95 98.96%);
+    border-radius: 0px 50px 50px 0px;
+    width: 225px !important;
+    height: 80px !important;
+  }
+
+  .rigth-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 340px !important;
+    height: 83px !important;
+    top: 218px !important;
+    right: 0px !important;
+    position: absolute !important;        
+  }
+
+  .rigth-img {
+    height: 80%;
+    width: 57% !important;
+    background-repeat: no-repeat !important;
+    background: url(../../../../assets/grafica_der1.png);
+  }
+
+  .card-docs-container {
+    width: 100%;
+    margin-top: 33%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .card-docs {
+    display: flex;
+    align-items: flex-start;
+    padding: 17px;
+    width: 84%;
+    flex-direction: column;
+    margin-bottom: 20px;
+    gap: 0px !important;
+    justify-content: space-between;
+    background: #ffffff;
+    box-shadow: 0px 0px 16px rgb(217 208 184 / 50%);
+    border-radius: 24px;
+  }
+
+  .button-container{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .documentos-container .center {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+  }
+
+  .documentos-container .center .documentos-servicios {
+    display: flex;
+    align-items: flex-start;
+    padding: 0px;
+    margin-left: 5%;
+    margin-top: 10%;
+    gap: 10px;
+    width: 95%;
+    margin-bottom: 0vh;
+  }
+
+  .info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .card-docs .docs-header-1 {
+    width: 9px;
+    margin-left: 5%;
+    margin-bottom: 7%;
+    height: 17px;
+  }
+
+}
