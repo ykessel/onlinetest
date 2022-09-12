@@ -76,6 +76,7 @@ import { DocumentosReducer } from './store/documentos/documentos.reducer';
 import { ServiciosReducer } from './store/servicios/servicios.reducer';
 import { SystemLangReducer, SystemServiceIdReducer } from './store/system/system.reducer';
 import { BannersComponent } from './componentes/home/banners/banners.component';
+import { SocialesComponent } from './componentes/shared/footer/sociales/sociales.component';
 
 const cookieConfig:NgcCookieConsentConfig = {
   cookie: {
@@ -120,6 +121,7 @@ const cookieConfig:NgcCookieConsentConfig = {
     ServiciosComponent,
     NavComponent,
     BannersComponent,
+    SocialesComponent,
   ],
   imports: [
     CommonModule,

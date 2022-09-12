@@ -10,8 +10,12 @@
             [class.active]="activeLink('')"
             mat-button
             routerLink=""
-            >Inicio</a
-          >
+            >Inicio
+            <div
+              class="line"
+              [style.visibility]="activeLink('') ? 'visible' : 'hidden'"
+            ></div>
+          </a>
 
           <a
             class="button-nav"
@@ -19,8 +23,12 @@
             [class.active]="activeLink('')"
             mat-button
             routerLink=""
-            >Home</a
-          >
+            >Home
+            <div
+              class="line"
+              [style.visibility]="activeLink('') ? 'visible' : 'hidden'"
+            ></div>
+          </a>
 
           <a
             class="button-nav"
@@ -28,9 +36,12 @@
             [class.active]="activeLink('')"
             mat-button
             routerLink=""
-            >Inicio</a
-          >
-          <div class="line" [style.visibility]="activeLink('') ? 'visible' : 'hidden'"></div>
+            >Inicio
+            <div
+              class="line"
+              [style.visibility]="activeLink('') ? 'visible' : 'hidden'"
+            ></div>
+          </a>
         </div>
 
         <div class="nav-container">
@@ -40,8 +51,14 @@
             [class.active]="activeLink('/nosotros')"
             mat-button
             routerLink="nosotros"
-            >Nosotros</a
-          >
+            >Nosotros
+            <div
+              class="line"
+              [style.visibility]="
+                activeLink('/nosotros') ? 'visible' : 'hidden'
+              "
+            ></div>
+          </a>
 
           <a
             class="button-nav"
@@ -49,8 +66,14 @@
             [class.active]="activeLink('/nosotros')"
             mat-button
             routerLink="nosotros"
-            >About us</a
-          >
+            >About us
+            <div
+              class="line"
+              [style.visibility]="
+                activeLink('/nosotros') ? 'visible' : 'hidden'
+              "
+            ></div>
+          </a>
 
           <a
             class="button-nav"
@@ -58,9 +81,14 @@
             [class.active]="activeLink('/nosotros')"
             mat-button
             routerLink="nosotros"
-            >Nosotros</a
-          >
-          <div class="line" [style.visibility]="activeLink('/nosotros') ? 'visible' : 'hidden'"></div>
+            >Nosotros
+            <div
+              class="line"
+              [style.visibility]="
+                activeLink('/nosotros') ? 'visible' : 'hidden'
+              "
+            ></div>
+          </a>
         </div>
 
         <div class="nav-container">
@@ -70,8 +98,14 @@
             [class.active]="activeLink('/servicios')"
             mat-button
             routerLink="servicios"
-            >Servicios</a
-          >
+            >Servicios
+            <div
+              class="line"
+              [style.visibility]="
+                activeLink('/servicios') ? 'visible' : 'hidden'
+              "
+            ></div>
+          </a>
 
           <a
             class="button-nav"
@@ -79,8 +113,14 @@
             [class.active]="activeLink('/servicios')"
             mat-button
             routerLink="servicios"
-            >Services</a
-          >
+            >Services
+            <div
+              class="line"
+              [style.visibility]="
+                activeLink('/servicios') ? 'visible' : 'hidden'
+              "
+            ></div>
+          </a>
 
           <a
             class="button-nav"
@@ -88,9 +128,14 @@
             [class.active]="activeLink('/servicios')"
             mat-button
             routerLink="servicios"
-            >Servicios</a
-          >
-          <div class="line" [style.visibility]="activeLink('/servicios') ? 'visible' : 'hidden'"></div>
+            >Servicios
+            <div
+              class="line"
+              [style.visibility]="
+                activeLink('/servicios') ? 'visible' : 'hidden'
+              "
+            ></div>
+          </a>
         </div>
 
         <div class="nav-container">
@@ -100,8 +145,14 @@
             [class.active]="activeLink('/documentos')"
             mat-button
             routerLink="documentos"
-            >Documentación</a
-          >
+            >Documentación
+            <div
+              class="line"
+              [style.visibility]="
+                activeLink('/documentos') ? 'visible' : 'hidden'
+              "
+            ></div>
+          </a>
 
           <a
             class="button-nav"
@@ -109,8 +160,14 @@
             [class.active]="activeLink('/documentos')"
             mat-button
             routerLink="documentos"
-            >Documentation</a
-          >
+            >Documentation
+            <div
+              class="line"
+              [style.visibility]="
+                activeLink('/documentos') ? 'visible' : 'hidden'
+              "
+            ></div>
+          </a>
 
           <a
             class="button-nav"
@@ -118,9 +175,14 @@
             [class.active]="activeLink('/documentos')"
             mat-button
             routerLink="documentos"
-            >Documentación</a
-          >
-          <div class="line" [style.visibility]="activeLink('/documentos') ? 'visible' : 'hidden'"></div>
+            >Documentación
+            <div
+              class="line"
+              [style.visibility]="
+                activeLink('/documentos') ? 'visible' : 'hidden'
+              "
+            ></div>
+          </a>
         </div>
 
         <div class="nav-container">
@@ -130,8 +192,14 @@
             [class.active]="activeLink('/contactos')"
             mat-button
             routerLink="contactos"
-            >Contáctenos</a
-          >
+            >Contáctenos
+            <div
+              class="line"
+              [style.visibility]="
+                activeLink('/contactos') ? 'visible' : 'hidden'
+              "
+            ></div>
+          </a>
 
           <a
             class="button-nav"
@@ -139,8 +207,14 @@
             [class.active]="activeLink('/contactos')"
             mat-button
             routerLink="contactos"
-            >Contact us</a
-          >
+            >Contact us
+            <div
+              class="line"
+              [style.visibility]="
+                activeLink('/contactos') ? 'visible' : 'hidden'
+              "
+            ></div>
+          </a>
 
           <a
             class="button-nav"
@@ -148,9 +222,14 @@
             [class.active]="activeLink('/contactos')"
             mat-button
             routerLink="contactos"
-            >Contáctenos</a
-          >
-          <div class="line" [style.visibility]="activeLink('/documentos') ? 'visible' : 'hidden'"></div>
+            >Contáctenos
+            <div
+              class="line"
+              [style.visibility]="
+                activeLink('/contactos') ? 'visible' : 'hidden'
+              "
+            ></div>
+          </a>
         </div>
       </div>
 
@@ -191,7 +270,7 @@
       </div>
 
       <div class="menu-nav">
-        <button mat-icon-button  [matMenuTriggerFor]="menuNav" aria-label="Nav">
+        <button mat-icon-button [matMenuTriggerFor]="menuNav" aria-label="Nav">
           <mat-icon>menu</mat-icon>
         </button>
         <mat-menu #menuNav xPosition="before">
@@ -202,8 +281,12 @@
               [class.active]="activeLink('/contactos')"
               mat-button
               routerLink=""
-              >Inicio</a
-            >
+              >Inicio
+              <div
+                class="line"
+                [style.visibility]="activeLink('') ? 'visible' : 'hidden'"
+              ></div>
+            </a>
 
             <a
               class="button-menu"
@@ -211,8 +294,12 @@
               [class.active]="activeLink('')"
               mat-button
               routerLink=""
-              >Home</a
-            >
+              >Home
+              <div
+                class="line"
+                [style.visibility]="activeLink('') ? 'visible' : 'hidden'"
+              ></div>
+            </a>
 
             <a
               class="button-menu"
@@ -220,9 +307,12 @@
               [class.active]="activeLink('')"
               mat-button
               routerLink=""
-              >Inicio</a
-            >
-            <div class="line" [style.visibility]="activeLink('') ? 'visible' : 'hidden'"></div>
+              >Inicio
+              <div
+                class="line"
+                [style.visibility]="activeLink('') ? 'visible' : 'hidden'"
+              ></div>
+            </a>
           </div>
 
           <div mat-menu-item class="nav-container">
@@ -232,8 +322,14 @@
               [class.active]="activeLink('/nosotros')"
               mat-button
               routerLink="nosotros"
-              >Nosotros</a
-            >
+              >Nosotros
+              <div
+                class="line"
+                [style.visibility]="
+                  activeLink('/nosotros') ? 'visible' : 'hidden'
+                "
+              ></div>
+            </a>
 
             <a
               class="button-menu"
@@ -241,8 +337,14 @@
               [class.active]="activeLink('/nosotros')"
               mat-button
               routerLink="nosotros"
-              >About us</a
-            >
+              >About us
+              <div
+                class="line"
+                [style.visibility]="
+                  activeLink('/nosotros') ? 'visible' : 'hidden'
+                "
+              ></div>
+            </a>
 
             <a
               class="button-menu"
@@ -250,9 +352,14 @@
               [class.active]="activeLink('/nosotros')"
               mat-button
               routerLink="nosotros"
-              >Nosotros</a
-            >
-            <div class="line" [style.visibility]="activeLink('/nosotros') ? 'visible' : 'hidden'"></div>
+              >Nosotros
+              <div
+                class="line"
+                [style.visibility]="
+                  activeLink('/nosotros') ? 'visible' : 'hidden'
+                "
+              ></div>
+            </a>
           </div>
 
           <div mat-menu-item class="nav-container">
@@ -262,8 +369,14 @@
               [class.active]="activeLink('/servicios')"
               mat-button
               routerLink="servicios"
-              >Servicios</a
-            >
+              >Servicios
+              <div
+                class="line"
+                [style.visibility]="
+                  activeLink('/servicios') ? 'visible' : 'hidden'
+                "
+              ></div>
+            </a>
 
             <a
               class="button-menu"
@@ -271,8 +384,14 @@
               [class.active]="activeLink('/servicios')"
               mat-button
               routerLink="servicios"
-              >Services</a
-            >
+              >Services
+              <div
+                class="line"
+                [style.visibility]="
+                  activeLink('/servicios') ? 'visible' : 'hidden'
+                "
+              ></div>
+            </a>
 
             <a
               class="button-menu"
@@ -280,9 +399,14 @@
               [class.active]="activeLink('/servicios')"
               mat-button
               routerLink="servicios"
-              >Servicios</a
-            >
-            <div class="line" [style.visibility]="activeLink('/servicios') ? 'visible' : 'hidden'"></div>
+              >Servicios
+              <div
+                class="line"
+                [style.visibility]="
+                  activeLink('/servicios') ? 'visible' : 'hidden'
+                "
+              ></div>
+            </a>
           </div>
 
           <div mat-menu-item class="nav-container">
@@ -292,8 +416,14 @@
               [class.active]="activeLink('/documentos')"
               mat-button
               routerLink="documentos"
-              >Documentación</a
-            >
+              >Documentación
+              <div
+                class="line"
+                [style.visibility]="
+                  activeLink('/documentos') ? 'visible' : 'hidden'
+                "
+              ></div>
+            </a>
 
             <a
               class="button-menu"
@@ -301,8 +431,14 @@
               [class.active]="activeLink('/documentos')"
               mat-button
               routerLink="documentos"
-              >Documentation</a
-            >
+              >Documentation
+              <div
+                class="line"
+                [style.visibility]="
+                  activeLink('/documentos') ? 'visible' : 'hidden'
+                "
+              ></div>
+            </a>
 
             <a
               class="button-menu"
@@ -310,9 +446,14 @@
               [class.active]="activeLink('/documentos')"
               mat-button
               routerLink="documentos"
-              >Documentación</a
-            >
-            <div class="line" [style.visibility]="activeLink('/documentos') ? 'visible' : 'hidden'"></div>
+              >Documentación
+              <div
+                class="line"
+                [style.visibility]="
+                  activeLink('/documentos') ? 'visible' : 'hidden'
+                "
+              ></div>
+            </a>
           </div>
 
           <div mat-menu-item class="nav-container">
@@ -322,8 +463,14 @@
               [class.active]="activeLink('/contactos')"
               mat-button
               routerLink="contactos"
-              >Contáctenos</a
-            >
+              >Contáctenos
+              <div
+                class="line"
+                [style.visibility]="
+                  activeLink('/contactos') ? 'visible' : 'hidden'
+                "
+              ></div>
+            </a>
 
             <a
               class="button-menu"
@@ -331,8 +478,14 @@
               [class.active]="activeLink('/contactos')"
               mat-button
               routerLink="contactos"
-              >Contact us</a
-            >
+              >Contact us
+              <div
+                class="line"
+                [style.visibility]="
+                  activeLink('/contactos') ? 'visible' : 'hidden'
+                "
+              ></div>
+            </a>
 
             <a
               class="button-menu"
@@ -340,28 +493,36 @@
               [class.active]="activeLink('/contactos')"
               mat-button
               routerLink="contactos"
-              >Contáctenos</a
-            >
-            <div class="line" [style.visibility]="activeLink('/contactos') ? 'visible' : 'hidden'"></div>
+              >Contáctenos
+              <div
+                class="line"
+                [style.visibility]="
+                  activeLink('/contactos') ? 'visible' : 'hidden'
+                "
+              ></div>
+            </a>
           </div>
           <mat-divider></mat-divider>
-          <button
-          mat-menu-item
-          *ngFor="let idioma of idiomas$ | async"
-          (click)="changeLang(idioma.siglas)"
-        >
-          <div class="button-wrapper-item">
-            <div class="img-item-container">
-              <img
-                *ngIf="idioma.nombre !== 'Otro'"
-                class="img-element"
-                [src]="getFlags(idioma.siglas)"
-                alt="Imagen idioma"
-              />
-            </div>
-            <span class="menu-span">{{ idioma.nombre }}</span>
+          <div class="lang-container">
+            <ng-container *ngFor="let idioma of idiomas$ | async">
+              <button class="lang-button" mat-button
+                (click)="changeLang(idioma.siglas)"
+                [style.background]="lang == idioma.siglas ? '#f5f5f5' : 'none' "
+              >
+                <div class="button-wrapper-item">
+                  <div class="img-item-container">
+                    <img
+                      *ngIf="idioma.nombre !== 'Otro'"
+                      class="img-element"
+                      [src]="getFlags(idioma.siglas)"
+                      alt="Imagen idioma"
+                    />
+                  </div>
+                  <span class="menu-span">{{ idioma.nombre }}</span>
+                </div>
+              </button>
+            </ng-container>
           </div>
-        </button>
         </mat-menu>
       </div>
     </div>

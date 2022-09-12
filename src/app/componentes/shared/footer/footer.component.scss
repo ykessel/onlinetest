@@ -271,33 +271,32 @@
           color: #ca8383;
         }
 
-
-      .footer-last-info {
-        display: flex;
-        flex-direction: column;
-        margin-top: 4rem;
-
-        .footer-info {
+        .footer-last-info {
           display: flex;
+          flex-direction: column;
+          margin-top: 4rem;
 
-          .footer-info-icon {
-            color: white;
-            font-size: 1.6em;
-            padding-right: 0.6em;
-          }
+          .footer-info {
+            display: flex;
 
-          p {
-            font-family: "Roboto";
-            font-style: normal;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 24px;
-            /* identical to box height, or 150% */
+            .footer-info-icon {
+              color: white;
+              font-size: 1.6em;
+              padding-right: 0.6em;
+            }
 
-            color: #ffffff;
+            p {
+              font-family: "Roboto";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 24px;
+              /* identical to box height, or 150% */
+
+              color: #ffffff;
+            }
           }
         }
-      }
       }
       .footer-last-documents {
         display: flex;
@@ -326,13 +325,15 @@
 
         .footer-docs-group {
           margin-left: 1rem;
-          p {
+
+          .enlace {
             font-family: "Roboto";
             font-style: normal;
             font-weight: 400;
             font-size: 16px;
             line-height: 24px;
             color: #fcb9b9;
+            text-decoration: none;
           }
         }
       }
@@ -345,7 +346,6 @@
       margin-right: 20vh;
       flex-direction: column;
 
-
       mat-divider {
         background-color: #823c3c;
         margin-top: 2rem;
@@ -355,14 +355,7 @@
       .footer-social {
         display: flex;
         justify-content: flex-end;
-        gap: 1em;
         margin-top: -3rem;
-
-
-        .footer-social-icon {
-          color: white;
-          font-size: 2em;
-        }
       }
 
       .footer-last-legal {

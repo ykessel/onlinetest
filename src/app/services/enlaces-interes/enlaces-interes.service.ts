@@ -14,6 +14,6 @@ export class EnlacesInteresService {
   };
 
   getEnlaces() {
-    return this.http.post<any[]>(api_base + 'listar-categorias-enlace', this.httpOptions);
+    return this.http.post<any[]>(api_base + 'listar-enlace-interes', this.httpOptions);
   }
 }

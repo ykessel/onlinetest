@@ -132,123 +132,19 @@
             <p *ngIf="lang === 'xx'" class="footer-title">{{ categoria.tituloOtro }}</p>
           </div>
           <ng-container *ngFor="let enlace of enlaces$ | async">
-            <div *ngIf="categoria.tituloEs === enlace.categoriaEs" class="footer-docs-group">
-              <a *ngIf="lang === 'es'" href="{{ enlace.enlaceEs }}" >{{ enlace.tituloEs }}</a>
-              <a *ngIf="lang === 'en'" href="{{ enlace.enlaceEn }}" >{{ enlace.tituloEn }}</a>
-              <a *ngIf="lang === 'xx'" href="{{ enlace.enlaceOtro }}" >{{ enlace.tituloOtro }}</a>
+            <div *ngIf="categoria.id === enlace.categoriaEnlaceEs!.id" class="footer-docs-group">
+              <a class="enlace" *ngIf="lang === 'es'" href="{{ enlace.enlaceEs }}" >{{ enlace.tituloEs }}</a>
+              <a class="enlace" *ngIf="lang === 'en'" href="{{ enlace.enlaceEn }}" >{{ enlace.tituloEn }}</a>
+              <a class="enlace" *ngIf="lang === 'xx'" href="{{ enlace.enlaceOtro }}" >{{ enlace.tituloOtro }}</a>
             </div>
           </ng-container>
         </div>
       </ng-container>
-
-      <!-- <div class="footer-last-documents">
-        <div class="footer-docs">
-          <img src="../assets/img_header.png" />
-          <p class="footer-title">Documentos</p>
-        </div>
-        <div class="footer-docs-group">
-          <p>Documento bastante largo que está en dos líneas</p>
-          <p>Documento 2</p>
-          <p>Documento 3</p>
-          <p>Documento 4</p>
-        </div>
-      </div>
-
-      <div class="footer-last-documents">
-        <div class="footer-docs">
-          <img src="../assets/img_header.png" />
-          <p class="footer-title">Documentos</p>
-        </div>
-        <div class="footer-docs-group">
-          <p>Documento bastante largo que está en dos líneas</p>
-          <p>Documento 2</p>
-          <p>Documento 3</p>
-          <p>Documento 4</p>
-        </div>
-      </div> -->
     </div>
 
     <div class="footer-last-group" ngsReveal>
       <div class="footer-social">
-        <ng-container *ngFor="let social of sociales$ | async">
-          <ng-container *ngIf="social.nombre === 'Facebook'">
-            <a [href]="social.enlace" target="_blank">
-              <fa-icon class="footer-social-icon" [icon]="faFacebook"></fa-icon>
-            </a>
-          </ng-container>
-
-          <ng-container *ngIf="social.nombre === 'G+'">
-            <a [href]="social.enlace" target="_blank">
-              <fa-icon
-                class="footer-social-icon"
-                [icon]="faGooglePlus"
-              ></fa-icon>
-            </a>
-          </ng-container>
-
-          <ng-container *ngIf="social.nombre == 'Instagram'">
-            <a [href]="social.enlace" target="_blank">
-              <fa-icon
-                class="footer-social-icon"
-                [icon]="faInstagram"
-              ></fa-icon>
-            </a>
-          </ng-container>
-
-          <ng-container *ngIf="social.nombre == 'Youtube'">
-            <a [href]="social.enlace" target="_blank">
-              <fa-icon class="footer-social-icon" [icon]="faYoutube"></fa-icon>
-            </a>
-          </ng-container>
-
-          <ng-container *ngIf="social.nombre == 'Twitter'">
-            <a [href]="social.enlace" target="_blank">
-              <fa-icon class="footer-social-icon" [icon]="faTwitter"></fa-icon>
-            </a>
-          </ng-container>
-
-          <ng-container *ngIf="social.nombre == 'TikTok'">
-            <a [href]="social.enlace" target="_blank">
-              <fa-icon class="footer-social-icon" [icon]="faTiktok"></fa-icon>
-            </a>
-          </ng-container>
-
-          <ng-container *ngIf="social.nombre == 'Linkedin'">
-            <a [href]="social.enlace" target="_blank">
-              <fa-icon class="footer-social-icon" [icon]="faLinkedin"></fa-icon>
-            </a>
-          </ng-container>
-
-          <ng-container *ngIf="social.nombre == 'Pinterest'">
-            <a [href]="social.enlace" target="_blank">
-              <fa-icon
-                class="footer-social-icon"
-                [icon]="faPinterest"
-              ></fa-icon>
-            </a>
-          </ng-container>
-
-          <ng-container *ngIf="social.nombre == 'Messenger'">
-            <a [href]="social.enlace" target="_blank">
-              <fa-icon
-                class="footer-social-icon"
-                [icon]="faFacebookMessenger"
-              ></fa-icon>
-            </a>
-          </ng-container>
-
-          <ng-container *ngIf="social.nombre == 'Snapchat'">
-            <a [href]="social.enlace" target="_blank">
-              <fa-icon class="footer-social-icon" [icon]="faSnapchat"></fa-icon>
-            </a>
-          </ng-container>
-
-          <ng-container *ngIf="social.nombre == 'Reddit'">
-            <a [href]="social.enlace" target="_blank">
-              <fa-icon class="footer-social-icon" [icon]="faReddit"></fa-icon>
-            </a>
-          </ng-container>
-        </ng-container>
+        <bipay-sociales></bipay-sociales>
       </div>
       <mat-divider></mat-divider>
       <div class="footer-last-legal">

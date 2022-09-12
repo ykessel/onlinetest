@@ -1,0 +1,79 @@
+<ng-container *ngFor="let social of sociales$ | async">
+  <ng-container *ngIf="social.nombre === 'Facebook'">
+    <a [href]="social.enlace" target="_blank">
+      <fa-icon class="footer-social-icon" [icon]="faFacebook"></fa-icon>
+    </a>
+  </ng-container>
+
+  <ng-container *ngIf="social.nombre === 'G+'">
+    <a [href]="social.enlace" target="_blank">
+      <fa-icon
+        class="footer-social-icon"
+        [icon]="faGooglePlus"
+      ></fa-icon>
+    </a>
+  </ng-container>
+
+  <ng-container *ngIf="social.nombre == 'Instagram'">
+    <a [href]="social.enlace" target="_blank">
+      <fa-icon
+        class="footer-social-icon"
+        [icon]="faInstagram"
+      ></fa-icon>
+    </a>
+  </ng-container>
+
+  <ng-container *ngIf="social.nombre == 'Youtube'">
+    <a [href]="social.enlace" target="_blank">
+      <fa-icon class="footer-social-icon" [icon]="faYoutube"></fa-icon>
+    </a>
+  </ng-container>
+
+  <ng-container *ngIf="social.nombre == 'Twitter'">
+    <a [href]="social.enlace" target="_blank">
+      <fa-icon class="footer-social-icon" [icon]="faTwitter"></fa-icon>
+    </a>
+  </ng-container>
+
+  <ng-container *ngIf="social.nombre == 'TikTok'">
+    <a [href]="social.enlace" target="_blank">
+      <fa-icon class="footer-social-icon" [icon]="faTiktok"></fa-icon>
+    </a>
+  </ng-container>
+
+  <ng-container *ngIf="social.nombre == 'Linkedin'">
+    <a [href]="social.enlace" target="_blank">
+      <fa-icon class="footer-social-icon" [icon]="faLinkedin"></fa-icon>
+    </a>
+  </ng-container>
+
+  <ng-container *ngIf="social.nombre == 'Pinterest'">
+    <a [href]="social.enlace" target="_blank">
+      <fa-icon
+        class="footer-social-icon"
+        [icon]="faPinterest"
+      ></fa-icon>
+    </a>
+  </ng-container>
+
+  <ng-container *ngIf="social.nombre == 'Messenger'">
+    <a [href]="social.enlace" target="_blank">
+      <fa-icon
+        class="footer-social-icon"
+        [icon]="faFacebookMessenger"
+      ></fa-icon>
+    </a>
+  </ng-container>
+
+  <ng-container *ngIf="social.nombre == 'Snapchat'">
+    <a [href]="social.enlace" target="_blank">
+      <fa-icon class="footer-social-icon" [icon]="faSnapchat"></fa-icon>
+    </a>
+  </ng-container>
+
+  <ng-container *ngIf="social.nombre == 'Reddit'">
+    <a [href]="social.enlace" target="_blank">
+      <fa-icon class="footer-social-icon" [icon]="faReddit"></fa-icon>
+    </a>
+  </ng-container>
+</ng-container>
