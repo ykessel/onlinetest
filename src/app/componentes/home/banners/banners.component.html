@@ -70,8 +70,9 @@
           </div>
         </div>
         <div class="banner-up-img" >
-          <img src="../../../../assets/banner.png"
-        />
+          <img *ngIf="lang === 'es'" src="{{ banner.imagenEs }}" />
+          <img *ngIf="lang === 'en'" src="{{ banner.imagenEn }}" />
+          <img *ngIf="lang === 'xx'" src="{{ banner.imagenOtro }}" />
         </div>
       </div>
     </ng-container>
@@ -87,4 +88,3 @@
     </div>
     </div>
 </div>
-<!-- [@enterLeave]="i === hideId ? 'enter' : 'leave'" -->

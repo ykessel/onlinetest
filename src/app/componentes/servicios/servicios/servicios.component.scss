@@ -109,6 +109,8 @@
     display: flex;
     justify-content: center;
     width: 100%;
+    margin-top: 1rem;
+
     img {
       width: 100%;
       border-radius: 10px;
@@ -131,7 +133,7 @@
 }
 
 .card-docs:last-child {
-  margin-bottom: 20vh !important;;
+  margin-bottom: 20vh !important;
 }
 
 .card-docs:first-child {
@@ -146,15 +148,14 @@
   height: 111px;
 }
 
-.content-text{
-  font-family: 'Roboto';
+.content-text {
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
   line-height: 24px;
-  color: #3F3726;
+  color: #3f3726;
 }
-
 
 .center-movil {
   display: none;

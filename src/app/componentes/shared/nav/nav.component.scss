@@ -11,10 +11,8 @@
   padding: 0 !important;
 }
 
-.menu {
-  .mat-menu-panel, .mat-menu-content  {
-    border-radius: 10px !important;
-  }
+.mat-menu-panel, .mat-menu-content {
+  border-radius: 10px;
 }
 
 .top-logo {

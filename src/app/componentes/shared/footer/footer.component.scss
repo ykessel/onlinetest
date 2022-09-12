@@ -1,16 +1,5 @@
 @import "./styles/footer.mediun.scss";
 
-.footer-description {
-  p {
-    color: #ca8383;
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-  }
-}
-
 .footer {
   margin-top: -11px;
   width: 100%;
@@ -55,11 +44,16 @@
         // gap: 5%;
       }
 
-      .img-footer {
-        height: 63%;
-        max-height: 139px;
-        width: 15%;
+      .asociado-img {
+        display: flex;
+        width: 30%;
+
+        .img-footer {
+          width: 100%;
+          max-height: 80px;
+        }
       }
+
     }
     .logos-group-2 {
       display: flex;
@@ -269,12 +263,13 @@
           font-size: 16px;
           line-height: 24px;
           color: #ca8383;
+          padding-top: 10px;
         }
 
         .footer-last-info {
           display: flex;
           flex-direction: column;
-          margin-top: 4rem;
+          margin-top: 2vh;
 
           .footer-info {
             display: flex;

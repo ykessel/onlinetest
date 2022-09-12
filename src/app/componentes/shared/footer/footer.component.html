@@ -1,16 +1,18 @@
 <div class="footer" ngsReveal>
   <div class="footer-comercios">
     <div class="logos-footer">
-      <ng-container *ngFor="let asoc of asoc">
+      <!-- <ng-container *ngFor="let asoc of asoc">
         <img
           src="{{ asoc.logo }}"
           alt="{{ asoc.tituloEs }}"
           class="img-footer"
         />
-      </ng-container>
-      <!-- <ng-container *ngFor="let aso of asociados$ | async">
-        <img src="{{ aso.logo }}" alt="{{ aso.tituloEs }}" class="img-footer" />
       </ng-container> -->
+      <ng-container *ngFor="let aso of asociados$ | async">
+        <div class="asociado-img" >
+          <img src="{{ aso.logo }}" alt="{{ aso.tituloEs }}" class="img-footer" />
+        </div>
+      </ng-container>
     </div>
   </div>
 
