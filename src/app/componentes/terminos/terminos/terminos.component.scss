@@ -1,0 +1,135 @@
+@import "./styles/terminos.medium.scss";
+
+.terminos-container {
+  display: flex;
+  width: 100%;
+
+  .left {
+    width: 20%;
+    margin-top: 30vh;
+    margin-left: 0;
+
+    .terminos-rect {
+      width: 40%;
+      height: 40px;
+      left: 0px;
+      top: 401px;
+
+      background: linear-gradient(
+        90deg,
+        #faa6a7 0%,
+        #b5e7ff 67.02%,
+        #ffdf95 98.96%
+      );
+      border-radius: 0px 50px 50px 0px;
+    }
+
+    .left-img {
+      width: 60px;
+    }
+  }
+
+  .center {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+
+    .center-movil {
+      display: none;
+    }
+
+    .center-header {
+      display: flex;
+      align-items: flex-start;
+      padding: 10px;
+      gap: 10px;
+      width: 100%;
+      margin-bottom: 2vh;
+
+      .center-terminos-header {
+        width: 0.7rem;
+      }
+
+      .header-title {
+        font-family: "Fredoka One";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        display: flex;
+        align-items: center;
+        color: #353535;
+      }
+
+      .header-text {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1rem;
+        color: #727272;
+      }
+    }
+
+    .center-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 32px;
+      gap: 32px;
+      margin-bottom: 20px;
+      justify-content: space-between;
+      background: #ffffff;
+
+      .center-content-first {
+        .center-content-first-title {
+          font-family: "Fredoka One";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 24px;
+          line-height: 29px;
+          color: #000000;
+        }
+
+        .center-content-first-text {
+          font-family: "Roboto";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          color: #727272;
+        }
+      }
+
+      .center-content-second {
+        .center-content-second-title {
+          font-family: "Fredoka One";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 24px;
+          line-height: 29px;
+          color: #000000;
+        }
+
+        .center-content-second-text {
+          font-family: "Roboto";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          color: #727272;
+        }
+      }
+    }
+  }
+
+  .right {
+    width: 20%;
+
+    .right-img {
+      position: absolute;
+      width: 150px;
+      right: 0;
+      margin-top: 18vh;
+    }
+  }
+}

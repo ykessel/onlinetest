@@ -1,0 +1,68 @@
+@media only screen and (min-width: 328px) and (max-width: 1280px) {
+  .servicios-container {
+    .right,
+    .left {
+      display: none;
+    }
+
+    .center {
+      width: 100% !important;
+      margin-top: 15% !important;
+
+      .center-movil {
+        display: flex !important;
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+
+        .terminos-rect {
+          width: 35%;
+          height: 80%;
+
+          background: linear-gradient(
+            90deg,
+            #faa6a7 0%,
+            #b5e7ff 67.02%,
+            #ffdf95 98.96%
+          );
+          border-radius: 0px 50px 50px 0px;
+        }
+
+        .center-movil-right {
+          width: 60%;
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+
+      .servicios-servicios {
+        flex-direction: column;
+        width: auto !important;
+        padding: 0 !important;
+        margin-left: 1rem !important;
+        gap: 1rem !important;
+
+        .header-title {
+          gap: 1rem !important;
+        }
+      }
+    }
+
+    .card-docs {
+      flex-direction: column;
+      margin: 1rem;
+
+      .servicio-img {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        img {
+          width: 100%;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+}

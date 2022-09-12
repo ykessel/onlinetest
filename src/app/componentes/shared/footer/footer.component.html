@@ -1,8 +1,12 @@
 <div class="footer" ngsReveal>
-  <div class="footer-comercios" >
+  <div class="footer-comercios">
     <div class="logos-footer">
       <ng-container *ngFor="let asoc of asoc">
-        <img src="{{ asoc.logo }}" alt="{{ asoc.tituloEs }}" class="img-footer" />
+        <img
+          src="{{ asoc.logo }}"
+          alt="{{ asoc.tituloEs }}"
+          class="img-footer"
+        />
       </ng-container>
       <!-- <ng-container *ngFor="let aso of asociados$ | async">
         <img src="{{ aso.logo }}" alt="{{ aso.tituloEs }}" class="img-footer" />
@@ -10,10 +14,14 @@
     </div>
   </div>
 
-  <div class="footer-contactos" >
+  <div class="footer-contactos">
     <img src="../../../../assets/curva2.png" class="bottom-line" />
     <div class="footer-contactos-container">
-      <img class="footer-contactos-left" src="../../../../assets/grafica-contactos_izq.png" alt="lines" />
+      <img
+        class="footer-contactos-left"
+        src="../../../../assets/grafica-contactos_izq.png"
+        alt="lines"
+      />
 
       <div class="footer-contactos-center">
         <ng-container *ngFor="let seccion of secciones$ | async">
@@ -28,12 +36,21 @@
               {{ seccion.tituloOtro }}
             </p>
 
-            <div *ngIf="lang === 'es'" class="footer-contactos-text" [innerHTML]="seccion.contenidoEs">
-            </div>
-            <div *ngIf="lang === 'en'" class="footer-contactos-text" [innerHTML]="seccion.contenidoEs">
-            </div>
-            <div *ngIf="lang === 'xx'" class="footer-contactos-text" [innerHTML]="seccion.contenidoEs">
-            </div>
+            <div
+              *ngIf="lang === 'es'"
+              class="footer-contactos-text"
+              [innerHTML]="seccion.contenidoEs"
+            ></div>
+            <div
+              *ngIf="lang === 'en'"
+              class="footer-contactos-text"
+              [innerHTML]="seccion.contenidoEs"
+            ></div>
+            <div
+              *ngIf="lang === 'xx'"
+              class="footer-contactos-text"
+              [innerHTML]="seccion.contenidoEs"
+            ></div>
             <div class="footer-contactos-boton">
               <a mat-button routerLink="contactos">Inicia ya</a>
             </div>
@@ -41,7 +58,11 @@
         </ng-container>
       </div>
 
-      <img class="footer-contactos-right" src="../../../../assets/grafica-contactos.png" alt="lines" />
+      <img
+        class="footer-contactos-right"
+        src="../../../../assets/grafica-contactos.png"
+        alt="lines"
+      />
     </div>
   </div>
 
@@ -50,7 +71,9 @@
       <mat-icon class="icon">phone</mat-icon>
       <p class="call-p1">Llamenos</p>
       <img src="../assets/img_header.png" />
-      <p class="call-p2">(53) 12345678</p>
+      <ng-container *ngFor="let contacto of contactos$ | async">
+        <p class="call-p2">{{ contacto.telefono }}</p>
+      </ng-container>
     </div>
 
     <div class="footer-container" ngsReveal>
@@ -59,141 +82,70 @@
 
         <ng-container *ngFor="let seccion of secciones$ | async">
           <ng-container *ngIf="seccion.id == 22">
-            <div *ngIf="lang === 'es'" class="footer-description" [innerHTML]="seccion.contenidoEs"></div>
-            <div *ngIf="lang === 'en'" class="footer-description" [innerHTML]="seccion.contenidoEn"></div>
-            <div *ngIf="lang === 'xx'" class="footer-description" [innerHTML]="seccion.contenidoOtro"></div>
+            <div
+              *ngIf="lang === 'es'"
+              class="footer-description"
+              [innerHTML]="seccion.contenidoEs"
+            ></div>
+            <div
+              *ngIf="lang === 'en'"
+              class="footer-description"
+              [innerHTML]="seccion.contenidoEn"
+            ></div>
+            <div
+              *ngIf="lang === 'xx'"
+              class="footer-description"
+              [innerHTML]="seccion.contenidoOtro"
+            ></div>
           </ng-container>
         </ng-container>
 
         <div class="footer-last-info">
-          <div class="footer-info">
-            <fa-icon class="footer-info-icon" [icon]="faLocationDot"></fa-icon>
-            <p>Dirección de la compañía, País.</p>
+          <ng-container *ngFor="let contacto of contactos$ | async">
+            <div class="footer-info">
+              <fa-icon
+                class="footer-info-icon"
+                [icon]="faLocationDot"
+              ></fa-icon>
+              <p>{{ contacto.direccion }}</p>
+            </div>
+
+            <div class="footer-info">
+              <fa-icon class="footer-info-icon" [icon]="faEnvelope"></fa-icon>
+              <p>{{ contacto.correo }}</p>
+            </div>
+
+            <div class="footer-info">
+              <fa-icon class="footer-info-icon" [icon]="faPhone"></fa-icon>
+              <p>{{ contacto.telefono }}</p>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+
+      <ng-container *ngFor="let categoria of categorias$ | async">
+        <div class="footer-last-documents">
+          <div class="footer-docs">
+            <img src="../assets/img_header.png" />
+            <p *ngIf="lang === 'es'" class="footer-title">{{ categoria.tituloEs }}</p>
+            <p *ngIf="lang === 'en'" class="footer-title">{{ categoria.tituloEn }}</p>
+            <p *ngIf="lang === 'xx'" class="footer-title">{{ categoria.tituloOtro }}</p>
           </div>
-
-          <div class="footer-info">
-            <fa-icon class="footer-info-icon" [icon]="faEnvelope"></fa-icon>
-            <p>infoalybio@server.com</p>
-          </div>
-
-          <div class="footer-info">
-            <fa-icon class="footer-info-icon" [icon]="faPhone"></fa-icon>
-            <p>(800) 1234567891</p>
-          </div>
+          <ng-container *ngFor="let enlace of enlaces$ | async">
+            <div *ngIf="categoria.id === enlace.categoriaEnlaceEs!.id" class="footer-docs-group">
+              <a class="enlace" *ngIf="lang === 'es'" href="{{ enlace.enlaceEs }}" >{{ enlace.tituloEs }}</a>
+              <a class="enlace" *ngIf="lang === 'en'" href="{{ enlace.enlaceEn }}" >{{ enlace.tituloEn }}</a>
+              <a class="enlace" *ngIf="lang === 'xx'" href="{{ enlace.enlaceOtro }}" >{{ enlace.tituloOtro }}</a>
+            </div>
+          </ng-container>
         </div>
-
-      </div>
-
-      <div class="footer-last-documents">
-        <div class="footer-docs">
-          <img src="../assets/img_header.png" />
-          <p class="footer-title">Documentos</p>
-        </div>
-        <div class="footer-docs-group">
-          <p>Documento bastante largo que está en dos líneas</p>
-          <p>Documento 2</p>
-          <p>Documento 3</p>
-          <p>Documento 4</p>
-        </div>
-      </div>
-
-      <div class="footer-last-documents">
-        <div class="footer-docs">
-          <img src="../assets/img_header.png" />
-          <p class="footer-title">Documentos</p>
-        </div>
-        <div class="footer-docs-group">
-          <p>Documento bastante largo que está en dos líneas</p>
-          <p>Documento 2</p>
-          <p>Documento 3</p>
-          <p>Documento 4</p>
-        </div>
-      </div>
-
-      <div class="footer-last-documents">
-        <div class="footer-docs">
-          <img src="../assets/img_header.png" />
-          <p class="footer-title">Documentos</p>
-        </div>
-        <div class="footer-docs-group">
-          <p>Documento bastante largo que está en dos líneas</p>
-          <p>Documento 2</p>
-          <p>Documento 3</p>
-          <p>Documento 4</p>
-        </div>
-      </div>
+      </ng-container>
     </div>
 
     <div class="footer-last-group" ngsReveal>
-        <div class="footer-social">
-          <ng-container *ngFor="let social of sociales$ | async">
-            <ng-container *ngIf="social.nombre === 'Facebook'">
-              <a [href]="social.enlace" target="_blank">
-                <fa-icon class="footer-social-icon" [icon]="faFacebook"></fa-icon>
-              </a>
-            </ng-container>
-
-            <ng-container *ngIf="social.nombre === 'G+'">
-              <a [href]="social.enlace" target="_blank">
-                <fa-icon class="footer-social-icon" [icon]="faGooglePlus"></fa-icon>
-              </a>
-            </ng-container>
-
-            <ng-container *ngIf="social.nombre == 'Instagram'">
-              <a [href]="social.enlace" target="_blank">
-                <fa-icon class="footer-social-icon" [icon]="faInstagram"></fa-icon>
-              </a>
-            </ng-container>
-
-            <ng-container *ngIf="social.nombre == 'Youtube'">
-              <a [href]="social.enlace" target="_blank">
-                <fa-icon class="footer-social-icon" [icon]="faYoutube"></fa-icon>
-              </a>
-            </ng-container>
-
-            <ng-container *ngIf="social.nombre == 'Twitter'">
-              <a [href]="social.enlace" target="_blank">
-                <fa-icon class="footer-social-icon" [icon]="faTwitter"></fa-icon>
-              </a>
-            </ng-container>
-
-            <ng-container *ngIf="social.nombre == 'TikTok'">
-              <a [href]="social.enlace" target="_blank">
-                <fa-icon class="footer-social-icon" [icon]="faTiktok"></fa-icon>
-              </a>
-            </ng-container>
-
-            <ng-container *ngIf="social.nombre == 'Linkedin'">
-              <a [href]="social.enlace" target="_blank">
-                <fa-icon class="footer-social-icon" [icon]="faLinkedin"></fa-icon>
-              </a>
-            </ng-container>
-
-            <ng-container *ngIf="social.nombre == 'Pinterest'">
-              <a [href]="social.enlace" target="_blank">
-                <fa-icon class="footer-social-icon" [icon]="faPinterest"></fa-icon>
-              </a>
-            </ng-container>
-
-            <ng-container *ngIf="social.nombre == 'Messenger'">
-              <a [href]="social.enlace" target="_blank">
-                <fa-icon class="footer-social-icon" [icon]="faFacebookMessenger"></fa-icon>
-              </a>
-            </ng-container>
-
-            <ng-container *ngIf="social.nombre == 'Snapchat'">
-              <a [href]="social.enlace" target="_blank">
-                <fa-icon class="footer-social-icon" [icon]="faSnapchat"></fa-icon>
-              </a>
-            </ng-container>
-
-            <ng-container *ngIf="social.nombre == 'Reddit'">
-              <a [href]="social.enlace" target="_blank">
-                <fa-icon class="footer-social-icon" [icon]="faReddit"></fa-icon>
-              </a>
-            </ng-container>
-          </ng-container>
-        </div>
+      <div class="footer-social">
+        <bipay-sociales></bipay-sociales>
+      </div>
       <mat-divider></mat-divider>
       <div class="footer-last-legal">
         <p>Copyrights 2021 por Bipay. Todos los derechos reservados</p>

@@ -41,8 +41,7 @@
 }
 
 .line{
-  width: 70%;
-  margin-top: 5px;
+  width: 100%;
   height: 6px;
   background: #353535;
   border-radius: 25px;
@@ -82,7 +81,6 @@
 
 .button-nav {
   width: 100%;
-  height: 19px;
 
   font-family: "Fredoka One";
   font-style: normal;
@@ -203,4 +201,8 @@ section {
 
 .menu-nav {
   display: none;
+}
+
+.active {
+  color: #353535;
 }

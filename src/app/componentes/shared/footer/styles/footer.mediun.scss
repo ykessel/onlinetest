@@ -25,6 +25,7 @@
 
   .footer-last-description {
     width: 100% !important;
+    margin-bottom: 2rem;
   }
 
   .footer-contactos-left,
@@ -47,7 +48,7 @@
     width: 80% !important;
     gap: 0px !important;
     height: auto !important;
-    margin-top: -3.5rem !important;
+    margin-top: -2em !important;
 
     p {
       margin: 0.8rem !important;
@@ -56,5 +57,25 @@
 
   .footer-contact {
     flex-direction: column !important ;
+  }
+
+  .footer-social {
+    display: flex;
+    justify-content: center !important;
+    margin-top: 3rem !important;
+  }
+
+  .footer-last-documents {
+    margin-bottom: 2rem;
+  }
+
+  .footer-last-info{
+    margin-top: 2rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .footer-last .footer-call {
+    margin-top: -4em !important;
   }
 }
