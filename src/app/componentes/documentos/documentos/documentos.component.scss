@@ -5,7 +5,7 @@
 }
 .info-container{
   display: flex;
-  
+
 }
 
 .documentos-container {
@@ -47,22 +47,29 @@
       display: flex;
       align-items: flex-start;
       padding: 10px;
-      gap: 10px;
+      gap: 1rem;
       width: 100%;
       margin-bottom: 2vh;
+      margin-top: 0.5rem;
 
       .docs-header {
-        width: 0.7rem;
+        width: 1rem;
       }
 
       .header-title {
-        font-family: "Fredoka One";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 40px;
         display: flex;
-        align-items: center;
-        color: #353535;
+        gap: 1rem;
+
+        p {
+          font-family: "Fredoka One";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 40px;
+          display: flex;
+          align-items: center;
+          color: #353535;
+          margin-bottom: 0;
+        }
       }
 
       .header-text {
@@ -135,7 +142,7 @@
 }
 
 .card-docs:first-child {
-  margin-top: 100px;
+  margin-top: 1vh;
 }
 
 .content-text{
@@ -147,14 +154,15 @@
   color: #3F3726;
 }
 
+.center-movil {
+  display: none;
+}
+
 @media (max-width: 700px) {
-  .img{
-    display: none;
+  .img, .right-img, .left, .right, .servicios-rect {
+    display: none !important;
   }
-  .servicios-rect{
-    display: none;
-  }
-  
+
   .left-img {
     top: 213px !important;
     left: -93px !important;
@@ -172,14 +180,7 @@
     height: 83px !important;
     top: 218px !important;
     right: 0px !important;
-    position: absolute !important;        
-  }
-
-  .rigth-img {
-    height: 80%;
-    width: 57% !important;
-    background-repeat: no-repeat !important;
-    background: url(../../../../assets/grafica_der1.png);
+    position: absolute !important;
   }
 
   .card-docs-container {
@@ -218,14 +219,15 @@
   }
 
   .documentos-container .center .documentos-servicios {
-    display: flex;
-    align-items: flex-start;
-    padding: 0px;
-    margin-left: 5%;
-    margin-top: 10%;
-    gap: 10px;
-    width: 95%;
-    margin-bottom: 0vh;
+    flex-direction: column;
+        width: auto !important;
+        padding: 0 !important;
+        margin-left: 1rem !important;
+        gap: 1rem !important;
+
+        .header-title {
+          gap: 1rem !important;
+        }
   }
 
   .info-container {
@@ -236,7 +238,7 @@
 
   .card-docs-container {
     width: 100%;
-    margin-top: 33%;
+    margin-top: 0 !important;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -248,5 +250,34 @@
     margin-bottom: 7%;
     height: 17px;
   }
+
+  .center-movil {
+    display: flex !important;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+
+    .terminos-rect {
+      width: 35%;
+      height: 80%;
+
+      background: linear-gradient(
+        90deg,
+        #faa6a7 0%,
+        #b5e7ff 67.02%,
+        #ffdf95 98.96%
+      );
+      border-radius: 0px 50px 50px 0px;
+    }
+
+    .center-movil-right {
+      width: 60%;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
 
 }

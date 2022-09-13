@@ -1,33 +1,50 @@
 <div class="documentos-container">
   <div class="left">
     <div class="servicios-rect"></div>
-    <div class="left-img"></div>
+    <!-- <div class="left-img"></div> -->
     <img class="img" src="../../../../assets/grafica_izq.png" />
   </div>
 
   <div class="center">
     <div class="documentos-servicios">
-      <img class="docs-header" src="../../../../assets/img_header.png" />
       <ng-container *ngFor="let seccion of secciones$ | async">
         <ng-container *ngIf="seccion.id == 15">
-          <p class="header-title">
-            {{ seccion.nombre }}
-          </p>
-          <!-- Suponiendo que el titulo de la pagina venga en diferente idiomas
-          este es el codigo   -->
+          <div class="header-title">
+            <img class="docs-header" src="../../../../assets/img_header.png" />
+            <p *ngIf="lang === 'es'">
+              {{ seccion.tituloEs }}
+            </p>
+            <p *ngIf="lang === 'en'">
+              {{ seccion.tituloEn }}
+            </p>
+            <p *ngIf="lang === 'xx'">
+              {{ seccion.tituloOtro }}
+            </p>
+          </div>
 
-          <!-- <p *ngIf="lang === 'es'" class="header-title">
-            {{ seccion.tituloEs }}
+          <p *ngIf="lang === 'es'" class="header-text">
+            {{ seccion.contenidoEs }}
           </p>
-          <p *ngIf="lang === 'en'" class="header-title">
-            {{ seccion.tituloEn }}
+          <p *ngIf="lang === 'en'" class="header-text">
+            {{ seccion.contenidoEn }}
           </p>
-          <p *ngIf="lang === 'xx'" class="header-title">
-            {{ seccion.tituloOtro }}
-          </p> -->
+          <p *ngIf="lang === 'xx'" class="header-text">
+            {{ seccion.contenidoOtro }}
+          </p>
         </ng-container>
       </ng-container>
     </div>
+
+    <div class="center-movil">
+      <div class="terminos-rect"></div>
+      <div class="center-movil-right">
+        <img
+          class="center-movil-right-img"
+          src="../../../../assets/grafica_der1.png"
+        />
+      </div>
+    </div>
+
     <div class="card-docs-container">
       <div *ngFor="let doc of documentos$ | async" class="card-docs">
         <div class="info-container">
@@ -38,7 +55,7 @@
               <p *ngIf="lang === 'es'" class="title">{{ doc.tituloEs }}</p>
               <p *ngIf="lang === 'en'" class="title">{{ doc.tituloEn }}</p>
               <p *ngIf="lang === 'xx'" class="title">{{ doc.tituloOtro }}</p>
-  
+
               <p *ngIf="lang === 'es'" class="content-text">
                 {{ doc.slugEs }}
               </p>
@@ -52,22 +69,32 @@
           </div>
         </div>
         <div class="button-container">
-          <button *ngIf="lang === 'es'" (click)="downloadDoc(doc.documentoEs)" mat-button>
+          <button
+            *ngIf="lang === 'es'"
+            (click)="downloadDoc(doc.documentoEs)"
+            mat-button
+          >
             <mat-icon>download</mat-icon>
           </button>
-  
-          <button *ngIf="lang === 'en'" (click)="downloadDoc(doc.documentoEn)" mat-button>
+
+          <button
+            *ngIf="lang === 'en'"
+            (click)="downloadDoc(doc.documentoEn)"
+            mat-button
+          >
             <mat-icon>download</mat-icon>
           </button>
-  
-          <button *ngIf="lang === 'xx'" (click)="downloadDoc(doc.documentoOtro)" mat-button>
+
+          <button
+            *ngIf="lang === 'xx'"
+            (click)="downloadDoc(doc.documentoOtro)"
+            mat-button
+          >
             <mat-icon>download</mat-icon>
           </button>
         </div>
       </div>
     </div>
-    
-
   </div>
 
   <div class="right">

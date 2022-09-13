@@ -1,57 +1,62 @@
 <div class="contact-container">
-    <div class="contact-head">
-        <div class="left-img"></div>
-        <div class="center-content">
-            <img class="chip-img" src="../../../../assets/img_header.png" />
-            <ng-container *ngFor="let seccion of secciones$ | async">
-                <ng-container *ngIf="seccion.id == 13">
-                    <h1 *ngIf="lang === 'es'" class="contact-tittle">
-                        {{ seccion.tituloEs }}
-                    </h1>
-                </ng-container>
-            </ng-container>
-        </div>
-        <div class="rigth-container">
-            <div class="rigth-img"></div>
-        </div>
+  <div class="contact-head">
+    <div class="left-img"></div>
+    <div class="center-content">
+      <img class="chip-img" src="../../../../assets/img_header.png" />
+      <ng-container *ngFor="let seccion of secciones$ | async">
+        <ng-container *ngIf="seccion.id == 13">
+          <h1 *ngIf="lang === 'es'" class="contact-tittle">
+            {{ seccion.tituloEs }}
+          </h1>
+          <h1 *ngIf="lang === 'en'" class="contact-tittle">
+            {{ seccion.tituloEn }}
+          </h1>
+          <h1 *ngIf="lang === 'xx'" class="contact-tittle">
+            {{ seccion.tituloOtro }}
+          </h1>
+        </ng-container>
+      </ng-container>
     </div>
-    <div class="contact-body">
-        <div class="initial-space">
-            <div class="container-izq">
-                <div class="img-chip-izq"></div>
-                <div class="img-chip-pink"></div>
-            </div>
-
-            <div class="container-der">
-                <div class="img-chip-der"></div>
-                <div class="img-chip-menor"></div>
-            </div>
-        </div>
-
-        <div class="we-background"></div>
-        <div class="we-text">
-            <div class="we-text-container">
-
-                  <ng-container *ngFor="let seccion of secciones$ | async">
-                <ng-container *ngIf="seccion.id == 13">
-                    <div class="nos-container" *ngIf="lang === 'es'" [innerHTML]="seccion.contenidoEs" ></div>
-                    <div class="nos-container" *ngIf="lang === 'en'" [innerHTML]="seccion.contenidoEs" ></div>
-                    <div class="nos-container" *ngIf="lang === 'xx'" [innerHTML]="seccion.contenidoOtro" ></div>
-        <!--         <h1 class="we-tittle">Historia</h1>
-                    <p class="p-text" *ngIf="lang === 'es'" class="contact-tittle">
-                        {{ seccion.contenidoEs }}
-                    </p>
-
-                    <p class="p-text" *ngIf="lang === 'en'" class="contact-tittle">
-                        {{ seccion.contenidoEs }}
-                    </p>
-
-                    <p class="p-text" *ngIf="lang === 'xx'" class="contact-tittle">
-                        {{ seccion.contenidoEs }}
-                    </p> -->
-                </ng-container>
-            </ng-container>
-            </div>
-        </div>
+    <div class="rigth-container">
+      <div class="rigth-img"></div>
     </div>
+  </div>
+  <div class="contact-body">
+    <div class="initial-space">
+      <div class="container-izq">
+        <div class="img-chip-izq"></div>
+        <div class="img-chip-pink"></div>
+      </div>
+
+      <div class="container-der">
+        <div class="img-chip-der"></div>
+        <div class="img-chip-menor"></div>
+      </div>
+    </div>
+
+    <div class="we-background"></div>
+    <div class="we-text-no">
+      <div class="we-text-container">
+        <ng-container *ngFor="let seccion of secciones$ | async">
+          <ng-container *ngIf="seccion.id == 13">
+            <div
+              class="nos-container"
+              *ngIf="lang === 'es'"
+              [innerHTML]="seccion.contenidoEs"
+            ></div>
+            <div
+              class="nos-container"
+              *ngIf="lang === 'en'"
+              [innerHTML]="seccion.contenidoEs"
+            ></div>
+            <div
+              class="nos-container"
+              *ngIf="lang === 'xx'"
+              [innerHTML]="seccion.contenidoOtro"
+            ></div>
+          </ng-container>
+        </ng-container>
+      </div>
+    </div>
+  </div>
 </div>
