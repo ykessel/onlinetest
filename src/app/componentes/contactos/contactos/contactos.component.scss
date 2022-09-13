@@ -17,7 +17,7 @@
     background: linear-gradient(90deg, #FAA6A7 0%, #B5E7FF 67.02%, #FFDF95 98.96%);
     border-radius: 0px 50px 50px 0px;
     width: 15%;
-    height: 40%;
+    height: 65%;
 }
 
 .rigth-img{
@@ -34,7 +34,7 @@
     width: 22%;
 }
 
-.center-content{
+.center-content-contact {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -45,7 +45,7 @@
     width: 66%;
 }
 
-.contact-tittle{
+.contact-title{
     font-family: 'Fredoka One';
     font-style: normal;
     font-weight: 400;
@@ -56,15 +56,16 @@
 }
 
 .chip-img{    
-    width: 25px;
-    height: 50px;
-    background: url(../../../../assets/img_header.png);
-    background-repeat: no-repeat;
+    width: 2%;
 }
 
 .contact-body{
     height: 90%;
-}   
+}
+
+.seccion-img {
+    width: 100%;
+}
 
 .initial-space{
     height: 40%;
@@ -86,38 +87,38 @@
     justify-content: flex-end;
 }
 
-.img-chip-izq{
+.img-chip-izq-contactos {
     position: absolute;
     width: 129px;
     height: 79px;
     left: -6px;
-    top: 286px;
+    top: 212px;
     z-index: 2;
     background-repeat: no-repeat !important;
     background: url(../../../../assets//grafica_izq.png);
 }
 
-.img-chip-pink{
+.img-chip-pink-contactos {
     position: absolute;
     width: 610px;
     height: 109px;
     left: -338px;
-    top: 330px;
+    top: 257px;
     z-index: 1;
     background: rgba(250, 166, 167, 0.5);
     border-radius: 500px;
     transform: rotate(-180deg);
 }
 
-.img-chip-der{
-    width: 30%;
-    height: 110px;
+.img-chip-der-contactos {
+    width: 20%;
+    height: 80px;
     background: linear-gradient(90deg, rgba(250, 166, 167, 0.5) 0%, rgba(181, 231, 255, 0.5) 67.02%, rgba(255, 223, 149, 0.5) 98.96%);
     border-radius: 0 500px 500px 0;
     transform: rotate(-180deg);
 }
 
-.img-chip-menor{
+.img-chip-menor-contactos {
     margin-top: 2%;
     width: 10%;
     height: 30px;
@@ -143,7 +144,7 @@
     width: 22%;
     height: 104%;
     left: 34%;
-    top: 67%;
+    top: 55%;
     background: #FFFFFF;
     box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.15);
     border-radius: 48px;
@@ -349,12 +350,11 @@
     margin-right: 5px;
 }
 
-.text-center{
+.text-center {
     word-wrap: break-word;
-    width: 30%;
     display: flex;
     align-items: flex-start;
-    margin-top: 4%;
+    margin-top: 2vh;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -362,23 +362,29 @@
     line-height: 26px;
     text-align: center;
     color: #727272;
+
+    display: flex;
+    position: absolute;
+    left: 30%;
+    right: 30%;
+
 }
 
 @media (max-width: 700px) {
 
-    .img-chip-izq{
+    .img-chip-izq-contactos {
         display: none;
     }
 
-    .img-chip-pink {
+    .img-chip-pink-contactos {
         display: none ;
     }
 
-    .img-chip-der{
+    .img-chip-der-contactos {
         display: none;
     }
 
-    .img-chip-menor {
+    .img-chip-menor-contactos {
         display: none ;
     }
 
@@ -409,7 +415,7 @@
         height: 80px !important;
     }
     
-    .center-content{
+    .center-content-contact {
         display: flex;
         flex-direction: row;
         justify-content: center;

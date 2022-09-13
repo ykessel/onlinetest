@@ -3,11 +3,11 @@
         <div class="left-img">
         </div>
 
-        <div class="center-content">
-            <div class="chip-img"></div>
+        <div class="center-content-contact">
+            <img class="chip-img" src="../../../../assets/img_header.png" />
             <ng-container *ngFor="let seccion of secciones$ | async">
                 <ng-container *ngIf="seccion.id == 16">
-                    <h1 class="contact-tittle">{{ seccion.nombre }}</h1>
+                    <h1 class="contact-title">{{ seccion.nombre }}</h1>
                 </ng-container>
             </ng-container>
         </div>
@@ -22,32 +22,48 @@
         <div class="initial-space">
             <div class="seccion-img">
                 <div class="container-izq">
-                    <div class="img-chip-izq"></div>
-                    <div class="img-chip-pink"></div>
+                    <div class="img-chip-izq-contactos"></div>
+                    <div class="img-chip-pink-contactos"></div>
                 </div>
-
+                <div class="text-center">
+                          <p>
+                            Aprobado por el Banco Central de Cuba y reconocido por otros
+                            organismos del estado como el Ministerio del Turismo, Ministerio.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                            ad minim veniam, quis nostrud exercit
+                          </p>
+                      </div>
+<!-- 
                 <ng-container *ngFor="let seccion of secciones$ | async">
-                    <ng-template >
+                    <ng-template *ngIf="seccion.id == 16">
                         <div class="text-center">
+                          <p>
+                            Aprobado por el Banco Central de Cuba y reconocido por otros
+                            organismos del estado como el Ministerio del Turismo, Ministerio.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                            ad minim veniam, quis nostrud exercit
+                          </p>
                             <p *ngIf="lang === 'es'">
                                 {{ seccion.contenidoEs }}
                             </p>
-    
+
                             <p *ngIf="lang === 'en'">
                                 {{ seccion.contenidoEn }}
                             </p>
-    
+
                             <p *ngIf="lang === 'xx'">
                                 {{ seccion.contenidoOtro }}
                             </p>
                         </div>
                     </ng-template>
-                </ng-container>
+                </ng-container> -->
 
                 <div class="container-der">
-                    <div class="img-chip-der"></div>
+                    <div class="img-chip-der-contactos"></div>
 
-                    <div class="img-chip-menor"></div>
+                    <div class="img-chip-menor-contactos"></div>
                 </div>
             </div>
 
