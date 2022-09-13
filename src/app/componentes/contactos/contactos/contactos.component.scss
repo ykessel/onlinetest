@@ -55,7 +55,7 @@
     color: #353535;
 }
 
-.chip-img{    
+.chip-img{
     width: 2%;
 }
 
@@ -68,7 +68,7 @@
 }
 
 .initial-space{
-    height: 40%;
+    height: 16%;
     width: 100%;
     display: flex;
     padding-bottom: 10%;
@@ -135,13 +135,15 @@
 }
 
 .we-text{
+
+
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 56px;
     gap: 10px;
     position: absolute;
-    width: 22%;
+    width: 32%;
     height: 104%;
     left: 34%;
     top: 55%;
@@ -395,7 +397,7 @@
         height: 83px !important;
         top: 218px !important;
         right: 0px !important;
-        position: absolute !important;        
+        position: absolute !important;
     }
 
     .rigth-img {
@@ -414,7 +416,7 @@
         width: 225px !important;
         height: 80px !important;
     }
-    
+
     .center-content-contact {
         display: flex;
         flex-direction: row;
