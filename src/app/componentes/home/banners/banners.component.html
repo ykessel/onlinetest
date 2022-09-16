@@ -1,27 +1,40 @@
 <div class="banner">
   <div class="banner-up-container">
-      <ng-container *ngFor="let banner of banners$ | async; let i = index">
+    <ng-container *ngFor="let banner of banners$ | async; let i = index">
       <div [class.show]="i === hideId" class="banner-up">
         <div class="banner-pres">
           <div class="banner-press-left">
             <img src="../../../../assets/img_header.png" class="pres-img" />
             <div class="banner-pres-group">
               <h3 *ngIf="lang === 'es'" class="banner-pres-title">
-                  {{ banner.tituloEs }}
-                </h3>
-                <h3 *ngIf="lang === 'en'" class="banner-pres-title">
-                  {{ banner.tituloEn }}
-                </h3>
-                <h3 *ngIf="lang === 'xx'" class="banner-pres-title">
-                  {{ banner.tituloOtro }}
-                </h3>
+                {{ banner.tituloEs }}
+              </h3>
+              <h3 *ngIf="lang === 'en'" class="banner-pres-title">
+                {{ banner.tituloEn }}
+              </h3>
+              <h3 *ngIf="lang === 'xx'" class="banner-pres-title">
+                {{ banner.tituloOtro }}
+              </h3>
 
-                <div *ngIf="lang === 'es'" [innerHtml]="banner.contenidoEs" class="banner-pres-p"></div>
-                <div *ngIf="lang === 'en'" [innerHtml]="banner.contenidoEn" class="banner-pres-p"></div>
-                <div *ngIf="lang === 'xx'" [innerHtml]="banner.contenidoOtro" class="banner-pres-p"></div>
+              <div
+                *ngIf="lang === 'es'"
+                [innerHtml]="banner.contenidoEs"
+                class="banner-pres-p"
+              ></div>
+              <div
+                *ngIf="lang === 'en'"
+                [innerHtml]="banner.contenidoEn"
+                class="banner-pres-p"
+              ></div>
+              <div
+                *ngIf="lang === 'xx'"
+                [innerHtml]="banner.contenidoOtro"
+                class="banner-pres-p"
+              ></div>
 
-                <div class="banner-pres-rect"></div>
-                <div class="banner-pres-buttons">
+              <div class="banner-pres-rect"></div>
+              <div class="banner-pres-buttons">
+                <ng-container *ngIf="banner.textoBtn1Es !== null">
                   <a
                     mat-button
                     class="banner-button-1"
@@ -29,6 +42,8 @@
                     *ngIf="lang === 'es'"
                     >{{ banner.textoBtn1Es }}</a
                   >
+                </ng-container>
+                <ng-container *ngIf="banner.textoBtn1En !== null">
                   <a
                     mat-button
                     class="banner-button-1"
@@ -36,6 +51,9 @@
                     *ngIf="lang === 'en'"
                     >{{ banner.textoBtn1En }}</a
                   >
+                </ng-container>
+
+                <ng-container *ngIf="banner.textoBtn1Otro !== null">
                   <a
                     mat-button
                     class="banner-button-1"
@@ -43,7 +61,9 @@
                     *ngIf="lang === 'xx'"
                     >{{ banner.textoBtn1Otro }}</a
                   >
+                </ng-container>
 
+                <ng-container *ngIf="banner.textoBtn2En !== null">
                   <a
                     mat-button
                     class="banner-button-2"
@@ -51,6 +71,9 @@
                     *ngIf="lang === 'en'"
                     >{{ banner.textoBtn2En }}</a
                   >
+                </ng-container>
+
+                <ng-container *ngIf="banner.textoBtn2Es !== null">
                   <a
                     mat-button
                     class="banner-button-2"
@@ -58,6 +81,9 @@
                     *ngIf="lang === 'es'"
                     >{{ banner.textoBtn2Es }}</a
                   >
+                </ng-container>
+
+                <ng-container *ngIf="banner.textoBtn2Otro !== null">
                   <a
                     mat-button
                     class="banner-button-2"
@@ -65,18 +91,19 @@
                     *ngIf="lang === 'xx'"
                     >{{ banner.textoBtn2Otro }}</a
                   >
-                </div>
+                </ng-container>
+              </div>
             </div>
           </div>
         </div>
-        <div class="banner-up-img" >
+        <div class="banner-up-img">
           <img *ngIf="lang === 'es'" src="{{ banner.imagenEs }}" />
           <img *ngIf="lang === 'en'" src="{{ banner.imagenEn }}" />
           <img *ngIf="lang === 'xx'" src="{{ banner.imagenOtro }}" />
         </div>
       </div>
     </ng-container>
-    </div>
+  </div>
 
   <div class="banner-down-container">
     <div class="banner-down">
@@ -84,7 +111,11 @@
         <img src="../../../../assets/grafica_izq.png" class="banner-izq" />
         <div class="banner-rect"></div>
       </div>
-      <img class="banner-der" src="../../../../assets/grafica_der1.png" alt="" />
+      <img
+        class="banner-der"
+        src="../../../../assets/grafica_der1.png"
+        alt=""
+      />
     </div>
-    </div>
+  </div>
 </div>
