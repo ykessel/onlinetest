@@ -11,13 +11,14 @@
     width: 100%;
     justify-content: flex-end !important;
     margin-left: 4rem;
-}
+  }
   .menu-nav {
     display: block !important;
   }
 
   .line {
-    margin-top: -11% !important;
+    // margin-top: -11% !important;
+    margin-top: -7px;
   }
 
   .button-menu {
@@ -26,9 +27,28 @@
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 45px !important;
+    line-height: 36px !important;
     color: #ae0000;
     padding-left: 0 !important;
+
+    box-sizing: border-box;
+    position: relative;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    display: inline-block;
+    white-space: nowrap;
+    text-decoration: none;
+    vertical-align: baseline;
+    text-align: center;
+    margin: 0;
+    min-width: 0;
+    border-radius: 4px;
+    overflow: visible;
+    margin: 8px 8px 8px 3px;
   }
 
   .mat-menu-panel,
