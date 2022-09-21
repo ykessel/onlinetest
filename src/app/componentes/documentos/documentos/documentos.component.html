@@ -22,15 +22,23 @@
             </p>
           </div>
 
-          <p *ngIf="lang === 'es'" class="header-text">
-            {{ seccion.contenidoEs }}
-          </p>
-          <p *ngIf="lang === 'en'" class="header-text">
-            {{ seccion.contenidoEn }}
-          </p>
-          <p *ngIf="lang === 'xx'" class="header-text">
-            {{ seccion.contenidoOtro }}
-          </p>
+          <div
+            *ngIf="lang === 'es'"
+            [innerHtml]="seccion.contenidoEs"
+            class="header-text"
+          ></div>
+
+          <div
+            *ngIf="lang === 'en'"
+            [innerHtml]="seccion.contenidoEn"
+            class="header-text"
+          ></div>
+
+          <div
+            *ngIf="lang === 'xx'"
+            [innerHtml]="seccion.contenidoOtro"
+            class="header-text"
+          ></div>
         </ng-container>
       </ng-container>
     </div>
@@ -46,7 +54,7 @@
     </div>
 
     <div class="card-docs-container">
-      <div *ngFor="let doc of documentos$ | async" class="card-docs">
+      <div *ngFor="let doc of documentos$ | async" class="card-docs-doc">
         <div class="info-container">
           <img class="docs-header-1" src="../../../../assets/img_header.png" />
           <div class="left-container">
@@ -70,27 +78,48 @@
         </div>
         <div class="button-container">
           <button
+            class="download"
             *ngIf="lang === 'es'"
             (click)="downloadDoc(doc.documentoEs)"
-            mat-button
           >
-            <mat-icon>download</mat-icon>
+            <div class="button-icon">
+              <img width="4" src="../../../../assets/Vector1.svg" />
+              <img
+                style="margin-top: -6px"
+                src="../../../../assets/Vector2.svg"
+              />
+              <img src="../../../../assets/Vector3.svg" />
+            </div>
           </button>
 
           <button
+            class="download"
             *ngIf="lang === 'en'"
             (click)="downloadDoc(doc.documentoEn)"
-            mat-button
           >
-            <mat-icon>download</mat-icon>
+            <div class="button-icon">
+              <img width="4" src="../../../../assets/Vector1.svg" />
+              <img
+                style="margin-top: -6px"
+                src="../../../../assets/Vector2.svg"
+              />
+              <img src="../../../../assets/Vector3.svg" />
+            </div>
           </button>
 
           <button
+            class="download"
             *ngIf="lang === 'xx'"
             (click)="downloadDoc(doc.documentoOtro)"
-            mat-button
           >
-            <mat-icon>download</mat-icon>
+            <div class="button-icon">
+              <img width="4" src="../../../../assets/Vector1.svg" />
+              <img
+                style="margin-top: -6px"
+                src="../../../../assets/Vector2.svg"
+              />
+              <img src="../../../../assets/Vector3.svg" />
+            </div>
           </button>
         </div>
       </div>

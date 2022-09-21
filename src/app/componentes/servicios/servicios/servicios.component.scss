@@ -1,4 +1,5 @@
 @import "./styles/servicios.medium.scss";
+@import "./styles/servicios.large.scss";
 
 .servicios-container {
   display: flex;
@@ -64,12 +65,15 @@
         }
       }
 
-      .header-text {
-        font-family: "Roboto";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 1rem;
-        color: #727272;
+       .header-text {
+        p {
+          font-family: "Roboto";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 1rem;
+          color: #727272;
+          line-height: 1.5rem;
+        }
       }
     }
   }
@@ -89,7 +93,7 @@
 .card-docs {
   display: flex;
   align-items: flex-start;
-  padding: 15px;
+  padding: 20px;
   gap: 32px;
   margin-bottom: 20px;
 
@@ -98,7 +102,7 @@
   border-radius: 24px;
 
   .docs-header-1 {
-    width: 0.5rem;
+    height: 3.5vh;
   }
   .docs-img {
     width: 8rem;
@@ -109,7 +113,8 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-top: 1rem;
+    min-width: 20vw;
+    margin-top: 3.5vh;
 
     img {
       width: 100%;
@@ -120,7 +125,7 @@
   .content-center {
     display: flex;
     flex-direction: column;
-    margin-top: 1rem;
+    margin-top: 3.5vh;
 
     .title {
       font-family: "Roboto";
@@ -152,9 +157,10 @@
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 16px;
+  line-height: 30px;
   color: #3f3726;
+  padding-right: 2rem;
 }
 
 .center-movil {

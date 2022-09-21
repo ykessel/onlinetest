@@ -1,4 +1,4 @@
-@media only screen and (min-width: 300px) and (max-width: 1280px) {
+@media only screen and (min-width: 300px) and (max-width: 1365px) {
   .footer .footer-last mat-chip {
     width: 85%;
   }
@@ -40,6 +40,7 @@
   .footer-contactos-boton a {
     width: auto !important;
     padding: 4% 10% !important;
+    border-radius: 65px !important;
   }
 
   .footer-contactos-text p {

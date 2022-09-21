@@ -181,6 +181,11 @@
   }
 }
 
+.mat-button-focus-overlay {
+    opacity: 0;
+    background: #fff;
+}
+
 .show {
   display: flex !important;
 }

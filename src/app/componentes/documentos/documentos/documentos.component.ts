@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { DocumentosService } from 'src/app/services/documentos/documentos.service';
 import { selectDocumentos } from 'src/app/store/documentos/documentos.selectors';
@@ -10,6 +10,7 @@ import { selectLang } from 'src/app/store/system/system.selectors';
   selector: 'bipay-documentos',
   templateUrl: './documentos.component.html',
   styleUrls: ['./documentos.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class DocumentosComponent implements OnInit {
   secciones$ = this.store.select(selectSecciones);
