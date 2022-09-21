@@ -21,16 +21,24 @@
               {{ seccion.tituloOtro }}
             </p>
           </div>
+                    <div
+            *ngIf="lang === 'es'"
+            [innerHtml]="seccion.contenidoEs"
+            class="header-text"
+          ></div>
 
-          <p *ngIf="lang === 'es'" class="header-text">
-            {{ seccion.contenidoEs }}
-          </p>
-          <p *ngIf="lang === 'en'" class="header-text">
-            {{ seccion.contenidoEn }}
-          </p>
-          <p *ngIf="lang === 'xx'" class="header-text">
-            {{ seccion.contenidoOtro }}
-          </p>
+          <div
+            *ngIf="lang === 'en'"
+            [innerHtml]="seccion.contenidoEn"
+            class="header-text"
+          ></div>
+
+          <div
+            *ngIf="lang === 'xx'"
+            [innerHtml]="seccion.contenidoOtro"
+            class="header-text"
+          ></div>
+
         </ng-container>
       </ng-container>
     </div>

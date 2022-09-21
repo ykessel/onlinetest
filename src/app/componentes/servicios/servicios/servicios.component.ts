@@ -1,5 +1,5 @@
+import { Component, OnInit, ViewEncapsulation } from "@angular/core";
 import { setCurrentExpandedService } from './../../../store/system/system.actions';
-import { Component, OnInit } from "@angular/core";
 import { ServiciosService } from "src/app/services/servicios/servicios.service";
 import { Store } from '@ngrx/store';
 import { selectSecciones } from "src/app/store/secciones/secciones.selectors";
@@ -11,6 +11,7 @@ import { selectLang, selectServiceId } from "src/app/store/system/system.selecto
   selector: "bipay-servicios",
   templateUrl: "./servicios.component.html",
   styleUrls: ["./servicios.component.scss"],
+  encapsulation: ViewEncapsulation.None,
 })
 export class ServiciosComponent implements OnInit {
   secciones$ = this.store.select(selectSecciones);

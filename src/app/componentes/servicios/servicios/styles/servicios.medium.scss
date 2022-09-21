@@ -1,4 +1,4 @@
-@media only screen and (min-width: 300px) and (max-width: 1280px) {
+@media only screen and (min-width: 300px) and (max-width: 1365px) {
   .servicios-container {
     .right,
     .left {
@@ -41,7 +41,7 @@
         flex-direction: column;
         width: auto !important;
         padding: 0 !important;
-        margin-left: 1rem !important;
+        margin: 0 1rem !important;
         gap: 1rem !important;
 
         .header-title {
