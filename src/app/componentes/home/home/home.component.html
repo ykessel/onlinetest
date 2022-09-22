@@ -164,6 +164,25 @@
       </ng-container>
       <div style="height: 133px; border-left: 2px dashed #d9d9d9"></div>
     </div>
+
+    <div class="car-container-movil">
+      <div class="middle-movil">
+        <owl-carousel-o [options]="customOptions3">
+          <ng-container *ngFor="let pago of pagos$ | async">
+            <ng-template carouselSlide>
+              <div class="small-card-container">
+                <div
+                  style="height: 133px; border-left: 2px dashed #d9d9d9"
+                ></div>
+                <div class="small-card">
+                  <img src="{{ pago.logo }}" />
+                </div>
+              </div>
+            </ng-template>
+          </ng-container>
+        </owl-carousel-o>
+      </div>
+    </div>
   </div>
 
   <div class="carrusel-2" ngsReveal>
