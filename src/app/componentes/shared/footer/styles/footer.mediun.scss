@@ -3,7 +3,7 @@
     width: 85%;
   }
 
-  .footer .footer-contactos .bottom-line{
+  .footer .footer-contactos .bottom-line {
     width: 100%;
     height: 8px !important;
   }
@@ -74,8 +74,23 @@
     margin-bottom: 2rem;
   }
 
-  .footer-last-info{
+  .footer-last-info {
     margin-top: 2rem;
+  }
+
+  .logos-footer {
+    gap: 5vh !important;
+    align-content: space-around;
+
+    .asociado-img {
+      display: flex;
+      width: 30%;
+
+      .img-footer {
+        width: 12vh;
+        max-height: 80px;
+      }
+    }
   }
 }
 
