@@ -50,14 +50,30 @@
 
   .footer-last .footer-call {
     flex-wrap: wrap;
-    width: 80% !important;
+    width: 339px !important;
+    flex-direction: column;
     gap: 0px !important;
-    height: auto !important;
-    margin-top: -2em !important;
+    height: 154px !important;
+    border-radius: 100px !important;
+    margin-top: -6em !important;
 
     p {
       margin: 0.8rem !important;
     }
+  }
+
+  .footer-call-number{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .footer-call-tittle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
 
   .footer-contact {
@@ -81,6 +97,6 @@
 
 @media only screen and (max-width: 450px) {
   .footer-last .footer-call {
-    margin-top: -4em !important;
+    margin-top: -6em !important;
   }
 }

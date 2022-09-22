@@ -180,6 +180,20 @@
       }
     }
   }
+
+  .footer-call-number{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-call-tittle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 17px;
+  }
+
   .icon {
     color: #670f0f;
   }
@@ -209,14 +223,14 @@
       align-items: center;
       width: 40%;
       padding: 4px 0px;
-      gap: 15px;
-      height: 3rem;
+      gap: 27px;
+      height: 84px;
 
       background: #e4e4e4;
       border-radius: 50px;
       justify-content: center;
       align-self: center;
-      margin-top: -1.5rem;
+      margin-top: -2.5rem;
       margin-bottom: 10vh;
 
       img {
