@@ -2,11 +2,18 @@
   .footer .footer-last mat-chip {
     width: 85%;
   }
+
+  .footer .footer-contactos .bottom-line{
+    width: 100%;
+    height: 8px !important;
+  }
+
   .footer-container {
     flex-direction: column;
     margin-left: 4% !important;
     margin-right: 4% !important;
   }
+
   .footer-last-group {
     margin-left: 3vh !important;
     margin-right: 3vh !important;
