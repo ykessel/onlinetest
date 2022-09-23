@@ -6,9 +6,34 @@
   overflow: hidden;
 }
 
-.car-container-movil {
-  display: none; 
-}
+  .car-container-movil {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 3% 0;
+
+    .middle-movil {
+      width: 100%;
+    }
+
+    .small-card-container {
+      display: flex;
+      width: 100%;
+      align-items: center;
+
+      .small-card {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 60%;
+        }
+      }
+    }
+
+  }
 
 .img-header {
   width: 25px;
@@ -309,7 +334,7 @@
     }
   }
   .carrusel-part2-third-line {
-    display: flex;
+    display: none;
     width: 90%;
     justify-content: center;
     align-items: center;
@@ -325,7 +350,6 @@
 }
 
 .carrusel-2 {
-  margin-top: 206px;
   background: linear-gradient(90deg, #fcded4 0%, #e6f2f2 51.87%, #fff1ce 100%);
   margin-bottom: 0px;
   max-width: 100%;
@@ -386,7 +410,7 @@
       background: #ffffff;
       box-shadow: 0px 0px 4px rgba(217, 208, 184, 0.5);
       border-radius: 24px;
-      min-height: 70vh;
+      min-height: 50vh;
       margin: 1% 4%;
 
       .carrusel-2-cards-text-title {

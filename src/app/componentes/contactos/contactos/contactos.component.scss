@@ -446,21 +446,17 @@
   width: 91%;
   margin-bottom: 5%;
 }
+.middle-images-movil {
+  display: none;
+}
 
 @media (max-width: 700px) {
-  .img-chip-izq-contactos {
-    display: none;
-  }
-
-  .img-chip-pink-contactos {
-    display: none;
-  }
-
-  .img-chip-der-contactos {
-    display: none;
-  }
-
-  .img-chip-menor-contactos {
+  .img-chip-izq-contactos,
+  .img-chip-pink-contactos,
+  .img-chip-der-contactos,
+  .img-chip-menor-contactos,
+  .rigth-img,
+  .left-img {
     display: none;
   }
 
@@ -474,27 +470,35 @@
     position: absolute !important;
   }
 
-  .rigth-img {
-    height: 80%;
-    width: 57% !important;
-    background-repeat: no-repeat !important;
-    background: url(../../../../assets/grafica_der1.png);
+  .middle-images-movil {
+    display: flex !important;
+    width: 100%;
+    background-color: #de2828;
+
+    .rigth-img-movil {
+      height: 80%;
+      width: 57%;
+      background-repeat: no-repeat;
+      background: url('../../../../assets/grafica_der1.png');
+    }
+  
+    .left-img-movil {
+      top: 51% !important;
+      left: -93px !important;
+      position: absolute !important;
+      background: linear-gradient(
+        90deg,
+        #faa6a7 0%,
+        #b5e7ff 67.02%,
+        #ffdf95 98.96%
+      );
+      border-radius: 0px 50px 50px 0px;
+      width: 225px !important;
+      height: 80px !important;
+    }
+
   }
 
-  .left-img {
-    top: 51% !important;
-    left: -93px !important;
-    position: absolute !important;
-    background: linear-gradient(
-      90deg,
-      #faa6a7 0%,
-      #b5e7ff 67.02%,
-      #ffdf95 98.96%
-    );
-    border-radius: 0px 50px 50px 0px;
-    width: 225px !important;
-    height: 80px !important;
-  }
 
   .center-content-contact {
     display: flex;

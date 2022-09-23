@@ -84,7 +84,7 @@ export class HomeComponent implements OnInit {
         items: 1,
       },
       760: {
-        items: 1,
+        items: 2,
       },
       1024: {
         items: 3,
@@ -118,7 +118,7 @@ export class HomeComponent implements OnInit {
         items: 1,
       },
       760: {
-        items: 1,
+        items: 3,
       },
       1024: {
         items: 4,
@@ -138,9 +138,9 @@ export class HomeComponent implements OnInit {
 
   customOptions3: OwlOptions = {
     loop: false,
-    mouseDrag: false,
+    mouseDrag: true,
     touchDrag: true,
-    pullDrag: false,
+    pullDrag: true,
     dots: false,
     navSpeed: 600,
     navText: ["", ""],
@@ -152,19 +152,19 @@ export class HomeComponent implements OnInit {
         items: 3,
       },
       760: {
-        items: 3,
+        items: 5,
       },
       1024: {
-        items: 4,
+        items: 6,
       },
       1366: {
-        items: 5,
+        items: 6,
       },
       1920: {
         items: 6,
       },
       2000: {
-        items: 7,
+        items: 6,
       },
     },
     nav: false,

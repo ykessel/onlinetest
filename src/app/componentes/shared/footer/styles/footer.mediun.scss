@@ -85,6 +85,7 @@
     .asociado-img {
       display: flex;
       width: 30%;
+      justify-content: center;
 
       .img-footer {
         width: 12vh;
@@ -94,8 +95,8 @@
   }
 }
 
-@media only screen and (max-width: 450px) {
-  .footer-last .footer-call {
-    margin-top: -4em !important;
-  }
-}
+// @media only screen and (max-width: 450px) {
+//   .footer-last .footer-call {
+//     margin-top: -4em !important;
+//   }
+// }

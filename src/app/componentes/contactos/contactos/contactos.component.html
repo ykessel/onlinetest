@@ -42,7 +42,15 @@
 
     <div class="we-background"></div>
     <div class="form-container">
-      <ng-container *ngFor="let seccion of secciones$ | async">
+      <div class="text-center">
+        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p> -->
+      </div>
+      <div class="middle-images-movil">
+        <div class="left-img-movil"></div>
+        <div class="rigth-img-movil"></div>
+      </div>
+
+      <!-- <ng-container *ngFor="let seccion of secciones$ | async">
         <ng-template *ngIf="seccion.id == 16">
           <div class="text-center">
             <p *ngIf="lang === 'es'">
@@ -58,7 +66,7 @@
             </p>
           </div>
         </ng-template>
-      </ng-container>
+      </ng-container> -->
       <form
         [formGroup]="contactoForm"
         (ngSubmit)="sendContacto()"
