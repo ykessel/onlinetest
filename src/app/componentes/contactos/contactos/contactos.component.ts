@@ -1,9 +1,11 @@
 import { Component, OnInit } from "@angular/core";
 import { FormGroup, Validators, FormBuilder } from "@angular/forms";
-import { FormsService } from "src/app/services/system/forms.service";
+import { MatDialog } from '@angular/material/dialog';
 import { Store } from '@ngrx/store';
+import { FormsService } from "src/app/services/system/forms.service";
 import { selectSecciones } from "src/app/store/secciones/secciones.selectors";
 import { selectLang } from "src/app/store/system/system.selectors";
+
 
 @Component({
   selector: "bipay-contactos",
@@ -17,17 +19,17 @@ export class ContactosComponent implements OnInit {
   lang$ = this.store.select(selectLang).subscribe((l) => this.lang = l);
 
 
-  constructor(private store: Store, private fb: FormBuilder, private formsService: FormsService) {
+  constructor(private store: Store, private fb: FormBuilder, private formsService: FormsService, public dialog: MatDialog) {
     this.contactoForm = this.fb.group({
       empresa: ["", Validators.required],
       paginaWeb: ["", Validators.pattern(/(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/)],
-      numeroCarnet: ["", [Validators.required, Validators.minLength(11)]],
+      numeroCarnet: ["", [Validators.required, Validators.minLength(11), Validators.maxLength(11)]],
       correo: ["", [Validators.required, Validators.email]],
       nombre: ["", Validators.required],
       apellidos: ["", Validators.required],
-      telefono: ["", [Validators.required, Validators.minLength(8)]],
+      telefono: ["", [Validators.required, Validators.minLength(8), Validators.maxLength(8)]],
       suscripcion: ["", Validators.required],
-      terminosCondiciones: ["", Validators.required],
+      terminosCondiciones: [false, Validators.requiredTrue],
     });
   }
 
@@ -36,6 +38,7 @@ export class ContactosComponent implements OnInit {
   sendContacto() {
     // this.formsService.sendContacto(this.contactoForm.value);
     console.log(this.contactoForm);
+   this.dialog.open(ComfirmDialog, { width: '250px',});
   }
 
   get empresa() { return this.contactoForm.get('empresa'); }
@@ -47,4 +50,15 @@ export class ContactosComponent implements OnInit {
   get telefono() { return this.contactoForm.get('telefono'); }
   get suscripcion() { return this.contactoForm.get('suscripcion'); }
   get terminosCondiciones() { return this.contactoForm.get('terminosCondiciones'); }
+
+  openDialog() {
+    this.dialog.open(ComfirmDialog);
+  }
 }
+
+@Component({
+  selector: 'confirm-dialog',
+  templateUrl: 'confirm-dialog.html',
+  styleUrls: ["./confirm-dialog.scss"],
+})
+export class ComfirmDialog {}

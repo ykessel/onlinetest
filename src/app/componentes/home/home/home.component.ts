@@ -51,17 +51,17 @@ export class HomeComponent implements OnInit {
 
     this.potencialidadesService
       .getPotencialidades()
-      .subscribe((potencialidades) =>{
+      .subscribe((potencialidades) => {
         this.totalPoten = potencialidades.length;
-        this.store.dispatch(getPotencialidades({ potencialidades }))}
-      );
+        this.store.dispatch(getPotencialidades({ potencialidades }));
+      });
 
     this.caracteristicasService
       .getCaracteristicas()
       .subscribe((caracteristicas) => {
         this.totalCaract = caracteristicas.length;
-        this.store.dispatch(getCaracteristicas({ caracteristicas }))}
-      );
+        this.store.dispatch(getCaracteristicas({ caracteristicas }));
+      });
 
     this.pagosService
       .getPagos()
@@ -84,7 +84,7 @@ export class HomeComponent implements OnInit {
         items: 1,
       },
       760: {
-        items: 1,
+        items: 2,
       },
       1024: {
         items: 3,
@@ -118,7 +118,7 @@ export class HomeComponent implements OnInit {
         items: 1,
       },
       760: {
-        items: 1,
+        items: 3,
       },
       1024: {
         items: 4,
@@ -131,6 +131,40 @@ export class HomeComponent implements OnInit {
       },
       2000: {
         items: 4,
+      },
+    },
+    nav: false,
+  };
+
+  customOptions3: OwlOptions = {
+    loop: false,
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: true,
+    dots: false,
+    navSpeed: 600,
+    navText: ["", ""],
+    responsive: {
+      0: {
+        items: 2,
+      },
+      400: {
+        items: 3,
+      },
+      760: {
+        items: 5,
+      },
+      1024: {
+        items: 6,
+      },
+      1366: {
+        items: 6,
+      },
+      1920: {
+        items: 6,
+      },
+      2000: {
+        items: 6,
       },
     },
     nav: false,

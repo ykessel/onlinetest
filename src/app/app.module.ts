@@ -13,7 +13,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
 import { CdkAccordionModule } from '@angular/cdk/accordion';
@@ -30,6 +30,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatDialogModule } from '@angular/material/dialog';
 
 // 3rd Party Libray
 import { CarouselModule } from 'ngx-owl-carousel-o';
@@ -39,7 +40,7 @@ import { NgsRevealModule } from 'ngx-scrollreveal';
 
 //App Components
 import { DocumentosComponent } from './componentes/documentos/documentos/documentos.component';
-import { ContactosComponent } from './componentes/contactos/contactos/contactos.component';
+import { ContactosComponent, ComfirmDialog } from './componentes/contactos/contactos/contactos.component';
 import { HomeComponent } from './componentes/home/home/home.component';
 import { TerminosComponent } from './componentes/terminos/terminos/terminos.component';
 import { NosotrosComponent } from './componentes/nosotros/nosotros/nosotros.component';
@@ -122,6 +123,7 @@ import { SocialesComponent } from './componentes/shared/footer/sociales/sociales
     NavComponent,
     BannersComponent,
     SocialesComponent,
+    ComfirmDialog,
   ],
   imports: [
     CommonModule,
@@ -130,6 +132,7 @@ import { SocialesComponent } from './componentes/shared/footer/sociales/sociales
     BrowserAnimationsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    FormsModule,
 
     //Material Modeules Imports
     MatToolbarModule,
@@ -144,7 +147,8 @@ import { SocialesComponent } from './componentes/shared/footer/sociales/sociales
     MatFormFieldModule,
     MatInputModule,
     MatDividerModule,
-    // MatSelectModule,
+    MatDialogModule,
+    FormsModule,
 
     //3rd Party Libray
     CarouselModule,

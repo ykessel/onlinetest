@@ -1,10 +1,12 @@
-@media only screen and (min-width: 300px) and (max-width: 800px) {
+@media only screen and (min-width: 300px) and (max-width: 1365px) {
   .carrusel-caract,
   .carrusel-potencial {
     width: 92% !important;
   }
 
   .car-container {
+    margin-top: 10%;
+
     .owl-carousel .owl-stage-outer {
       min-height: 180vh !important;
     }
@@ -25,14 +27,6 @@
   .carrusel-1-chips {
     display: none !important;
   }
-
-  // .mat-button,
-  // .mat-icon-button,
-  // .mat-stroked-button,
-  // .mat-flat-button {
-  //   min-width: 50px !important;
-  //   line-height: 30px !important;
-  // }
 
   .carrusel-2-first-line {
     padding-top: 10% !important;
@@ -71,6 +65,7 @@
   }
 
   .carrusel-part2-third-line {
+    display: none !important;
     margin-top: 10% !important;
     justify-content: start !important;
 
@@ -79,6 +74,7 @@
       height: 40% !important;
     }
   }
+
   .carrusel-2 {
     margin-top: 10% !important;
   }
@@ -86,5 +82,47 @@
   .carrusel-2-third-line-text {
     height: auto !important;
     width: 100% !important;
+  }
+
+  .car-container-movil {
+    display: flex !important;
+    flex-direction: column;
+    width: 100% !important;
+    margin-top: 10% !important;
+    margin-left: 5% !important;
+
+    .middle-movil {
+      width: 100% !important;
+    }
+
+    // .owl-carousel .owl-stage-outer {
+    //   min-height: 50px;
+    // }
+
+    .small-card-container {
+      display: flex;
+      width: 100%;
+      align-items: center;
+
+      .small-card {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+  }
+
+  .second-rect {
+    position: relative;
+    width: 1412px !important;
+    left: -330% !important;
+  }
+
+  .first-rect {
+    position: relative;
+    width: 1018px !important;
+    left: -260% !important
   }
 }
