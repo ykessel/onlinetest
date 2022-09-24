@@ -518,7 +518,7 @@
     }
 
     .contact-container {
-        height: 135vh;
+        height: 147vh;
         background-color: white;
     }    
 
@@ -568,8 +568,8 @@
         flex-direction: column;
         position: absolute;
         left: 8%;
-        gap: 23%;
-        top: 27% !important;
+        gap: 16%;
+        top: 5% !important;
         width: 83% !important;
         height: 103%;
     }
@@ -609,9 +609,29 @@
         position: absolute;
         left: 8%;
         gap: 23%;
-        top: 25% !important;
+        top: 4% !important;
         width: 83% !important;
         height: 100%;
+    }
+
+    .rigth-container {
+        display: flex;
+        justify-content: flex-end;
+        width: 340px !important;
+        height: 83px !important;
+        top: 45% !important;
+        right: 0px !important;
+        position: absolute !important;
+    }
+
+    .left-img {
+        top: 44% !important;
+        left: -93px !important;
+        position: absolute !important;
+        background: linear-gradient( 90deg, #faa6a7 0%, #b5e7ff 67.02%, #ffdf95 98.96%);
+        border-radius: 0px 50px 50px 0px;
+        width: 225px !important;
+        height: 80px !important;
     }
 }
 
