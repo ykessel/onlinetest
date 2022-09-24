@@ -9,7 +9,7 @@
         />
       </ng-container> -->
       <ng-container *ngFor="let aso of asociados$ | async">
-        <div class="asociado-img" >
+        <div class="asociado-img">
           <img src="{{ aso.logo }}" alt="{{ aso.tituloEs }}" class="img-footer" />
         </div>
       </ng-container>
@@ -19,11 +19,7 @@
   <div class="footer-contactos">
     <img src="../../../../assets/curva2.png" class="bottom-line" />
     <div class="footer-contactos-container">
-      <img
-        class="footer-contactos-left"
-        src="../../../../assets/grafica-contactos_izq.png"
-        alt="lines"
-      />
+      <img class="footer-contactos-left" src="../../../../assets/grafica-contactos_izq.png" alt="lines" />
 
       <div class="footer-contactos-center">
         <ng-container *ngFor="let seccion of secciones$ | async">
@@ -38,21 +34,9 @@
               {{ seccion.tituloOtro }}
             </p>
 
-            <div
-              *ngIf="lang === 'es'"
-              class="footer-contactos-text"
-              [innerHTML]="seccion.contenidoEs"
-            ></div>
-            <div
-              *ngIf="lang === 'en'"
-              class="footer-contactos-text"
-              [innerHTML]="seccion.contenidoEs"
-            ></div>
-            <div
-              *ngIf="lang === 'xx'"
-              class="footer-contactos-text"
-              [innerHTML]="seccion.contenidoEs"
-            ></div>
+            <div *ngIf="lang === 'es'" class="footer-contactos-text" [innerHTML]="seccion.contenidoEs"></div>
+            <div *ngIf="lang === 'en'" class="footer-contactos-text" [innerHTML]="seccion.contenidoEs"></div>
+            <div *ngIf="lang === 'xx'" class="footer-contactos-text" [innerHTML]="seccion.contenidoEs"></div>
             <div class="footer-contactos-boton">
               <a mat-button routerLink="contactos">Inicia ya</a>
             </div>
@@ -60,22 +44,22 @@
         </ng-container>
       </div>
 
-      <img
-        class="footer-contactos-right"
-        src="../../../../assets/grafica-contactos.png"
-        alt="lines"
-      />
+      <img class="footer-contactos-right" src="../../../../assets/grafica-contactos.png" alt="lines" />
     </div>
   </div>
 
   <div class="footer-last">
     <div class="footer-call" mat-button href="#">
-      <mat-icon class="icon">phone</mat-icon>
-      <p class="call-p1">Llamenos</p>
-      <img src="../assets/img_header.png" />
-      <ng-container *ngFor="let contacto of contactos$ | async">
-        <p class="call-p2">{{ contacto.telefono }}</p>
-      </ng-container>
+      <div class="footer-call-tittle">
+        <mat-icon class="icon">phone</mat-icon>
+        <p class="call-p1">Llamenos</p>
+        <img src="../assets/img_header.png" />
+      </div>
+      <div class="footer-call-number">
+        <ng-container *ngFor="let contacto of contactos$ | async">
+          <p class="call-p2">{{ contacto.telefono }}</p>
+        </ng-container>
+      </div>
     </div>
 
     <div class="footer-container" ngsReveal>
@@ -84,31 +68,16 @@
 
         <ng-container *ngFor="let seccion of secciones$ | async">
           <ng-container *ngIf="seccion.id == 22">
-            <div
-              *ngIf="lang === 'es'"
-              class="footer-description"
-              [innerHTML]="seccion.contenidoEs"
-            ></div>
-            <div
-              *ngIf="lang === 'en'"
-              class="footer-description"
-              [innerHTML]="seccion.contenidoEn"
-            ></div>
-            <div
-              *ngIf="lang === 'xx'"
-              class="footer-description"
-              [innerHTML]="seccion.contenidoOtro"
-            ></div>
+            <div *ngIf="lang === 'es'" class="footer-description" [innerHTML]="seccion.contenidoEs"></div>
+            <div *ngIf="lang === 'en'" class="footer-description" [innerHTML]="seccion.contenidoEn"></div>
+            <div *ngIf="lang === 'xx'" class="footer-description" [innerHTML]="seccion.contenidoOtro"></div>
           </ng-container>
         </ng-container>
 
         <div class="footer-last-info">
           <ng-container *ngFor="let contacto of contactos$ | async">
             <div class="footer-info">
-              <fa-icon
-                class="footer-info-icon"
-                [icon]="faLocationDot"
-              ></fa-icon>
+              <fa-icon class="footer-info-icon" [icon]="faLocationDot"></fa-icon>
               <p>{{ contacto.direccion }}</p>
             </div>
 
@@ -135,9 +104,9 @@
           </div>
           <ng-container *ngFor="let enlace of enlaces$ | async">
             <div *ngIf="categoria.id === enlace.categoriaEnlaceEs!.id" class="footer-docs-group">
-              <a class="enlace" *ngIf="lang === 'es'" href="{{ enlace.enlaceEs }}" >{{ enlace.tituloEs }}</a>
-              <a class="enlace" *ngIf="lang === 'en'" href="{{ enlace.enlaceEn }}" >{{ enlace.tituloEn }}</a>
-              <a class="enlace" *ngIf="lang === 'xx'" href="{{ enlace.enlaceOtro }}" >{{ enlace.tituloOtro }}</a>
+              <a class="enlace" *ngIf="lang === 'es'" href="{{ enlace.enlaceEs }}">{{ enlace.tituloEs }}</a>
+              <a class="enlace" *ngIf="lang === 'en'" href="{{ enlace.enlaceEn }}">{{ enlace.tituloEn }}</a>
+              <a class="enlace" *ngIf="lang === 'xx'" href="{{ enlace.enlaceOtro }}">{{ enlace.tituloOtro }}</a>
             </div>
           </ng-container>
         </div>
