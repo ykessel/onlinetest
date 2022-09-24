@@ -101,7 +101,12 @@
               text-align: center;
               color: #5d0303;
               background: #f6d895;
-              border-radius: 50px;
+              border-radius: 50px; 
+
+              &:hover {
+                background: #EDA301;
+                color: #fff;
+              }
             }
 
             .banner-button-2 {
@@ -122,6 +127,11 @@
 
               background: #feb5b5;
               border-radius: 50px;
+
+              &:hover {
+                background: #670F0F;
+                color: #fff;
+              }
             }
           }
         }
