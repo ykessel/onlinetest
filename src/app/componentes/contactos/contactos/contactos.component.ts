@@ -5,6 +5,8 @@ import { Store } from '@ngrx/store';
 import { FormsService } from "src/app/services/system/forms.service";
 import { selectSecciones } from "src/app/store/secciones/secciones.selectors";
 import { selectLang } from "src/app/store/system/system.selectors";
+// import { catchError } from 'rxjs/operators'; 
+// import { HttpErrorResponse } from "@angular/common/http";
 
 
 @Component({
@@ -35,10 +37,27 @@ export class ContactosComponent implements OnInit {
 
   ngOnInit(): void {}
 
+//   private handleError(error: HttpErrorResponse) {
+//   if (error.status === 0) {
+//     // A client-side or network error occurred. Handle it accordingly.
+//     console.error('An error occurred:', error.error);
+//   } else {
+//     // The backend returned an unsuccessful response code.
+//     // The response body may contain clues as to what went wrong.
+//     console.error(
+//       `Backend returned code ${error.status}, body was: `, error.error);
+//   }
+//   // Return an observable with a user-facing error message.
+//   return throwError(() => new Error('Something bad happened; please try again later.'));
+// }
+
   sendContacto() {
-    // this.formsService.sendContacto(this.contactoForm.value);
-    console.log(this.contactoForm);
-   this.dialog.open(ComfirmDialog, { width: '250px',});
+    // this.formsService.sendContacto(this.contactoForm.value).pipe(
+    //   catchError(this.handleError)
+    // ).subscribe(x => {
+    //   console.log(x)
+    // });
+    this.dialog.open(ComfirmDialog, { width: '250px',});
   }
 
   get empresa() { return this.contactoForm.get('empresa'); }
