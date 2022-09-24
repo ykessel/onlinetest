@@ -228,6 +228,10 @@
   background: #f6d895;
   border-radius: 60px;
   align-self: center;
+
+  &:hover {
+    background: #F2CB74;
+  }
 }
 
 .car-container {

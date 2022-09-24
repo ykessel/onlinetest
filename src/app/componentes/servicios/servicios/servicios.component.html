@@ -21,7 +21,7 @@
               {{ seccion.tituloOtro }}
             </p>
           </div>
-                    <div
+          <div
             *ngIf="lang === 'es'"
             [innerHtml]="seccion.contenidoEs"
             class="header-text"
@@ -38,7 +38,6 @@
             [innerHtml]="seccion.contenidoOtro"
             class="header-text"
           ></div>
-
         </ng-container>
       </ng-container>
     </div>
@@ -75,58 +74,38 @@
             <p class="title" *ngIf="lang === 'xx'">{{ servicio.tituloOtro }}</p>
 
             <ng-container *ngIf="lang === 'es'">
-              <ng-container *ngIf="sid === servicio.id">
-                <div
-                  class="content-text"
-                  [innerHtml]="servicio.contenidoEs"
-                ></div>
-              </ng-container>
-              <ng-container *ngIf="sid !== servicio.id">
-                <div
-                  class="content-text"
-                  [innerHtml]="servicio.contenidoEs.substr(0, 300) + '...'"
-                ></div>
-              </ng-container>
+              <div
+                class="content-text"
+                [innerHtml]="servicio.contenidoEs"
+                [@animationShowHide]="sid === servicio.id ? 'open' : 'close'"
+              ></div>
             </ng-container>
 
             <ng-container *ngIf="lang === 'en'">
-              <ng-container *ngIf="sid === servicio.id">
-                <div
-                  class="content-text"
-                  [innerHtml]="servicio.contenidoEn"
-                ></div>
-              </ng-container>
-              <ng-container *ngIf="sid !== servicio.id">
-                <div
-                  class="content-text"
-                  [innerHtml]="servicio.contenidoEs.substr(0, 300) + '...'"
-                ></div>
-              </ng-container>
+              <div
+                class="content-text"
+                [innerHtml]="servicio.contenidoEn"
+                [@animationShowHide]="sid === servicio.id ? 'open' : 'close'"
+              ></div>
             </ng-container>
 
             <ng-container *ngIf="lang === 'xx'">
-              <ng-container *ngIf="sid === servicio.id">
-                <div
-                  class="content-text"
-                  [innerHtml]="servicio.contenidoOtro"
-                ></div>
-              </ng-container>
-              <ng-container *ngIf="sid !== servicio.id">
-                <div
-                  class="content-text"
-                  [innerHtml]="servicio.contenidoOtro.substr(0, 300) + '...'"
-                ></div>
-              </ng-container>
+              <div
+                class="content-text"
+                [innerHtml]="servicio.contenidoOtro"
+                [@animationShowHide]="sid === servicio.id ? 'open' : 'close'"
+              ></div>
             </ng-container>
 
             <button
-              style="display: flex; width: 1rem; align-self: self-end"
-              mat-flat-button
+              style="display: flex; align-self: self-end; justify-content: center"
+              mat-icon-button
               (click)="hideAndShow(servicio.id)"
             >
-              <mat-icon>{{
-                sid === servicio.id ? "expand_less" : "expand_more"
-              }}</mat-icon>
+              <img
+                src="../../../../assets/Vector2.svg"
+                [@animationRotate]="sid === servicio.id ? 'close' : 'open'"
+              />
             </button>
           </div>
         </div>

@@ -23,7 +23,7 @@
       flex-wrap: wrap;
       justify-content: center;
       align-content: space-around;
-      gap: 5%;
+      gap: 3%;
     }
 
     .logos-group-1 {
@@ -44,16 +44,6 @@
         justify-content: space-between;
         width: 50%;
         // gap: 5%;
-      }
-
-      .asociado-img {
-        display: flex;
-        width: 30%;
-
-        .img-footer {
-          width: 100%;
-          max-height: 80px;
-        }
       }
 
     }
@@ -390,4 +380,11 @@
       }
     }
   }
+}
+
+.asociado-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 17%;
 }
