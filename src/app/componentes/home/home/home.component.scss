@@ -272,6 +272,7 @@
 
   .carrusel-part2-first-line {
     display: flex;
+    width: 63%;
     gap: 31px;
     justify-content: center;
 
@@ -284,7 +285,7 @@
     .pagos {
       //width: 351px;
       height: 72px;
-      width: 62%;
+      width: 100%;
       font-family: "Fredoka One";
       font-style: normal;
       font-weight: 400;
@@ -300,7 +301,11 @@
       height: 50px;
     }
 
-    .lorem p{
+    .lorem  { 
+      display: flex;
+      width: 80%;
+
+      p {
       //width: 416px;
       font-family: 'Roboto';
       font-style: normal;
@@ -312,6 +317,8 @@
       width: 100%;
     }
   }
+  }
+
   .carrusel-part2-second-line {
     width: 100%;
 
