@@ -10,9 +10,18 @@
 
   .banner-up-container {
     display: flex;
-    width: 100%;
-    height: 70%;
-    max-height: 70%;
+    width: 100vw;
+    height: 70vh;
+    max-height: 70vh;
+
+    .owl-carousel .owl-item {
+      // width: 100vw !important;
+
+      img {
+        display: block;
+        width: auto;   
+      }
+    }
 
 
     .banner-up {
@@ -20,7 +29,7 @@
       // position: absolute;
       // left: -100%;
       // top: 0;
-      // width: 100%;
+      width: 100vw;
       // opacity: 0;
       // transition: all 0.5s ease-in-out;
 

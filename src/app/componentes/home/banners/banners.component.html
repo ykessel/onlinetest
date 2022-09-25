@@ -1,7 +1,119 @@
 <div class="banner">
   <div class="banner-up-container">
-    <ng-container *ngFor="let banner of banners$ | async; let i = index">
-      <!-- div [@anima]="i === hideId ? 'in' : 'out'"" @fade [class.show]="i === hideId" class="banner-up"> -->
+    <div style="width: 100%">
+      <owl-carousel-o [options]="bannerOptions">
+        <ng-container *ngFor="let banner of banners$ | async">
+          <ng-template carouselSlide>
+            <div class="banner-up">
+              <div class="banner-pres">
+                <div class="banner-press-left">
+                  <img
+                    src="../../../../assets/img_header.png"
+                    class="pres-img-ban"
+                  />
+                  <div class="banner-pres-group">
+                    <h3 *ngIf="lang === 'es'" class="banner-pres-title">
+                      {{ banner.tituloEs }}
+                    </h3>
+                    <h3 *ngIf="lang === 'en'" class="banner-pres-title">
+                      {{ banner.tituloEn }}
+                    </h3>
+                    <h3 *ngIf="lang === 'xx'" class="banner-pres-title">
+                      {{ banner.tituloOtro }}
+                    </h3>
+
+                    <div
+                      *ngIf="lang === 'es'"
+                      [innerHtml]="banner.contenidoEs | sanitazeHtml"
+                      class="banner-pres-p"
+                    ></div>
+                    <div
+                      *ngIf="lang === 'en'"
+                      [innerHtml]="banner.contenidoEn | sanitazeHtml"
+                      class="banner-pres-p"
+                    ></div>
+                    <div
+                      *ngIf="lang === 'xx'"
+                      [innerHtml]="banner.contenidoOtro | sanitazeHtml"
+                      class="banner-pres-p"
+                    ></div>
+
+                    <div class="banner-pres-rect"></div>
+                    <div class="banner-pres-buttons">
+                      <ng-container *ngIf="banner.textoBtn1Es !== null">
+                        <a
+                          mat-button
+                          class="banner-button-1"
+                          href="{{ banner.enlaceBtn1Es }}"
+                          *ngIf="lang === 'es'"
+                          >{{ banner.textoBtn1Es }}</a
+                        >
+                      </ng-container>
+                      <ng-container *ngIf="banner.textoBtn1En !== null">
+                        <a
+                          mat-button
+                          class="banner-button-1"
+                          href="{{ banner.enlaceBtn1En }}"
+                          *ngIf="lang === 'en'"
+                          >{{ banner.textoBtn1En }}</a
+                        >
+                      </ng-container>
+
+                      <ng-container *ngIf="banner.textoBtn1Otro !== null">
+                        <a
+                          mat-button
+                          class="banner-button-1"
+                          href="{{ banner.enlaceBtn1Otro }}"
+                          *ngIf="lang === 'xx'"
+                          >{{ banner.textoBtn1Otro }}</a
+                        >
+                      </ng-container>
+
+                      <ng-container *ngIf="banner.textoBtn2En !== null">
+                        <a
+                          mat-button
+                          class="banner-button-2"
+                          routerLink="contactos"
+                          *ngIf="lang === 'en'"
+                          >{{ banner.textoBtn2En }}</a
+                        >
+                      </ng-container>
+
+                      <ng-container *ngIf="banner.textoBtn2Es !== null">
+                        <a
+                          mat-button
+                          class="banner-button-2"
+                          routerLink="contactos"
+                          *ngIf="lang === 'es'"
+                          >{{ banner.textoBtn2Es }}</a
+                        >
+                      </ng-container>
+
+                      <ng-container *ngIf="banner.textoBtn2Otro !== null">
+                        <a
+                          mat-button
+                          class="banner-button-2"
+                          routerLink="contactos"
+                          *ngIf="lang === 'xx'"
+                          >{{ banner.textoBtn2Otro }}</a
+                        >
+                      </ng-container>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="banner-up-img">
+                <img *ngIf="lang === 'es'" src="{{ banner.imagenEs }}" />
+                <img *ngIf="lang === 'en'" src="{{ banner.imagenEn }}" />
+                <img *ngIf="lang === 'xx'" src="{{ banner.imagenOtro }}" />
+              </div>
+            </div>
+          </ng-template>
+        </ng-container>
+      </owl-carousel-o>
+    </div>
+
+    <!--     <ng-container *ngFor="let banner of banners$ | async; let i = index">
       <div *ngIf="i === hideId" class="banner-up">
         <div class="banner-pres">
           <div class="banner-press-left">
@@ -103,7 +215,7 @@
           <img *ngIf="lang === 'xx'" src="{{ banner.imagenOtro }}" />
         </div>
       </div>
-    </ng-container>
+    </ng-container> -->
   </div>
 
   <div class="banner-down-container">
@@ -120,3 +232,5 @@
     </div>
   </div>
 </div>
+
+<!-- div [@anima]="i === hideId ? 'in' : 'out'"" @fade [class.show]="i === hideId" class="banner-up"> -->

@@ -25,6 +25,8 @@ import { selectLang } from "src/app/store/system/system.selectors";
 import { selectBanners } from "./../../../store/banners/banners.selectors";
 import { Banner } from "src/app/models/banner.model";
 import { first, take } from "rxjs/operators";
+import { OwlOptions } from "ngx-owl-carousel-o";
+import { selectCaracteristicas } from "src/app/store/caracteristicas/caracteristicas.selectors";
 
 @Component({
   selector: "bipay-banners",
@@ -82,6 +84,7 @@ export class BannersComponent implements OnInit, AfterViewInit, OnDestroy {
   banners$ = this.store.select(selectBanners);
   lang$ = this.store.select(selectLang).subscribe((l) => (this.lang = l));
   totalBanners = this.banners$.subscribe((a) => (this.total = a.length));
+   caracteristicas$ = this.store.select(selectCaracteristicas);
 
   constructor(private store: Store, private bannersService: BannersService) {}
 
@@ -112,5 +115,30 @@ export class BannersComponent implements OnInit, AfterViewInit, OnDestroy {
       this.hideId = 0;
       this.idInterval = setInterval(this.changeBanner, 100000);
     }
+  };
+
+  bannerOptions: OwlOptions = {
+    loop: true,
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: false,
+    autoplay: true,
+    autoplayTimeout: 7000,
+    autoplayHoverPause: true,
+    autoplaySpeed: 1500,
+    dotsSpeed: 500,
+    autoplayMouseleaveTimeout: 1100,
+    dots: false,
+    navSpeed: 600,
+    navText: ["", ""],
+    responsive: {
+      0: {
+        items: 1,
+      },
+      2000: {
+        items: 1,
+      },
+    },
+    nav: false,
   };
 }

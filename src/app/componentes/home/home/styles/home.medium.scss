@@ -5,23 +5,15 @@
   }
 
   .car-container {
-    margin-top: 10%;
+    margin-top: 0;
 
     .owl-carousel .owl-stage-outer {
       min-height: 180vh !important;
     }
   }
 
-  // .carrusel-2 .carrusel-2-third-line .bottom-line{
-  //   display: none !important;
-  // }
-
   .carrusel-1-cards {
     width: 90% !important;
-  }
-
-  .carrusel-2-first-line {
-    margin-bottom: -10% !important;
   }
 
   .carrusel-1-chips {
@@ -29,15 +21,20 @@
   }
 
   .carrusel-2-first-line {
+    width: 92%;
+    justify-content: center;
     padding-top: 10% !important;
+    margin-bottom: -10% !important;
 
     .carrusel-2-first-line-text {
       position: absolute !important;
       max-width: 100% !important;
+      margin-right: 0;
     }
   }
 
   .carrusel-part2-first-line {
+    width: 90%;
     flex-direction: column !important;
     margin: 4%;
 
@@ -50,6 +47,7 @@
     }
     .header {
       margin-bottom: 12px;
+      margin-top: 0 !important;
     }
     .mat-typography p {
       margin: 0 !important;
@@ -77,11 +75,16 @@
 
   .carrusel-2 {
     margin-top: 10% !important;
+
+    .carrusel-2-second-line {
+      margin-top:101px
+    }
   }
 
   .carrusel-2-third-line-text {
     height: auto !important;
     width: 100% !important;
+    padding-bottom: 2vh;
   }
 
   .car-container-movil {
@@ -125,4 +128,16 @@
     width: 1018px !important;
     left: -260% !important
   }
+
+  .group-1, .example-spacer  {
+    display: none;
+  }
+
+  .group-2 {
+    /* width: 60%; */
+    position: absolute;
+    top: 18vh;
+    height: 40%;
+    left: -12vw;
+}
 }
