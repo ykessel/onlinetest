@@ -78,7 +78,7 @@ export class BannersComponent implements OnInit, AfterViewInit, OnDestroy {
   hideId: number = 0;
   total: number = 0;
   idInterval!: any;
-  time: number = 7000;
+  time: number = 100000;
   banners$ = this.store.select(selectBanners);
   lang$ = this.store.select(selectLang).subscribe((l) => (this.lang = l));
   totalBanners = this.banners$.subscribe((a) => (this.total = a.length));
@@ -110,7 +110,7 @@ export class BannersComponent implements OnInit, AfterViewInit, OnDestroy {
     } else if (this.hideId === this.total) {
       clearInterval(this.idInterval);
       this.hideId = 0;
-      this.idInterval = setInterval(this.changeBanner, 7000);
+      this.idInterval = setInterval(this.changeBanner, 100000);
     }
   };
 }

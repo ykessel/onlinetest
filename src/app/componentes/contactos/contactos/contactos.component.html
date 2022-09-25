@@ -42,18 +42,17 @@
 
     <div class="we-background"></div>
     <div class="we-form-container">
-  <!--     <div class="text-center">
+      <!--     <div class="text-center">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
       </div> -->
 
       <div class="we-middle-images-movil">
         <div class="we-left-img-movil"></div>
         <div class="we-rigth-img-movil"></div>
-      </div> 
+      </div>
       <ng-container *ngFor="let seccion of secciones$ | async">
         <ng-container *ngIf="seccion.id == 16">
-
-           <div
+          <div
             *ngIf="lang === 'es'"
             [innerHtml]="seccion.contenidoEs"
             class="we-p-initial"
@@ -71,8 +70,7 @@
             class="we-p-initial"
           ></div>
 
-          
-<!--             <p *ngIf="lang === 'es'" class="p-initial">
+          <!--             <p *ngIf="lang === 'es'" class="p-initial">
               {{ seccion.contenidoEs }}
             </p>
 
@@ -105,7 +103,8 @@
             class="we-alert we-alert-danger"
           >
             <div *ngIf="empresa?.errors?.['required']">
-              Este campo no pude estar vacio.
+              <p *ngIf="lang === 'en'">This field cannot be empty.</p>
+              <p *ngIf="lang === 'es'">Este campo no pude estar vacío.</p>
             </div>
           </div>
 
@@ -126,10 +125,16 @@
             class="we-alert we-alert-danger"
           >
             <div *ngIf="numeroCarnet?.errors?.['required']">
-              Este campo no pude estar vacio.
+              <p *ngIf="lang === 'en'">This field cannot be empty.</p>
+              <p *ngIf="lang === 'es'">Este campo no pude estar vacío.</p>
             </div>
             <div *ngIf="numeroCarnet?.errors?.['minlength']">
-              Entre un numero de carnet valido
+              <p *ngIf="lang === 'en'">Enter a valid id number</p>
+              <p *ngIf="lang === 'es'">Entre un número de carnet válido</p>
+            </div>
+            <div *ngIf="numeroCarnet?.errors?.['maxlength']">
+              <p *ngIf="lang === 'en'">Enter a valid id number</p>
+              <p *ngIf="lang === 'es'">Entre un número de carnet válido</p>
             </div>
           </div>
 
@@ -149,7 +154,8 @@
             class="we-alert we-alert-danger"
           >
             <div *ngIf="paginaWeb?.errors?.['pattern']">
-              Entre una direccion valida
+              <p *ngIf="lang === 'en'">Enter a valid address</p>
+              <p *ngIf="lang === 'es'">Entre una dirección válida.</p>
             </div>
           </div>
 
@@ -167,7 +173,8 @@
             class="we-alert we-alert-danger"
           >
             <div *ngIf="nombre?.errors?.['required']">
-              Este campo no pude estar vacio.
+              <p *ngIf="lang === 'en'">This field cannot be empty.</p>
+              <p *ngIf="lang === 'es'">Este campo no pude estar vacío.</p>
             </div>
           </div>
 
@@ -187,7 +194,8 @@
             class="we-alert we-alert-danger"
           >
             <div *ngIf="apellidos?.errors?.['required']">
-              Este campo no pude estar vacio.
+              <p *ngIf="lang === 'en'">This field cannot be empty.</p>
+              <p *ngIf="lang === 'es'">Este campo no pude estar vacío.</p>
             </div>
           </div>
 
@@ -205,10 +213,16 @@
             class="we-alert we-alert-danger"
           >
             <div *ngIf="telefono?.errors?.['required']">
-              Este campo no pude estar vacio.
+              <p *ngIf="lang === 'en'">This field cannot be empty.</p>
+              <p *ngIf="lang === 'es'">Este campo no pude estar vacío.</p>
             </div>
             <div *ngIf="telefono?.errors?.['minlength']">
-              Entre un numero de telefono valido
+              <p *ngIf="lang === 'en'">Enter a valid phone number</p>
+              <p *ngIf="lang === 'es'">Entre un número de teléfono válido</p>
+            </div>
+            <div *ngIf="telefono?.errors?.['maxlength']">
+              <p *ngIf="lang === 'en'">Enter a valid phone number</p>
+              <p *ngIf="lang === 'es'">Entre un número de teléfono válido</p>
             </div>
           </div>
 
@@ -226,9 +240,10 @@
             *ngIf="correo?.invalid && (correo?.dirty || correo?.touched)"
             class="we-alert we-alert-danger"
           >
-            <div *ngIf="correo?.errors?.['required']">
-              Este campo no pude estar vacio.
-            </div>
+            <ng-container *ngIf="correo?.errors?.['required']">
+              <p *ngIf="lang === 'en'">This field cannot be empty.</p>
+              <p *ngIf="lang === 'es'">Este campo no pude estar vacío.</p>
+            </ng-container>
           </div>
         </div>
         <div class="we-policy">
@@ -256,7 +271,9 @@
                 class="we-alert we-alert-danger"
               >
                 <div *ngIf="terminosCondiciones?.errors?.['required']">
-                  Este campo debe estar seleccionado
+                  <p *ngIf="lang === 'en'">This field cannot be empty.</p>
+                  <p *ngIf="lang === 'es'">Este campo no pude estar vacío.</p>
+                  <!-- Este campo debe estar seleccionado -->
                 </div>
               </div>
             </div>
@@ -278,11 +295,7 @@
           </div>
           <div class="we-button-container">
             <!-- [disabled]="!contactoForm.valid" -->
-            <button
-              mat-button
-              type="submit"
-              class="we-form-button"
-            >
+            <button mat-button type="submit" class="we-form-button">
               Enviar
             </button>
           </div>
