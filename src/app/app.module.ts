@@ -78,6 +78,7 @@ import { ServiciosReducer } from './store/servicios/servicios.reducer';
 import { SystemLangReducer, SystemServiceIdReducer } from './store/system/system.reducer';
 import { BannersComponent } from './componentes/home/banners/banners.component';
 import { SocialesComponent } from './componentes/shared/footer/sociales/sociales.component';
+import { SanitazeHtmlPipe } from './pipes/sanitaze-html.pipe';
 
 // const cookieConfig:NgcCookieConsentConfig = {
 //   cookie: {
@@ -124,6 +125,7 @@ import { SocialesComponent } from './componentes/shared/footer/sociales/sociales
     BannersComponent,
     SocialesComponent,
     ComfirmDialog,
+    SanitazeHtmlPipe,
   ],
   imports: [
     CommonModule,

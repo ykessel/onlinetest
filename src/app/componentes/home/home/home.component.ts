@@ -19,6 +19,7 @@ import { selectServicios } from "src/app/store/servicios/servicios.selectors";
 import { getPagos } from "src/app/store/pagos/pagos.actions";
 import { selectLang } from "src/app/store/system/system.selectors";
 
+
 @Component({
   selector: "bipay-home",
   templateUrl: "./home.component.html",
@@ -29,6 +30,7 @@ export class HomeComponent implements OnInit {
   lang: string = "";
   totalCaract: number = 0;
   totalPoten: number = 0;
+  totalPagos : number = 0;
   secciones$ = this.store.select(selectSecciones);
   servicios$ = this.store.select(selectServicios);
   potencialidades$ = this.store.select(selectPotencialidades);
@@ -41,7 +43,7 @@ export class HomeComponent implements OnInit {
     private pagosService: PagosService,
     private caracteristicasService: CaracteristicasService,
     private potencialidadesService: PotencialidadesService,
-    private bannersService: BannersService
+    private bannersService: BannersService,
   ) {}
 
   ngOnInit(): void {
@@ -65,7 +67,10 @@ export class HomeComponent implements OnInit {
 
     this.pagosService
       .getPagos()
-      .subscribe((pagos) => this.store.dispatch(getPagos({ pagos })));
+      .subscribe((pagos) => {
+        this.totalPagos = pagos.length;
+        this.store.dispatch(getPagos({ pagos }))
+      });
   }
 
   customOptions: OwlOptions = {
@@ -152,7 +157,7 @@ export class HomeComponent implements OnInit {
         items: 3,
       },
       760: {
-        items: 5,
+        items: 6,
       },
       1024: {
         items: 6,

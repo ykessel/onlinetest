@@ -1,7 +1,8 @@
 <div class="banner">
   <div class="banner-up-container">
     <ng-container *ngFor="let banner of banners$ | async; let i = index">
-      <div [class.show]="i === hideId" class="banner-up">
+      <!-- div [@anima]="i === hideId ? 'in' : 'out'"" @fade [class.show]="i === hideId" class="banner-up"> -->
+      <div *ngIf="i === hideId" class="banner-up">
         <div class="banner-pres">
           <div class="banner-press-left">
             <img src="../../../../assets/img_header.png" class="pres-img" />
@@ -18,17 +19,17 @@
 
               <div
                 *ngIf="lang === 'es'"
-                [innerHtml]="banner.contenidoEs"
+                [innerHtml]="banner.contenidoEs | sanitazeHtml"
                 class="banner-pres-p"
               ></div>
               <div
                 *ngIf="lang === 'en'"
-                [innerHtml]="banner.contenidoEn"
+                [innerHtml]="banner.contenidoEn | sanitazeHtml"
                 class="banner-pres-p"
               ></div>
               <div
                 *ngIf="lang === 'xx'"
-                [innerHtml]="banner.contenidoOtro"
+                [innerHtml]="banner.contenidoOtro | sanitazeHtml"
                 class="banner-pres-p"
               ></div>
 

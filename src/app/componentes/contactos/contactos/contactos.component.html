@@ -1,59 +1,78 @@
-<div class="contact-container">
-  <div class="contact-head">
-    <div class="left-img"></div>
+<div class="we-contact-container">
+  <div class="we-contact-head">
+    <div class="we-left-img"></div>
 
-    <div class="center-content-contact">
-      <img class="chip-img" src="../../../../assets/img_header.png" />
+    <div class="we-center-content-contact">
+      <img class="we-chip-img" src="../../../../assets/img_header.png" />
       <ng-container *ngFor="let seccion of secciones$ | async">
         <ng-container *ngIf="seccion.id == 16">
-          <h1 *ngIf="lang === 'es'" class="contact-title">
+          <p *ngIf="lang === 'es'" class="we-contact-title">
             {{ seccion.tituloEs }}
-          </h1>
-          <h1 *ngIf="lang === 'en'" class="contact-title">
+          </p>
+          <p *ngIf="lang === 'en'" class="we-contact-title">
             {{ seccion.tituloEn }}
-          </h1>
-          <h1 *ngIf="lang === 'xx'" class="contact-title">
+          </p>
+          <p *ngIf="lang === 'xx'" class="we-contact-title">
             {{ seccion.tituloOtro }}
-          </h1>
+          </p>
         </ng-container>
       </ng-container>
     </div>
 
-    <div class="rigth-container">
-      <div class="rigth-img"></div>
+    <div class="we-rigth-container">
+      <div class="we-rigth-img"></div>
     </div>
   </div>
 
-  <div class="contact-body">
-    <div class="initial-space">
-      <div class="seccion-img">
-        <div class="container-izq">
-          <div class="img-chip-izq-contactos"></div>
-          <div class="img-chip-pink-contactos"></div>
+  <div class="we-contact-body">
+    <div class="we-initial-space">
+      <div class="we-seccion-img">
+        <div class="we-container-izq">
+          <div class="we-img-chip-izq-contactos"></div>
+          <div class="we-img-chip-pink-contactos"></div>
         </div>
 
-        <div class="container-der">
-          <div class="img-chip-der-contactos"></div>
+        <div class="we-container-der">
+          <div class="we-img-chip-der-contactos"></div>
 
-          <div class="img-chip-menor-contactos"></div>
+          <div class="we-img-chip-menor-contactos"></div>
         </div>
       </div>
     </div>
 
     <div class="we-background"></div>
-    <div class="form-container">
-      <div class="text-center">
-        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p> -->
-      </div>
-      <div class="middle-images-movil">
-        <div class="left-img-movil"></div>
-        <div class="rigth-img-movil"></div>
-      </div>
-      <!-- <p class="p-initial">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p> -->
+    <div class="we-form-container">
+  <!--     <div class="text-center">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+      </div> -->
+
+      <div class="we-middle-images-movil">
+        <div class="we-left-img-movil"></div>
+        <div class="we-rigth-img-movil"></div>
+      </div> 
       <ng-container *ngFor="let seccion of secciones$ | async">
-        <ng-template *ngIf="seccion.id == 16">
+        <ng-container *ngIf="seccion.id == 16">
+
+           <div
+            *ngIf="lang === 'es'"
+            [innerHtml]="seccion.contenidoEs"
+            class="we-p-initial"
+          ></div>
+
+          <div
+            *ngIf="lang === 'en'"
+            [innerHtml]="seccion.contenidoEn"
+            class="we-p-initial"
+          ></div>
+
+          <div
+            *ngIf="lang === 'xx'"
+            [innerHtml]="seccion.contenidoOtro"
+            class="we-p-initial"
+          ></div>
+
           
-            <p *ngIf="lang === 'es'" class="p-initial">
+<!--             <p *ngIf="lang === 'es'" class="p-initial">
               {{ seccion.contenidoEs }}
             </p>
 
@@ -64,8 +83,8 @@
             <p *ngIf="lang === 'xx'" class="p-initial">
               {{ seccion.contenidoOtro }}
             </p>
-      
-        </ng-template>
+       -->
+        </ng-container>
       </ng-container>
       <form
         [formGroup]="contactoForm"
@@ -78,12 +97,12 @@
             matInput
             formControlName="empresa"
             placeholder="Empresa*"
-            [class.input-error]="empresa?.invalid && (empresa?.dirty || empresa?.touched) && empresa?.errors?.['required']"
+            [class.we-input-error]="empresa?.invalid && (empresa?.dirty || empresa?.touched) && empresa?.errors?.['required']"
             class="we-input"
           />
           <div
             *ngIf="empresa?.invalid && (empresa?.dirty || empresa?.touched)"
-            class="alert alert-danger"
+            class="we-alert we-alert-danger"
           >
             <div *ngIf="empresa?.errors?.['required']">
               Este campo no pude estar vacio.
@@ -104,7 +123,7 @@
               numeroCarnet?.invalid &&
               (numeroCarnet?.dirty || numeroCarnet?.touched)
             "
-            class="alert alert-danger"
+            class="we-alert we-alert-danger"
           >
             <div *ngIf="numeroCarnet?.errors?.['required']">
               Este campo no pude estar vacio.
@@ -127,7 +146,7 @@
             *ngIf="
               paginaWeb?.invalid && (paginaWeb?.dirty || paginaWeb?.touched)
             "
-            class="alert alert-danger"
+            class="we-alert we-alert-danger"
           >
             <div *ngIf="paginaWeb?.errors?.['pattern']">
               Entre una direccion valida
@@ -145,7 +164,7 @@
 
           <div
             *ngIf="nombre?.invalid && (nombre?.dirty || nombre?.touched)"
-            class="alert alert-danger"
+            class="we-alert we-alert-danger"
           >
             <div *ngIf="nombre?.errors?.['required']">
               Este campo no pude estar vacio.
@@ -165,7 +184,7 @@
             *ngIf="
               apellidos?.invalid && (apellidos?.dirty || apellidos?.touched)
             "
-            class="alert alert-danger"
+            class="we-alert we-alert-danger"
           >
             <div *ngIf="apellidos?.errors?.['required']">
               Este campo no pude estar vacio.
@@ -183,7 +202,7 @@
 
           <div
             *ngIf="telefono?.invalid && (telefono?.dirty || telefono?.touched)"
-            class="alert alert-danger"
+            class="we-alert we-alert-danger"
           >
             <div *ngIf="telefono?.errors?.['required']">
               Este campo no pude estar vacio.
@@ -205,7 +224,7 @@
 
           <div
             *ngIf="correo?.invalid && (correo?.dirty || correo?.touched)"
-            class="alert alert-danger"
+            class="we-alert we-alert-danger"
           >
             <div *ngIf="correo?.errors?.['required']">
               Este campo no pude estar vacio.
@@ -214,19 +233,19 @@
         </div>
         <div class="we-policy">
           <div class="we-term">
-            <div class="check-container">
+            <div class="we-check-container">
               <input
                 formControlName="terminosCondiciones"
                 type="checkbox"
                 class="we-check"
               />
             </div>
-            <div class="p-container">
-              <p class="policy-p">
+            <div class="we-p-container">
+              <p class="we-policy-p">
                 He leído y acepto la
-                <a href="#" class="link">Política de Privacidad</a>
+                <a href="#" class="we-link">Política de Privacidad</a>
                 y
-                <a href="#" class="link">Condiciones generales de BIPAY</a>
+                <a href="#" class="we-link">Condiciones generales de BIPAY</a>
               </p>
 
               <div
@@ -234,7 +253,7 @@
                   terminosCondiciones?.invalid &&
                   (terminosCondiciones?.dirty || terminosCondiciones?.touched)
                 "
-                class="alert alert-danger"
+                class="we-alert we-alert-danger"
               >
                 <div *ngIf="terminosCondiciones?.errors?.['required']">
                   Este campo debe estar seleccionado
@@ -243,26 +262,26 @@
             </div>
           </div>
           <div class="we-ask">
-            <div class="check-container">
+            <div class="we-check-container">
               <input
                 formControlName="suscripcion"
                 type="checkbox"
                 class="we-check"
               />
             </div>
-            <div class="p-container">
-              <p class="policy-p">
+            <div class="we-p-container">
+              <p class="we-policy-p">
                 Acepto recibir información comercial, incluso por medios
                 electrónicos.
               </p>
             </div>
           </div>
-          <div class="button-container">
+          <div class="we-button-container">
             <!-- [disabled]="!contactoForm.valid" -->
             <button
               mat-button
               type="submit"
-              class="form-button"
+              class="we-form-button"
             >
               Enviar
             </button>

@@ -18,12 +18,22 @@ import { CategoriasEnlaceService } from 'src/app/services/categorias-enlace/cate
 import { getCategorias } from 'src/app/store/categorias/categorias.actions';
 import { getContactos } from 'src/app/store/contactos/contactos.actions';
 import { getEnlaces } from 'src/app/store/enlaces/enlaces.actions';
+import {
+  HashLocationStrategy,
+  Location,
+  LocationStrategy,
+  PathLocationStrategy,
+} from '@angular/common';
 
 @Component({
   selector: 'bipay-footer',
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss'],
   encapsulation: ViewEncapsulation.None,
+  providers: [
+    Location,
+    { provide: LocationStrategy, useClass: PathLocationStrategy },
+  ],
 })
 export class FooterComponent implements OnInit {
   lang: string = '';
@@ -31,6 +41,7 @@ export class FooterComponent implements OnInit {
   faLocationDot = faLocationDot;
   faEnvelope = faEnvelope;
   faPhone = faPhone;
+  location: Location;
   secciones$ = this.store.select(selectSecciones);
   asociados$ = this.store.select(selectAsociados);
   documentos$ = this.store.select(selectDocumentos);
@@ -45,8 +56,9 @@ export class FooterComponent implements OnInit {
     private documentosService: DocumentosService,
     private categoriasService: CategoriasEnlaceService,
     private contactosService: DatosContactoService,
-    private enlacesService: EnlacesInteresService
-  ) {}
+    private enlacesService: EnlacesInteresService,
+    location: Location
+  ) {this.location = location;}
 
   ngOnInit(): void {
     this.asociadosService.getAsociados()

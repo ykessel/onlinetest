@@ -1,13 +1,10 @@
 <div class="footer" ngsReveal>
+
+  <div class="footer-comercios-container">
+  <img src="../../../../assets/curva1.png" [class.just-home]="location.path() === ''" class="bottom-line" />
+
   <div class="footer-comercios">
     <div class="logos-footer">
-      <!-- <ng-container *ngFor="let asoc of asoc">
-        <img
-          src="{{ asoc.logo }}"
-          alt="{{ asoc.tituloEs }}"
-          class="img-footer"
-        />
-      </ng-container> -->
       <ng-container *ngFor="let aso of asociados$ | async">
         <div class="asociado-img">
           <img src="{{ aso.logo }}" alt="{{ aso.tituloEs }}" class="img-footer" />
@@ -15,9 +12,11 @@
       </ng-container>
     </div>
   </div>
+  </div>
+
 
   <div class="footer-contactos">
-    <img src="../../../../assets/curva2.png" class="bottom-line" />
+    <img src="../../../../assets/curva2.png" class="bottom-line-2" />
     <div class="footer-contactos-container">
       <img class="footer-contactos-left" src="../../../../assets/grafica-contactos_izq.png" alt="lines" />
 
@@ -52,7 +51,9 @@
     <div class="footer-call" mat-button href="#">
       <div class="footer-call-tittle">
         <mat-icon class="icon">phone</mat-icon>
-        <p class="call-p1">Llamenos</p>
+        <p *ngIf="lang === 'es'" class="call-p1">Llamenos</p>
+        <p *ngIf="lang === 'en'" class="call-p1">Call us</p>
+        <p *ngIf="lang === 'xx'" class="call-p1">Llamenos</p>
         <img src="../assets/img_header.png" />
       </div>
       <div class="footer-call-number">

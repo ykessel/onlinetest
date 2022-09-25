@@ -1,12 +1,13 @@
 
 @import "./styles/contactos.large.scss";
 
-.contact-container {
+.we-contact-container {
     height: 189vh;
     background-color: white;
+    margin-bottom: 10vh;
 }
 
-.contact-head {
+.we-contact-head {
     display: flex;
     height: 9%;
     margin-top: 2%;
@@ -15,7 +16,7 @@
     justify-content: center;
 }
 
-.left-img {
+.we-left-img {
     margin-top: 2%;
     margin-right: 5%;
     background: linear-gradient(
@@ -29,21 +30,21 @@
     height: 65%;
 }
 
-.rigth-img {
+.we-rigth-img {
     height: 80%;
     width: 90%;
     background-repeat: no-repeat !important;
     background: url(../../../../assets/grafica_der1.png);
 }
 
-.rigth-container {
+.we-rigth-container {
     display: flex;
     justify-content: flex-end;
     height: 100%;
     width: 22%;
 }
 
-.center-content-contact {
+.we-center-content-contact {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -54,7 +55,7 @@
     width: 66%;
 }
 
-.contact-title {
+.we-contact-title {
     font-family: "Fredoka One";
     font-style: normal;
     font-weight: 400;
@@ -64,31 +65,31 @@
     color: #353535;
 }
 
-.chip-img {
+.we-chip-img {
     width: 2%;
 }
 
-.contact-body {
+.we-contact-body {
     height: 90%;
 }
 
-.seccion-img {
+.we-seccion-img {
     width: 100%;
 }
 
-.initial-space {
+.we-initial-space {
     height: 16%;
     width: 100%;
     display: flex;
     padding-bottom: 10%;
 }
 
-.container-izq {
+.we-container-izq {
     display: flex;
     flex-grow: 1;
 }
 
-.container-der {
+.we-container-der {
     display: flex;
     flex-grow: 1;
     flex-direction: column;
@@ -96,7 +97,7 @@
     justify-content: flex-end;
 }
 
-.img-chip-izq-contactos {
+.we-img-chip-izq-contactos {
     position: absolute;
     width: 129px;
     height: 79px;
@@ -107,7 +108,7 @@
     background: url(../../../../assets//grafica_izq.png);
 }
 
-.img-chip-pink-contactos {
+.we-img-chip-pink-contactos {
     position: absolute;
     width: 610px;
     height: 109px;
@@ -119,7 +120,7 @@
     transform: rotate(-180deg);
 }
 
-.img-chip-der-contactos {
+.we-img-chip-der-contactos {
     width: 20%;
     height: 80px;
     background: linear-gradient(
@@ -132,7 +133,7 @@
     transform: rotate(-180deg);
 }
 
-.img-chip-menor-contactos {
+.we-img-chip-menor-contactos {
     margin-top: 2%;
     width: 10%;
     height: 30px;
@@ -162,39 +163,38 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    align-self: center;
     padding: 56px;
     gap: 10px;
     width: 57%;
-    height: 100%;
     background: #ffffff;
     box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.15);
     border-radius: 48px;
 }
 
-.button-container{
+.we-button-container{
     display: flex;
     width: 100%;
     justify-content: center;
 }
 
-.form-container {
+.we-form-container {
     display: flex;
     flex-direction: column;
     position: absolute;
-    left: 34%;
-    top: 40%;
-    width: 46%;
-    height: 104%;
+    left: 27%;
+    right: 27%;
+    top: 38%;
 }
 
-.p-initial{
-    color: black;
-    width: 69%;
-    margin-bottom: 5%;
-}
+// .p-initial {
+//     color: black;
+//     width: 69%;
+//     margin-bottom: 5%;
+// }
 
 
-.img-text {
+.we-img-text {
     height: 30%;
     width: 100%;
     padding: 5% 5% 0 5%;
@@ -321,7 +321,7 @@
     color: #353535;
 }
 
-.p-text {
+.we-p-text {
     color: #727272;
 }
 .we-text-container {
@@ -347,6 +347,7 @@
     flex-direction: row;
     align-items: flex-start;
     height: 30%;
+    margin-bottom: 5vh;
 }
 
 .we-check {
@@ -357,7 +358,7 @@
     border-radius: 8px;
 }
 
-.policy-p {
+.we-policy-p {
    font-family: "Roboto";
    font-style: normal;
    font-weight: 400;
@@ -368,12 +369,12 @@
    color: #808080;
 }
 
-.link {
+.we-link {
     text-decoration: none;
     color: #eda301;
 }
 
-.form-button {
+.we-form-button {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -390,27 +391,28 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 14px;
-    color: #eac2c2 !important;
+    color: #eac2c2;
+
     &:hover {
         background: #420101;
         color: #fff;
     }
 }
 
-.check-container {
+.we-check-container {
     display: flex;
     height: 100%;
     align-items: center;
     margin-right: 5px;
 }
 
-.p-container{
+.we-p-container{
     display: flex;
     height: 100%;
     align-items: flex-start;
 }
 
-.text-center {
+.we-text-center {
     word-wrap: break-word;
     display: flex;
     align-items: flex-start;
@@ -429,18 +431,21 @@
     right: 30%;
 }
 
-.alert-danger {
+.we-alert-danger {
     margin-top: -13px;
     margin-left: 1vw;
     padding: 8px;
     color: crimson;
 }
 
-.input-error {
+.we-input-error {
     border: 1px solid crimson !important;
 }
 
-.p-initial {
+.we-p-initial {
+    margin-bottom: 6vh;
+   
+    p {    
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -448,28 +453,27 @@
     line-height: 24px;
     text-align: center;
     color: #727272;
-    width: 91%;
-    margin-bottom: 5%;
+    }
 }
 
 @media (max-width: 700px) {
-    .img-chip-izq-contactos {
+    .we-img-chip-izq-contactos {
         display: none;
     }
 
-    .img-chip-pink-contactos {
+    .we-img-chip-pink-contactos {
         display: none;
     }
 
-    .img-chip-der-contactos {
+    .we-img-chip-der-contactos {
         display: none;
     }
 
-    .img-chip-menor-contactos {
+    .we-img-chip-menor-contactos {
         display: none;
     }
 
-    .rigth-container {
+    .we-rigth-container {
         display: flex;
         justify-content: flex-end;
         width: 340px !important;
@@ -479,14 +483,14 @@
         position: absolute !important;
     }
 
-    .rigth-img {
+    .we-rigth-img {
         height: 80%;
         width: 57% !important;
         background-repeat: no-repeat !important;
         background: url(../../../../assets/grafica_der1.png);
     }
 
-    .left-img {
+    .we-left-img {
         top: 39% !important;
         left: -93px !important;
         position: absolute !important;
@@ -501,7 +505,7 @@
         height: 80px !important;
     }
 
-    .center-content-contact {
+    .we-center-content-contact {
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -535,23 +539,26 @@
         border-radius: 48px;
     }
 
-    .text-center {
+    .we-text-center {
         left: 5% !important;
         right: 5% !important;
     }
 
-    .initial-space {
+    .we-initial-space {
         display: flex;
         height: 0%;
         width: 100%;
         padding-bottom: 100% !important;
     }
 
-    .chip-img {
+    .we-chip-img {
         width: 4% !important;
     }
 
-    .p-initial {
+    .we-p-initial {
+        margin-bottom: 6vh;
+
+        p {    
         font-family: 'Roboto';
         font-style: normal;
         font-weight: 400;
@@ -559,11 +566,10 @@
         line-height: 24px;
         text-align: center;
         color: #727272;
-        width: 91%;
-        margin-bottom: 5%;
+        }
     }
 
-    .form-container {
+    .we-form-container {
         display: flex;
         flex-direction: column;
         position: absolute;
@@ -576,14 +582,14 @@
 }
 
 @media only screen and (min-width: 100px) and (max-width: 360px) {
-    .rigth-img {
+    .we-rigth-img {
         height: 80%;
         width: 45% !important;
         background-repeat: no-repeat !important;
         background: url(../../../../assets/grafica_der1.png);
     }
 
-    .contact-container {
+    .we-contact-container {
         height: 194vh !important;
         background-color: white !important;
     }
@@ -603,7 +609,7 @@
         box-shadow: 0px 0px 32px rgb(0 0 0 / 15%);
         border-radius: 48px;
     }
-    .form-container {
+    .we-form-container {
         display: flex;
         flex-direction: column;
         position: absolute;
@@ -614,7 +620,7 @@
         height: 100%;
     }
 
-    .rigth-container {
+    .we-rigth-container {
         display: flex;
         justify-content: flex-end;
         width: 340px !important;
@@ -624,7 +630,7 @@
         position: absolute !important;
     }
 
-    .left-img {
+    .we-left-img {
         top: 44% !important;
         left: -93px !important;
         position: absolute !important;
@@ -650,7 +656,7 @@
         border-radius: 48px;
     } 
 
-    .form-container {
+    .we-form-container {
         display: flex;
         flex-direction: column;
         position: absolute;
@@ -660,7 +666,7 @@
         height: 104%;
     }
 
-    .contact-container{
+    .we-contact-container{
         height: 108vh !important;
         background-color: white;
     }

@@ -233,7 +233,7 @@
             <mat-icon>keyboard_arrow_down</mat-icon>
           </div>
         </button>
-        <mat-menu #menu="matMenu">
+        <mat-menu #menu="matMenu" class="menu-lang">
           <button
             mat-menu-item
             *ngFor="let idioma of idiomas$ | async"
@@ -258,7 +258,7 @@
         <button mat-icon-button [matMenuTriggerFor]="menuNav" aria-label="Nav">
           <mat-icon>menu</mat-icon>
         </button>
-        <mat-menu #menuNav xPosition="before">
+        <mat-menu #menuNav xPosition="before" class="menu-movil">
           <div mat-menu-item class="nav-container-home">
             <a
               class="button-menu"
