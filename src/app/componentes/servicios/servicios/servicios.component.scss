@@ -11,11 +11,8 @@
     margin-left: 0;
 
     .servicios-rect {
-      width: 48%;
+      width: 62%;
       height: 64px;
-      left: 0px;
-      top: 401px;
-
       background: linear-gradient(
         90deg,
         #faa6a7 0%,
@@ -23,10 +20,6 @@
         #ffdf95 98.96%
       );
       border-radius: 0px 50px 50px 0px;
-    }
-
-    .left-img {
-      width: 60px;
     }
   }
 
@@ -66,7 +59,7 @@
         }
       }
 
-       .header-text {
+      .header-text {
         p {
           font-family: "Roboto";
           font-style: normal;
@@ -81,12 +74,16 @@
 
   .right {
     width: 20%;
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-end;
 
     .right-img {
-      position: absolute;
-      width: 15%;
-      right: 0;
+      width: 286px;
+      height: 83px;
       margin-top: 16vh;
+      object-fit: cover;
+      object-position: 41px;
     }
   }
 }

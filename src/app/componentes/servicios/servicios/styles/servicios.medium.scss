@@ -2,7 +2,7 @@
   .servicios-container {
     .right,
     .left {
-      display: none;
+      display: none !important;
     }
 
     .center {
@@ -17,7 +17,7 @@
 
         .terminos-rect {
           width: 35%;
-          height: 80%;
+          height: 10vh;
 
           background: linear-gradient(
             90deg,
@@ -25,7 +25,7 @@
             #b5e7ff 67.02%,
             #ffdf95 98.96%
           );
-          border-radius: 0px 50px 50px 0px;
+          border-radius: 0px 100px 100px 0px;
         }
 
         .center-movil-right {
@@ -33,6 +33,9 @@
 
           img {
             width: 100%;
+            height: auto;
+            margin-top: 0;
+            object-fit: unset;
           }
         }
       }

@@ -1,24 +1,34 @@
 <div class="footer" ngsReveal>
-
   <div class="footer-comercios-container">
-  <img src="../../../../assets/curva1.png" [class.just-home]="location.path() === ''" class="bottom-line" />
+    <img
+      src="../../../../assets/curva1.png"
+      [class.just-home]="location.path() === ''"
+      class="bottom-line"
+    />
 
-  <div class="footer-comercios">
-    <div class="logos-footer">
-      <ng-container *ngFor="let aso of asociados$ | async">
-        <div class="asociado-img">
-          <img src="{{ aso.logo }}" alt="{{ aso.tituloEs }}" class="img-footer" />
-        </div>
-      </ng-container>
+    <div class="footer-comercios">
+      <div class="logos-footer">
+        <ng-container *ngFor="let aso of asociados$ | async">
+          <div class="asociado-img">
+            <img
+              src="{{ aso.logo }}"
+              alt="{{ aso.tituloEs }}"
+              class="img-footer"
+            />
+          </div>
+        </ng-container>
+      </div>
     </div>
   </div>
-  </div>
-
 
   <div class="footer-contactos">
     <img src="../../../../assets/curva2.png" class="bottom-line-2" />
     <div class="footer-contactos-container">
-      <img class="footer-contactos-left" src="../../../../assets/grafica-contactos_izq.png" alt="lines" />
+      <img
+        class="footer-contactos-left"
+        src="../../../../assets/grafica-contactos_izq.png"
+        alt="lines"
+      />
 
       <div class="footer-contactos-center">
         <ng-container *ngFor="let seccion of secciones$ | async">
@@ -33,9 +43,21 @@
               {{ seccion.tituloOtro }}
             </p>
 
-            <div *ngIf="lang === 'es'" class="footer-contactos-text" [innerHTML]="seccion.contenidoEs"></div>
-            <div *ngIf="lang === 'en'" class="footer-contactos-text" [innerHTML]="seccion.contenidoEs"></div>
-            <div *ngIf="lang === 'xx'" class="footer-contactos-text" [innerHTML]="seccion.contenidoEs"></div>
+            <div
+              *ngIf="lang === 'es'"
+              class="footer-contactos-text"
+              [innerHTML]="seccion.contenidoEs"
+            ></div>
+            <div
+              *ngIf="lang === 'en'"
+              class="footer-contactos-text"
+              [innerHTML]="seccion.contenidoEs"
+            ></div>
+            <div
+              *ngIf="lang === 'xx'"
+              class="footer-contactos-text"
+              [innerHTML]="seccion.contenidoEs"
+            ></div>
             <div class="footer-contactos-boton">
               <a mat-button routerLink="contactos">Inicia ya</a>
             </div>
@@ -43,7 +65,11 @@
         </ng-container>
       </div>
 
-      <img class="footer-contactos-right" src="../../../../assets/grafica-contactos.png" alt="lines" />
+      <img
+        class="footer-contactos-right"
+        src="../../../../assets/grafica-contactos.png"
+        alt="lines"
+      />
     </div>
   </div>
 
@@ -69,16 +95,37 @@
 
         <ng-container *ngFor="let seccion of secciones$ | async">
           <ng-container *ngIf="seccion.id == 22">
-            <div *ngIf="lang === 'es'" class="footer-description" [innerHTML]="seccion.contenidoEs"></div>
-            <div *ngIf="lang === 'en'" class="footer-description" [innerHTML]="seccion.contenidoEn"></div>
-            <div *ngIf="lang === 'xx'" class="footer-description" [innerHTML]="seccion.contenidoOtro"></div>
+            <div *ngIf="seccion.contenidoEs !== null">
+              <div
+                *ngIf="lang === 'es'"
+                class="footer-description"
+                [innerHTML]="seccion.contenidoEs"
+              ></div>
+            </div>
+            <div *ngIf="seccion.contenidoEn !== null">
+              <div
+                *ngIf="lang === 'en'"
+                class="footer-description"
+                [innerHTML]="seccion.contenidoEn"
+              ></div>
+            </div>
+            <div *ngIf="seccion.contenidoOtro !== null">
+              <div
+                *ngIf="lang === 'xx'"
+                class="footer-description"
+                [innerHTML]="seccion.contenidoOtro"
+              ></div>
+            </div>
           </ng-container>
         </ng-container>
 
         <div class="footer-last-info">
           <ng-container *ngFor="let contacto of contactos$ | async">
             <div class="footer-info">
-              <fa-icon class="footer-info-icon" [icon]="faLocationDot"></fa-icon>
+              <fa-icon
+                class="footer-info-icon"
+                [icon]="faLocationDot"
+              ></fa-icon>
               <p>{{ contacto.direccion }}</p>
             </div>
 
@@ -99,15 +146,39 @@
         <div class="footer-last-documents">
           <div class="footer-docs">
             <img src="../assets/img_header.png" />
-            <p *ngIf="lang === 'es'" class="footer-title">{{ categoria.tituloEs }}</p>
-            <p *ngIf="lang === 'en'" class="footer-title">{{ categoria.tituloEn }}</p>
-            <p *ngIf="lang === 'xx'" class="footer-title">{{ categoria.tituloOtro }}</p>
+            <p *ngIf="lang === 'es'" class="footer-title">
+              {{ categoria.tituloEs }}
+            </p>
+            <p *ngIf="lang === 'en'" class="footer-title">
+              {{ categoria.tituloEn }}
+            </p>
+            <p *ngIf="lang === 'xx'" class="footer-title">
+              {{ categoria.tituloOtro }}
+            </p>
           </div>
           <ng-container *ngFor="let enlace of enlaces$ | async">
-            <div *ngIf="categoria.id === enlace.categoriaEnlaceEs!.id" class="footer-docs-group">
-              <a class="enlace" *ngIf="lang === 'es'" href="{{ enlace.enlaceEs }}">{{ enlace.tituloEs }}</a>
-              <a class="enlace" *ngIf="lang === 'en'" href="{{ enlace.enlaceEn }}">{{ enlace.tituloEn }}</a>
-              <a class="enlace" *ngIf="lang === 'xx'" href="{{ enlace.enlaceOtro }}">{{ enlace.tituloOtro }}</a>
+            <div
+              *ngIf="categoria.id === enlace.categoriaEnlaceEs!.id"
+              class="footer-docs-group"
+            >
+              <a
+                class="enlace"
+                *ngIf="lang === 'es'"
+                href="{{ enlace.enlaceEs }}"
+                >{{ enlace.tituloEs }}</a
+              >
+              <a
+                class="enlace"
+                *ngIf="lang === 'en'"
+                href="{{ enlace.enlaceEn }}"
+                >{{ enlace.tituloEn }}</a
+              >
+              <a
+                class="enlace"
+                *ngIf="lang === 'xx'"
+                href="{{ enlace.enlaceOtro }}"
+                >{{ enlace.tituloOtro }}</a
+              >
             </div>
           </ng-container>
         </div>

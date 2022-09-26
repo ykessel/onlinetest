@@ -1,310 +1,220 @@
-.contact-container {
-    height: 155vh;
-    background-color: white;
-}
+@import "./styles/nosotros.medium.scss";
 
-.contact-head {
-    display: flex;
-    margin-top: 2%;
-    justify-content: center;
-    flex-direction: row;
-    align-items: center;
-    height: 9%;
-}
-
-.left-img {
-    margin-top: 2%;
-    margin-right: 5%;
-    background: linear-gradient(
-        90deg,
-        #faa6a7 0%,
-        #b5e7ff 67.02%,
-        #ffdf95 98.96%
-    );
-    border-radius: 0px 50px 50px 0px;
-    width: 16%;
-    height: 65%;
-}
-
-.rigth-img {
-    height: 80%;
-    width: 90%;
-    background-repeat: no-repeat !important;
-    background: url(../../../../assets/grafica_der1.png);
-}
-
-.rigth-container {
-    display: flex;
-    justify-content: flex-end;
-    height: 100%;
-    width: 22%;
-}
-
-.center-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background: #fff8e7;
-    border-radius: 500px;
-    height: 90%;
-    width: 66%;
-    padding: 1rem 0;
-}
-
-.contact-tittle {
-    font-family: "Fredoka One" !important;
-    font-style: normal !important;
-    font-weight: 400 !important;
-    font-size: 35px !important;
-    line-height: 68px !important;
-    margin: 0 0 0 2% !important;
-    color: #353535 !important;
-}
-
-.chip-img {
-    width: 2%;
-}
-
-.contact-body {
-    height: 90%;
-}
-
-.initial-space {
-    height: 20%;
+.container {
     width: 100%;
-    display: flex;
-    padding-bottom: 10%;
-}
 
-.container-izq {
-    display: flex;
-    flex-grow: 1;
-}
-
-.container-der {
-    display: flex;
-    flex-grow: 1;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: flex-end;
-}
-
-.img-chip-izq {
-    position: absolute;
-    width: 129px;
-    height: 79px;
-    left: -6px;
-    top: 212px;
-    z-index: 2;
-    background-repeat: no-repeat !important;
-    background: url(../../../../assets//grafica_izq.png);
-}
-
-.img-chip-pink {
-    position: absolute;
-    width: 610px;
-    height: 109px;
-    left: -338px;
-    top: 257px;
-    z-index: 1;
-    background: rgba(250, 166, 167, 0.5);
-    border-radius: 500px;
-    transform: rotate(-180deg);
-}
-
-.img-chip-der {
-    width: 37%;
-    height: 47%;
-    background: linear-gradient(
-        90deg,
-        rgba(250, 166, 167, 0.5) 0%,
-        rgba(181, 231, 255, 0.5) 67.02%,
-        rgba(255, 223, 149, 0.5) 98.96%
-    );
-    border-radius: 0 500px 500px 0;
-    transform: rotate(-180deg);
-}
-
-.img-chip-menor {
-    margin-top: 2%;
-    width: 15%;
-    height: 30px;
-    background: linear-gradient(
-        90deg,
-        #faa6a7 0%,
-        #b5e7ff 67.02%,
-        #ffdf95 98.96%
-    );
-    border-radius: 0 500px 500px 0;
-    transform: rotate(-180deg);
-}
-
-.we-background {
-    height: 91%;
-    width: 100%;
-    background: linear-gradient(
-        90deg,
-        rgba(250, 166, 167, 0.3) 0%,
-        rgba(181, 231, 255, 0.3) 67.02%,
-        rgba(255, 223, 149, 0.3) 98.96%
-    );
-    border-radius: 0px;
-}
-
-.we-text-no {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    width: 55%;
-    height: 127%;
-    left: 23%;
-    top: 40%;
-    background: #ffffff;
-}
-
-.img-text {
-    height: 30%;
-    width: 100%;
-    padding: 5% 5% 0 5%;
-    background-repeat: no-repeat !important;
-    background: url(../../../../assets/Rectangle13.png);
-}
-
-.we-text-container {
-    width: 60%;
-}
-
-.nos-container {
-    h1 {
-        font-family: "Roboto";
-        font-style: normal;
-        font-weight: 700;
-        font-size: 32px;
-        line-height: 32px;
-        color: #353535;
-    }
-
-    h3 {
-        font-family: "Roboto";
-        font-style: normal;
-        font-weight: 600;
-        font-size: 22px;
-        line-height: 32px;
-        color: #353535;
-    }
-
-    figure {
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    * > img,
-    img {
-        width: 100%;
-    }
-
-    p {
-        font-family: "Roboto";
-        font-style: normal;
-        font-weight: 400;
-        margin-bottom: 6%;
-        font-size: 18px;
-        line-height: 32px;
-        color: #727272;
-    }
-}
-
-@media (max-width: 700px) {
-    .img-chip-izq,
-    .img-chip-pink,
-    .img-chip-der,
-    .img-chip-menor {
-        display: none;
-    }
-
-    .we-text-container {
-        width: 92% !important;
-    }
-
-    .contact-head {
-        margin-top: 4% !important;
-    }
-
-    .we-text-no {
+    .fondo {
+        display: flex;
+        height: 150%;
         position: absolute;
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        height: 127%;
-        left: 0%;
-        top: 56%;
-        background: #ffffff;
-    }
-
-    .center-content {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        background: #fff8e7;
-        border-radius: 500px;
-        height: 55% !important;
-        width: 90% !important;
-    }
-
-    .rigth-container {
-        display: flex;
-        justify-content: flex-end;
-        width: 340px !important;
-        height: 83px !important;
-        top: 218px !important;
-        right: 0px !important;
-        position: absolute !important;
-    }
-
-    .rigth-img {
-        height: 80%;
-        width: 57% !important;
-        background-repeat: no-repeat !important;
-        background: url(../../../../assets/grafica_der1.png);
-    }
-
-    .left-img {
-        top: 213px !important;
-        left: -93px !important;
-        position: absolute !important;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        top: 75vh;
         background: linear-gradient(
             90deg,
-            #faa6a7 0%,
-            #b5e7ff 67.02%,
-            #ffdf95 98.96%
+            rgba(250, 166, 167, 0.3) 0%,
+            rgba(181, 231, 255, 0.3) 67.02%,
+            rgba(255, 223, 149, 0.3) 98.96%
         );
-        border-radius: 0px 50px 50px 0px;
-        width: 225px !important;
-        height: 80px !important;
     }
 
-    .chip-img {
-        width: 4% !important;
+    .contenido {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+
+        .centro {
+            display: flex;
+            width: 100%;
+
+            .left-side {
+                display: flex;
+                width: 20%;
+                flex-direction: column;
+                align-items: flex-start;
+
+                .left-img {
+                    background: linear-gradient(
+                        90deg,
+                        #faa6a7 0%,
+                        #b5e7ff 67.02%,
+                        #ffdf95 98.96%
+                    );
+                    border-radius: 0 500px 500px 0;
+                    width: 14vw;
+                    height: 8vh;
+                    margin-top: 6vh;
+                }
+
+                .img-chip-izq {
+                    width: 129px;
+                    height: 79px;
+                    z-index: 2;
+                    background-repeat: no-repeat !important;
+                    background: url(../../../../assets//grafica_izq.png);
+                }
+
+                .img-chip-pink {
+                    width: 100%;
+                    margin-top: -5.5vh;
+                    height: 15vh;
+                    z-index: 1;
+                    background: rgba(250, 166, 167, 0.5);
+                    border-radius: 0 500px 500px 0;
+                }
+            }
+
+            .middle-side {
+                display: flex;
+                flex-direction: column;
+                width: 60%;
+
+                .contact-head2 {
+                    display: flex;
+                    flex-direction: row;
+                    height: 15vh;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: 8vh;
+
+                    .center-content2 {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+                        background: #fff8e7;
+                        border-radius: 500px;
+                        width: 100%;
+                        padding: 1rem 0;
+
+                        .chip-img {
+                            width: 1rem;
+                        }
+
+                        .contact-tittle {
+                            font-family: "Fredoka One" !important;
+                            font-style: normal !important;
+                            font-weight: 400 !important;
+                            font-size: 35px !important;
+                            line-height: 68px !important;
+                            margin: 0 0 0 2% !important;
+                            color: #353535 !important;
+                        }
+                    }
+                }
+
+                .nos-movil {
+                    display: none;
+                }
+
+                .we-text-no2 {
+                    display: flex;
+                    justify-content: center;
+                    background: #ffffff;
+                    padding-bottom: 25vh;
+
+                    .we-text-container-con {
+                        width: 60%;
+
+                        .nos-container {
+                            h1 {
+                                font-family: "Roboto";
+                                font-style: normal;
+                                font-weight: 700;
+                                font-size: 32px;
+                                line-height: 32px;
+                                color: #353535;
+                            }
+
+                            h3 {
+                                font-family: "Roboto";
+                                font-style: normal;
+                                font-weight: 600;
+                                font-size: 22px;
+                                line-height: 32px;
+                                color: #353535;
+                            }
+
+                            figure {
+                                margin-left: 0;
+                                margin-right: 0;
+                            }
+
+                            * > img,
+                            img {
+                                width: 100%;
+                            }
+
+                            p {
+                                font-family: "Roboto";
+                                font-style: normal;
+                                font-weight: 400;
+                                margin-bottom: 6%;
+                                font-size: 18px;
+                                line-height: 32px;
+                                color: #727272;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .right-side {
+                display: flex;
+                width: 20%;
+                flex-direction: column;
+                align-items: flex-end;
+
+                .rigth-img2 {
+                    width: 95%;
+                    // height: 83px;
+                    margin-top: 4vh;
+                    object-fit: cover;
+                    object-position: 20px;
+                }
+
+                .img-chip-der {
+                    width: 100%;
+                    margin-top: 6vh;
+                    height: 15vh;
+
+                    background: linear-gradient(
+                        90deg,
+                        rgba(250, 166, 167, 0.5) 0%,
+                        rgba(181, 231, 255, 0.5) 67.02%,
+                        rgba(255, 223, 149, 0.5) 98.96%
+                    );
+                    border-radius: 0 500px 500px 0;
+                    transform: rotate(-180deg);
+                }
+
+                .img-chip-menor {
+                    margin-top: 4%;
+                    width: 19vh;
+                    height: 30px;
+                    background: linear-gradient(
+                        90deg,
+                        #faa6a7 0%,
+                        #b5e7ff 67.02%,
+                        #ffdf95 98.96%
+                    );
+                    border-radius: 0 500px 500px 0;
+                    transform: rotate(-180deg);
+                }
+            }
+        }
     }
 }
 
-@media only screen and (min-width: 1440px) {
-    .we-text-no {
-        top: 34% !important;
-    }
-
-    .left-img {
-        margin-right: 11% !important;
-        width: 11% !important;
-        height: 45% !important;
-    }
-
-    .img-chip-izq {
-        top: 264px !important;
+@media only screen and (min-width: 1440px) and (max-width: 1920px) {
+    .center-content2 {
+        padding: 2rem 0 !important;
     }
     .img-chip-pink {
-        top: 309px !important;
+        margin-top: -3.5vh !important;
     }
+
+    .fondo {
+    top: 55vh !important}
 }
