@@ -47,11 +47,8 @@
     margin-left: 0;
 
     .servicios-rect {
-      width: 40%;
-      height: 70px;
-      left: 0px;
-      top: 401px;
-
+      width: 62%;
+      height: 64px;
       background: linear-gradient(
         90deg,
         #faa6a7 0%,
@@ -59,10 +56,6 @@
         #ffdf95 98.96%
       );
       border-radius: 0px 50px 50px 0px;
-    }
-
-    .left-img {
-      width: 68px;
     }
   }
 
@@ -116,13 +109,16 @@
 
   .right {
     width: 20%;
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-end;
 
     .right-img {
-      position: absolute;
-      width: 194px;
+      width: 286px;
       height: 83px;
-      right: 0;
-      margin-top: 18vh;
+      margin-top: 16vh;
+      object-fit: cover;
+      object-position: 41px;
     }
   }
 }

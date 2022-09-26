@@ -14,7 +14,7 @@ export class SanitazeHtmlPipe implements PipeTransform {
     if(typeof(v) === 'string') {
       return this._sanitizer.bypassSecurityTrustHtml(v);
     } else {
-      console.error('Sanitaze Html solo recibe contenido de tipo string');
+      return this._sanitizer.bypassSecurityTrustHtml('<p style="color: crimson;">Esto es un error - contenido no es un string</p>');
     }
   }
 }
