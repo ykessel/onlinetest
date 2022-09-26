@@ -6,7 +6,6 @@ import { getIdiomas } from 'src/app/store/idiomas/idiomas.actions';
 import { selectLang } from 'src/app/store/system/system.selectors';
 import { SetLang } from 'src/app/store/system/system.actions';
 import {
-  HashLocationStrategy,
   Location,
   LocationStrategy,
   PathLocationStrategy,
@@ -65,6 +64,5 @@ export class NavComponent implements OnInit {
   changeLang(lang: string) {
     console.log(lang);
     this.store.dispatch(SetLang({ lang }));
-    // this.commonService.changeData(value);
   }
 }
