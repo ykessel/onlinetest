@@ -1,5 +1,9 @@
-<h1 mat-dialog-title>Confirmacion</h1>
-<div class="text-content" mat-dialog-content>Sus datos han sido enviados correctamente </div>
+<h1 mat-dialog-title>
+  {{ lang === "es" ? "Confirmación" : "Confirmation" }}
+</h1>
+<div class="text-content" mat-dialog-content>{{ data.message }}</div>
 <div mat-dialog-actions>
-  <button class="form-button" mat-button mat-dialog-close>Cerrar</button>
+  <button class="form-button" mat-button mat-dialog-close>
+    {{ lang === "es" ? "Cerrar" : "Close" }}
+  </button>
 </div>

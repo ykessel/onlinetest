@@ -73,7 +73,7 @@
                 .contact-head2 {
                     display: flex;
                     flex-direction: row;
-                    height: 15vh;
+                    height: 17vh;
                     justify-content: center;
                     align-items: center;
                     margin-bottom: 8vh;
@@ -86,7 +86,8 @@
                         background: #fff8e7;
                         border-radius: 500px;
                         width: 100%;
-                        padding: 1rem 0;
+                        height: 100%;
+                        // padding: 1rem 0;
 
                         .chip-img {
                             width: 1rem;

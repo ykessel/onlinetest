@@ -96,7 +96,7 @@
             type="text"
             matInput
             formControlName="empresa"
-            placeholder="Empresa*"
+            [placeholder]="lang === 'es' ? 'Empresa*' : 'Company*'"
             [class.we-input-error]="empresa?.invalid && (empresa?.dirty || empresa?.touched) && empresa?.errors?.['required']"
             class="we-input"
           />
@@ -114,7 +114,7 @@
             type="text"
             matInput
             formControlName="numeroCarnet"
-            placeholder="No Carnet*"
+            [placeholder]="lang === 'es' ? 'No Carnet*' : 'ID Number*'"
             [class.input-error]="numeroCarnet?.invalid && (numeroCarnet?.dirty || numeroCarnet?.touched) && (numeroCarnet?.errors?.['required'] || numeroCarnet?.errors?.['minlength'])"
             class="we-input"
           />
@@ -144,7 +144,7 @@
             type="text"
             matInput
             formControlName="paginaWeb"
-            placeholder="Pagina Web"
+            [placeholder]="lang === 'es' ? 'Pagina Web' : 'Web Site'"
             [class.input-error]="paginaWeb?.invalid && (paginaWeb?.dirty || paginaWeb?.touched) && paginaWeb?.errors?.['pattern']"
             class="we-input"
           />
@@ -165,7 +165,7 @@
             type="text"
             matInput
             formControlName="nombre"
-            placeholder="Nombre*"
+            [placeholder]="lang === 'es' ? 'Nombre*' : 'Name'"
             [class.input-error]="nombre?.invalid && (nombre?.dirty || nombre?.touched) && nombre?.errors?.['required']"
             class="we-input"
           />
@@ -184,7 +184,7 @@
             type="text"
             matInput
             formControlName="apellidos"
-            placeholder="Apellidos*"
+            [placeholder]="lang === 'es' ? 'Apellidos*' : 'Surnames*'"
             [class.input-error]="apellidos?.invalid && (apellidos?.dirty || apellidos?.touched) && apellidos?.errors?.['required']"
             class="we-input"
           />
@@ -205,7 +205,7 @@
             type="text"
             matInput
             formControlName="telefono"
-            placeholder="Teléfono*"
+            [placeholder]="lang === 'es' ? 'Teléfono*' : 'Phone*'"
             [class.input-error]="telefono?.invalid && (telefono?.dirty || telefono?.touched) && (telefono?.errors?.['required'] || telefono?.errors?.['minlength'])"
             class="we-input"
           />
@@ -232,7 +232,7 @@
             type="text"
             matInput
             formControlName="correo"
-            placeholder="Email*"
+            [placeholder]="lang === 'es' ? 'Correo*' : 'Email*'"
             type="email"
             [class.input-error]="correo?.invalid && (correo?.dirty || correo?.touched) && correo?.errors?.['required']"
             class="we-input"
@@ -258,7 +258,21 @@
               />
             </div>
             <div class="we-p-container">
-              <p class="we-policy-p">
+              <p class="we-policy-p" *ngIf="lang === 'es'">
+                He leído y acepto la
+                <a href="#" class="we-link">Política de Privacidad</a>
+                y
+                <a href="#" class="we-link">Condiciones generales de BIPAY</a>
+              </p>
+
+              <p class="we-policy-p" *ngIf="lang === 'en'">
+                I have read and accept the
+                <a href="#" class="we-link">Privacy Policy</a>
+                and
+                <a href="#" class="we-link">General Conditions of BIPAY</a>
+              </p>
+
+              <p class="we-policy-p" *ngIf="lang === 'xx'">
                 He leído y acepto la
                 <a href="#" class="we-link">Política de Privacidad</a>
                 y
@@ -273,9 +287,10 @@
                 class="we-alert we-alert-danger"
               >
                 <div *ngIf="terminosCondiciones?.errors?.['required']">
-                  <p *ngIf="lang === 'en'">This field cannot be empty.</p>
-                  <p *ngIf="lang === 'es'">Este campo no pude estar vacío.</p>
-                  <!-- Este campo debe estar seleccionado -->
+                  <p *ngIf="lang === 'en'">This field must be selected.</p>
+                  <p *ngIf="lang === 'es'">
+                    Este campo debe estar seleccionado.
+                  </p>
                 </div>
               </div>
             </div>
@@ -290,15 +305,22 @@
             </div>
             <div class="we-p-container">
               <p class="we-policy-p">
-                Acepto recibir información comercial, incluso por medios
-                electrónicos.
+                {{
+                  lang === "es"
+                    ? "Acepto recibir información comercial, incluso por medios electrónicos."
+                    : "I agree to receive commercial information, including by electronic means."
+                }}
               </p>
             </div>
           </div>
           <div class="we-button-container">
             <!-- [disabled]="!contactoForm.valid" -->
             <button mat-button type="submit" class="we-form-button">
-              Enviar
+              {{
+                lang === "es"
+                  ? "Enviar"
+                  : "Send"
+              }}
             </button>
           </div>
         </div>
