@@ -6,6 +6,14 @@
     margin-bottom: 10vh;
 }
 
+.we-p-initial-mobile{
+    display: none;
+}
+
+.we-img-container{
+    display: none;
+}
+
 .we-contact-head {
     display: flex;
     height: 9%;
@@ -515,6 +523,11 @@
         height: 80px !important;
     }
 
+    .p-container-header{
+        display: none;
+        // height: 50%;
+    }
+
     .we-center-content-contact {
         display: flex;
         flex-direction: row;
@@ -537,7 +550,7 @@
     // }
 
     .we-contact-container {
-        height: 133vh !important;
+        height: 156vh !important;
         background-color: white !important;
     }
 
@@ -569,9 +582,13 @@
     .we-chip-img {
         width: 4% !important;
     }
-
-    .we-p-initial {
-        margin-bottom: 6vh;
+    
+    .we-p-initial-mobile {
+        display: flex;
+        justify-content: center;
+        margin-top: 3%;
+        word-break: break-word;
+        padding: 0px 10% 10%;
 
         p {
             font-family: "Roboto";
@@ -584,13 +601,46 @@
         }
     }
 
+    .we-img-container{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .we-rigth-img-mobile{
+        background: linear-gradient(
+            90deg,
+            #faa6a7 0%,
+            #b5e7ff 67.02%,
+            #ffdf95 98.96%
+        );
+        border-radius: 0px 50px 50px 0px;
+        // width: 225px !important;
+        height: 80px !important;
+        width: 40% !important;
+    }
+
+    .we-left-img{
+        display: none;
+    }
+
+    .we-rigth-img{
+        display: none;
+    }
+
+    .we-left-img-mobile{
+        height: 72px;
+        width: 53% !important;
+        background-repeat: no-repeat !important;
+        background: url(../../../../assets/grafica_der1.png);
+    }
+
     .we-form-container {
         display: flex;
         flex-direction: column;
         position: absolute;
         left: 8%;
         gap: 16%;
-        top: 5% !important;
+        top: 45% !important;
         width: 83% !important;
         height: 103%;
     }
@@ -602,6 +652,29 @@
         width: 45% !important;
         background-repeat: no-repeat !important;
         background: url(../../../../assets/grafica_der1.png);
+    }
+
+    .p-container-header{
+        display: none;
+        // height: 50%;
+    }
+
+    .we-p-initial-mobile {
+        display: flex;
+        justify-content: center;
+        margin-top: 3%;
+        word-break: break-word;
+        padding: 0px 10% 10%;
+
+        p {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+            color: #727272;
+        }
     }
 
     .we-contact-container {
@@ -624,13 +697,14 @@
         box-shadow: 0px 0px 32px rgb(0 0 0 / 15%);
         border-radius: 48px;
     }
+
     .we-form-container {
         display: flex;
         flex-direction: column;
         position: absolute;
         left: 8%;
         gap: 23%;
-        top: 4% !important;
+        top: 23% !important;
         width: 83% !important;
         height: 100%;
     }
