@@ -52,8 +52,8 @@
     flex-wrap: wrap;
     width: 80% !important;
     gap: 0px !important;
-    height: auto !important;
-    margin-top: -4em !important;
+    // height: auto !important;
+    // margin-top: -4em !important;
 
     p {
       margin: 0.8rem !important;
@@ -88,8 +88,8 @@
       justify-content: center;
 
       .img-footer {
-        width: 12vh;
-        max-height: 80px;
+        // width: 12vh;
+        // max-height: 80px;
       }
     }
   }
@@ -98,8 +98,20 @@
   margin-top: 0 !important;
 }
 .footer-call-tittle {
-  gap: 0!important;
+  gap: 0 !important;
 }
+
+
+.bottom-line {
+    margin-top: 0 !important;
+}
+
+
+.curved-container .carrusel-2-third-line-text-footer {
+    font-size: 1.6rem !important;
+    width: 80% !important;
+}
+
 }
 
 // @media only screen and (max-width: 450px) {

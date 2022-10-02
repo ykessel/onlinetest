@@ -1,10 +1,15 @@
 <div class="footer" ngsReveal>
   <div class="footer-comercios-container">
-    <img
-      src="../../../../assets/curva1.png"
-      [class.just-home]="location.path() === ''"
-      class="bottom-line"
-    />
+    <div  class="curved-container">
+      <p [class.just-home]="location.path() === ''" class="carrusel-2-third-line-text-footer">
+        Visite los comercios que utilizan Bipay
+      </p>
+      <img
+        src="../../../../assets/curva1.png"
+        [class.just-home]="location.path() === ''"
+        class="bottom-line"
+      />
+    </div>
 
     <div class="footer-comercios">
       <div class="logos-footer">
@@ -59,7 +64,9 @@
               [innerHTML]="seccion.contenidoEs"
             ></div>
             <div class="footer-contactos-boton">
-              <a mat-button routerLink="contactos">Inicia ya</a>
+              <a mat-button routerLink="contactos">
+                {{ lang === "es" ? "Inicia ya" : "Start now" }}
+              </a>
             </div>
           </ng-container>
         </ng-container>

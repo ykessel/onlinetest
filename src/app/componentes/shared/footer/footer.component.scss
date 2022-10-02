@@ -1,9 +1,8 @@
-
 @import "./styles/footer.mediun.scss";
 @import "./styles/footer.large.scss";
 
 .footer {
-  margin-top: -11px;
+  margin-top: -20vh;
   width: 100%;
 
   .footer-comercios-container {
@@ -12,74 +11,72 @@
     width: 100%;
     margin-top: -8vh;
 
-  .footer-comercios {
-    width: 94%;
-    padding: 3%;
-    height: 576px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(180deg, #901616 0%, #5d0303 100%);
-
-
-    .logos-footer {
+    .footer-comercios {
+      width: 94%;
+      padding: 3%;
+      height: 576px;
       display: flex;
-      width: 100%;
-      // height: 100%;
-      flex-wrap: wrap;
+      flex-direction: column;
       justify-content: center;
-      align-content: flex-start;
-    }
+      align-items: center;
+      background: linear-gradient(180deg, #901616 0%, #5d0303 100%);
 
-    .logos-group-1 {
-      display: flex;
-      width: 100%;
-      gap: 5%;
-      margin-bottom: 84px;
-
-      .img-section1 {
+      .logos-footer {
         display: flex;
-        justify-content: space-between;
-        width: 50%;
-        // gap: 5%;
+        width: 100%;
+        // height: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: flex-start;
+        gap: 55px;
       }
 
-      .img-section2 {
+      .logos-group-1 {
         display: flex;
-        justify-content: space-between;
-        width: 50%;
-        // gap: 5%;
+        width: 100%;
+        gap: 5%;
+        margin-bottom: 84px;
+
+        .img-section1 {
+          display: flex;
+          justify-content: space-between;
+          width: 50%;
+          // gap: 5%;
+        }
+
+        .img-section2 {
+          display: flex;
+          justify-content: space-between;
+          width: 50%;
+          // gap: 5%;
+        }
       }
-
-    }
-    .logos-group-2 {
-      display: flex;
-      width: 100%;
-      gap: 5%;
-
-      .img-section1 {
+      .logos-group-2 {
         display: flex;
-        justify-content: space-between;
-        width: 50%;
-        // gap: 5%;
-      }
+        width: 100%;
+        gap: 5%;
 
-      .img-section2 {
-        display: flex;
-        width: 50%;
-        justify-content: space-between;
-        // gap: 5%;
-      }
-      .img-footer {
-        height: 63%;
-        max-height: 139px;
-        width: 25%;
+        .img-section1 {
+          display: flex;
+          justify-content: space-between;
+          width: 50%;
+          // gap: 5%;
+        }
+
+        .img-section2 {
+          display: flex;
+          width: 50%;
+          justify-content: space-between;
+          // gap: 5%;
+        }
+        .img-footer {
+          height: 63%;
+          max-height: 139px;
+          width: 25%;
+        }
       }
     }
   }
-  }
-
 
   .footer-contactos {
     width: 100%;
@@ -88,6 +85,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: -2px;
 
     .bottom-line {
       width: 100%;
@@ -180,13 +178,13 @@
     }
   }
 
-  .footer-call-number{
+  .footer-call-number {
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  .footer-call-tittle{
+  .footer-call-tittle {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -226,7 +224,7 @@
       border-radius: 100px;
       justify-content: center;
       align-self: center;
-      margin-top: -2.5rem;
+      margin-top: -42px;
       margin-bottom: 10vh;
 
       img {
@@ -291,7 +289,7 @@
         .footer-last-info {
           display: flex;
           flex-direction: column;
-          gap:16px;
+          gap: 16px;
 
           .footer-info {
             display: flex;
@@ -355,7 +353,6 @@
               color: white;
             }
           }
-
         }
       }
     }
@@ -393,7 +390,6 @@
         }
       }
     }
-
   }
 }
 
@@ -401,14 +397,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 17%;
-  margin-right: 36px;
-  margin-bottom: 64px;
+  width: 13.63%;
+
+  img {
+    width: 100%;
+    object-fit: scale-down;
+  }
 }
 
 .bottom-line {
   display: none;
   width: 100%;
+  margin-top: -36px;
 }
 
 .bottom-line-2 {
@@ -417,4 +417,29 @@
 
 .just-home {
   display: block !important;
+}
+
+.curved-container {
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: -1px;
+
+  .carrusel-2-third-line-text-footer {
+    display: none;
+    font-family: "Fredoka One";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 36px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #5d0303;
+    height: 72px;
+    width: 40%;
+    margin: 0;
+  }
 }

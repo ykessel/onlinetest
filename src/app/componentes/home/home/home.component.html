@@ -117,6 +117,7 @@
     <div class="up"></div>
     <div class="down"></div>
   </div>
+  <div style="width: 100vw; border-top: 2px dashed #d9d9d9; margin: 35px 0;"></div>
 
   <div class="carrusel-part2" ngsReveal>
     <!-- Seccion de metodos de pagos (Info header) -->
@@ -156,15 +157,16 @@
       <div class="second-rect"></div>
     </div>
 
-    <!-- Seccion de metodos de pagos (Imagenes) -->
-    <div class="carrusel-part2-third-line">
+
+    <!-- <div class="carrusel-part2-third-line">
       <ng-container *ngFor="let pago of pagos$ | async">
         <div style="height: 133px; border-left: 2px dashed #d9d9d9"></div>
         <img src="{{ pago.logo }}" class="small-card" />
       </ng-container>
       <div style="height: 133px; border-left: 2px dashed #d9d9d9"></div>
-    </div>
+    </div> -->
 
+<!-- Seccion de metodos de pagos (Imagenes) -->
     <div class="car-container-movil">
              <button
           mat-button
@@ -196,6 +198,7 @@
                 <div class="small-card">
                   <img src="{{ pago.logo }}" />
                 </div>
+                 <div class="vertical-dash-line"></div>
               </div>
             </ng-template>
           </ng-container>
@@ -222,7 +225,7 @@
         </button>
     </div>
   </div>
-
+  <div style="width: 100vw; border-top: 2px dashed #d9d9d9; margin: 35px 0;"></div>
   <div class="carrusel-2" ngsReveal>
     <div class="carrusel-2-first-line">
       <img class="group-1" src="../../../../assets/Group.png" alt="Group 1" />
@@ -341,9 +344,12 @@
     </div>
 
     <div class="carrusel-2-third-line">
-      <div class="curved-container">
-        <ng-container *ngFor="let seccion of secciones$ | async">
-          <ng-container *ngIf="seccion.id === 20">
+      <!-- <div class="curved-container"> -->
+         <!--    <p class="carrusel-2-third-line-text-footer">
+              Visite los comercios que utilizan Bipay
+            </p> -->
+        <!-- <ng-container *ngFor="let seccion of secciones$ | async">
+          <ng-container *ngIf="seccion.id === 20">         
             <p *ngIf="lang === 'es'" class="carrusel-2-third-line-text">
               {{ seccion.tituloEs }}
             </p>
@@ -354,8 +360,8 @@
               {{ seccion.tituloOtro }}
             </p>
           </ng-container>
-        </ng-container>
-      </div>
+        </ng-container> -->
+      <!-- </div> -->
       <!-- <img src="../../../../assets/curva1.png" class="bottom-line" /> -->
     </div>
   </div>
