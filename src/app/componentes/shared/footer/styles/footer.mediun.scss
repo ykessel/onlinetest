@@ -12,6 +12,10 @@
     flex-direction: column;
     margin-left: 4% !important;
     margin-right: 4% !important;
+
+    .footer-des-cat {
+      flex-direction: column;
+    }
   }
 
   .footer-last-group {
@@ -30,6 +34,31 @@
   .footer-last-description {
     width: 100% !important;
     margin-bottom: 2rem;
+
+    .footer-last-info-movil {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      .footer-info {
+        display: flex;
+
+        .footer-info-icon {
+          color: white;
+          font-size: 1.6em;
+          padding-right: 0.6em;
+        }
+
+        p {
+          font-family: "Roboto";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          color: #ffffff;
+        }
+      }
+    }
   }
 
   .footer-contactos-left,
@@ -56,7 +85,7 @@
     // margin-top: -4em !important;
 
     p {
-      margin: 0.8rem !important;
+      margin: 0 0.8rem !important;
     }
   }
 
@@ -68,14 +97,14 @@
     display: flex;
     justify-content: center !important;
     margin-top: 3rem !important;
+
+    .footer-last-info {
+      display: none !important;
+    }
   }
 
   .footer-last-documents {
     margin-bottom: 2rem;
-  }
-
-  .footer-last-info {
-    margin-top: 2rem;
   }
 
   .logos-footer {
@@ -86,32 +115,24 @@
       display: flex;
       width: 30%;
       justify-content: center;
-
-      .img-footer {
-        // width: 12vh;
-        // max-height: 80px;
-      }
     }
   }
 
   .footer-comercios-container {
-  margin-top: 0 !important;
-}
-.footer-call-tittle {
-  gap: 0 !important;
-}
-
-
-.bottom-line {
     margin-top: 0 !important;
-}
+  }
+  .footer-call-tittle {
+    gap: 0 !important;
+  }
 
+  .bottom-line {
+    margin-top: 0 !important;
+  }
 
-.curved-container .carrusel-2-third-line-text-footer {
+  .curved-container .carrusel-2-third-line-text-footer {
     font-size: 1.6rem !important;
     width: 80% !important;
-}
-
+  }
 }
 
 // @media only screen and (max-width: 450px) {

@@ -127,6 +127,28 @@
               </div>
             </ng-container>
           </ng-container>
+
+          <div class="footer-last-info-movil">
+            <ng-container *ngFor="let contacto of contactos$ | async">
+              <div class="footer-info">
+                <fa-icon
+                  class="footer-info-icon"
+                  [icon]="faLocationDot"
+                ></fa-icon>
+                <p>{{ contacto.direccion }}</p>
+              </div>
+
+              <div class="footer-info">
+                <fa-icon class="footer-info-icon" [icon]="faEnvelope"></fa-icon>
+                <p>{{ contacto.correo }}</p>
+              </div>
+
+              <div class="footer-info">
+                <fa-icon class="footer-info-icon" [icon]="faPhone"></fa-icon>
+                <p>{{ contacto.telefono }}</p>
+              </div>
+            </ng-container>
+          </div>
         </div>
 
         <ng-container *ngFor="let categoria of categorias$ | async">
