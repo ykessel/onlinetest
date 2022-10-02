@@ -4,7 +4,7 @@
 .mat-toolbar {
   background-color: white !important;
   margin-top: 1%;
-  margin-bottom: 2%;
+  margin-bottom: 1%;
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -220,4 +220,11 @@ section {
 
 .active {
   color: #353535;
+}
+
+
+@media only screen and (min-width: 1440px) {
+  .mat-toolbar {
+    margin-bottom: 2% !important;
+  }
 }

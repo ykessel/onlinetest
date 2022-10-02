@@ -259,32 +259,88 @@
       margin-top: 5%;
       justify-content: center;
       gap: 2%;
+      flex-direction: column;
 
-      .footer-last-description {
+      .footer-des-cat {
         display: flex;
-        flex-direction: column;
-        width: 35%;
-        margin-bottom: 40px;
+        gap: 3%;
 
-        img {
-          width: 115px;
-          height: 54px;
-          padding-bottom: 40px;
-        }
-
-        p {
-          font-family: "Roboto";
-          font-style: normal;
-          font-weight: 400;
-          font-size: 16px;
-          line-height: 24px;
-          color: #ca8383;
-          margin: 0;
-        }
-
-        .footer-description {
+        .footer-last-description {
+          display: flex;
+          flex-direction: column;
+          width: 35%;
           margin-bottom: 40px;
+
+          img {
+            width: 115px;
+            height: 54px;
+            padding-bottom: 40px;
+          }
+
+          p {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: #ca8383;
+            margin: 0;
+          }
+
+          .footer-description {
+            margin-bottom: 40px;
+          }
+
+
         }
+
+        .footer-last-documents {
+          display: flex;
+          flex-direction: column;
+          gap: 4%;
+
+          .footer-docs {
+            display: flex;
+
+            img {
+              width: 2vh;
+              height: 3.6vh;
+              margin-right: 1vh;
+            }
+
+            .footer-title {
+              font-family: "Roboto";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 20px;
+              line-height: 24px;
+              color: #f4a800;
+            }
+          }
+
+          .footer-docs-group {
+            margin-left: 3vh;
+
+            .enlace {
+              font-family: "Roboto";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 24px;
+              color: #fcb9b9;
+              text-decoration: none;
+
+              &:hover {
+                color: white;
+              }
+            }
+          }
+        }
+      }
+
+      .footer-social {
+        display: flex;
+        justify-content: space-between;
 
         .footer-last-info {
           display: flex;
@@ -293,7 +349,6 @@
 
           .footer-info {
             display: flex;
-            align-items: center;
 
             .footer-info-icon {
               color: white;
@@ -311,48 +366,10 @@
             }
           }
         }
-      }
 
-      .footer-last-documents {
-        display: flex;
-        flex-direction: column;
-        gap: 4%;
-
-        .footer-docs {
+        .footer-social-container {
           display: flex;
-
-          img {
-            width: 2vh;
-            height: 3.6vh;
-            margin-right: 1vh;
-          }
-
-          .footer-title {
-            font-family: "Roboto";
-            font-style: normal;
-            font-weight: 400;
-            font-size: 20px;
-            line-height: 24px;
-            color: #f4a800;
-          }
-        }
-
-        .footer-docs-group {
-          margin-left: 3vh;
-
-          .enlace {
-            font-family: "Roboto";
-            font-style: normal;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 24px;
-            color: #fcb9b9;
-            text-decoration: none;
-
-            &:hover {
-              color: white;
-            }
-          }
+  align-self: flex-end;
         }
       }
     }
@@ -368,13 +385,6 @@
         background-color: #823c3c;
         margin-top: 44px;
         margin-bottom: 34px;
-      }
-
-      .footer-social {
-        display: flex;
-        justify-content: flex-end;
-        margin-bottom: 2%;
-        margin-top: -3rem;
       }
 
       .footer-last-legal {

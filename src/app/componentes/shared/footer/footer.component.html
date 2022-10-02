@@ -97,35 +97,82 @@
     </div>
 
     <div class="footer-container" ngsReveal>
-      <div class="footer-last-description">
-        <img src="../assets/logo-footer.png" />
 
-        <ng-container *ngFor="let seccion of secciones$ | async">
-          <ng-container *ngIf="seccion.id == 22">
-            <div *ngIf="seccion.contenidoEs !== null">
-              <div
-                *ngIf="lang === 'es'"
-                class="footer-description"
-                [innerHTML]="seccion.contenidoEs"
-              ></div>
-            </div>
-            <div *ngIf="seccion.contenidoEn !== null">
-              <div
-                *ngIf="lang === 'en'"
-                class="footer-description"
-                [innerHTML]="seccion.contenidoEn"
-              ></div>
-            </div>
-            <div *ngIf="seccion.contenidoOtro !== null">
-              <div
-                *ngIf="lang === 'xx'"
-                class="footer-description"
-                [innerHTML]="seccion.contenidoOtro"
-              ></div>
-            </div>
+      <div class="footer-des-cat" >
+        <div class="footer-last-description">
+          <img src="../assets/logo-footer.png" />
+
+          <ng-container *ngFor="let seccion of secciones$ | async">
+            <ng-container *ngIf="seccion.id == 22">
+              <div *ngIf="seccion.contenidoEs !== null">
+                <div
+                  *ngIf="lang === 'es'"
+                  class="footer-description"
+                  [innerHTML]="seccion.contenidoEs"
+                ></div>
+              </div>
+              <div *ngIf="seccion.contenidoEn !== null">
+                <div
+                  *ngIf="lang === 'en'"
+                  class="footer-description"
+                  [innerHTML]="seccion.contenidoEn"
+                ></div>
+              </div>
+              <div *ngIf="seccion.contenidoOtro !== null">
+                <div
+                  *ngIf="lang === 'xx'"
+                  class="footer-description"
+                  [innerHTML]="seccion.contenidoOtro"
+                ></div>
+              </div>
+            </ng-container>
           </ng-container>
-        </ng-container>
+        </div>
 
+        <ng-container *ngFor="let categoria of categorias$ | async">
+          <div class="footer-last-documents">
+            <div class="footer-docs">
+              <img src="../assets/img_header.png" />
+              <p *ngIf="lang === 'es'" class="footer-title">
+                {{ categoria.tituloEs }}
+              </p>
+              <p *ngIf="lang === 'en'" class="footer-title">
+                {{ categoria.tituloEn }}
+              </p>
+              <p *ngIf="lang === 'xx'" class="footer-title">
+                {{ categoria.tituloOtro }}
+              </p>
+            </div>
+            <ng-container *ngFor="let enlace of enlaces$ | async">
+              <div
+                *ngIf="categoria.id === enlace.categoriaEnlaceEs!.id"
+                class="footer-docs-group"
+              >
+                <a
+                  class="enlace"
+                  *ngIf="lang === 'es'"
+                  href="{{ enlace.enlaceEs }}"
+                  >{{ enlace.tituloEs }}</a
+                >
+                <a
+                  class="enlace"
+                  *ngIf="lang === 'en'"
+                  href="{{ enlace.enlaceEn }}"
+                  >{{ enlace.tituloEn }}</a
+                >
+                <a
+                  class="enlace"
+                  *ngIf="lang === 'xx'"
+                  href="{{ enlace.enlaceOtro }}"
+                  >{{ enlace.tituloOtro }}</a
+                >
+              </div>
+            </ng-container>
+          </div>
+        </ng-container>
+      </div>
+
+      <div class="footer-social">
         <div class="footer-last-info">
           <ng-container *ngFor="let contacto of contactos$ | async">
             <div class="footer-info">
@@ -147,55 +194,13 @@
             </div>
           </ng-container>
         </div>
-      </div>
-
-      <ng-container *ngFor="let categoria of categorias$ | async">
-        <div class="footer-last-documents">
-          <div class="footer-docs">
-            <img src="../assets/img_header.png" />
-            <p *ngIf="lang === 'es'" class="footer-title">
-              {{ categoria.tituloEs }}
-            </p>
-            <p *ngIf="lang === 'en'" class="footer-title">
-              {{ categoria.tituloEn }}
-            </p>
-            <p *ngIf="lang === 'xx'" class="footer-title">
-              {{ categoria.tituloOtro }}
-            </p>
-          </div>
-          <ng-container *ngFor="let enlace of enlaces$ | async">
-            <div
-              *ngIf="categoria.id === enlace.categoriaEnlaceEs!.id"
-              class="footer-docs-group"
-            >
-              <a
-                class="enlace"
-                *ngIf="lang === 'es'"
-                href="{{ enlace.enlaceEs }}"
-                >{{ enlace.tituloEs }}</a
-              >
-              <a
-                class="enlace"
-                *ngIf="lang === 'en'"
-                href="{{ enlace.enlaceEn }}"
-                >{{ enlace.tituloEn }}</a
-              >
-              <a
-                class="enlace"
-                *ngIf="lang === 'xx'"
-                href="{{ enlace.enlaceOtro }}"
-                >{{ enlace.tituloOtro }}</a
-              >
-            </div>
-          </ng-container>
+        <div class="footer-social-container">
+          <bipay-sociales></bipay-sociales>
         </div>
-      </ng-container>
+      </div>
     </div>
 
     <div class="footer-last-group" ngsReveal>
-      <div class="footer-social">
-        <bipay-sociales></bipay-sociales>
-      </div>
       <mat-divider></mat-divider>
       <div class="footer-last-legal">
         <p>Copyrights 2021 por Bipay. Todos los derechos reservados</p>
