@@ -1,78 +1,30 @@
-<div class="we-contact-container">
-  <div class="we-contact-head">
-    <!-- <ng-container *ngFor="let seccion of secciones$ | async">
-      <ng-container *ngIf="seccion.id == 16">
-        <div *ngIf="lang === 'es'" [innerHtml]="seccion.contenidoEs" class="we-p-initial"></div>
-
-        <div *ngIf="lang === 'en'" [innerHtml]="seccion.contenidoEn" class="we-p-initial"></div>
-
-        <div *ngIf="lang === 'xx'" [innerHtml]="seccion.contenidoOtro" class="we-p-initial"></div>
-      </ng-container>
-    </ng-container> -->
-    <div class="we-left-img"></div>
-
-    <div class="we-center-content-contact">
-      <img class="we-chip-img" src="../../../../assets/img_header.png" />
-      <ng-container *ngFor="let seccion of secciones$ | async">
-        <ng-container *ngIf="seccion.id == 16">
-          <p *ngIf="lang === 'es'" class="we-contact-title">
-            {{ seccion.tituloEs }}
-          </p>
-          <p *ngIf="lang === 'en'" class="we-contact-title">
-            {{ seccion.tituloEn }}
-          </p>
-          <p *ngIf="lang === 'xx'" class="we-contact-title">
-            {{ seccion.tituloOtro }}
-          </p>
-        </ng-container>
-      </ng-container>
-    </div>
-
-    <div class="we-rigth-container">
-      <div class="we-rigth-img"></div>
-    </div>
-  </div>
-
-  <ng-container *ngFor="let seccion of secciones$ | async">
-    <ng-container *ngIf="seccion.id == 16">
-      <div *ngIf="lang === 'es'" [innerHtml]="seccion.contenidoEs" class="we-p-initial-mobile"></div>
-
-      <div *ngIf="lang === 'en'" [innerHtml]="seccion.contenidoEn" class="we-p-initial-mobile"></div>
-
-      <div *ngIf="lang === 'xx'" [innerHtml]="seccion.contenidoOtro" class="we-p-initial-mobile"></div>
-    </ng-container>
-  </ng-container>
-
-  <div class="we-img-container">
-    <div class="we-rigth-img-mobile"></div>
-    <div class="we-left-img-mobile"></div>
-  </div>
-
-  <div class="we-contact-body">
-    <div class="we-initial-space">
-      <div class="we-seccion-img">
-        <div class="we-container-izq">
-          <div class="we-img-chip-izq-contactos"></div>
-          <div class="we-img-chip-pink-contactos"></div>
-        </div>
-
-        <div class="we-container-der">
-          <div class="we-img-chip-der-contactos"></div>
-
-          <div class="we-img-chip-menor-contactos"></div>
-        </div>
+<div style="width: 100%" class="container">
+  <div class="contenido">
+    <div class="centro">
+      <div class="left-side">
+        <div class="left-img"></div>
+        <div class="img-chip-izq"></div>
+        <div class="img-chip-pink"></div>
       </div>
-    </div>
-
-    <div class="we-background"></div>
-    
-    <div class="we-form-container">
-      <div class="we-middle-images-movil">
-        <div class="we-left-img-movil"></div>
-        <div class="we-rigth-img-movil"></div>
-      </div>
-
-      <div class="p-container-header">
+      <div class="middle-side">
+        <div class="contact-head2">
+          <div class="center-content2">
+            <img class="chip-img" src="../../../../assets/img_header.png" />
+            <ng-container *ngFor="let seccion of secciones$ | async">
+              <ng-container *ngIf="seccion.id == 16">
+                <h1 *ngIf="lang === 'es'" class="contact-tittle">
+                  {{ seccion.tituloEs }}
+                </h1>
+                <h1 *ngIf="lang === 'en'" class="contact-tittle">
+                  {{ seccion.tituloEn }}
+                </h1>
+                <h1 *ngIf="lang === 'xx'" class="contact-tittle">
+                  {{ seccion.tituloOtro }}
+                </h1>
+              </ng-container>
+            </ng-container>
+          </div>
+        </div>
         <ng-container *ngFor="let seccion of secciones$ | async">
 
           <ng-container *ngIf="seccion.id == 16">
@@ -83,178 +35,269 @@
             <div *ngIf="lang === 'xx'" [innerHtml]="seccion.contenidoOtro" class="we-p-initial"></div>
           </ng-container>
         </ng-container>
-      </div>
-      <form [formGroup]="contactoForm" (ngSubmit)="sendContacto()" class="we-text">
-        <div class="we-text-container">
-          <input type="text" matInput formControlName="empresa" [placeholder]="lang === 'es' ? 'Empresa*' : 'Company*'"
-            [class.we-input-error]="empresa?.invalid && (empresa?.dirty || empresa?.touched) && empresa?.errors?.['required']"
-            class="we-input" />
-          <div *ngIf="empresa?.invalid && (empresa?.dirty || empresa?.touched)" class="we-alert we-alert-danger">
-            <div *ngIf="empresa?.errors?.['required']">
-              <p *ngIf="lang === 'en'">This field cannot be empty.</p>
-              <p *ngIf="lang === 'es'">Este campo no pude estar vacío.</p>
-            </div>
-          </div>
 
-          <input type="text" matInput formControlName="numeroCarnet"
-            [placeholder]="lang === 'es' ? 'No Carnet*' : 'ID Number*'"
-            [class.input-error]="numeroCarnet?.invalid && (numeroCarnet?.dirty || numeroCarnet?.touched) && (numeroCarnet?.errors?.['required'] || numeroCarnet?.errors?.['minlength'])"
-            class="we-input" />
-
-          <div *ngIf="
-              numeroCarnet?.invalid &&
-              (numeroCarnet?.dirty || numeroCarnet?.touched)
-            " class="we-alert we-alert-danger">
-            <div *ngIf="numeroCarnet?.errors?.['required']">
-              <p *ngIf="lang === 'en'">This field cannot be empty.</p>
-              <p *ngIf="lang === 'es'">Este campo no pude estar vacío.</p>
-            </div>
-            <div *ngIf="numeroCarnet?.errors?.['minlength']">
-              <p *ngIf="lang === 'en'">Enter a valid id number</p>
-              <p *ngIf="lang === 'es'">Entre un número de carnet válido</p>
-            </div>
-            <div *ngIf="numeroCarnet?.errors?.['maxlength']">
-              <p *ngIf="lang === 'en'">Enter a valid id number</p>
-              <p *ngIf="lang === 'es'">Entre un número de carnet válido</p>
-            </div>
-          </div>
-
-          <input type="text" matInput formControlName="paginaWeb"
-            [placeholder]="lang === 'es' ? 'Pagina Web' : 'Web Site'"
-            [class.input-error]="paginaWeb?.invalid && (paginaWeb?.dirty || paginaWeb?.touched) && paginaWeb?.errors?.['pattern']"
-            class="we-input" />
-
-          <div *ngIf="
-              paginaWeb?.invalid && (paginaWeb?.dirty || paginaWeb?.touched)
-            " class="we-alert we-alert-danger">
-            <div *ngIf="paginaWeb?.errors?.['pattern']">
-              <p *ngIf="lang === 'en'">Enter a valid address</p>
-              <p *ngIf="lang === 'es'">Entre una dirección válida.</p>
-            </div>
-          </div>
-
-          <input type="text" matInput formControlName="nombre" [placeholder]="lang === 'es' ? 'Nombre*' : 'Name'"
-            [class.input-error]="nombre?.invalid && (nombre?.dirty || nombre?.touched) && nombre?.errors?.['required']"
-            class="we-input" />
-
-          <div *ngIf="nombre?.invalid && (nombre?.dirty || nombre?.touched)" class="we-alert we-alert-danger">
-            <div *ngIf="nombre?.errors?.['required']">
-              <p *ngIf="lang === 'en'">This field cannot be empty.</p>
-              <p *ngIf="lang === 'es'">Este campo no pude estar vacío.</p>
-            </div>
-          </div>
-
-          <input type="text" matInput formControlName="apellidos"
-            [placeholder]="lang === 'es' ? 'Apellidos*' : 'Surnames*'"
-            [class.input-error]="apellidos?.invalid && (apellidos?.dirty || apellidos?.touched) && apellidos?.errors?.['required']"
-            class="we-input" />
-
-          <div *ngIf="
-              apellidos?.invalid && (apellidos?.dirty || apellidos?.touched)
-            " class="we-alert we-alert-danger">
-            <div *ngIf="apellidos?.errors?.['required']">
-              <p *ngIf="lang === 'en'">This field cannot be empty.</p>
-              <p *ngIf="lang === 'es'">Este campo no pude estar vacío.</p>
-            </div>
-          </div>
-
-          <input type="text" matInput formControlName="telefono" [placeholder]="lang === 'es' ? 'Teléfono*' : 'Phone*'"
-            [class.input-error]="telefono?.invalid && (telefono?.dirty || telefono?.touched) && (telefono?.errors?.['required'] || telefono?.errors?.['minlength'])"
-            class="we-input" />
-
-          <div *ngIf="telefono?.invalid && (telefono?.dirty || telefono?.touched)" class="we-alert we-alert-danger">
-            <div *ngIf="telefono?.errors?.['required']">
-              <p *ngIf="lang === 'en'">This field cannot be empty.</p>
-              <p *ngIf="lang === 'es'">Este campo no pude estar vacío.</p>
-            </div>
-            <div *ngIf="telefono?.errors?.['minlength']">
-              <p *ngIf="lang === 'en'">Enter a valid phone number</p>
-              <p *ngIf="lang === 'es'">Entre un número de teléfono válido</p>
-            </div>
-            <div *ngIf="telefono?.errors?.['maxlength']">
-              <p *ngIf="lang === 'en'">Enter a valid phone number</p>
-              <p *ngIf="lang === 'es'">Entre un número de teléfono válido</p>
-            </div>
-          </div>
-
-          <input type="text" matInput formControlName="correo" [placeholder]="lang === 'es' ? 'Correo*' : 'Email*'"
-            type="email"
-            [class.input-error]="correo?.invalid && (correo?.dirty || correo?.touched) && correo?.errors?.['required']"
-            class="we-input" />
-
-          <div *ngIf="correo?.invalid && (correo?.dirty || correo?.touched)" class="we-alert we-alert-danger">
-            <ng-container *ngIf="correo?.errors?.['required']">
-              <p *ngIf="lang === 'en'">This field cannot be empty.</p>
-              <p *ngIf="lang === 'es'">Este campo no pude estar vacío.</p>
-            </ng-container>
-          </div>
+        <div class="nos-movil">
+          <div class="left-img-movil"></div>
+          <img
+            class="rigth-img2-movil"
+            src="../../../../assets/grafica_der1.png"
+          />
         </div>
-        <div class="we-policy">
-          <div class="we-term">
-            <div class="we-check-container">
-              <input formControlName="terminosCondiciones" type="checkbox" class="we-check" />
-            </div>
-            <div class="we-p-container">
-              <p class="we-policy-p" *ngIf="lang === 'es'">
-                He leído y acepto la
-                <a href="#" class="we-link">Política de Privacidad</a>
-                y
-                <a href="#" class="we-link">Condiciones generales de BIPAY</a>
-              </p>
+        <div class="we-text-no2">
+          <form
+            [formGroup]="contactoForm"
+            (ngSubmit)="sendContacto()"
+            class="we-text"
+          >
+            <div class="we-text-container">
+              <input
+                type="text"
+                matInput
+                formControlName="empresa"
+                [placeholder]="lang === 'es' ? 'Empresa*' : 'Company*'"
+                [class.we-input-error]="empresa?.invalid && (empresa?.dirty || empresa?.touched) && empresa?.errors?.['required']"
+                class="we-input"
+              />
+              <div
+                *ngIf="empresa?.invalid && (empresa?.dirty || empresa?.touched)"
+                class="we-alert we-alert-danger"
+              >
+                <div *ngIf="empresa?.errors?.['required']">
+                  <p *ngIf="lang === 'en'">This field cannot be empty.</p>
+                  <p *ngIf="lang === 'es'">Este campo no pude estar vacío.</p>
+                </div>
+              </div>
 
-              <p class="we-policy-p" *ngIf="lang === 'en'">
-                I have read and accept the
-                <a href="#" class="we-link">Privacy Policy</a>
-                and
-                <a href="#" class="we-link">General Conditions of BIPAY</a>
-              </p>
+              <input
+                type="text"
+                matInput
+                formControlName="numeroCarnet"
+                [placeholder]="lang === 'es' ? 'No Carnet*' : 'ID Number*'"
+                [class.input-error]="numeroCarnet?.invalid && (numeroCarnet?.dirty || numeroCarnet?.touched) && (numeroCarnet?.errors?.['required'] || numeroCarnet?.errors?.['minlength'])"
+                class="we-input"
+              />
 
-              <p class="we-policy-p" *ngIf="lang === 'xx'">
-                He leído y acepto la
-                <a href="#" class="we-link">Política de Privacidad</a>
-                y
-                <a href="#" class="we-link">Condiciones generales de BIPAY</a>
-              </p>
+              <div
+                *ngIf="
+                  numeroCarnet?.invalid &&
+                  (numeroCarnet?.dirty || numeroCarnet?.touched)
+                "
+                class="we-alert we-alert-danger"
+              >
+                <div *ngIf="numeroCarnet?.errors?.['required']">
+                  <p *ngIf="lang === 'en'">This field cannot be empty.</p>
+                  <p *ngIf="lang === 'es'">Este campo no pude estar vacío.</p>
+                </div>
+                <div *ngIf="numeroCarnet?.errors?.['minlength']">
+                  <p *ngIf="lang === 'en'">Enter a valid id number</p>
+                  <p *ngIf="lang === 'es'">Entre un número de carnet válido</p>
+                </div>
+                <div *ngIf="numeroCarnet?.errors?.['maxlength']">
+                  <p *ngIf="lang === 'en'">Enter a valid id number</p>
+                  <p *ngIf="lang === 'es'">Entre un número de carnet válido</p>
+                </div>
+              </div>
 
-              <div *ngIf="
-                  terminosCondiciones?.invalid &&
-                  (terminosCondiciones?.dirty || terminosCondiciones?.touched)
-                " class="we-alert we-alert-danger">
-                <div *ngIf="terminosCondiciones?.errors?.['required']">
-                  <p *ngIf="lang === 'en'">This field must be selected.</p>
+              <input
+                type="text"
+                matInput
+                formControlName="paginaWeb"
+                [placeholder]="lang === 'es' ? 'Pagina Web' : 'Web Site'"
+                [class.input-error]="paginaWeb?.invalid && (paginaWeb?.dirty || paginaWeb?.touched) && paginaWeb?.errors?.['pattern']"
+                class="we-input"
+              />
+
+              <div
+                *ngIf="
+                  paginaWeb?.invalid && (paginaWeb?.dirty || paginaWeb?.touched)
+                "
+                class="we-alert we-alert-danger"
+              >
+                <div *ngIf="paginaWeb?.errors?.['pattern']">
+                  <p *ngIf="lang === 'en'">Enter a valid address</p>
+                  <p *ngIf="lang === 'es'">Entre una dirección válida.</p>
+                </div>
+              </div>
+
+              <input
+                type="text"
+                matInput
+                formControlName="nombre"
+                [placeholder]="lang === 'es' ? 'Nombre*' : 'Name'"
+                [class.input-error]="nombre?.invalid && (nombre?.dirty || nombre?.touched) && nombre?.errors?.['required']"
+                class="we-input"
+              />
+
+              <div
+                *ngIf="nombre?.invalid && (nombre?.dirty || nombre?.touched)"
+                class="we-alert we-alert-danger"
+              >
+                <div *ngIf="nombre?.errors?.['required']">
+                  <p *ngIf="lang === 'en'">This field cannot be empty.</p>
+                  <p *ngIf="lang === 'es'">Este campo no pude estar vacío.</p>
+                </div>
+              </div>
+
+              <input
+                type="text"
+                matInput
+                formControlName="apellidos"
+                [placeholder]="lang === 'es' ? 'Apellidos*' : 'Surnames*'"
+                [class.input-error]="apellidos?.invalid && (apellidos?.dirty || apellidos?.touched) && apellidos?.errors?.['required']"
+                class="we-input"
+              />
+
+              <div
+                *ngIf="
+                  apellidos?.invalid && (apellidos?.dirty || apellidos?.touched)
+                "
+                class="we-alert we-alert-danger"
+              >
+                <div *ngIf="apellidos?.errors?.['required']">
+                  <p *ngIf="lang === 'en'">This field cannot be empty.</p>
+                  <p *ngIf="lang === 'es'">Este campo no pude estar vacío.</p>
+                </div>
+              </div>
+
+              <input
+                type="text"
+                matInput
+                formControlName="telefono"
+                [placeholder]="lang === 'es' ? 'Teléfono*' : 'Phone*'"
+                [class.input-error]="telefono?.invalid && (telefono?.dirty || telefono?.touched) && (telefono?.errors?.['required'] || telefono?.errors?.['minlength'])"
+                class="we-input"
+              />
+
+              <div
+                *ngIf="
+                  telefono?.invalid && (telefono?.dirty || telefono?.touched)
+                "
+                class="we-alert we-alert-danger"
+              >
+                <div *ngIf="telefono?.errors?.['required']">
+                  <p *ngIf="lang === 'en'">This field cannot be empty.</p>
+                  <p *ngIf="lang === 'es'">Este campo no pude estar vacío.</p>
+                </div>
+                <div *ngIf="telefono?.errors?.['minlength']">
+                  <p *ngIf="lang === 'en'">Enter a valid phone number</p>
                   <p *ngIf="lang === 'es'">
-                    Este campo debe estar seleccionado.
+                    Entre un número de teléfono válido
+                  </p>
+                </div>
+                <div *ngIf="telefono?.errors?.['maxlength']">
+                  <p *ngIf="lang === 'en'">Enter a valid phone number</p>
+                  <p *ngIf="lang === 'es'">
+                    Entre un número de teléfono válido
                   </p>
                 </div>
               </div>
+
+              <input
+                type="text"
+                matInput
+                formControlName="correo"
+                [placeholder]="lang === 'es' ? 'Correo*' : 'Email*'"
+                type="email"
+                [class.input-error]="correo?.invalid && (correo?.dirty || correo?.touched) && correo?.errors?.['required']"
+                class="we-input"
+              />
+
+              <div
+                *ngIf="correo?.invalid && (correo?.dirty || correo?.touched)"
+                class="we-alert we-alert-danger"
+              >
+                <ng-container *ngIf="correo?.errors?.['required']">
+                  <p *ngIf="lang === 'en'">This field cannot be empty.</p>
+                  <p *ngIf="lang === 'es'">Este campo no pude estar vacío.</p>
+                </ng-container>
+              </div>
             </div>
-          </div>
-          <div class="we-ask">
-            <div class="we-check-container">
-              <input formControlName="suscripcion" type="checkbox" class="we-check" />
+            <div class="we-policy">
+              <div class="we-term">
+                <div class="we-check-container">
+                  <input
+                    formControlName="terminosCondiciones"
+                    type="checkbox"
+                    class="we-check"
+                  />
+                </div>
+                <div class="we-p-container">
+                  <p class="we-policy-p" *ngIf="lang === 'es'">
+                    He leído y acepto la
+                    <a href="#" class="we-link">Política de Privacidad</a>
+                    y
+                    <a href="#" class="we-link"
+                      >Condiciones generales de BIPAY</a
+                    >
+                  </p>
+
+                  <p class="we-policy-p" *ngIf="lang === 'en'">
+                    I have read and accept the
+                    <a href="#" class="we-link">Privacy Policy</a>
+                    and
+                    <a href="#" class="we-link">General Conditions of BIPAY</a>
+                  </p>
+
+                  <p class="we-policy-p" *ngIf="lang === 'xx'">
+                    He leído y acepto la
+                    <a href="#" class="we-link">Política de Privacidad</a>
+                    y
+                    <a href="#" class="we-link"
+                      >Condiciones generales de BIPAY</a
+                    >
+                  </p>
+
+                  <div
+                    *ngIf="
+                      terminosCondiciones?.invalid &&
+                      (terminosCondiciones?.dirty ||
+                        terminosCondiciones?.touched)
+                    "
+                    class="we-alert we-alert-danger"
+                  >
+                    <div *ngIf="terminosCondiciones?.errors?.['required']">
+                      <p *ngIf="lang === 'en'">This field must be selected.</p>
+                      <p *ngIf="lang === 'es'">
+                        Este campo debe estar seleccionado.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="we-ask">
+                <div class="we-check-container">
+                  <input
+                    formControlName="suscripcion"
+                    type="checkbox"
+                    class="we-check"
+                  />
+                </div>
+                <div class="we-p-container">
+                  <p class="we-policy-p">
+                    {{
+                      lang === "es"
+                        ? "Acepto recibir información comercial, incluso por medios electrónicos."
+                        : "I agree to receive commercial information, including by electronic means."
+                    }}
+                  </p>
+                </div>
+              </div>
+              <div class="we-button-container">
+                <button mat-button type="submit" class="we-form-button">
+                  {{ lang === "es" ? "Enviar" : "Send" }}
+                </button>
+              </div>
             </div>
-            <div class="we-p-container">
-              <p class="we-policy-p">
-                {{
-                lang === "es"
-                ? "Acepto recibir información comercial, incluso por medios electrónicos."
-                : "I agree to receive commercial information, including by electronic means."
-                }}
-              </p>
-            </div>
-          </div>
-          <div class="we-button-container">
-            <!-- [disabled]="!contactoForm.valid" -->
-            <button mat-button type="submit" class="we-form-button">
-              {{
-              lang === "es"
-              ? "Enviar"
-              : "Send"
-              }}
-            </button>
-          </div>
+          </form>
         </div>
-      </form>
+      </div>
+      <div class="right-side">
+        <img class="rigth-img2" src="../../../../assets/grafica_der1.png" />
+        <div class="img-chip-der"></div>
+        <div class="img-chip-menor"></div>
+      </div>
     </div>
   </div>
+
+  <div class="fondo"></div>
 </div>
