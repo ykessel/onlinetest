@@ -1,29 +1,29 @@
 @media only screen and (min-width: 300px) and (max-width: 1080px) {
-    .rigth-img2,
-    .left-img,
-    .img-chip-izq,
-    .img-chip-pink,
-    .img-chip-der,
-    .img-chip-menor,
-    .left-side,
-    .right-side {
+    .con-rigth-img2,
+    .con-left-img,
+    .con-img-chip-izq,
+    .con-img-chip-pink,
+    .con-img-chip-der,
+    .con-img-chip-menor,
+    .con-left-side,
+    .con-right-side {
         display: none !important;
     }
 
-    .fondo {
+    .con-fondo {
         top: 100vh !important;
     }
 
-    .middle-side {
+    .con-middle-side {
         width: 100% !important;
 
-        .nos-movil {
+        .con-nos-movil {
             display: flex !important;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 8vh;
 
-            .left-img-movil {
+            .con-left-img-movil {
                 background: linear-gradient(
                     90deg,
                     #faa6a7 0%,
@@ -35,7 +35,7 @@
                 height: 9vh;
             }
 
-            .rigth-img2-movil {
+            .con-rigth-img2-movil {
                 width: 286px;
                 height: 83px;
                 margin-top: 4vh;
@@ -44,21 +44,23 @@
             }
         }
 
-        .we-text-no2 {
+        .con-we-text-no2 {
             padding-bottom: 5vh !important;
-            .we-text {
+            
+            .con-we-text {
                 padding: 30px !important;
                 width: 75% !important;
             }
         }
 
-        .contact-head2 {
+        .con-contact-head2 {
             margin: 2vh 0 !important;
-            .center-content2 {
+            
+            .con-center-content2 {
                 width: 90% !important;
             }
 
-            .we-p-initial {
+            .con-we-p-initial {
                 margin-bottom: 0vh !important;
             }
         }
