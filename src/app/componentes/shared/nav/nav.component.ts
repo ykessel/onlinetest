@@ -47,7 +47,7 @@ export class NavComponent implements OnInit {
   getFlags(sigla: string) {
     let flag = this.flags_base + sigla.toUpperCase() + '.svg';
     if (sigla === 'en') {
-      return this.flags_base + 'US' + '.svg';
+      return this.flags_base + 'GB' + '.svg';
     } else {
       return flag;
     }
