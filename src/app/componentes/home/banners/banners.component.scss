@@ -1,12 +1,10 @@
 @import "./styles/banners.medium.scss";
 
-
 .banner {
-  display:flex;
+  display: flex;
   flex-direction: column;
   height: 100vh;
   width: 100vw;
-
 
   .banner-up-container {
     display: flex;
@@ -22,7 +20,6 @@
         width: auto;
       }
     }
-
 
     .banner-up {
       display: flex;
@@ -46,11 +43,11 @@
           margin-top: 5%;
         }
 
-      .pres-img-ban {
-        height: 2rem;
-        margin-right: 0.6rem;
-        padding-top: 0.2rem;
-        max-width: 32px;
+        .pres-img-ban {
+          height: 2rem;
+          margin-right: 0.6rem;
+          padding-top: 0.2rem;
+          max-width: 32px;
         }
 
         .banner-pres-group {
@@ -85,7 +82,6 @@
               font-size: 16px;
               line-height: 24px;
               /* or 150% */
-
 
               color: #727272;
               padding-right: 4rem;
@@ -123,7 +119,7 @@
               border-radius: 50px;
 
               &:hover {
-                background: #EDA301;
+                background: #eda301;
                 color: #fff;
               }
             }
@@ -148,7 +144,7 @@
               border-radius: 50px;
 
               &:hover {
-                background: #670F0F;
+                background: #670f0f;
                 color: #fff;
               }
             }
@@ -163,7 +159,6 @@
         }
       }
     }
-
   }
 
   .banner-down-container {
@@ -206,13 +201,12 @@
         border-radius: 0px 50px 50px 0px;
       }
     }
-
   }
 }
 
 .mat-button-focus-overlay {
-    opacity: 0;
-    background: #fff;
+  opacity: 0;
+  background: #fff;
 }
 
 .show {
@@ -220,7 +214,6 @@
   // opacity: 1;
   // left: 100%;
 }
-
 
 // @keyframes changeBannerAnimation {
 //   from { width: 100%; opacity: 0 }

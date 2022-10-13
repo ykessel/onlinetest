@@ -1,68 +1,68 @@
 @media only screen and (min-width: 300px) and (max-width: 1080px) {
-    .con-rigth-img2,
-    .con-left-img,
-    .con-img-chip-izq,
-    .con-img-chip-pink,
-    .con-img-chip-der,
-    .con-img-chip-menor,
-    .con-left-side,
-    .con-right-side {
-        display: none !important;
+  .con-rigth-img2,
+  .con-left-img,
+  .con-img-chip-izq,
+  .con-img-chip-pink,
+  .con-img-chip-der,
+  .con-img-chip-menor,
+  .con-left-side,
+  .con-right-side {
+    display: none !important;
+  }
+
+  .con-fondo {
+    top: 100vh !important;
+  }
+
+  .con-middle-side {
+    width: 100% !important;
+
+    .con-nos-movil {
+      display: flex !important;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8vh;
+
+      .con-left-img-movil {
+        background: linear-gradient(
+          90deg,
+          #faa6a7 0%,
+          #b5e7ff 67.02%,
+          #ffdf95 98.96%
+        );
+        border-radius: 0px 50px 50px 0px;
+        width: 100%;
+        height: 9vh;
+      }
+
+      .con-rigth-img2-movil {
+        width: 286px;
+        height: 83px;
+        margin-top: 4vh;
+        object-fit: cover;
+        object-position: 41px;
+      }
     }
 
-    .con-fondo {
-        top: 100vh !important;
+    .con-we-text-no2 {
+      padding-bottom: 5vh !important;
+
+      .con-we-text {
+        padding: 30px !important;
+        width: 75% !important;
+      }
     }
 
-    .con-middle-side {
-        width: 100% !important;
+    .con-contact-head2 {
+      margin: 2vh 0 !important;
 
-        .con-nos-movil {
-            display: flex !important;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 8vh;
+      .con-center-content2 {
+        width: 90% !important;
+      }
 
-            .con-left-img-movil {
-                background: linear-gradient(
-                    90deg,
-                    #faa6a7 0%,
-                    #b5e7ff 67.02%,
-                    #ffdf95 98.96%
-                );
-                border-radius: 0px 50px 50px 0px;
-                width: 100%;
-                height: 9vh;
-            }
-
-            .con-rigth-img2-movil {
-                width: 286px;
-                height: 83px;
-                margin-top: 4vh;
-                object-fit: cover;
-                object-position: 41px;
-            }
-        }
-
-        .con-we-text-no2 {
-            padding-bottom: 5vh !important;
-            
-            .con-we-text {
-                padding: 30px !important;
-                width: 75% !important;
-            }
-        }
-
-        .con-contact-head2 {
-            margin: 2vh 0 !important;
-            
-            .con-center-content2 {
-                width: 90% !important;
-            }
-
-            .con-we-p-initial {
-                margin-bottom: 0vh !important;
-            }
-        }
+      .con-we-p-initial {
+        margin-bottom: 0vh !important;
+      }
     }
+  }
 }

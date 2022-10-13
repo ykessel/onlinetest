@@ -6,10 +6,8 @@ import { selectPagos } from "./../../../store/pagos/pagos.selectors";
 import { CaracteristicasService } from "src/app/services/caracteristicas/caracteristicas.service";
 import { PagosService } from "src/app/services/pagos/pagos.service";
 import { OwlOptions } from "ngx-owl-carousel-o";
-import { CommonService } from "src/app/services/system/common.service";
 import { PotencialidadesService } from "src/app/services/potencialidades/potencialidades.service";
 import { BannersService } from "src/app/services/banners/banners.service";
-import { AsociadosService } from "src/app/services/asociados/asociados.service";
 import { Store } from "@ngrx/store";
 import { selectSecciones } from "src/app/store/secciones/secciones.selectors";
 import { getBanners } from "src/app/store/banners/banners.actions";
@@ -18,8 +16,6 @@ import { selectPotencialidades } from "src/app/store/potencialidades/potencialid
 import { selectServicios } from "src/app/store/servicios/servicios.selectors";
 import { getPagos } from "src/app/store/pagos/pagos.actions";
 import { selectLang } from "src/app/store/system/system.selectors";
-
-
 @Component({
   selector: "bipay-home",
   templateUrl: "./home.component.html",

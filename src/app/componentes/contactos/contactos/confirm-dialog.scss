@@ -1,32 +1,32 @@
 .text-content {
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    text-align: justify;
-    color: #727272;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: justify;
+  color: #727272;
 }
 
 .form-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15px 10px;
-    gap: 10px;
-    border: none;
-    width: 45%;
-    height: 100%;
-    background: #670f0f;
-    border-radius: 50px;
-    font-family: "Fredoka One";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 14px;
-    margin-top: 7vh;
-    color: #eac2c2;
-    &:hover {
-        background: #420101;
-        color: #fff;
-    }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 10px;
+  gap: 10px;
+  border: none;
+  width: 45%;
+  height: 100%;
+  background: #670f0f;
+  border-radius: 50px;
+  font-family: "Fredoka One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 14px;
+  margin-top: 7vh;
+  color: #eac2c2;
+  &:hover {
+    background: #420101;
+    color: #fff;
+  }
 }

@@ -3,6 +3,7 @@
     <img class="top-logo" src="../../../../assets/logo.png" />
     <div class="example-button-row">
       <div class="navigation">
+        <!-- Link Inicio -->
         <div class="nav-container-home">
           <a
             class="button-nav"
@@ -40,182 +41,184 @@
             ></div>
           </a>
         </div>
+        <ng-container *ngFor="let seccion of secciones$ | async">
+          <!-- Link Nosotros -->
+          <div *ngIf="seccion.id == 13 && seccion.activo" class="nav-container">
+            <a
+              class="button-nav"
+              *ngIf="lang === 'es'"
+              [class.active]="activeLink('/nosotros')"
+              routerLink="nosotros"
+              >Nosotros
+              <div
+                class="line"
+                [style.visibility]="
+                  activeLink('/nosotros') ? 'visible' : 'hidden'
+                "
+              ></div>
+            </a>
 
-        <div class="nav-container">
-          <a
-            class="button-nav"
-            *ngIf="lang === 'es'"
-            [class.active]="activeLink('/nosotros')"
-            routerLink="nosotros"
-            >Nosotros
-            <div
-              class="line"
-              [style.visibility]="
-                activeLink('/nosotros') ? 'visible' : 'hidden'
-              "
-            ></div>
-          </a>
+            <a
+              class="button-nav"
+              *ngIf="lang === 'en'"
+              [class.active]="activeLink('/nosotros')"
+              routerLink="nosotros"
+              >About us
+              <div
+                class="line"
+                [style.visibility]="
+                  activeLink('/nosotros') ? 'visible' : 'hidden'
+                "
+              ></div>
+            </a>
 
-          <a
-            class="button-nav"
-            *ngIf="lang === 'en'"
-            [class.active]="activeLink('/nosotros')"
-            routerLink="nosotros"
-            >About us
-            <div
-              class="line"
-              [style.visibility]="
-                activeLink('/nosotros') ? 'visible' : 'hidden'
-              "
-            ></div>
-          </a>
+            <a
+              class="button-nav"
+              *ngIf="lang === 'xx'"
+              [class.active]="activeLink('/nosotros')"
+              routerLink="nosotros"
+              >Nosotros
+              <div
+                class="line"
+                [style.visibility]="
+                  activeLink('/nosotros') ? 'visible' : 'hidden'
+                "
+              ></div>
+            </a>
+          </div>
+          <!-- Link Servicios -->
+          <div *ngIf="seccion.id == 14 && seccion.activo" class="nav-container">
+            <a
+              class="button-nav"
+              *ngIf="lang === 'es'"
+              [class.active]="activeLink('/servicios')"
+              routerLink="servicios"
+              >Servicios
+              <div
+                class="line"
+                [style.visibility]="
+                  activeLink('/servicios') ? 'visible' : 'hidden'
+                "
+              ></div>
+            </a>
 
-          <a
-            class="button-nav"
-            *ngIf="lang === 'xx'"
-            [class.active]="activeLink('/nosotros')"
-            routerLink="nosotros"
-            >Nosotros
-            <div
-              class="line"
-              [style.visibility]="
-                activeLink('/nosotros') ? 'visible' : 'hidden'
-              "
-            ></div>
-          </a>
-        </div>
+            <a
+              class="button-nav"
+              *ngIf="lang === 'en'"
+              [class.active]="activeLink('/servicios')"
+              routerLink="servicios"
+              >Services
+              <div
+                class="line"
+                [style.visibility]="
+                  activeLink('/servicios') ? 'visible' : 'hidden'
+                "
+              ></div>
+            </a>
 
-        <div class="nav-container">
-          <a
-            class="button-nav"
-            *ngIf="lang === 'es'"
-            [class.active]="activeLink('/servicios')"
-            routerLink="servicios"
-            >Servicios
-            <div
-              class="line"
-              [style.visibility]="
-                activeLink('/servicios') ? 'visible' : 'hidden'
-              "
-            ></div>
-          </a>
+            <a
+              class="button-nav"
+              *ngIf="lang === 'xx'"
+              [class.active]="activeLink('/servicios')"
+              routerLink="servicios"
+              >Servicios
+              <div
+                class="line"
+                [style.visibility]="
+                  activeLink('/servicios') ? 'visible' : 'hidden'
+                "
+              ></div>
+            </a>
+          </div>
+          <!-- Link Documentos  -->
+          <div *ngIf="seccion.id == 15 && seccion.activo" class="nav-container">
+            <a
+              class="button-nav"
+              *ngIf="lang === 'es'"
+              [class.active]="activeLink('/documentos')"
+              routerLink="documentos"
+              >Documentación
+              <div
+                class="line"
+                [style.visibility]="
+                  activeLink('/documentos') ? 'visible' : 'hidden'
+                "
+              ></div>
+            </a>
 
-          <a
-            class="button-nav"
-            *ngIf="lang === 'en'"
-            [class.active]="activeLink('/servicios')"
-            routerLink="servicios"
-            >Services
-            <div
-              class="line"
-              [style.visibility]="
-                activeLink('/servicios') ? 'visible' : 'hidden'
-              "
-            ></div>
-          </a>
+            <a
+              class="button-nav"
+              *ngIf="lang === 'en'"
+              [class.active]="activeLink('/documentos')"
+              routerLink="documentos"
+              >Documentation
+              <div
+                class="line"
+                [style.visibility]="
+                  activeLink('/documentos') ? 'visible' : 'hidden'
+                "
+              ></div>
+            </a>
 
-          <a
-            class="button-nav"
-            *ngIf="lang === 'xx'"
-            [class.active]="activeLink('/servicios')"
-            routerLink="servicios"
-            >Servicios
-            <div
-              class="line"
-              [style.visibility]="
-                activeLink('/servicios') ? 'visible' : 'hidden'
-              "
-            ></div>
-          </a>
-        </div>
+            <a
+              class="button-nav"
+              *ngIf="lang === 'xx'"
+              [class.active]="activeLink('/documentos')"
+              routerLink="documentos"
+              >Documentación
+              <div
+                class="line"
+                [style.visibility]="
+                  activeLink('/documentos') ? 'visible' : 'hidden'
+                "
+              ></div>
+            </a>
+          </div>
+          <!-- Link Contactos  -->
+          <div *ngIf="seccion.id == 16 && seccion.activo" class="nav-container">
+            <a
+              class="button-nav"
+              *ngIf="lang === 'es'"
+              [class.active]="activeLink('/contactos')"
+              routerLink="contactos"
+              >Contáctenos
+              <div
+                class="line"
+                [style.visibility]="
+                  activeLink('/contactos') ? 'visible' : 'hidden'
+                "
+              ></div>
+            </a>
 
-        <div class="nav-container">
-          <a
-            class="button-nav"
-            *ngIf="lang === 'es'"
-            [class.active]="activeLink('/documentos')"
-            routerLink="documentos"
-            >Documentación
-            <div
-              class="line"
-              [style.visibility]="
-                activeLink('/documentos') ? 'visible' : 'hidden'
-              "
-            ></div>
-          </a>
+            <a
+              class="button-nav"
+              *ngIf="lang === 'en'"
+              [class.active]="activeLink('/contactos')"
+              routerLink="contactos"
+              >Contact us
+              <div
+                class="line"
+                [style.visibility]="
+                  activeLink('/contactos') ? 'visible' : 'hidden'
+                "
+              ></div>
+            </a>
 
-          <a
-            class="button-nav"
-            *ngIf="lang === 'en'"
-            [class.active]="activeLink('/documentos')"
-            routerLink="documentos"
-            >Documentation
-            <div
-              class="line"
-              [style.visibility]="
-                activeLink('/documentos') ? 'visible' : 'hidden'
-              "
-            ></div>
-          </a>
-
-          <a
-            class="button-nav"
-            *ngIf="lang === 'xx'"
-            [class.active]="activeLink('/documentos')"
-            routerLink="documentos"
-            >Documentación
-            <div
-              class="line"
-              [style.visibility]="
-                activeLink('/documentos') ? 'visible' : 'hidden'
-              "
-            ></div>
-          </a>
-        </div>
-
-        <div class="nav-container">
-          <a
-            class="button-nav"
-            *ngIf="lang === 'es'"
-            [class.active]="activeLink('/contactos')"
-            routerLink="contactos"
-            >Contáctenos
-            <div
-              class="line"
-              [style.visibility]="
-                activeLink('/contactos') ? 'visible' : 'hidden'
-              "
-            ></div>
-          </a>
-
-          <a
-            class="button-nav"
-            *ngIf="lang === 'en'"
-            [class.active]="activeLink('/contactos')"
-            routerLink="contactos"
-            >Contact us
-            <div
-              class="line"
-              [style.visibility]="
-                activeLink('/contactos') ? 'visible' : 'hidden'
-              "
-            ></div>
-          </a>
-
-          <a
-            class="button-nav"
-            *ngIf="lang === 'xx'"
-            [class.active]="activeLink('/contactos')"
-            routerLink="contactos"
-            >Contáctenos
-            <div
-              class="line"
-              [style.visibility]="
-                activeLink('/contactos') ? 'visible' : 'hidden'
-              "
-            ></div>
-          </a>
-        </div>
+            <a
+              class="button-nav"
+              *ngIf="lang === 'xx'"
+              [class.active]="activeLink('/contactos')"
+              routerLink="contactos"
+              >Contáctenos
+              <div
+                class="line"
+                [style.visibility]="
+                  activeLink('/contactos') ? 'visible' : 'hidden'
+                "
+              ></div>
+            </a>
+          </div>
+        </ng-container>
       </div>
 
       <div class="menu">
@@ -240,7 +243,10 @@
             (click)="changeLang(idioma.siglas)"
           >
             <div class="button-wrapper-item">
-              <div [class.ing-fix]="idioma.siglas === 'en'" class="img-item-container">
+              <div
+                [class.ing-fix]="idioma.siglas === 'en'"
+                class="img-item-container"
+              >
                 <img
                   *ngIf="idioma.nombre !== 'Otro'"
                   class="img-element"
@@ -296,191 +302,215 @@
               ></div>
             </a>
           </div>
+          <ng-container *ngFor="let seccion of secciones$ | async">
+            <div
+              *ngIf="seccion.id == 13 && seccion.activo"
+              mat-menu-item
+              class="nav-container"
+            >
+              <a
+                class="button-menu"
+                *ngIf="lang === 'es'"
+                [class.active]="activeLink('/nosotros')"
+                routerLink="nosotros"
+                >Nosotros
+                <div
+                  class="line"
+                  [style.visibility]="
+                    activeLink('/nosotros') ? 'visible' : 'hidden'
+                  "
+                ></div>
+              </a>
 
-          <div mat-menu-item class="nav-container">
-            <a
-              class="button-menu"
-              *ngIf="lang === 'es'"
-              [class.active]="activeLink('/nosotros')"
-              routerLink="nosotros"
-              >Nosotros
-              <div
-                class="line"
-                [style.visibility]="
-                  activeLink('/nosotros') ? 'visible' : 'hidden'
-                "
-              ></div>
-            </a>
+              <a
+                class="button-menu"
+                *ngIf="lang === 'en'"
+                [class.active]="activeLink('/nosotros')"
+                routerLink="nosotros"
+                >About us
+                <div
+                  class="line"
+                  [style.visibility]="
+                    activeLink('/nosotros') ? 'visible' : 'hidden'
+                  "
+                ></div>
+              </a>
 
-            <a
-              class="button-menu"
-              *ngIf="lang === 'en'"
-              [class.active]="activeLink('/nosotros')"
-              routerLink="nosotros"
-              >About us
-              <div
-                class="line"
-                [style.visibility]="
-                  activeLink('/nosotros') ? 'visible' : 'hidden'
-                "
-              ></div>
-            </a>
+              <a
+                class="button-menu"
+                *ngIf="lang === 'xx'"
+                [class.active]="activeLink('/nosotros')"
+                routerLink="nosotros"
+                >Nosotros
+                <div
+                  class="line"
+                  [style.visibility]="
+                    activeLink('/nosotros') ? 'visible' : 'hidden'
+                  "
+                ></div>
+              </a>
+            </div>
 
-            <a
-              class="button-menu"
-              *ngIf="lang === 'xx'"
-              [class.active]="activeLink('/nosotros')"
-              routerLink="nosotros"
-              >Nosotros
-              <div
-                class="line"
-                [style.visibility]="
-                  activeLink('/nosotros') ? 'visible' : 'hidden'
-                "
-              ></div>
-            </a>
-          </div>
+            <div
+              *ngIf="seccion.id == 14 && seccion.activo"
+              mat-menu-item
+              class="nav-container"
+            >
+              <a
+                class="button-menu"
+                *ngIf="lang === 'es'"
+                [class.active]="activeLink('/servicios')"
+                routerLink="servicios"
+                >Servicios
+                <div
+                  class="line"
+                  [style.visibility]="
+                    activeLink('/servicios') ? 'visible' : 'hidden'
+                  "
+                ></div>
+              </a>
 
-          <div mat-menu-item class="nav-container">
-            <a
-              class="button-menu"
-              *ngIf="lang === 'es'"
-              [class.active]="activeLink('/servicios')"
-              routerLink="servicios"
-              >Servicios
-              <div
-                class="line"
-                [style.visibility]="
-                  activeLink('/servicios') ? 'visible' : 'hidden'
-                "
-              ></div>
-            </a>
+              <a
+                class="button-menu"
+                *ngIf="lang === 'en'"
+                [class.active]="activeLink('/servicios')"
+                routerLink="servicios"
+                >Services
+                <div
+                  class="line"
+                  [style.visibility]="
+                    activeLink('/servicios') ? 'visible' : 'hidden'
+                  "
+                ></div>
+              </a>
 
-            <a
-              class="button-menu"
-              *ngIf="lang === 'en'"
-              [class.active]="activeLink('/servicios')"
-              routerLink="servicios"
-              >Services
-              <div
-                class="line"
-                [style.visibility]="
-                  activeLink('/servicios') ? 'visible' : 'hidden'
-                "
-              ></div>
-            </a>
+              <a
+                class="button-menu"
+                *ngIf="lang === 'xx'"
+                [class.active]="activeLink('/servicios')"
+                routerLink="servicios"
+                >Servicios
+                <div
+                  class="line"
+                  [style.visibility]="
+                    activeLink('/servicios') ? 'visible' : 'hidden'
+                  "
+                ></div>
+              </a>
+            </div>
 
-            <a
-              class="button-menu"
-              *ngIf="lang === 'xx'"
-              [class.active]="activeLink('/servicios')"
-              routerLink="servicios"
-              >Servicios
-              <div
-                class="line"
-                [style.visibility]="
-                  activeLink('/servicios') ? 'visible' : 'hidden'
-                "
-              ></div>
-            </a>
-          </div>
+            <div
+              *ngIf="seccion.id == 15 && seccion.activo"
+              mat-menu-item
+              class="nav-container"
+            >
+              <a
+                class="button-menu"
+                *ngIf="lang === 'es'"
+                [class.active]="activeLink('/documentos')"
+                routerLink="documentos"
+                >Documentación
+                <div
+                  class="line"
+                  [style.visibility]="
+                    activeLink('/documentos') ? 'visible' : 'hidden'
+                  "
+                ></div>
+              </a>
 
-          <div mat-menu-item class="nav-container">
-            <a
-              class="button-menu"
-              *ngIf="lang === 'es'"
-              [class.active]="activeLink('/documentos')"
-              routerLink="documentos"
-              >Documentación
-              <div
-                class="line"
-                [style.visibility]="
-                  activeLink('/documentos') ? 'visible' : 'hidden'
-                "
-              ></div>
-            </a>
+              <a
+                class="button-menu"
+                *ngIf="lang === 'en'"
+                [class.active]="activeLink('/documentos')"
+                routerLink="documentos"
+                >Documentation
+                <div
+                  class="line"
+                  [style.visibility]="
+                    activeLink('/documentos') ? 'visible' : 'hidden'
+                  "
+                ></div>
+              </a>
 
-            <a
-              class="button-menu"
-              *ngIf="lang === 'en'"
-              [class.active]="activeLink('/documentos')"
-              routerLink="documentos"
-              >Documentation
-              <div
-                class="line"
-                [style.visibility]="
-                  activeLink('/documentos') ? 'visible' : 'hidden'
-                "
-              ></div>
-            </a>
+              <a
+                class="button-menu"
+                *ngIf="lang === 'xx'"
+                [class.active]="activeLink('/documentos')"
+                routerLink="documentos"
+                >Documentación
+                <div
+                  class="line"
+                  [style.visibility]="
+                    activeLink('/documentos') ? 'visible' : 'hidden'
+                  "
+                ></div>
+              </a>
+            </div>
 
-            <a
-              class="button-menu"
-              *ngIf="lang === 'xx'"
-              [class.active]="activeLink('/documentos')"
-              routerLink="documentos"
-              >Documentación
-              <div
-                class="line"
-                [style.visibility]="
-                  activeLink('/documentos') ? 'visible' : 'hidden'
-                "
-              ></div>
-            </a>
-          </div>
+            <div
+              *ngIf="seccion.id == 16 && seccion.activo"
+              mat-menu-item
+              class="nav-container"
+            >
+              <a
+                class="button-menu"
+                *ngIf="lang === 'es'"
+                [class.active]="activeLink('/contactos')"
+                routerLink="contactos"
+                >Contáctenos
+                <div
+                  class="line"
+                  [style.visibility]="
+                    activeLink('/contactos') ? 'visible' : 'hidden'
+                  "
+                ></div>
+              </a>
 
-          <div mat-menu-item class="nav-container">
-            <a
-              class="button-menu"
-              *ngIf="lang === 'es'"
-              [class.active]="activeLink('/contactos')"
-              routerLink="contactos"
-              >Contáctenos
-              <div
-                class="line"
-                [style.visibility]="
-                  activeLink('/contactos') ? 'visible' : 'hidden'
-                "
-              ></div>
-            </a>
+              <a
+                class="button-menu"
+                *ngIf="lang === 'en'"
+                [class.active]="activeLink('/contactos')"
+                routerLink="contactos"
+                >Contact us
+                <div
+                  class="line"
+                  [style.visibility]="
+                    activeLink('/contactos') ? 'visible' : 'hidden'
+                  "
+                ></div>
+              </a>
 
-            <a
-              class="button-menu"
-              *ngIf="lang === 'en'"
-              [class.active]="activeLink('/contactos')"
-              routerLink="contactos"
-              >Contact us
-              <div
-                class="line"
-                [style.visibility]="
-                  activeLink('/contactos') ? 'visible' : 'hidden'
-                "
-              ></div>
-            </a>
+              <a
+                class="button-menu"
+                *ngIf="lang === 'xx'"
+                [class.active]="activeLink('/contactos')"
+                routerLink="contactos"
+                >Contáctenos
+                <div
+                  class="line"
+                  [style.visibility]="
+                    activeLink('/contactos') ? 'visible' : 'hidden'
+                  "
+                ></div>
+              </a>
+            </div>
+          </ng-container>
 
-            <a
-              class="button-menu"
-              *ngIf="lang === 'xx'"
-              [class.active]="activeLink('/contactos')"
-              routerLink="contactos"
-              >Contáctenos
-              <div
-                class="line"
-                [style.visibility]="
-                  activeLink('/contactos') ? 'visible' : 'hidden'
-                "
-              ></div>
-            </a>
-          </div>
           <mat-divider></mat-divider>
+
           <div class="lang-container">
             <ng-container *ngFor="let idioma of idiomas$ | async">
-              <button class="lang-button" mat-button
+              <button
+                class="lang-button"
+                mat-button
                 (click)="changeLang(idioma.siglas)"
-                [style.background]="lang == idioma.siglas ? '#f5f5f5' : 'none' "
+                [style.background]="lang == idioma.siglas ? '#f5f5f5' : 'none'"
               >
                 <div class="button-wrapper-item">
-                  <div [class.ing-fix]="idioma.siglas === 'en'" class="img-item-container">
+                  <div
+                    [class.ing-fix]="idioma.siglas === 'en'"
+                    class="img-item-container"
+                  >
                     <img
                       *ngIf="idioma.nombre !== 'Otro'"
                       class="img-element"

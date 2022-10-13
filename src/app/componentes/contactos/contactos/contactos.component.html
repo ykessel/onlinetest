@@ -26,13 +26,24 @@
           </div>
         </div>
         <ng-container *ngFor="let seccion of secciones$ | async">
-
           <ng-container *ngIf="seccion.id == 16">
-            <div *ngIf="lang === 'es'" [innerHtml]="seccion.contenidoEs" class="con-we-p-initial"></div>
+            <div
+              *ngIf="lang === 'es'"
+              [innerHtml]="seccion.contenidoEs"
+              class="con-we-p-initial"
+            ></div>
 
-            <div *ngIf="lang === 'en'" [innerHtml]="seccion.contenidoEn" class="con-we-p-initial"></div>
+            <div
+              *ngIf="lang === 'en'"
+              [innerHtml]="seccion.contenidoEn"
+              class="con-we-p-initial"
+            ></div>
 
-            <div *ngIf="lang === 'xx'" [innerHtml]="seccion.contenidoOtro" class="con-we-p-initial"></div>
+            <div
+              *ngIf="lang === 'xx'"
+              [innerHtml]="seccion.contenidoOtro"
+              class="con-we-p-initial"
+            ></div>
           </ng-container>
         </ng-container>
 
@@ -235,7 +246,9 @@
                     I have read and accept the
                     <a href="#" class="con-we-link">Privacy Policy</a>
                     and
-                    <a href="#" class="con-we-link">General Conditions of BIPAY</a>
+                    <a href="#" class="con-we-link"
+                      >General Conditions of BIPAY</a
+                    >
                   </p>
 
                   <p class="con-we-policy-p" *ngIf="lang === 'xx'">

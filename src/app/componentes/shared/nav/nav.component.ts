@@ -5,6 +5,7 @@ import { selectIdiomas } from 'src/app/store/idiomas/idiomas.selectors';
 import { getIdiomas } from 'src/app/store/idiomas/idiomas.actions';
 import { selectLang } from 'src/app/store/system/system.selectors';
 import { SetLang } from 'src/app/store/system/system.actions';
+import { selectSecciones } from 'src/app/store/secciones/secciones.selectors';
 import {
   Location,
   LocationStrategy,
@@ -24,6 +25,7 @@ import {
 export class NavComponent implements OnInit {
   Idiomas: any[] = [];
   lang: string = '';
+  secciones$ = this.store.select(selectSecciones);
   lang$ = this.store.select(selectLang).subscribe((l) => (this.lang = l));
   flags_base: string =
     'https://purecatamphetamine.github.io/country-flag-icons/3x2/';
@@ -54,7 +56,7 @@ export class NavComponent implements OnInit {
   }
 
   activeLink(link: string) {
-    if(this.location.path() === link) {
+    if (this.location.path() === link) {
       return true;
     } else {
       return false;

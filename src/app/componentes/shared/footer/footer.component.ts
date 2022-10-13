@@ -2,7 +2,11 @@ import { getAsociados } from './../../../store/asociados/asociados.actions';
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { AsociadosService } from 'src/app/services/asociados/asociados.service';
-import { faLocationDot, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
+import {
+  faLocationDot,
+  faEnvelope,
+  faPhone,
+} from '@fortawesome/free-solid-svg-icons';
 import { selectAsociados } from 'src/app/store/asociados/asociados.selectors';
 import { selectSecciones } from 'src/app/store/secciones/secciones.selectors';
 import { selectLang } from 'src/app/store/system/system.selectors';
@@ -37,7 +41,7 @@ import {
 })
 export class FooterComponent implements OnInit {
   lang: string = '';
-  asoc: any[]=  [];
+  asoc: any[] = [];
   faLocationDot = faLocationDot;
   faEnvelope = faEnvelope;
   faPhone = faPhone;
@@ -48,7 +52,7 @@ export class FooterComponent implements OnInit {
   categorias$ = this.store.select(selectCategorias);
   contactos$ = this.store.select(selectContactos);
   enlaces$ = this.store.select(selectEnlaces);
-  lang$ = this.store.select(selectLang).subscribe((l) => this.lang = l);
+  lang$ = this.store.select(selectLang).subscribe((l) => (this.lang = l));
 
   constructor(
     private store: Store,
@@ -58,35 +62,36 @@ export class FooterComponent implements OnInit {
     private contactosService: DatosContactoService,
     private enlacesService: EnlacesInteresService,
     location: Location
-  ) {this.location = location;}
+  ) {
+    this.location = location;
+  }
 
   ngOnInit(): void {
-    this.asociadosService.getAsociados()
-    .subscribe((asociados) =>{
+    this.asociadosService.getAsociados().subscribe((asociados) => {
       this.asoc = asociados;
-      this.store.dispatch(getAsociados({ asociados }))}
-    );
+      this.store.dispatch(getAsociados({ asociados }));
+    });
 
     this.documentosService
-    .getDocumentos()
-    .subscribe((documentos) =>
-      this.store.dispatch(getDocumentos({ documentos }))
-    );
+      .getDocumentos()
+      .subscribe((documentos) =>
+        this.store.dispatch(getDocumentos({ documentos }))
+      );
 
-    this.categoriasService.getCategorias()
-    .subscribe((categorias) =>
-      this.store.dispatch(getCategorias({ categorias }))
-    );
+    this.categoriasService
+      .getCategorias()
+      .subscribe((categorias) =>
+        this.store.dispatch(getCategorias({ categorias }))
+      );
 
-    this.contactosService.getDatosContacto()
-    .subscribe((contactos) =>
-      this.store.dispatch(getContactos({ contactos }))
-    );
+    this.contactosService
+      .getDatosContacto()
+      .subscribe((contactos) =>
+        this.store.dispatch(getContactos({ contactos }))
+      );
 
-    this.enlacesService.getEnlaces()
-    .subscribe((enlaces) =>
-      this.store.dispatch(getEnlaces({ enlaces }))
-    );
-
+    this.enlacesService
+      .getEnlaces()
+      .subscribe((enlaces) => this.store.dispatch(getEnlaces({ enlaces })));
   }
 }

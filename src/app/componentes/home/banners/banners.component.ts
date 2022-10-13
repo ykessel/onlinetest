@@ -4,79 +4,23 @@ import {
   AfterViewInit,
   OnDestroy,
   ViewEncapsulation,
-  ElementRef,
-  ViewChild,
-} from "@angular/core";
-import {
-  animation,
-  trigger,
-  animateChild,
-  group,
-  transition,
-  animate,
-  style,
-  query,
-  state,
-} from "@angular/animations";
-import { Store } from "@ngrx/store";
-import { BannersService } from "src/app/services/banners/banners.service";
-import { getBanners } from "src/app/store/banners/banners.actions";
-import { selectLang } from "src/app/store/system/system.selectors";
-import { selectBanners } from "./../../../store/banners/banners.selectors";
-import { Banner } from "src/app/models/banner.model";
-import { first, take } from "rxjs/operators";
-import { OwlOptions } from "ngx-owl-carousel-o";
-import { selectCaracteristicas } from "src/app/store/caracteristicas/caracteristicas.selectors";
+} from '@angular/core';
+import { Store } from '@ngrx/store';
+import { BannersService } from 'src/app/services/banners/banners.service';
+import { getBanners } from 'src/app/store/banners/banners.actions';
+import { selectLang } from 'src/app/store/system/system.selectors';
+import { selectBanners } from './../../../store/banners/banners.selectors';
+import { OwlOptions } from 'ngx-owl-carousel-o';
+import { selectCaracteristicas } from 'src/app/store/caracteristicas/caracteristicas.selectors';
 
 @Component({
-  selector: "bipay-banners",
-  templateUrl: "./banners.component.html",
-  styleUrls: ["./banners.component.scss"],
+  selector: 'bipay-banners',
+  templateUrl: './banners.component.html',
+  styleUrls: ['./banners.component.scss'],
   encapsulation: ViewEncapsulation.None,
-  animations: [
-    // trigger("anima", [
-    //   state("in", style({  left: "-100%", width: "100%" })),
-
-    //   state("out", style({ left: "0%" , opacity: 0 })),
-
-    //   transition("out => in", [animate("1000ms ease-out", style({ opacity: 1, width: '100%' }))]),
-
-    //   transition("in => out", [
-    //     style({ position: "relative" }),
-    //     style({ position: "absolute", top: 0, left: 0, width: "100%" }),
-    //     // animate("2s ease-out", style({ left: "100%", opacity: 0 })),
-        
-    //     // animate("2000ms ease-out")]
-    //   // ),
-    //   // transition("out => in", [animate("100ms")]),
-    // ]),
-
-    //  trigger('in', [
-    //   state(':enter',
-    //   style({ opacity: 1, backgroundColor: 'green' })
-    // ),
-    // ])
-
-    // trigger("anima", [
-    //   transition("* <=> *", [
-    //     style({ position: "relative" }),
-    //     query(":enter, :leave", [
-    //       style({ position: "absolute", top: 0, left: 0, width: "100%" }),
-    //     ]),
-    //     query(":enter", [style({ left: "-100%" })]),
-
-    //     group([
-    //       query(":leave", [
-    //         animate("2s ease-out", style({ left: "100%", opacity: 0 })),
-    //       ]),
-    //       query(":enter", [animate("2s ease-out", style({ left: "0%" }))]),
-    //     ]),
-    //   ]),
-    // ]),
-  ],
 })
 export class BannersComponent implements OnInit, AfterViewInit, OnDestroy {
-  lang: string = "";
+  lang: string = '';
   hideId: number = 0;
   total: number = 0;
   idInterval!: any;
@@ -84,7 +28,7 @@ export class BannersComponent implements OnInit, AfterViewInit, OnDestroy {
   banners$ = this.store.select(selectBanners);
   lang$ = this.store.select(selectLang).subscribe((l) => (this.lang = l));
   totalBanners = this.banners$.subscribe((a) => (this.total = a.length));
-   caracteristicas$ = this.store.select(selectCaracteristicas);
+  caracteristicas$ = this.store.select(selectCaracteristicas);
 
   constructor(private store: Store, private bannersService: BannersService) {}
 
@@ -130,7 +74,7 @@ export class BannersComponent implements OnInit, AfterViewInit, OnDestroy {
     autoplayMouseleaveTimeout: 1100,
     dots: false,
     navSpeed: 600,
-    navText: ["", ""],
+    navText: ['', ''],
     responsive: {
       0: {
         items: 1,

@@ -117,7 +117,9 @@
     <div class="up"></div>
     <div class="down"></div>
   </div>
-  <div style="width: 100vw; border-top: 2px dashed #d9d9d9; margin: 35px 0;"></div>
+  <div
+    style="width: 100vw; border-top: 2px dashed #d9d9d9; margin: 35px 0"
+  ></div>
 
   <div class="carrusel-part2" ngsReveal>
     <!-- Seccion de metodos de pagos (Info header) -->
@@ -157,7 +159,6 @@
       <div class="second-rect"></div>
     </div>
 
-
     <!-- <div class="carrusel-part2-third-line">
       <ng-container *ngFor="let pago of pagos$ | async">
         <div style="height: 133px; border-left: 2px dashed #d9d9d9"></div>
@@ -166,27 +167,27 @@
       <div style="height: 133px; border-left: 2px dashed #d9d9d9"></div>
     </div> -->
 
-<!-- Seccion de metodos de pagos (Imagenes) -->
+    <!-- Seccion de metodos de pagos (Imagenes) -->
     <div class="car-container-movil">
-             <button
-          mat-button
-          (click)="owlPagos.prev()"
-          [class.hide]="totalPagos  === 6"
-          class="carrusel-1-chips"
+      <button
+        mat-button
+        (click)="owlPagos.prev()"
+        [class.hide]="totalPagos === 6"
+        class="carrusel-1-chips"
+      >
+        <svg
+          width="50%"
+          height="50%"
+          viewBox="0 0 26 25"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <svg
-            width="50%"
-            height="50%"
-            viewBox="0 0 26 25"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M21.3 8H14.2L15.3 6.9C16.9 5.3 16.9 2.8 15.3 1.2C13.7 -0.4 11.2 -0.4 9.6 1.2L1.3 9.5C1.3 9.5 1.3 9.5 1.2 9.6C0.4 10.4 0 11.4 0 12.5C0 13.5 0.4 14.6 1.2 15.4C1.2 15.4 1.2 15.4 1.3 15.5L9 23.1C10.6 24.7 13.1 24.7 14.7 23.1C16.3 21.5 16.3 19 14.7 17.4L13.6 16.3H21.3C23.6 16.3 25.5 14.4 25.5 12.1C25.5 9.8 23.7 8 21.3 8Z"
-              fill="white"
-            />
-          </svg>
-        </button>
+          <path
+            d="M21.3 8H14.2L15.3 6.9C16.9 5.3 16.9 2.8 15.3 1.2C13.7 -0.4 11.2 -0.4 9.6 1.2L1.3 9.5C1.3 9.5 1.3 9.5 1.2 9.6C0.4 10.4 0 11.4 0 12.5C0 13.5 0.4 14.6 1.2 15.4C1.2 15.4 1.2 15.4 1.3 15.5L9 23.1C10.6 24.7 13.1 24.7 14.7 23.1C16.3 21.5 16.3 19 14.7 17.4L13.6 16.3H21.3C23.6 16.3 25.5 14.4 25.5 12.1C25.5 9.8 23.7 8 21.3 8Z"
+            fill="white"
+          />
+        </svg>
+      </button>
       <div class="middle-movil">
         <owl-carousel-o [options]="customOptions3" #owlPagos>
           <ng-container *ngFor="let pago of pagos$ | async">
@@ -198,34 +199,36 @@
                 <div class="small-card">
                   <img src="{{ pago.logo }}" />
                 </div>
-                 <div class="vertical-dash-line"></div>
+                <div class="vertical-dash-line"></div>
               </div>
             </ng-template>
           </ng-container>
         </owl-carousel-o>
       </div>
-       <button
-          mat-button
-          (click)="owlPagos.next()"
-          [class.hide]="totalPagos  === 6"
-          class="carrusel-1-chips"
+      <button
+        mat-button
+        (click)="owlPagos.next()"
+        [class.hide]="totalPagos === 6"
+        class="carrusel-1-chips"
+      >
+        <svg
+          width="50%"
+          height="50%"
+          viewBox="0 0 26 25"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <svg
-            width="50%"
-            height="50%"
-            viewBox="0 0 26 25"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M4.2 16.3L11.3 16.3L10.2 17.4C8.6 19 8.6 21.5 10.2 23.1C11.8 24.7 14.3 24.7 15.9 23.1L24.2 14.8C24.2 14.8 24.2 14.8 24.3 14.7C25.1 13.9 25.5 12.9 25.5 11.8C25.5 10.8 25.1 9.70005 24.3 8.90005C24.3 8.90005 24.3 8.90005 24.2 8.80005L16.5 1.20005C14.9 -0.399953 12.4 -0.399953 10.8 1.20005C9.2 2.80005 9.2 5.30005 10.8 6.90005L11.9 8.00005L4.2 8.00005C1.9 8.00005 1.25889e-06 9.90005 1.05782e-06 12.2C8.56743e-07 14.5 1.8 16.3 4.2 16.3Z"
-              fill="white"
-            />
-          </svg>
-        </button>
+          <path
+            d="M4.2 16.3L11.3 16.3L10.2 17.4C8.6 19 8.6 21.5 10.2 23.1C11.8 24.7 14.3 24.7 15.9 23.1L24.2 14.8C24.2 14.8 24.2 14.8 24.3 14.7C25.1 13.9 25.5 12.9 25.5 11.8C25.5 10.8 25.1 9.70005 24.3 8.90005C24.3 8.90005 24.3 8.90005 24.2 8.80005L16.5 1.20005C14.9 -0.399953 12.4 -0.399953 10.8 1.20005C9.2 2.80005 9.2 5.30005 10.8 6.90005L11.9 8.00005L4.2 8.00005C1.9 8.00005 1.25889e-06 9.90005 1.05782e-06 12.2C8.56743e-07 14.5 1.8 16.3 4.2 16.3Z"
+            fill="white"
+          />
+        </svg>
+      </button>
     </div>
   </div>
-  <div style="width: 100vw; border-top: 2px dashed #d9d9d9; margin: 35px 0;"></div>
+  <div
+    style="width: 100vw; border-top: 2px dashed #d9d9d9; margin: 35px 0"
+  ></div>
   <div class="carrusel-2" ngsReveal>
     <div class="carrusel-2-first-line">
       <img class="group-1" src="../../../../assets/Group.png" alt="Group 1" />
@@ -236,13 +239,13 @@
           *ngIf="seccion.id === 19 && lang === 'es'"
           class="carrusel-2-first-line-text"
         >
-          {{ seccion.tituloEs |  uppercase }}
+          {{ seccion.tituloEs | uppercase }}
         </p>
         <p
           *ngIf="seccion.id === 19 && lang === 'en'"
           class="carrusel-2-first-line-text"
         >
-          {{ seccion.tituloEn |  uppercase }}
+          {{ seccion.tituloEn | uppercase }}
         </p>
         <p
           *ngIf="seccion.id === 19 && lang === 'otro'"
@@ -343,26 +346,6 @@
       </button>
     </div>
 
-    <div class="carrusel-2-third-line">
-      <!-- <div class="curved-container"> -->
-         <!--    <p class="carrusel-2-third-line-text-footer">
-              Visite los comercios que utilizan Bipay
-            </p> -->
-        <!-- <ng-container *ngFor="let seccion of secciones$ | async">
-          <ng-container *ngIf="seccion.id === 20">
-            <p *ngIf="lang === 'es'" class="carrusel-2-third-line-text">
-              {{ seccion.tituloEs }}
-            </p>
-            <p *ngIf="lang === 'en'" class="carrusel-2-third-line-text">
-              {{ seccion.tituloEn }}
-            </p>
-            <p *ngIf="lang === 'xx'" class="carrusel-2-third-line-text">
-              {{ seccion.tituloOtro }}
-            </p>
-          </ng-container>
-        </ng-container> -->
-      <!-- </div> -->
-      <!-- <img src="../../../../assets/curva1.png" class="bottom-line" /> -->
-    </div>
+    <div class="carrusel-2-third-line"></div>
   </div>
 </div>
