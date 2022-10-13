@@ -1,7 +1,10 @@
 <div class="footer" ngsReveal>
   <div class="footer-comercios-container">
-    <div  class="curved-container">
-      <p [class.just-home]="location.path() === ''" class="carrusel-2-third-line-text-footer">
+    <div class="curved-container">
+      <p
+        [class.just-home]="location.path() === ''"
+        class="carrusel-2-third-line-text-footer"
+      >
         Visite los comercios que utilizan Bipay
       </p>
       <img
@@ -97,8 +100,7 @@
     </div>
 
     <div class="footer-container" ngsReveal>
-
-      <div class="footer-des-cat" >
+      <div class="footer-des-cat">
         <div class="footer-last-description">
           <img src="../assets/logo-footer.png" />
 
@@ -224,9 +226,25 @@
 
     <div class="footer-last-group" ngsReveal>
       <mat-divider></mat-divider>
-      <div class="footer-last-legal">
-        <p>Copyrights 2021 por Bipay. Todos los derechos reservados</p>
-      </div>
+      <ng-container *ngFor="let seccion of secciones$ | async">
+        <ng-container *ngIf="seccion.id == 23">
+          <div
+            *ngIf="lang === 'es'"
+            class="footer-last-legal"
+            [innerHTML]="seccion.contenidoEs"
+          ></div>
+          <div
+            *ngIf="lang === 'en'"
+            class="footer-last-legal"
+            [innerHTML]="seccion.contenidoEn"
+          ></div>
+          <div
+            *ngIf="lang === 'xx'"
+            class="footer-last-legal"
+            [innerHTML]="seccion.contenidoOtro"
+          ></div>
+        </ng-container>
+      </ng-container>
     </div>
   </div>
 </div>
