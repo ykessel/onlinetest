@@ -49,11 +49,11 @@ export class AppComponent implements OnInit, OnDestroy {
      // you can use this.ccService.getConfig() to do stuff...
     });
 
-    this.initializeSubscription = this.ccService.initialize$.subscribe(
-      (event: NgcInitializeEvent) => {
-        // you can use this.ccService.getConfig() to do stuff...
-      }
-    );
+//     this.initializeSubscription = this.ccService.initialize$.subscribe(
+//       (event: NgcInitializeEvent) => {
+//         // you can use this.ccService.getConfig() to do stuff...
+//       }
+//     );
 
     this.statusChangeSubscription = this.ccService.statusChange$.subscribe(
       (event: NgcStatusChangeEvent) => {
