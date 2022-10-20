@@ -82,7 +82,7 @@ import { SanitazeHtmlPipe } from './pipes/sanitaze-html.pipe';
 
 const cookieConfig:NgcCookieConsentConfig = {
   cookie: {
-    domain: "localhost"
+    domain: "https://bipay-dev.vercel.app/"
   },
   position: "bottom",
   theme: "classic",
