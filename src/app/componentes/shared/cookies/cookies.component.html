@@ -31,9 +31,9 @@
 		</div>
 		<div class="cookie-actions">			
 			<div class="boton-action">
-				<button mat-button class="config-button">Configurar cookies</button>
-				<button mat-button>Aceptar todas</button>
-				<button mat-button>Rechazar todas</button>
+				<button mat-button class="config-button" (click)="openDialog()">Configurar cookies</button>
+				<button mat-button (click)="hideCookie()">Aceptar todas</button>
+				<button mat-button (click)="hideCookie()">Rechazar todas</button>
 			</div>
 		</div>
 	</div>
