@@ -36,7 +36,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgsRevealModule } from 'ngx-scrollreveal';
-import { NgcCookieConsentModule, NgcCookieConsentConfig } from 'ngx-cookieconsent';
+// import { NgcCookieConsentModule, NgcCookieConsentConfig } from 'ngx-cookieconsent';
 
 //App Components
 import { DocumentosComponent } from './componentes/documentos/documentos/documentos.component';
@@ -79,37 +79,51 @@ import { SystemLangReducer, SystemServiceIdReducer } from './store/system/system
 import { BannersComponent } from './componentes/home/banners/banners.component';
 import { SocialesComponent } from './componentes/shared/footer/sociales/sociales.component';
 import { SanitazeHtmlPipe } from './pipes/sanitaze-html.pipe';
+import { CookiesComponent } from './componentes/shared/cookies/cookies.component';
 
-const cookieConfig:NgcCookieConsentConfig = {
-  cookie: {
-    domain: "https://bipay-dev.vercel.app/"
-  },
-  position: "bottom",
-  theme: "classic",
-  palette: {
-    popup: {
-      background: "#000000",
-      text: "#ffffff",
-      link: "#ffffff"
-    },
-    button: {
-      background: "#f1d600",
-      text: "#000000",
-      border: "transparent"
-    }
-  },
-  type: "opt-in",
-  content: {
-    message: "This website uses cookies to ensure you get the best experience on our website.",
-    dismiss: "Got it!",
-    deny: "Decline",
-    link: "Learn more",
-    href: "https://cookiesandyou.com",
-    policy: "Cookie Policy",
-    header: "Cookies used on the website!",
-    allow: "Allow cookies"
-  }
-};
+// const cookieConfig:NgcCookieConsentConfig = {
+//   cookie: {
+//     domain: "https://bipay-dev.vercel.app/"
+//   },
+//   position: "bottom",
+//   theme: "classic",
+//   palette: {
+//     popup: {
+//       background: "#000000",
+//       text: "#ffffff",
+//       link: "#ffffff"
+//     },
+//     button: {
+//       background: "#f1d600",
+//       text: "#000000",
+//       border: "transparent"
+//     }
+//   },
+//   type: "opt-in",
+//   layout: 'my-custom-layout',
+//   layouts: {
+//     "my-custom-layout": '{{buttons}}'
+//   },
+//   elements:{
+//     buttons: `
+//     <span id="cookieconsent:desc" class="cc-message">{{message}}
+//      <button (click)="delclineCookies()">Decline</button>
+//      <button (click)="customomizeCookies() => { console.log("Inject code") }">Customize Cookies</button>
+//      <button (click)="acceptCookies()">Accept</button>
+//     </span>
+//     `,
+//   },
+//   content: {
+//     message: "This website uses cookies to ensure you get the best experience on our website.",
+//     dismiss: "Got it!",
+//     deny: "Decline",
+//     link: "Learn more",
+//     href: "https://cookiesandyou.com",
+//     policy: "Cookie Policy",
+//     header: "Cookies used on the website!",
+//     allow: "Allow cookies"
+//   }
+// };
 
 @NgModule({
   declarations: [
@@ -126,6 +140,7 @@ const cookieConfig:NgcCookieConsentConfig = {
     SocialesComponent,
     ComfirmDialog,
     SanitazeHtmlPipe,
+    CookiesComponent,
   ],
   imports: [
     CommonModule,
@@ -180,7 +195,7 @@ const cookieConfig:NgcCookieConsentConfig = {
       maxAge: 25,
       logOnly: environment.production,
     }),
-    NgcCookieConsentModule.forRoot(cookieConfig),
+    // NgcCookieConsentModule.forRoot(cookieConfig),
   ],
   exports: [
     FooterComponent,

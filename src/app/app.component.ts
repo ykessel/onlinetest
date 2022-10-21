@@ -3,12 +3,12 @@ import { SeccionesService } from './services/secciones/secciones.service';
 import { Store } from '@ngrx/store';
 import { selectSecciones } from 'src/app/store/secciones/secciones.selectors';
 import { getSecciones } from 'src/app/store/secciones/secciones.actions';
-import {
-  NgcCookieConsentService,
-  NgcNoCookieLawEvent,
-  NgcInitializeEvent,
-  NgcStatusChangeEvent,
-} from "ngx-cookieconsent";
+// import {
+//   NgcCookieConsentService,
+//   NgcNoCookieLawEvent,
+//   NgcInitializeEvent,
+//   NgcStatusChangeEvent,
+// } from "ngx-cookieconsent";
 import { Subscription } from "rxjs";
 
 @Component({
@@ -29,8 +29,12 @@ export class AppComponent implements OnInit, OnDestroy {
   constructor(
     private store: Store,
     private seccionesService: SeccionesService,
-    private ccService: NgcCookieConsentService,
+    // private ccService: NgcCookieConsentService,
   ) {}
+
+  customomizeCookies() {
+    console.log("CUSTOM")
+  }
 
   ngOnInit(): void {
     this.seccionesService

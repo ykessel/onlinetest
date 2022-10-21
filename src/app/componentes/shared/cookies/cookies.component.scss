@@ -1,0 +1,96 @@
+.cookie-container {
+	display: flex;
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #f4a800;
+	z-index: 9999;
+	padding: 1.5%;
+	// transition: 1s ease;
+
+	.cookie-info {
+		width: 50%;
+
+		.cookie-text {
+			display: flex;
+			flex-direction: column;
+
+			h2 {
+				font-family: "Inter";
+				font-style: normal;
+				font-weight: 700;
+				font-size: 24px;
+				line-height: 29px;
+				color: #000000;
+			}
+
+			p {
+				font-family: "Inter";
+				font-style: normal;
+				font-weight: 400;
+				font-size: 14px;
+				line-height: 140%;
+				color: #000000;
+			}
+		}
+	}
+
+	.cookie-actions {
+		width: 50%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		.boton-close {
+			display: flex;
+			justify-content: flex-end;
+			align-items: flex-start;
+		}
+
+		.boton-action {
+			display: flex;
+			justify-content: center;
+			align-items: flex-end;
+			gap: 12px;
+
+			.mat-button:not(.config-button) {
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: flex-start;
+				padding: 6px 12px;
+				gap: 10px;
+				background: #670f0f;
+				border-radius: 50px;
+				color: #fff;
+
+				&:hover {
+					background: #420101;
+				}
+			}
+
+			.mat-button:first-child {
+				font-family: "Inter";
+				font-style: normal;
+				font-weight: 700;
+				font-size: 14px;
+				line-height: 19px;
+				color: #670f0f;
+				text-decoration: underline;
+				align-self: center;
+				margin-right: 1rem;
+			}
+		}
+	}
+}
+
+.hide {
+	display: none !important;
+}
+
+.footer-social-icon {
+  color: #670f0f;
+  font-size: 2em;
+  margin-left: 0.5em;
+}

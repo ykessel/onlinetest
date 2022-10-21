@@ -1,0 +1,35 @@
+<div [class.hide]="hide" class="cookie-container">
+	<div class="cookie-info">
+		<h2>Bienvenido a Bidaiondo</h2>
+		<div class="cookie-text">
+			<p>
+				BIDAIONDO S.L utiliza las tecnologías conocidas como Cookies con
+				la finalidad de permitir la navegación por Internet (cookies
+				técnicas propias necesarias) y cookies de terceros de tipo
+				analíticas para analizar el uso que hace el usuario del propio
+				sitio web.
+			</p>
+			<p>
+				Al aceptar el uso de cookies, el usuario está aceptando y
+				consintiendo la descarga de cookies en el terminal en caso de
+				haber habilitado la opción correspondiente.
+			</p>
+			<p>
+				El acceso y la navegación en el Sitio Web, o el uso de los
+				servicios del mismo, implican la aceptación de los términos
+				incluidos en el Aviso Legal, la Política de Privacidad y esta
+				Política de Cookies en los términos descritos.
+			</p>
+		</div>
+	</div>
+	<div class="cookie-actions">
+		<div class="boton-close">
+			<fa-icon (click)="hideCookie()" class="footer-social-icon" [icon]="faXmarkCircle"></fa-icon>
+		</div>
+		<div class="boton-action">
+			<button mat-button class="config-button">Configurar cookies</button>
+			<button mat-button>Aceptar todas</button>
+			<button mat-button>Rechazar todas</button>
+		</div>
+	</div>
+</div>
