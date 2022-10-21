@@ -31,6 +31,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 // 3rd Party Libray
 import { CarouselModule } from 'ngx-owl-carousel-o';
@@ -79,7 +80,7 @@ import { SystemLangReducer, SystemServiceIdReducer } from './store/system/system
 import { BannersComponent } from './componentes/home/banners/banners.component';
 import { SocialesComponent } from './componentes/shared/footer/sociales/sociales.component';
 import { SanitazeHtmlPipe } from './pipes/sanitaze-html.pipe';
-import { CookiesComponent } from './componentes/shared/cookies/cookies.component';
+import { CookiesComponent, ConfigCookie  } from './componentes/shared/cookies/cookies.component';
 
 // const cookieConfig:NgcCookieConsentConfig = {
 //   cookie: {
@@ -141,6 +142,7 @@ import { CookiesComponent } from './componentes/shared/cookies/cookies.component
     ComfirmDialog,
     SanitazeHtmlPipe,
     CookiesComponent,
+    ConfigCookie,
   ],
   imports: [
     CommonModule,
@@ -166,6 +168,7 @@ import { CookiesComponent } from './componentes/shared/cookies/cookies.component
     MatDividerModule,
     MatDialogModule,
     FormsModule,
+    MatCheckboxModule,
 
     //3rd Party Libray
     CarouselModule,

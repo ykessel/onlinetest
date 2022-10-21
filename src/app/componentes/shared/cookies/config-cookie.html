@@ -1,0 +1,39 @@
+<div class="config-cookie">
+  <div class="config-cookie-top">
+    <img src="../../../../assets/logo.png" />
+    <fa-icon (click)="onNoClick()" class="footer-social-icon" [icon]="faXmarkCircle"></fa-icon>
+  </div>  
+  <div class="config-cookie-text">
+    <h2>Bienvenido a Bidaiondo</h2>
+          <p>
+        BIDAIONDO S.L utiliza las tecnologías conocidas como Cookies con
+        la finalidad de permitir la navegación por Internet (cookies
+        técnicas propias necesarias) y cookies de terceros de tipo
+        analíticas para analizar el uso que hace el usuario del propio
+        sitio web.
+      </p>
+      <p>
+        Al aceptar el uso de cookies, el usuario está aceptando y
+        consintiendo la descarga de cookies en el terminal en caso de
+        haber habilitado la opción correspondiente.
+      </p>
+      <p>
+        El acceso y la navegación en el Sitio Web, o el uso de los
+        servicios del mismo, implican la aceptación de los términos
+        incluidos en el <a href="#" >Aviso Legal</a>, la <a href="#">Política de Privacidad</a> y esta
+        <a href="#">Política de Cookies</a> en los términos descritos.
+      </p>
+  </div> 
+  <mat-divider></mat-divider> 
+  <div class="config-cookie-checkbox">
+    <mat-checkbox checked>Cookies Obligatorias</mat-checkbox>
+    <mat-checkbox>Cookies Primera</mat-checkbox>
+    <mat-checkbox>Cookies Segunda</mat-checkbox>
+    <mat-checkbox>Cookies Tercera</mat-checkbox>
+  </div>
+  <mat-divider></mat-divider>   
+  <div class="config-cookie-bottom">
+      <button mat-button (click)="onNoClick()">Aceptar todas</button>
+      <button mat-button (click)="onNoClick()">Rechazar todas</button>
+  </div>  
+</div>

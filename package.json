@@ -30,7 +30,6 @@
     "@ngrx/effects": "^14.3.0",
     "@ngrx/store": "^14.3.0",
     "@ngrx/store-devtools": "^14.3.0",
-    "cookieconsent": "^3.1.1",
     "flag-icon-css": "^4.1.7",
     "jquery": "^3.6.0",
     "js-file-downloader": "^1.1.24",
