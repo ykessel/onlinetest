@@ -16,10 +16,73 @@ body {
   width: 20000px !important;
 }
 
-.owl-stage, .owl-item {
+.owl-stage,
+.owl-item {
   display: flex;
 }
 
 .mat-dialog-container {
-    border-radius: 16px !important;
+  border-radius: 16px !important;
+  padding: 0px !important;
+}
+
+.mat-checkbox-checked .mat-checkbox-checkmark {
+  display: none;
+}
+
+.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background,
+.mat-checkbox-checked.mat-accent .mat-checkbox-background {
+  background-color: #f4a800;
+}
+
+.mat-checkbox-checked:not(.mat-checkbox-disabled).mat-accent
+  .mat-ripple-element,
+.mat-checkbox:active:not(.mat-checkbox-disabled).mat-accent
+  .mat-ripple-element {
+  background: #ffa800;
+}
+
+.mat-checkbox-frame {
+  border-radius: 5px !important;
+}
+
+.mat-checkbox-background {
+  background-color: #d9d9d9;
+}
+
+.cookie-modal {
+  width: 35vw;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 1080px) {
+  .cookie-modal {
+    width: 94vw;
+    max-width: 94vw !important;
+  }
+
+  .config-cookie {
+    padding: 0.5rem 0px !important;
+  }
+
+  .config-cookie-top {
+    margin-bottom: 0.2rem !important;
+  }
+  .config-cookie-text {
+    padding: 0px 12px !important;
+  }
+
+  .config-cookie-checkbox {
+    padding: 0.5rem 12px !important;
+  }
+
+  .config-cookie-bottom {
+    gap: 0.2rem !important;
+    margin-top: 1rem !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .footer-social-icon {
+    margin-right: 2% !important;
+  }
 }
