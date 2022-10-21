@@ -33,6 +33,11 @@
 				line-height: 140%;
 				color: #000000;
 			}
+
+			a {
+				color: #fff;
+				text-decoration: underline;
+			}
 		}
 	}
 
@@ -90,11 +95,11 @@
 }
 
 .footer-social-icon {
-  color: #670f0f;
-  font-size: 2em;
-  margin-left: 0.5em;
+	color: #670f0f;
+	font-size: 2em;
+	margin-left: 0.5em;
 
-   &:hover {
-    color: #420101;
-  }
+	&:hover {
+		color: #420101;
+	}
 }

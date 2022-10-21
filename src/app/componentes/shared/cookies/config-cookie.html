@@ -20,8 +20,8 @@
       <p>
         El acceso y la navegación en el Sitio Web, o el uso de los
         servicios del mismo, implican la aceptación de los términos
-        incluidos en el <a>Aviso Legal</a>, la <a>Política de Privacidad</a> y esta
-        <a>Política de Cookies</a> en los términos descritos.
+        incluidos en el <a href="#" >Aviso Legal</a>, la <a href="#">Política de Privacidad</a> y esta
+        <a href="#">Política de Cookies</a> en los términos descritos.
       </p>
   </div> 
   <mat-divider></mat-divider> 
@@ -33,7 +33,7 @@
   </div>
   <mat-divider></mat-divider>   
   <div class="config-cookie-bottom">
-      <button mat-button>Aceptar todas</button>
-      <button mat-button>Rechazar todas</button>
+      <button mat-button (click)="onNoClick()">Aceptar todas</button>
+      <button mat-button (click)="onNoClick()">Rechazar todas</button>
   </div>  
 </div>
