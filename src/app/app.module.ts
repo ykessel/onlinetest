@@ -37,7 +37,6 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgsRevealModule } from 'ngx-scrollreveal';
-// import { NgcCookieConsentModule, NgcCookieConsentConfig } from 'ngx-cookieconsent';
 
 //App Components
 import { DocumentosComponent } from './componentes/documentos/documentos/documentos.component';
@@ -82,49 +81,7 @@ import { SocialesComponent } from './componentes/shared/footer/sociales/sociales
 import { SanitazeHtmlPipe } from './pipes/sanitaze-html.pipe';
 import { CookiesComponent, ConfigCookie  } from './componentes/shared/cookies/cookies.component';
 
-// const cookieConfig:NgcCookieConsentConfig = {
-//   cookie: {
-//     domain: "https://bipay-dev.vercel.app/"
-//   },
-//   position: "bottom",
-//   theme: "classic",
-//   palette: {
-//     popup: {
-//       background: "#000000",
-//       text: "#ffffff",
-//       link: "#ffffff"
-//     },
-//     button: {
-//       background: "#f1d600",
-//       text: "#000000",
-//       border: "transparent"
-//     }
-//   },
-//   type: "opt-in",
-//   layout: 'my-custom-layout',
-//   layouts: {
-//     "my-custom-layout": '{{buttons}}'
-//   },
-//   elements:{
-//     buttons: `
-//     <span id="cookieconsent:desc" class="cc-message">{{message}}
-//      <button (click)="delclineCookies()">Decline</button>
-//      <button (click)="customomizeCookies() => { console.log("Inject code") }">Customize Cookies</button>
-//      <button (click)="acceptCookies()">Accept</button>
-//     </span>
-//     `,
-//   },
-//   content: {
-//     message: "This website uses cookies to ensure you get the best experience on our website.",
-//     dismiss: "Got it!",
-//     deny: "Decline",
-//     link: "Learn more",
-//     href: "https://cookiesandyou.com",
-//     policy: "Cookie Policy",
-//     header: "Cookies used on the website!",
-//     allow: "Allow cookies"
-//   }
-// };
+import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
@@ -198,7 +155,7 @@ import { CookiesComponent, ConfigCookie  } from './componentes/shared/cookies/co
       maxAge: 25,
       logOnly: environment.production,
     }),
-    // NgcCookieConsentModule.forRoot(cookieConfig),
+
   ],
   exports: [
     FooterComponent,
@@ -222,7 +179,8 @@ import { CookiesComponent, ConfigCookie  } from './componentes/shared/cookies/co
     CategoriasEnlaceService,
     ContactosService,
     EnlacesInteresService,
-    DatosContactoService
+    DatosContactoService,
+    CookieService,
   ],
   bootstrap: [AppComponent],
 })

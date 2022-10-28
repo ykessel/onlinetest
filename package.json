@@ -1,6 +1,6 @@
 {
   "name": "bipay-frontend-personal",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -33,6 +33,7 @@
     "flag-icon-css": "^4.1.7",
     "jquery": "^3.6.0",
     "js-file-downloader": "^1.1.24",
+    "ngx-cookie-service": "^14.0.1",
     "ngx-owl-carousel": "^2.0.7",
     "ngx-owl-carousel-o": "^14.0.1",
     "ngx-scrollreveal": "^3.0.0",

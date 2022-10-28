@@ -25,15 +25,14 @@
       </p>
   </div> 
   <mat-divider></mat-divider> 
-  <div class="config-cookie-checkbox">
-    <mat-checkbox checked>Cookies Obligatorias</mat-checkbox>
-    <mat-checkbox>Cookies Primera</mat-checkbox>
-    <mat-checkbox>Cookies Segunda</mat-checkbox>
-    <mat-checkbox>Cookies Tercera</mat-checkbox>
+  <div class="config-cookie-checkbox"  [formGroup]="cookies">
+    <mat-checkbox formControlName="primera">Bidaiondo.com</mat-checkbox>
+    <mat-checkbox formControlName="segunda">Moz.com</mat-checkbox>
+    <mat-checkbox formControlName="tercera">Secure/europeanssl.eu</mat-checkbox>
   </div>
   <mat-divider></mat-divider>   
   <div class="config-cookie-bottom">
-      <button mat-button (click)="onNoClick()">Aceptar todas</button>
-      <button mat-button (click)="onNoClick()">Rechazar todas</button>
+      <button mat-button (click)="cookieSave()">Aceptar</button>
+      <button mat-button (click)="rejectAll()">Rechazar</button>
   </div>  
 </div>
