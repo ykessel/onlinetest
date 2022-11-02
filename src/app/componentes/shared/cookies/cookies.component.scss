@@ -10,7 +10,7 @@
 	padding: 1.5%;
 
 	.cookie-info {
-		width: 50%;
+		width: 70%;
 
 		.cookie-text {
 			display: flex;
@@ -26,20 +26,25 @@
 				font: 400 14px/20px Roboto, "Helvetica Neue";
 				line-height: 140%;
 				color: #000000;
-			}
 
-			a {
-				color: #fff;
-				text-decoration: underline;
+				a {
+					font-family: "Roboto";
+					font-style: normal;
+					font-weight: 400;
+					font-size: 16px;
+					line-height: 24px;
+					color: #670f0f;
+					text-decoration: none;
+				}
 			}
 		}
 	}
 
 	.cookie-actions {
-		width: 50%;
-  		display: flex;
-    	flex-direction: column;
-    	justify-content: flex-end;
+		width: 30%;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
 
 		.boton-close {
 			display: flex;
@@ -68,14 +73,6 @@
 					background: #420101;
 				}
 			}
-
-			.mat-button:first-child {
-                font: 400 14px/20px Roboto, "Helvetica Neue";
-				line-height: 19px;
-				color: #670f0f;
-				text-decoration: underline;
-				align-self: center;
-			}
 		}
 	}
 }
@@ -94,12 +91,12 @@
 	}
 }
 
-.cookie-header{
+.cookie-header {
 	display: flex;
 	justify-content: space-between;
 }
 
-.cookie-content{
+.cookie-content {
 	display: flex;
 }
 
@@ -116,7 +113,7 @@
 		padding: 1.5%;
 	}
 
-	.cookie-info{
+	.cookie-info {
 		width: 100% !important;
 	}
 
@@ -127,7 +124,7 @@
 		justify-content: flex-end !important;
 	}
 
-	.boton-action{
+	.boton-action {
 		display: flex !important;
 		flex-direction: column !important;
 		justify-content: center !important;
@@ -141,13 +138,13 @@
 		flex-direction: column;
 	}
 
-	.cookie-title{
+	.cookie-title {
 		margin: 6% 0 16px !important;
 	}
 
-	.cookie-header{
+	.cookie-header {
 		display: flex;
 		padding: 3% 0 0 3%;
-		justify-content: space-between;	
+		justify-content: space-between;
 	}
 }

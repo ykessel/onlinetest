@@ -16,8 +16,10 @@ import { CookieService } from "ngx-cookie-service";
   styleUrls: ["./cookies.component.scss"],
 })
 export class CookiesComponent implements OnInit {
-  hide: boolean = localStorage.getItem("showCookie") == "false" ? true : false;
+  lang: string = '';
   faXmarkCircle = faXmarkCircle;
+  lang$ = this.store.select(selectLang).subscribe((l) => (this.lang = l));
+  hide: boolean = localStorage.getItem("showCookie") == "false" ? true : false;
 
   constructor(
     private store: Store,

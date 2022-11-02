@@ -1,22 +1,29 @@
 <div [class.hide]="hide" class="cookie-container">
 	<div class="cookie-header">
-		<h2 class="cookie-title">Bienvenido a Bidaiondo</h2>
+		<h2 class="cookie-title" *ngIf="lang === 'es'">Bienvenido a Bipay</h2>
+		<h2 class="cookie-title" *ngIf="lang === 'en'">Welcome to Bipay</h2>
 		<div class="boton-close">
-			<fa-icon (click)="hideCookie()" class="footer-social-icon" [icon]="faXmarkCircle"></fa-icon>
+			<fa-icon
+				(click)="hideCookie()"
+				class="footer-social-icon"
+				[icon]="faXmarkCircle"
+			></fa-icon>
 		</div>
 	</div>
 
 	<div class="cookie-content">
-		<div class="cookie-info"> 	 	
+		<div class="cookie-info">
 			<div class="cookie-text">
-				<p>
-					BIDAIONDO S.L utiliza las tecnologías conocidas como Cookies con
-					la finalidad de permitir la navegación por Internet (cookies
-					técnicas propias necesarias) y cookies de terceros de tipo
-					analíticas para analizar el uso que hace el usuario del propio
-					sitio web.
+				<p *ngIf="lang === 'es'">
+					Bipay utiliza cookies necesarias y propias, relativas al propio funcionamiento del sitio web. Haz click <a href="#" >Aqui</a> para obtener mas informacion. No guardamos ninguna iinformacion vinculada directamente a usted.
 				</p>
-				<p>
+				<p *ngIf="lang === 'en'">
+					Bipay uses technologies known as Cookies with the purpose of
+					allowing Internet browsing (cookies necessary own
+					techniques) and third-party cookies of the type analytics to
+					analyze the use made by the user of the site us
+				</p>
+				<!-- <p>
 					Al aceptar el uso de cookies, el usuario está aceptando y
 					consintiendo la descarga de cookies en el terminal en caso de
 					haber habilitado la opción correspondiente.
@@ -26,14 +33,18 @@
 					servicios del mismo, implican la aceptación de los términos
 					incluidos en el Aviso Legal, la Política de Privacidad y esta
 					Política de Cookies en los términos descritos.
-				</p>
+				</p> -->
 			</div>
 		</div>
-		<div class="cookie-actions">			
+		<div class="cookie-actions">
 			<div class="boton-action">
-				<button mat-button class="config-button" (click)="openDialog()">Configurar cookies</button>
-				<button mat-button (click)="acceptAll()">Aceptar</button>
-				<button mat-button (click)="hideCookie()">Rechazar</button>
+				<!-- <button mat-button class="config-button" (click)="openDialog()">
+					Configurar cookies
+				</button> -->
+				<button mat-button (click)="acceptAll()" *ngIf="lang === 'es'">Aceptar</button>
+				<button mat-button (click)="acceptAll()" *ngIf="lang === 'en'">Accept</button>
+				<button mat-button (click)="rejectAll()" *ngIf="lang === 'es'">Rechazar</button>
+				<button mat-button (click)="rejectAll()" *ngIf="lang === 'en'">Decline</button>
 			</div>
 		</div>
 	</div>

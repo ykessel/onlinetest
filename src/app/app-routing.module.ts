@@ -9,17 +9,17 @@ import { NosotrosComponent } from './componentes/nosotros/nosotros/nosotros.comp
 import { TerminosComponent } from './componentes/terminos/terminos/terminos.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '', pathMatch: 'full', component: HomeComponent },
-  { path: 'nosotros',  canActivate: [RutaAccesoGuard], data: { id: 13}, component: NosotrosComponent },
-  { path: 'servicios', canActivate: [RutaAccesoGuard], data: { id: 14}, component: ServiciosComponent },
-  { path: 'documentos', canActivate: [RutaAccesoGuard], data: { id: 15}, component: DocumentosComponent },
-  { path: 'contactos', canActivate: [RutaAccesoGuard], data: { id: 16},component: ContactosComponent },
+  { path: '', component: HomeComponent },
+  { path: 'nosotros', data: { id: 13}, component: NosotrosComponent },
+  { path: 'servicios', data: { id: 14}, component: ServiciosComponent },
+  { path: 'documentos', data: { id: 15}, component: DocumentosComponent },
+  { path: 'contactos', data: { id: 16},component: ContactosComponent },
   { path: 'terminos', component: TerminosComponent },
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled', enableTracing: false}),
+    RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled', enableTracing: true}),
   ],
   exports: [RouterModule],
 })

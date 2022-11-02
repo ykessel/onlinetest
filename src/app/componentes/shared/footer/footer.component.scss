@@ -442,16 +442,19 @@
 
   .carrusel-2-third-line-text-footer {
     display: none;
-    font-family: "Fredoka One";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 36px;
-    text-align: center;
-    text-transform: uppercase;
-    color: #5d0303;
-    height: 72px;
     width: 40%;
     margin: 0;
+
+    p {
+      font-family: "Fredoka One";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 36px;
+      line-height: 36px;
+      text-align: center;
+      text-transform: uppercase;
+      color: #5d0303;
+      height: 72px;
+    }
   }
 }

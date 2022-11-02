@@ -1,12 +1,22 @@
 <div class="footer" ngsReveal>
   <div class="footer-comercios-container">
     <div class="curved-container">
-      <p
-        [class.just-home]="location.path() === ''"
-        class="carrusel-2-third-line-text-footer"
-      >
-        Visite los comercios que utilizan Bipay
-      </p>
+      <ng-container *ngFor="let seccion of secciones$ | async">
+        <ng-container *ngIf="seccion.id == 20">
+          <div
+            *ngIf="lang === 'es'"
+            class="carrusel-2-third-line-text-footer"
+            [class.just-home]="location.path() === ''"
+            [innerHTML]="seccion.contenidoEs"
+          ></div>
+          <div
+            *ngIf="lang === 'en'"
+            class="carrusel-2-third-line-text-footer"
+            [class.just-home]="location.path() === ''"
+            [innerHTML]="seccion.contenidoEn"
+          ></div>
+        </ng-container>
+      </ng-container>
       <img
         src="../../../../assets/curva1.png"
         [class.just-home]="location.path() === ''"
