@@ -82,6 +82,7 @@ import { SanitazeHtmlPipe } from './pipes/sanitaze-html.pipe';
 import { CookiesComponent, ConfigCookie  } from './componentes/shared/cookies/cookies.component';
 
 import { CookieService } from 'ngx-cookie-service';
+import { GenericComponent } from './componentes/shared/generic/generic.component';
 
 @NgModule({
   declarations: [
@@ -100,6 +101,7 @@ import { CookieService } from 'ngx-cookie-service';
     SanitazeHtmlPipe,
     CookiesComponent,
     ConfigCookie,
+    GenericComponent,
   ],
   imports: [
     CommonModule,

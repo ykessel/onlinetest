@@ -28,6 +28,7 @@ import {
   LocationStrategy,
   PathLocationStrategy,
 } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'bipay-footer',
@@ -61,7 +62,8 @@ export class FooterComponent implements OnInit {
     private categoriasService: CategoriasEnlaceService,
     private contactosService: DatosContactoService,
     private enlacesService: EnlacesInteresService,
-    location: Location
+    location: Location,
+    private router: Router,
   ) {
     this.location = location;
   }
@@ -93,5 +95,11 @@ export class FooterComponent implements OnInit {
     this.enlacesService
       .getEnlaces()
       .subscribe((enlaces) => this.store.dispatch(getEnlaces({ enlaces })));
+  }
+
+  generatePag(url: string | null) {
+    if(typeof(url) === 'string') {
+      this.router.navigate(['/generic',  { genericUrl: url }])
+    }
   }
 }

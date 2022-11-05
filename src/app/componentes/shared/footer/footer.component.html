@@ -177,7 +177,7 @@
                 {{ categoria.tituloOtro }}
               </p>
             </div>
-            <ng-container *ngFor="let enlace of enlaces$ | async">
+            <ng-container #link *ngFor="let enlace of enlaces$ | async">
               <div
                 *ngIf="categoria.id === enlace.categoriaEnlaceEs!.id"
                 class="footer-docs-group"
@@ -185,19 +185,17 @@
                 <a
                   class="enlace"
                   *ngIf="lang === 'es'"
-                  href="{{ enlace.enlaceEs }}"
+                  (click)="generatePag(enlace.enlaceEs)"
                   >{{ enlace.tituloEs }}</a
                 >
                 <a
                   class="enlace"
                   *ngIf="lang === 'en'"
-                  href="{{ enlace.enlaceEn }}"
                   >{{ enlace.tituloEn }}</a
                 >
                 <a
                   class="enlace"
                   *ngIf="lang === 'xx'"
-                  href="{{ enlace.enlaceOtro }}"
                   >{{ enlace.tituloOtro }}</a
                 >
               </div>

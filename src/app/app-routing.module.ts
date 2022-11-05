@@ -7,6 +7,7 @@ import { DocumentosComponent } from './componentes/documentos/documentos/documen
 import { ContactosComponent } from './componentes/contactos/contactos/contactos.component';
 import { NosotrosComponent } from './componentes/nosotros/nosotros/nosotros.component';
 import { TerminosComponent } from './componentes/terminos/terminos/terminos.component';
+import { GenericComponent } from './componentes/shared/generic/generic.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -14,12 +15,13 @@ const routes: Routes = [
   { path: 'servicios', data: { id: 14}, component: ServiciosComponent },
   { path: 'documentos', data: { id: 15}, component: DocumentosComponent },
   { path: 'contactos', data: { id: 16},component: ContactosComponent },
+  { path: 'generic', component: GenericComponent },
   { path: 'terminos', component: TerminosComponent },
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled', enableTracing: true}),
+    RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled', enableTracing: false}),
   ],
   exports: [RouterModule],
 })
