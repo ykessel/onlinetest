@@ -16,7 +16,6 @@ export type PageType = {
   encapsulation: ViewEncapsulation.None,
 })
 export class GenericComponent implements OnInit {
-  // page$: Observable<PageType> = of({titulo: '', contenido: ''});
   page: PageType = { titulo: '', contenido: '' };
 
   constructor(
@@ -25,9 +24,15 @@ export class GenericComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.route.paramMap.subscribe((x: any) => {
+    this.route.paramMap.subscribe((link: any) => {
     this.categoriasEnlaceService
-        .getGenericPage(x.params.genericUrl).subscribe((x: PageType)=> this.page = x);
+        .getGenericPage(link.params.genericUrl).subscribe((page: PageType) => {
+          if (page !== null) {
+            this.page = page
+          } else {
+            this.page = { titulo: '', contenido: '' };
+          }
+        });
     });
   }
 }
