@@ -23,6 +23,7 @@ export class CategoriasEnlaceService {
   }
 
   getGenericPage(url: string) {
-    return this.http.get<PageType>(url);
+    let segureLink = url.replace('http://', 'https://')
+    return this.http.get<PageType>(segureLink);
   }
 }
