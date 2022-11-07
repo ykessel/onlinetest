@@ -1,6 +1,3 @@
-<!-- <p>{{page$ | async}}</p> -->
-
-
 <div style="width: 100%" class="gen-container">
   <div class="gen-contenido">
     <div class="gen-centro">
@@ -11,53 +8,9 @@
       </div>
       <div class="gen-middle-side">
 
-<!--         <div class="contact-head2">
-          <div class="center-content2">
-            <img class="chip-img" src="../../../../assets/img_header.png" />
-            <ng-container *ngFor="let seccion of secciones$ | async">
-              <ng-container *ngIf="seccion.id == 13">
-                <h1 *ngIf="lang === 'es'" class="contact-tittle">
-                  {{ seccion.tituloEs }}
-                </h1>
-                <h1 *ngIf="lang === 'en'" class="contact-tittle">
-                  {{ seccion.tituloEn }}
-                </h1>
-                <h1 *ngIf="lang === 'xx'" class="contact-tittle">
-                  {{ seccion.tituloOtro }}
-                </h1>
-              </ng-container>
-            </ng-container>
-          </div>
-        </div>
-        <div class="nos-movil">
-          <div class="left-img-movil"></div>
-          <img
-            class="rigth-img2-movil"
-            src="../../../../assets/grafica_der1.png"
-          />
-        </div> -->
         <div class="gen-we-text-no2">
           <div class="gen-we-text-container-con">
            	<div [innerHtml]="page.contenido"></div>
-<!--             <ng-container *ngFor="let seccion of secciones$ | async">
-              <ng-container *ngIf="seccion.id == 13">
-                <div
-                  class="nos-container"
-                  *ngIf="lang === 'es'"
-                  [innerHTML]="seccion.contenidoEs"
-                ></div>
-                <div
-                  class="nos-container"
-                  *ngIf="lang === 'en'"
-                  [innerHTML]="seccion.contenidoEs"
-                ></div>
-                <div
-                  class="nos-container"
-                  *ngIf="lang === 'xx'"
-                  [innerHTML]="seccion.contenidoOtro"
-                ></div>
-              </ng-container>
-            </ng-container> -->
           </div>
         </div>
       </div>
