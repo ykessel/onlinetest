@@ -37,26 +37,11 @@ export class ContactosComponent implements OnInit {
   ) {
     this.contactoForm = this.fb.group({
       empresa: ['', Validators.required],
-      paginaWeb: [
-        '',
-        Validators.pattern(
-          /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/
-        ),
-      ],
-      numeroCarnet: [
-        '',
-        [
-          Validators.required,
-          Validators.minLength(11),
-          Validators.maxLength(11),
-        ],
-      ],
+      paginaWeb: [''],
       correo: ['', [Validators.required, Validators.email]],
       nombre: ['', Validators.required],
       apellidos: ['', Validators.required],
-      telefono: [
-        '',
-        [Validators.required, Validators.minLength(8), Validators.maxLength(8)],
+      telefono: ['', [Validators.required, Validators.minLength(8), Validators.maxLength(8)],
       ],
       suscripcion: ['', Validators.required],
       terminosCondiciones: [false, Validators.requiredTrue],

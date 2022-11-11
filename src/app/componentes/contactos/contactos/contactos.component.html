@@ -82,53 +82,10 @@
               <input
                 type="text"
                 matInput
-                formControlName="numeroCarnet"
-                [placeholder]="lang === 'es' ? 'No Carnet*' : 'ID Number*'"
-                [class.con-input-error]="numeroCarnet?.invalid && (numeroCarnet?.dirty || numeroCarnet?.touched) && (numeroCarnet?.errors?.['required'] || numeroCarnet?.errors?.['minlength'])"
-                class="con-we-input"
-              />
-
-              <div
-                *ngIf="
-                  numeroCarnet?.invalid &&
-                  (numeroCarnet?.dirty || numeroCarnet?.touched)
-                "
-                class="con-we-alert con-we-alert-danger"
-              >
-                <div *ngIf="numeroCarnet?.errors?.['required']">
-                  <p *ngIf="lang === 'en'">This field cannot be empty.</p>
-                  <p *ngIf="lang === 'es'">Este campo no pude estar vacío.</p>
-                </div>
-                <div *ngIf="numeroCarnet?.errors?.['minlength']">
-                  <p *ngIf="lang === 'en'">Enter a valid id number</p>
-                  <p *ngIf="lang === 'es'">Entre un número de carnet válido</p>
-                </div>
-                <div *ngIf="numeroCarnet?.errors?.['maxlength']">
-                  <p *ngIf="lang === 'en'">Enter a valid id number</p>
-                  <p *ngIf="lang === 'es'">Entre un número de carnet válido</p>
-                </div>
-              </div>
-
-              <input
-                type="text"
-                matInput
                 formControlName="paginaWeb"
                 [placeholder]="lang === 'es' ? 'Pagina Web' : 'Web Site'"
-                [class.con-input-error]="paginaWeb?.invalid && (paginaWeb?.dirty || paginaWeb?.touched) && paginaWeb?.errors?.['pattern']"
                 class="con-we-input"
               />
-
-              <div
-                *ngIf="
-                  paginaWeb?.invalid && (paginaWeb?.dirty || paginaWeb?.touched)
-                "
-                class="con-we-alert con-we-alert-danger"
-              >
-                <div *ngIf="paginaWeb?.errors?.['pattern']">
-                  <p *ngIf="lang === 'en'">Enter a valid address</p>
-                  <p *ngIf="lang === 'es'">Entre una dirección válida.</p>
-                </div>
-              </div>
 
               <input
                 type="text"
@@ -223,6 +180,7 @@
                 </ng-container>
               </div>
             </div>
+
             <div class="con-we-policy">
               <div class="con-we-term">
                 <div class="con-we-check-container">
