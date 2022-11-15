@@ -9,6 +9,7 @@ import {
 import { Store } from "@ngrx/store";
 import { selectLang } from "src/app/store/system/system.selectors";
 import { CookieService } from "ngx-cookie-service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "bipay-cookies",
@@ -16,7 +17,7 @@ import { CookieService } from "ngx-cookie-service";
   styleUrls: ["./cookies.component.scss"],
 })
 export class CookiesComponent implements OnInit {
-  lang: string = '';
+  lang: string = "";
   faXmarkCircle = faXmarkCircle;
   lang$ = this.store.select(selectLang).subscribe((l) => (this.lang = l));
   hide: boolean = localStorage.getItem("showCookie") == "false" ? true : false;
@@ -24,13 +25,24 @@ export class CookiesComponent implements OnInit {
   constructor(
     private store: Store,
     public dialog: MatDialog,
-    private cookieService: CookieService
+    private cookieService: CookieService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {}
 
   hideCookie() {
     this.hide = true;
+  }
+
+  generatePag() {
+    this.router.navigate([
+      "/generic",
+      {
+        genericUrl:
+          "http://bipay.tucasamar.com/enlace/seccion-generica/detalles-de-cookies",
+      },
+    ]);
   }
 
   openDialog() {

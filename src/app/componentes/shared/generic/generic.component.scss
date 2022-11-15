@@ -4,7 +4,7 @@
 
   .gen-fondo {
     display: flex;
-    height: 650%;
+    height: 400%;
     position: absolute;
     left: 0;
     right: 0;
@@ -118,45 +118,51 @@
 
           .gen-we-text-container-con {
             width: 60%;
-            
-             h1 {
-                font-family: "Roboto";
-                font-style: normal;
-                font-weight: 700;
-                font-size: 32px;
-                line-height: 32px;
-                color: #353535;
-              }
 
-              h3 {
-                font-family: "Roboto";
-                font-style: normal;
-                font-weight: 700;
-                font-size: 32px;
-                line-height: 32px;
-                color: #353535;
-              }
-
-              figure {
-                margin-left: 0;
-                margin-right: 0;
-              }
-
-              * > img,
-              img {
-                width: 100%;
-              }
-
-              p {
-                font-family: "Roboto";
-                font-style: normal;
-                font-weight: 400;
-                margin-bottom: 6%;
-                font-size: 18px;
-                line-height: 32px;
-                color: #727272;
-              }
+            h1 {
+              font-family: "Roboto";
+              font-style: normal;
+              font-weight: 700;
+              font-size: 32px;
+              line-height: 32px;
+              color: #353535;
             }
+
+            h3 {
+              font-family: "Roboto";
+              font-style: normal;
+              font-weight: 700;
+              font-size: 32px;
+              line-height: 32px;
+              color: #353535;
+            }
+
+            figure {
+              margin-left: 0;
+              margin-right: 0;
+            }
+
+            * > img,
+            img {
+              width: 100%;
+            }
+
+            p {
+              font-family: "Roboto";
+              font-style: normal;
+              font-weight: 400;
+              margin-bottom: 6%;
+              font-size: 18px;
+              line-height: 32px;
+              color: #727272;
+            }
+
+            * {
+              font: 400 14px/20px Roboto, "Helvetica Neue";
+              line-height: 140%;
+              color: #000000;
+            }
+          }
         }
       }
 

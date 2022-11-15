@@ -15,7 +15,7 @@
 		<div class="cookie-info">
 			<div class="cookie-text">
 				<p *ngIf="lang === 'es'">
-					Bipay utiliza cookies necesarias y propias, relativas al propio funcionamiento del sitio web. Haz click <a (click)="hideCookie()" routerLink="/terminos" >Aqui</a> para obtener mas informacion. No guardamos ninguna informacion vinculada directamente a usted.
+					Bipay utiliza cookies necesarias y propias, relativas al propio funcionamiento del sitio web. Haz click <a (click)="generatePag()" (click)="hideCookie()" >Aqui</a> para obtener mas informacion. No guardamos ninguna informacion vinculada directamente a usted.
 				</p>
 				<p *ngIf="lang === 'en'">
 					Bipay uses technologies known as Cookies with the purpose of
